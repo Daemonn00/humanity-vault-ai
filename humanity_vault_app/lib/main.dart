@@ -6,6 +6,7 @@ import 'core/theme/app_theme.dart';
 import 'features/library/data/articles_repository.dart';
 import 'features/library/data/categories_repository.dart';
 import 'features/library/presentation/categories_screen.dart';
+import 'features/library/presentation/search_screen.dart';
 import 'shared/widgets/action_card.dart';
 
 void main() {
@@ -105,7 +106,13 @@ class HomeScreen extends StatelessWidget {
             subtitle: 'Find articles across the archive',
             iconBackgroundColor: AppColors.primary.withValues(alpha: 0.12),
             iconColor: AppColors.primary,
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SearchScreen(),
+                ),
+              );
+            },
           ),
           const SizedBox(height: AppSpacing.md),
           ActionCard(

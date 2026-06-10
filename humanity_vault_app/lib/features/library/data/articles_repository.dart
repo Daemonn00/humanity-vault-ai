@@ -79,4 +79,11 @@ class ArticlesRepository {
   List<Article> getArticles(String categoryFolder) {
     return articlesByCategoryFolder[categoryFolder] ?? const [];
   }
+
+  /// Returns all articles across every category, for searching.
+  List<Article> getAllArticles() {
+    return articlesByCategoryFolder.values
+        .expand((articles) => articles)
+        .toList();
+  }
 }

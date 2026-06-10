@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/articles_repository.dart';
 import '../models/category.dart';
+import 'article_detail_screen.dart';
 
 /// Displays the list of articles available within a category.
 class ArticleListScreen extends StatelessWidget {
@@ -30,7 +31,14 @@ class ArticleListScreen extends StatelessWidget {
                   leading: const Icon(Icons.article_outlined),
                   title: Text(article.title),
                   subtitle: Text(article.category),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            ArticleDetailScreen(article: article),
+                      ),
+                    );
+                  },
                 );
               },
             ),

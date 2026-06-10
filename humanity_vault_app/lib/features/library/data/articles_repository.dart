@@ -1,88 +1,81 @@
+import 'package:flutter/services.dart' show AssetManifest, rootBundle;
+
 import '../models/article.dart';
+import 'markdown_article_parser.dart';
 
 /// Provides the list of articles for each knowledge category.
 ///
-/// This mirrors the sample articles under the repository's `knowledge/`
-/// directory. No database or network access is used - the data is local
-/// and static for the MVP.
+/// Articles are loaded from Markdown files bundled under the `knowledge/`
+/// asset directory. No database or network access is used - all data is
+/// local and discovered via the Flutter asset bundle.
 class ArticlesRepository {
-  static const Map<String, List<Article>> articlesByCategoryFolder = {
-    'islam': [
-      Article(
-        title: 'Daily Morning and Evening Dua',
-        category: 'Islam',
-        summary:
-            'A collection of short duas recommended to be recited in the '
-            'morning and evening for protection, gratitude, and remembrance '
-            'of Allah.',
-        content:
-            'Reciting morning and evening duas is a Sunnah practice that '
-            'helps maintain a connection with Allah throughout the day. '
-            'These duas typically include seeking protection from harm, '
-            'expressing gratitude, and asking for guidance and well-being '
-            'for oneself and one\'s family.',
-        benefits: [
-          'Provides spiritual protection throughout the day',
-          'Builds a daily habit of remembrance (dhikr)',
-          'Brings peace of mind and gratitude',
-        ],
-        sources: ['Islamic Primary Source'],
-      ),
-    ],
-    'survival': [
-      Article(
-        title: 'Water Purification Using Boiling',
-        category: 'Survival',
-        summary:
-            'Boiling is one of the most reliable methods to make water safe '
-            'to drink by killing disease-causing organisms such as '
-            'bacteria, viruses, and parasites.',
-        content:
-            'To purify water by boiling, bring water to a rolling boil for '
-            'at least one minute (three minutes at higher altitudes). Allow '
-            'the water to cool before drinking. Boiling does not remove '
-            'chemical contaminants or sediment, so water should be filtered '
-            'or allowed to settle before boiling when possible.',
-        benefits: [
-          'Kills bacteria, viruses, and parasites',
-          'Requires no special equipment beyond a heat source and container',
-          'One of the most reliable emergency purification methods',
-        ],
-        sources: ['WHO', 'Government Disaster Guide'],
-      ),
-    ],
-    'medicine': [
-      Article(
-        title: 'Basic CPR',
-        category: 'Medicine',
-        summary:
-            'Cardiopulmonary resuscitation (CPR) is an emergency procedure '
-            'used to manually preserve brain function until further '
-            'measures restore spontaneous blood circulation and breathing '
-            'in a person who is in cardiac arrest.',
-        content:
-            'To perform basic CPR, place the heel of one hand on the center '
-            'of the chest, place the other hand on top, and push hard and '
-            'fast at a rate of 100 to 120 compressions per minute, allowing '
-            'the chest to fully recoil between compressions. Continue until '
-            'emergency help arrives or the person shows signs of life.',
-        benefits: [
-          'Can double or triple a cardiac arrest victim\'s chance of survival',
-          'Helps maintain blood flow to vital organs until help arrives',
-          'Can be performed without specialized equipment',
-        ],
-        sources: ['Medical Source'],
-      ),
-    ],
-  };
+  static Map<String, List<Article>> _articlesByCategoryFolder = {};
+  static bool _loaded = false;
 
+  /// Loads and parses all knowledge Markdown files from assets.
+  ///
+  /// Must be awaited before the app's first build so that
+  /// [getArticles] and [getAllArticles] return populated data.
+  static Future<void> ensureLoaded() async {
+    if (_loaded) return;
+
+    final assetManifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+    final assetPaths = assetManifest.listAssets();
+
+    final articlesByCategoryFolder = <String, List<Article>>{};
+
+    for (final assetPath in assetPaths) {
+      if (!assetPath.startsWith('knowledge/') || !assetPath.endsWith('.md')) {
+        continue;
+      }
+      if (assetPath.endsWith('README.md')) {
+        continue;
+      }
+
+      final segments = assetPath.split('/');
+      if (segments.length < 3) continue;
+      final categoryFolder = segments[1];
+
+      final raw = await rootBundle.loadString(assetPath);
+      final article = _parseArticle(raw);
+      if (article == null) continue;
+
+      articlesByCategoryFolder.putIfAbsent(categoryFolder, () => []).add(article);
+    }
+
+    _articlesByCategoryFolder = articlesByCategoryFolder;
+    _loaded = true;
+  }
+
+  static Article? _parseArticle(String raw) {
+    final doc = MarkdownArticleParser.parse(raw);
+    final title = doc.field('title');
+    final category = doc.field('category');
+    if (title == null || category == null) return null;
+
+    return Article(
+      title: title,
+      category: category,
+      summary: doc.section('summary'),
+      content: doc.section('main content'),
+      benefits: MarkdownArticleParser.extractBulletItems(doc.section('benefits')),
+      sources: MarkdownArticleParser.extractBulletItems(doc.section('sources')),
+      subcategory: doc.field('subcategory'),
+      author: doc.field('author'),
+      lastUpdated: doc.field('last_updated'),
+      knowledgeLevel: doc.field('knowledge_level'),
+      verificationLevel: doc.field('verification_level'),
+    );
+  }
+
+  /// Returns all articles for the given category folder name.
   List<Article> getArticles(String categoryFolder) {
-    return articlesByCategoryFolder[categoryFolder] ?? const [];
+    return _articlesByCategoryFolder[categoryFolder] ?? const [];
   }
 
   /// Returns all articles across every category, for searching.
   List<Article> getAllArticles() {
-    return articlesByCategoryFolder.values
+    return _articlesByCategoryFolder.values
         .expand((articles) => articles)
         .toList();
   }

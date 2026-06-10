@@ -7,6 +7,11 @@ class Article {
     required this.content,
     required this.benefits,
     required this.sources,
+    this.subcategory,
+    this.author,
+    this.lastUpdated,
+    this.knowledgeLevel,
+    this.verificationLevel,
   });
 
   /// Title of the article.
@@ -26,4 +31,19 @@ class Article {
 
   /// Sources the article's information is drawn from.
   final List<String> sources;
+
+  /// Optional subcategory/topic within the category (e.g. "Water").
+  final String? subcategory;
+
+  /// Optional author or contributor credit.
+  final String? author;
+
+  /// Optional last-updated date, as written in the source file.
+  final String? lastUpdated;
+
+  /// Optional knowledge level (e.g. "Level 1").
+  final String? knowledgeLevel;
+
+  /// Optional verification level (e.g. "Verified Source").
+  final String? verificationLevel;
 }

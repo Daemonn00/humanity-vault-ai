@@ -10,7 +10,9 @@ import 'features/library/presentation/categories_screen.dart';
 import 'features/library/presentation/search_screen.dart';
 import 'shared/widgets/action_card.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ArticlesRepository.ensureLoaded();
   runApp(const HumanityVaultApp());
 }
 

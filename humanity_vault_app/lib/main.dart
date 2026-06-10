@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'features/library/presentation/categories_screen.dart';
+
 void main() {
   runApp(const HumanityVaultApp());
 }
@@ -34,7 +36,13 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CategoriesScreen(),
+                  ),
+                );
+              },
               icon: const Icon(Icons.menu_book),
               label: const Text('Browse Categories'),
             ),

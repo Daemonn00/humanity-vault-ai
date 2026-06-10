@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/theme/app_colors.dart';
+import '../../../core/theme/app_spacing.dart';
+import '../../../shared/widgets/bullet_list.dart';
+import '../../../shared/widgets/section_card.dart';
 import '../models/article.dart';
 
 /// Displays the full content of a single article.
@@ -10,21 +14,19 @@ class ArticleDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
     return Scaffold(
       appBar: AppBar(
         title: Text(article.title),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(AppSpacing.screenPadding),
         children: [
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(AppSpacing.lg),
             decoration: BoxDecoration(
-              color: colorScheme.primaryContainer,
-              borderRadius: BorderRadius.circular(20),
+              color: AppColors.primary,
+              borderRadius: BorderRadius.circular(AppSpacing.heroRadius),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,112 +34,44 @@ class ArticleDetailScreen extends StatelessWidget {
                 Text(
                   article.title,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: colorScheme.onPrimaryContainer,
+                        color: Colors.white,
                       ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
                 Chip(
                   label: Text(article.category),
-                  backgroundColor: colorScheme.surface,
+                  backgroundColor: AppColors.accent,
+                  labelStyle: const TextStyle(color: AppColors.textPrimary),
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 16),
-          _SectionCard(
+          const SizedBox(height: AppSpacing.md),
+          SectionCard(
             icon: Icons.summarize_outlined,
             title: 'Summary',
             child: Text(article.summary),
           ),
-          const SizedBox(height: 16),
-          _SectionCard(
+          const SizedBox(height: AppSpacing.md),
+          SectionCard(
             icon: Icons.menu_book_outlined,
             title: 'Main Content',
             child: Text(article.content),
           ),
-          const SizedBox(height: 16),
-          _SectionCard(
+          const SizedBox(height: AppSpacing.md),
+          SectionCard(
             icon: Icons.check_circle_outline,
             title: 'Benefits',
-            child: _BulletList(items: article.benefits),
+            child: BulletList(items: article.benefits),
           ),
-          const SizedBox(height: 16),
-          _SectionCard(
+          const SizedBox(height: AppSpacing.md),
+          SectionCard(
             icon: Icons.fact_check_outlined,
             title: 'Sources',
-            child: _BulletList(items: article.sources),
+            child: BulletList(items: article.sources),
           ),
         ],
       ),
-    );
-  }
-}
-
-/// A titled card used to group a section of article content.
-class _SectionCard extends StatelessWidget {
-  const _SectionCard({
-    required this.icon,
-    required this.title,
-    required this.child,
-  });
-
-  final IconData icon;
-  final String title;
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(icon, size: 20, color: colorScheme.primary),
-                const SizedBox(width: 8),
-                Text(
-                  title,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            child,
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// A simple bulleted list of text items.
-class _BulletList extends StatelessWidget {
-  const _BulletList({required this.items});
-
-  final List<String> items;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: items
-          .map(
-            (item) => Padding(
-              padding: const EdgeInsets.only(bottom: 6.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('• '),
-                  Expanded(child: Text(item)),
-                ],
-              ),
-            ),
-          )
-          .toList(),
     );
   }
 }

@@ -7,6 +7,7 @@ class Category {
     required this.name,
     required this.folderName,
     required this.icon,
+    required this.color,
   });
 
   /// Display name shown to the user.
@@ -17,4 +18,7 @@ class Category {
 
   /// Icon representing the category.
   final IconData icon;
+
+  /// Muted accent color representing this category.
+  final Color color;
 }

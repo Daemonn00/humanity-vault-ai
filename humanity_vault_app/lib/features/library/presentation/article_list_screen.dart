@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/theme/app_spacing.dart';
 import '../data/articles_repository.dart';
 import '../models/category.dart';
 import 'article_detail_screen.dart';
@@ -22,7 +23,7 @@ class ArticleListScreen extends StatelessWidget {
       body: articles.isEmpty
           ? Center(
               child: Padding(
-                padding: const EdgeInsets.all(24.0),
+                padding: const EdgeInsets.all(AppSpacing.lg),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -31,7 +32,7 @@ class ArticleListScreen extends StatelessWidget {
                       size: 48,
                       color: colorScheme.outline,
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
                     Text(
                       'No articles available yet.',
                       style: Theme.of(context).textTheme.bodyLarge,
@@ -41,14 +42,15 @@ class ArticleListScreen extends StatelessWidget {
               ),
             )
           : ListView.separated(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(AppSpacing.screenPadding),
               itemCount: articles.length,
-              separatorBuilder: (context, index) => const SizedBox(height: 12),
+              separatorBuilder: (context, index) =>
+                  const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
               itemBuilder: (context, index) {
                 final article = articles[index];
                 return Card(
                   child: InkWell(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
@@ -58,18 +60,19 @@ class ArticleListScreen extends StatelessWidget {
                       );
                     },
                     child: Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(AppSpacing.md),
                       child: Row(
                         children: [
                           CircleAvatar(
                             radius: 24,
-                            backgroundColor: colorScheme.secondaryContainer,
+                            backgroundColor:
+                                category.color.withValues(alpha: 0.12),
                             child: Icon(
                               Icons.article_outlined,
-                              color: colorScheme.onSecondaryContainer,
+                              color: category.color,
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          const SizedBox(width: AppSpacing.md),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

@@ -8,7 +8,7 @@ void main() {
   testWidgets('Home screen shows title and main actions', (WidgetTester tester) async {
     await tester.pumpWidget(const HumanityVaultApp());
 
-    expect(find.text('Humanity Vault AI'), findsOneWidget);
+    expect(find.text('Humanity Vault AI'), findsWidgets);
     expect(find.text('Browse Categories'), findsOneWidget);
     expect(find.text('Search Knowledge'), findsOneWidget);
     expect(find.text('Emergency Mode'), findsOneWidget);

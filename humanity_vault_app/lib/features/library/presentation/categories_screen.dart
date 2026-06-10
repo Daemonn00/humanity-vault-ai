@@ -10,27 +10,58 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final categories = CategoriesRepository().getCategories();
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Browse Categories'),
       ),
-      body: ListView.separated(
+      body: GridView.builder(
+        padding: const EdgeInsets.all(20.0),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 16,
+          crossAxisSpacing: 16,
+          childAspectRatio: 1.1,
+        ),
         itemCount: categories.length,
-        separatorBuilder: (context, index) => const Divider(height: 1),
         itemBuilder: (context, index) {
           final category = categories[index];
-          return ListTile(
-            leading: Icon(category.icon),
-            title: Text(category.name),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => ArticleListScreen(category: category),
+          return Card(
+            child: InkWell(
+              borderRadius: BorderRadius.circular(16),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        ArticleListScreen(category: category),
+                  ),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      radius: 28,
+                      backgroundColor: colorScheme.primaryContainer,
+                      child: Icon(
+                        category.icon,
+                        size: 28,
+                        color: colorScheme.onPrimaryContainer,
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      category.name,
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ],
                 ),
-              );
-            },
+              ),
+            ),
           );
         },
       ),

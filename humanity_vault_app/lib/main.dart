@@ -5,6 +5,7 @@ import 'core/theme/app_spacing.dart';
 import 'core/theme/app_theme.dart';
 import 'features/library/data/articles_repository.dart';
 import 'features/library/data/categories_repository.dart';
+import 'features/emergency/presentation/emergency_screen.dart';
 import 'features/library/presentation/categories_screen.dart';
 import 'features/library/presentation/search_screen.dart';
 import 'shared/widgets/action_card.dart';
@@ -119,9 +120,15 @@ class HomeScreen extends StatelessWidget {
             icon: Icons.warning_amber,
             title: 'Emergency Mode',
             subtitle: 'Quick access to critical survival information',
-            iconBackgroundColor: AppColors.emergency.withValues(alpha: 0.12),
-            iconColor: AppColors.emergency,
-            onTap: () {},
+            iconBackgroundColor: AppColors.emergencySecondary,
+            iconColor: AppColors.emergencyPrimary,
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const EmergencyScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),

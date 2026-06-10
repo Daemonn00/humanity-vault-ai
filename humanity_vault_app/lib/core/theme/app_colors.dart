@@ -24,8 +24,11 @@ class AppColors {
   /// Primary text color.
   static const Color textPrimary = Color(0xFF2A2A2A);
 
-  /// Muted alert tone for Emergency Mode, distinct from the gold accent.
-  static const Color emergency = Color(0xFFB5563B);
+  /// Emergency Mode primary tone - prepared and resilient, not alarming.
+  static const Color emergencyPrimary = Color(0xFFC7772B);
+
+  /// Emergency Mode secondary tone - soft background/tint for cards.
+  static const Color emergencySecondary = Color(0xFFF2E6D8);
 
   // ---------------------------------------------------------------------
   // Muted category colors

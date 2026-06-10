@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/categories_repository.dart';
+import 'article_list_screen.dart';
 
 /// Displays the list of knowledge categories available in the vault.
 class CategoriesScreen extends StatelessWidget {
@@ -23,7 +24,13 @@ class CategoriesScreen extends StatelessWidget {
             leading: Icon(category.icon),
             title: Text(category.name),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => ArticleListScreen(category: category),
+                ),
+              );
+            },
           );
         },
       ),

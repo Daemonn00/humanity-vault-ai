@@ -4,7 +4,7 @@ category: Survival
 subcategory: Water
 author: Humanity Vault Contributors
 created_date: 2026-06-10
-last_updated: 2026-06-10
+last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Verified Source
 ---
@@ -28,4 +28,4 @@ To purify water by boiling, bring water to a rolling boil for at least one minut
 ## Sources
 
 - WHO
-- Government Disaster Guide
+- CDC (Centers for Disease Control and Prevention) Emergency Disinfection of Drinking Water guidelines

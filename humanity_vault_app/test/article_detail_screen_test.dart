@@ -62,4 +62,24 @@ void main() {
 
     expect(tester.getSize(find.byType(ListView)).width, 680);
   });
+
+  testWidgets('renders metadata bar without overflow on phone widths',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+    final article = ArticlesRepository()
+        .getAllArticles()
+        .firstWhere((a) => a.slug == 'basic_shelter_construction');
+
+    tester.view.physicalSize = const Size(375, 812);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(MaterialApp(
+      home: ArticleDetailScreen(article: article),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+  });
 }

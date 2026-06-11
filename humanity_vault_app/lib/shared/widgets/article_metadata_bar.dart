@@ -117,12 +117,16 @@ class _InfoLine extends StatelessWidget {
       children: [
         Icon(icon, size: 14, color: mutedColor),
         const SizedBox(width: AppSpacing.xs),
-        Text(
-          text,
-          style: Theme.of(context)
-              .textTheme
-              .bodyMedium
-              ?.copyWith(color: mutedColor, fontSize: 13),
+        Flexible(
+          child: Text(
+            text,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium
+                ?.copyWith(color: mutedColor, fontSize: 13),
+          ),
         ),
       ],
     );

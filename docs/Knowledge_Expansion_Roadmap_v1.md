@@ -60,12 +60,12 @@ ethical, and culturally continuous over time.
    Severe bleeding kills faster than almost anything else; basic
    pressure/dressing techniques save lives with minimal supplies.
 
-4. **[Survival] Fire Starting Without Matches**
+4. **[Survival] Fire Starting Without Matches** `[EXISTS]`
    Fire enables warmth, cooking, water purification (boiling), and
    morale - foundational to nearly every other survival task.
 
 5. **[Agriculture] Growing Staple Food Crops** (grains, tubers,
-   legumes)
+   legumes) `[EXISTS]`
    Food security underpins long-term survival; staple crops are
    calorie-dense and storable, the backbone of any community.
 
@@ -74,9 +74,10 @@ ethical, and culturally continuous over time.
    with available materials is core survival knowledge.
    (Implemented as "Basic Shelter Construction".)
 
-7. **[Agriculture] Seed Saving & Storage**
+7. **[Agriculture] Seed Saving & Storage** `[EXISTS]`
    Without seed banks, one bad harvest ends food production
    permanently - this is civilization-preservation knowledge.
+   (Implemented as "Seed Saving Basics".)
 
 8. **[Survival] Food & Water Storage and Preservation** `[EXISTS]`
    Bridges the gap between harvests/resupply; prevents waste and
@@ -84,7 +85,7 @@ ethical, and culturally continuous over time.
    (Food preservation portion implemented as "Food Preservation
    Basics"; water storage guidance remains a future addition.)
 
-9. **[Medicine] Sanitation, Hygiene & Disease Prevention**
+9. **[Medicine] Sanitation, Hygiene & Disease Prevention** `[EXISTS]`
    Historically, poor sanitation has killed more people than war or
    famine combined - simple hygiene practices prevent epidemics.
 
@@ -97,7 +98,7 @@ ethical, and culturally continuous over time.
 ### Survival (3 - all in Top 10, no additions for this tier)
 
 - Water Purification Using Boiling `[EXISTS]` - Top 10 #1
-- Fire Starting Without Matches - Top 10 #4
+- Fire Starting Without Matches `[EXISTS]` - Top 10 #4
 - Emergency Shelter Construction `[EXISTS]` - Top 10 #6
 - Food & Water Storage and Preservation `[EXISTS]` - Top 10 #8
 - Basic Navigation Without GPS or Compass - Top 10 #10
@@ -106,12 +107,12 @@ ethical, and culturally continuous over time.
 
 - Basic CPR Overview `[EXISTS]` - Top 10 #2
 - Wound Care & Bleeding Control `[EXISTS]` - Top 10 #3
-- Sanitation, Hygiene & Disease Prevention - Top 10 #9
+- Sanitation, Hygiene & Disease Prevention `[EXISTS]` - Top 10 #9
 
 ### Agriculture (2 in Top 10, no additions for this tier)
 
-- Growing Staple Food Crops - Top 10 #5
-- Seed Saving & Storage - Top 10 #7
+- Growing Staple Food Crops `[EXISTS]` - Top 10 #5
+- Seed Saving & Storage `[EXISTS]` - Top 10 #7
 
 ### Construction (+3 new)
 
@@ -388,3 +389,30 @@ covered. Remaining Top 10 items: #4 (Fire Starting Without Matches),
 #5 (Growing Staple Food Crops), #7 (Seed Saving & Storage), #9
 (Sanitation, Hygiene & Disease Prevention - core hygiene practices),
 #10 (Basic Navigation Without GPS or Compass).
+
+### Sprint 3 (2026-06-11)
+
+Four articles authored, closing four of the five remaining Top 10
+gaps and opening the **Agriculture** category for the first time (no
+new code/category changes required - the folder was already
+registered):
+
+- **Sanitation, Hygiene and Disease Prevention**
+  (`knowledge/medicine/sanitation_hygiene_and_disease_prevention.md`) -
+  fulfills Top 10 #9
+- **Fire Starting Without Matches**
+  (`knowledge/survival/fire_starting_without_matches.md`) - fulfills
+  Top 10 #4
+- **Growing Staple Food Crops**
+  (`knowledge/agriculture/growing_staple_food_crops.md`) - fulfills
+  Top 10 #5, first Agriculture article
+- **Seed Saving Basics**
+  (`knowledge/agriculture/seed_saving_basics.md`) - fulfills Top 10 #7
+
+Related Knowledge links added: Sanitation <-> Recognizing and Treating
+Dehydration, Sanitation <-> Water Purification, Fire Starting <->
+Emergency Fire Safety, Growing Staple Food Crops <-> Seed Saving
+Basics.
+
+Top 10 is now 9/10 complete. Only remaining item: #10 (Basic
+Navigation Without GPS or Compass).

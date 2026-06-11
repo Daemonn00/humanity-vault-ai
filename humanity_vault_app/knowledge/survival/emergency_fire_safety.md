@@ -7,6 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Verified Source
+related_articles: fire_starting_without_matches
 ---
 
 # Emergency Fire Safety

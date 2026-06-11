@@ -56,7 +56,7 @@ ethical, and culturally continuous over time.
    Already covered. Reverses the most immediately fatal medical
    emergency with zero equipment.
 
-3. **[Medicine] Wound Care & Bleeding Control**
+3. **[Medicine] Wound Care & Bleeding Control** `[EXISTS]`
    Severe bleeding kills faster than almost anything else; basic
    pressure/dressing techniques save lives with minimal supplies.
 
@@ -69,17 +69,20 @@ ethical, and culturally continuous over time.
    Food security underpins long-term survival; staple crops are
    calorie-dense and storable, the backbone of any community.
 
-6. **[Survival] Emergency Shelter Construction**
+6. **[Survival] Emergency Shelter Construction** `[EXISTS]`
    Exposure (cold/heat/rain) can kill within hours; shelter-building
    with available materials is core survival knowledge.
+   (Implemented as "Basic Shelter Construction".)
 
 7. **[Agriculture] Seed Saving & Storage**
    Without seed banks, one bad harvest ends food production
    permanently - this is civilization-preservation knowledge.
 
-8. **[Survival] Food & Water Storage and Preservation**
+8. **[Survival] Food & Water Storage and Preservation** `[EXISTS]`
    Bridges the gap between harvests/resupply; prevents waste and
    famine during shortages.
+   (Food preservation portion implemented as "Food Preservation
+   Basics"; water storage guidance remains a future addition.)
 
 9. **[Medicine] Sanitation, Hygiene & Disease Prevention**
    Historically, poor sanitation has killed more people than war or
@@ -95,14 +98,14 @@ ethical, and culturally continuous over time.
 
 - Water Purification Using Boiling `[EXISTS]` - Top 10 #1
 - Fire Starting Without Matches - Top 10 #4
-- Emergency Shelter Construction - Top 10 #6
-- Food & Water Storage and Preservation - Top 10 #8
+- Emergency Shelter Construction `[EXISTS]` - Top 10 #6
+- Food & Water Storage and Preservation `[EXISTS]` - Top 10 #8
 - Basic Navigation Without GPS or Compass - Top 10 #10
 
 ### Medicine (3 - all in Top 10, no additions for this tier)
 
 - Basic CPR Overview `[EXISTS]` - Top 10 #2
-- Wound Care & Bleeding Control - Top 10 #3
+- Wound Care & Bleeding Control `[EXISTS]` - Top 10 #3
 - Sanitation, Hygiene & Disease Prevention - Top 10 #9
 
 ### Agriculture (2 in Top 10, no additions for this tier)
@@ -319,3 +322,33 @@ ethical, and culturally continuous over time.
   [Knowledge_Authoring_Standard_v1.md](Knowledge_Authoring_Standard_v1.md)
 - Re-review and revise this roadmap (v2) once the Top 10 articles are
   complete, to confirm priorities still hold
+
+## 10. Sprint Progress Log
+
+### Sprint 1 (2026-06-11)
+
+Five articles authored following
+[Content_Creation_Workflow_v1.md](Content_Creation_Workflow_v1.md):
+
+- **Wound Care and Bleeding Control**
+  (`knowledge/medicine/wound_care_and_bleeding_control.md`) - fulfills
+  Top 10 #3
+- **Recognizing and Treating Dehydration**
+  (`knowledge/medicine/recognizing_and_treating_dehydration.md`) -
+  additional article supporting Top 10 #9 (Sanitation, Hygiene &
+  Disease Prevention)
+- **Emergency Fire Safety**
+  (`knowledge/survival/emergency_fire_safety.md`) - additional article
+  complementing Top 10 #4 (Fire Starting Without Matches)
+- **Basic Shelter Construction**
+  (`knowledge/survival/basic_shelter_construction.md`) - fulfills
+  Top 10 #6 (Emergency Shelter Construction)
+- **Food Preservation Basics**
+  (`knowledge/survival/food_preservation_basics.md`) - fulfills the
+  food-preservation portion of Top 10 #8 (Food & Water Storage and
+  Preservation); water storage guidance remains a future addition
+
+Remaining Top 10 items: #4 (Fire Starting Without Matches), #5
+(Growing Staple Food Crops), #7 (Seed Saving & Storage), #9
+(Sanitation, Hygiene & Disease Prevention - core hygiene practices),
+#10 (Basic Navigation Without GPS or Compass).

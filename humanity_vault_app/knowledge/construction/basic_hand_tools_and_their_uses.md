@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Community Verified
-related_articles: basic_shelter_construction, well_digging_and_safe_water_access
+related_articles: basic_shelter_construction, well_digging_and_safe_water_access, simple_machines
 ---
 
 # Basic Hand Tools and Their Uses

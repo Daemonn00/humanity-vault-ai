@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Community Verified
-related_articles: sanitation_hygiene_and_disease_prevention
+related_articles: sanitation_hygiene_and_disease_prevention, how_writing_and_numeracy_systems_work, lessons_from_historical_civilization_collapse_and_recovery
 ---
 
 # Foundational Ethics and Decision-Making Under Scarcity

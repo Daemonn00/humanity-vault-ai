@@ -139,10 +139,10 @@ ethical, and culturally continuous over time.
 
 ### Engineering (+3 new)
 
-- **Simple Machines** (lever, pulley, wheel & axle, inclined plane)
+- **Simple Machines** (lever, pulley, wheel & axle, inclined plane) `[EXISTS]`
   The conceptual foundation for almost all mechanical problem-solving
   with limited materials.
-- **Basic Mechanics for Tool & Equipment Repair**
+- **Basic Mechanics for Tool & Equipment Repair** `[EXISTS]`
   Keeping existing tools/vehicles/pumps functional extends the life of
   scarce manufactured goods.
 - **Water Wheel & Wind Power Basics**
@@ -151,10 +151,10 @@ ethical, and culturally continuous over time.
 
 ### History (+2 new)
 
-- **How Writing & Numeracy Systems Work**
+- **How Writing & Numeracy Systems Work** `[EXISTS]`
   Literacy and number systems are the foundation of all knowledge
   transfer - must be re-teachable from scratch.
-- **Lessons from Historical Civilization Collapse & Recovery**
+- **Lessons from Historical Civilization Collapse & Recovery** `[EXISTS]`
   Real-world precedent on what societies need to rebuild and what
   mistakes to avoid (over-specialization, resource depletion).
 
@@ -461,3 +461,35 @@ Ethics <-> Sanitation, Core Pillars of Practice <-> Daily Dua.
 
 Top 25 is now 14/25 complete (56%). Construction, Philosophy, and
 Islam categories now each have at least one article.
+
+### Sprint 6 (2026-06-11)
+
+Four articles authored, opening the **Engineering** and **History**
+categories for the first time and completing both of History's Top 25
+items (no new code/category changes required - all folders were
+already registered):
+
+- **Simple Machines**
+  (`knowledge/engineering/simple_machines.md`) - fulfills Top 25
+  Engineering item (1 of 3), first Engineering article
+- **Basic Mechanics for Tool and Equipment Repair**
+  (`knowledge/engineering/basic_mechanics_for_tool_and_equipment_repair.md`) -
+  fulfills Top 25 Engineering item (2 of 3)
+- **How Writing and Numeracy Systems Work**
+  (`knowledge/history/how_writing_and_numeracy_systems_work.md`) -
+  fulfills Top 25 History item, first History article
+- **Lessons from Historical Civilization Collapse and Recovery**
+  (`knowledge/history/lessons_from_historical_civilization_collapse_and_recovery.md`) -
+  fulfills Top 25 History item, completes History's Top 25 pair
+
+Related Knowledge links added: Simple Machines <-> Basic Hand Tools,
+Basic Mechanics <-> Simple Machines, Basic Mechanics <-> Basic Hand
+Tools, How Writing and Numeracy <-> Foundational Ethics, How Writing
+and Numeracy <-> Lessons from Civilization Collapse, Lessons from
+Civilization Collapse <-> Foundational Ethics.
+
+Top 25 is now 18/25 complete (72%). Engineering and History categories
+now each have content; remaining Top 25 gaps: Engineering (Water
+Wheel & Wind Power Basics), Electronics (Basic Circuits & Battery
+Power), Philosophy (Critical Thinking & Evaluating Information), and
+Local Wisdom (Traditional Weather Prediction & Seasonal Indicators).

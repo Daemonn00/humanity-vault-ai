@@ -59,16 +59,11 @@ growth.
 
 ## Benefits
 
-- Drying, salting, smoking, and fermenting all extend food storage
-  life using only basic tools, salt, and heat or sunlight
-- These methods reduce dependence on refrigeration or packaged food,
-  which may not be available
-- Preserved food provides a stored energy reserve for periods when
-  fresh food is scarce, such as winter or after a poor harvest
+- Drying, salting, smoking, and fermenting all extend food storage life using only basic tools, salt, and heat or sunlight
+- These methods reduce dependence on refrigeration or packaged food, which may not be available
+- Preserved food provides a stored energy reserve for periods when fresh food is scarce, such as winter or after a poor harvest
 
 ## Sources
 
-- Food and Agriculture Organization of the United Nations (FAO) food
-  preservation guidelines
-- United States Department of Agriculture (USDA) home food
-  preservation guidelines
+- Food and Agriculture Organization of the United Nations (FAO) food preservation guidelines
+- United States Department of Agriculture (USDA) home food preservation guidelines

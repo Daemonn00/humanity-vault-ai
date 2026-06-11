@@ -50,12 +50,9 @@ inside an enclosed shelter, and ensure good ventilation.
 
 ## Benefits
 
-- A lean-to shelter can be built with no tools other than what is
-  found in the immediate environment
-- Proper site selection avoids common hazards such as falling
-  branches, flash floods, and excessive wind exposure
-- Ground insulation and a small enclosed space dramatically reduce
-  heat loss compared to sleeping in the open
+- A lean-to shelter can be built with no tools other than what is found in the immediate environment
+- Proper site selection avoids common hazards such as falling branches, flash floods, and excessive wind exposure
+- Ground insulation and a small enclosed space dramatically reduce heat loss compared to sleeping in the open
 
 ## Sources
 

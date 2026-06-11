@@ -48,15 +48,11 @@ out but is still hot underneath can reignite later or in wind.
 
 ## Benefits
 
-- Clearing a burn area and keeping water or dirt nearby prevents most
-  fires from spreading out of control
-- Knowing the stop-drop-roll technique can prevent serious burns if
-  clothing catches fire
-- Properly extinguishing fires after use prevents reignition, which is
-  a common cause of accidental wildfires and structure fires
+- Clearing a burn area and keeping water or dirt nearby prevents most fires from spreading out of control
+- Knowing the stop-drop-roll technique can prevent serious burns if clothing catches fire
+- Properly extinguishing fires after use prevents reignition, which is a common cause of accidental wildfires and structure fires
 
 ## Sources
 
-- National Fire Protection Association (NFPA) public fire safety
-  guidelines
+- National Fire Protection Association (NFPA) public fire safety guidelines
 - U.S. Forest Service campfire safety guidelines

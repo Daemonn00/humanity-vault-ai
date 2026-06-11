@@ -46,15 +46,11 @@ can worsen quickly.
 
 ## Benefits
 
-- Recognizing early signs of dehydration allows treatment before it
-  becomes a medical emergency
-- The oral rehydration solution recipe uses only water, sugar, and
-  salt - ingredients that are widely available and storable
-- Knowing which symptoms require urgent medical care helps prioritize
-  limited medical resources toward those most at risk
+- Recognizing early signs of dehydration allows treatment before it becomes a medical emergency
+- The oral rehydration solution recipe uses only water, sugar, and salt - ingredients that are widely available and storable
+- Knowing which symptoms require urgent medical care helps prioritize limited medical resources toward those most at risk
 
 ## Sources
 
 - World Health Organization Oral Rehydration Salts (ORS) guidelines
-- Centers for Disease Control and Prevention (CDC) hydration and
-  diarrhea management guidance
+- Centers for Disease Control and Prevention (CDC) hydration and diarrhea management guidance

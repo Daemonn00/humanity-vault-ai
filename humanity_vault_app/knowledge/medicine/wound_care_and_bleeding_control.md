@@ -48,12 +48,9 @@ it is available.
 
 ## Benefits
 
-- Direct pressure can stop most external bleeding using only basic
-  clean materials, with no special equipment required
-- Proper wound cleaning and dressing significantly reduces the risk
-  of infection in the days after an injury
-- Recognizing infection warning signs early allows treatment before a
-  minor wound becomes a serious medical emergency
+- Direct pressure can stop most external bleeding using only basic clean materials, with no special equipment required
+- Proper wound cleaning and dressing significantly reduces the risk of infection in the days after an injury
+- Recognizing infection warning signs early allows treatment before a minor wound becomes a serious medical emergency
 
 ## Sources
 

@@ -116,10 +116,11 @@ ethical, and culturally continuous over time.
 
 ### Construction (+3 new)
 
-- **Well Digging & Safe Water Access**
+- **Well Digging & Safe Water Access** `[EXISTS]`
   Reliable, ongoing water access beyond rainfall/rivers; critical for
   permanent settlement.
-- **Basic Hand Tools & Their Uses**
+  (Implemented as "Well Digging and Safe Water Access".)
+- **Basic Hand Tools & Their Uses** `[EXISTS]`
   Foundational knowledge for making/maintaining all other tools and
   structures without powered equipment.
 - **Simple Structural Building Techniques** (timber framing/log
@@ -159,7 +160,7 @@ ethical, and culturally continuous over time.
 
 ### Philosophy (+2 new)
 
-- **Foundational Ethics & Decision-Making Under Scarcity**
+- **Foundational Ethics & Decision-Making Under Scarcity** `[EXISTS]`
   Guides hard choices (resource allocation, triage) with consistency
   and fairness when formal institutions are absent.
 - **Critical Thinking & Evaluating Information**
@@ -169,7 +170,7 @@ ethical, and culturally continuous over time.
 ### Islam (+1 new, 1 existing)
 
 - Daily Morning and Evening Dua `[EXISTS]` - already covered
-- **Core Pillars of Practice** (Salah, fasting, charity essentials)
+- **Core Pillars of Practice** (Salah, fasting, charity essentials) `[EXISTS]`
   Preserves core religious practice for community cohesion and
   spiritual resilience during hardship.
 
@@ -431,3 +432,32 @@ Related Knowledge links added: Basic Navigation -> Basic Shelter
 Construction, Basic Navigation -> Emergency Fire Safety.
 
 Top 10 is now 10/10 complete (100%).
+
+### Sprint 5 (2026-06-11)
+
+Four articles authored, opening the **Construction** and **Philosophy**
+categories for the first time and completing the Islam Top 25 pair (no
+new code/category changes required - all folders were already
+registered):
+
+- **Well Digging and Safe Water Access**
+  (`knowledge/construction/well_digging_and_safe_water_access.md`) -
+  fulfills Top 25 Construction item, first Construction article
+- **Basic Hand Tools and Their Uses**
+  (`knowledge/construction/basic_hand_tools_and_their_uses.md`) -
+  fulfills Top 25 Construction item
+- **Foundational Ethics and Decision-Making Under Scarcity**
+  (`knowledge/philosophy/foundational_ethics_and_decision_making_under_scarcity.md`) -
+  fulfills Top 25 Philosophy item, first Philosophy article
+- **Core Pillars of Practice**
+  (`knowledge/islam/core_pillars_of_practice.md`) - fulfills Top 25
+  Islam item, completes the Islam Top 25 pair with Daily Dua
+
+Related Knowledge links added: Well Digging <-> Water Purification,
+Well Digging <-> Water Storage, Well Digging <-> Sanitation, Basic
+Hand Tools <-> Basic Shelter Construction, Basic Hand Tools <-> Well
+Digging, Basic Shelter Construction <-> Basic Navigation, Foundational
+Ethics <-> Sanitation, Core Pillars of Practice <-> Daily Dua.
+
+Top 25 is now 14/25 complete (56%). Construction, Philosophy, and
+Islam categories now each have at least one article.

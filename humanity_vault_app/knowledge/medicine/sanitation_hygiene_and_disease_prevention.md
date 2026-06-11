@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Verified Source
-related_articles: recognizing_and_treating_dehydration, water_purification
+related_articles: recognizing_and_treating_dehydration, water_purification, well_digging_and_safe_water_access
 ---
 
 # Sanitation, Hygiene and Disease Prevention

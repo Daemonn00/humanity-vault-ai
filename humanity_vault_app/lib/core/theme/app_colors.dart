@@ -44,6 +44,7 @@ class AppColors {
   static const Color philosophy = Color(0xFF6E5A8A);
   static const Color islam = Color(0xFF2F7A5F);
   static const Color localWisdom = Color(0xFF8C6A4A);
+  static const Color communication = Color(0xFFB05A3C);
 
   // ---------------------------------------------------------------------
   // Verification level badge colors

@@ -70,6 +70,12 @@ class CategoriesRepository {
       icon: Icons.groups,
       color: AppColors.localWisdom,
     ),
+    Category(
+      name: 'Communication',
+      folderName: 'communication',
+      icon: Icons.cell_tower,
+      color: AppColors.communication,
+    ),
   ];
 
   List<Category> getCategories() => categories;

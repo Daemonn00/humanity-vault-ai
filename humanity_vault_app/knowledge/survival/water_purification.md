@@ -7,7 +7,7 @@ created_date: 2026-06-10
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Verified Source
-related_articles: recognizing_and_treating_dehydration
+related_articles: recognizing_and_treating_dehydration, water_storage_and_long_term_water_safety
 ---
 
 # Water Purification Using Boiling

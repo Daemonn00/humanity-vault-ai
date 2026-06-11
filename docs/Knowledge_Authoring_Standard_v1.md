@@ -194,7 +194,8 @@ Authoring rules:
   - one level deep, no further subfolders
 - `<category_folder>` MUST be one of the existing folder names:
   `survival`, `medicine`, `agriculture`, `engineering`, `electronics`,
-  `construction`, `history`, `philosophy`, `islam`, `local_wisdom`
+  `construction`, `history`, `philosophy`, `islam`, `local_wisdom`,
+  `communication`
 - The folder name is the source of truth for category assignment at
   the file-system/asset level; the `category` frontmatter field must
   match the corresponding display name exactly (see table below) so
@@ -220,6 +221,7 @@ Authoring rules:
 | philosophy       | Philosophy                       |
 | islam            | Islam                            |
 | local_wisdom     | Local Wisdom                     |
+| communication    | Communication                   |
 
 ## 11. Authoring Guidelines (General)
 

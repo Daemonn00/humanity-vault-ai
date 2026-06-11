@@ -352,3 +352,39 @@ Remaining Top 10 items: #4 (Fire Starting Without Matches), #5
 (Growing Staple Food Crops), #7 (Seed Saving & Storage), #9
 (Sanitation, Hygiene & Disease Prevention - core hygiene practices),
 #10 (Basic Navigation Without GPS or Compass).
+
+### Sprint 2 (2026-06-11)
+
+Five articles authored, expanding Survival/Water coverage and adding a
+new **Communication** category (added to `CategoriesRepository`,
+`AppColors`, `pubspec.yaml` assets, and the Authoring Standard's
+category table):
+
+- **Water Storage and Long-Term Water Safety**
+  (`knowledge/survival/water_storage_and_long_term_water_safety.md`) -
+  completes the water-storage portion of Top 10 #8 (Food & Water
+  Storage and Preservation)
+- **Emergency Communications Basics**
+  (`knowledge/communication/emergency_communications_basics.md`) - new
+  Communication category, foundational planning article
+- **Radio Communication Fundamentals**
+  (`knowledge/communication/radio_communication_fundamentals.md`) -
+  new Communication category, covers AM/FM, FRS/CB, and amateur radio
+- **Power Bank Survival Guide**
+  (`knowledge/electronics/power_bank_survival_guide.md`) - supports
+  offline communication/power resilience
+- **Emergency Phone Power Management**
+  (`knowledge/electronics/emergency_phone_power_management.md`) -
+  complements the power bank guide with no-equipment battery
+  conservation
+
+Related Knowledge links added: Water Purification <-> Water Storage,
+Water Storage <-> Dehydration, Emergency Communications <-> Radio
+Fundamentals, Radio Fundamentals <-> Power Bank Guide, Power Bank
+Guide <-> Phone Power Management <-> Emergency Communications.
+
+Top 10 #8 (Food & Water Storage and Preservation) is now fully
+covered. Remaining Top 10 items: #4 (Fire Starting Without Matches),
+#5 (Growing Staple Food Crops), #7 (Seed Saving & Storage), #9
+(Sanitation, Hygiene & Disease Prevention - core hygiene practices),
+#10 (Basic Navigation Without GPS or Compass).

@@ -63,6 +63,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - knowledge/agriculture/
+    - knowledge/communication/
     - knowledge/construction/
     - knowledge/electronics/
     - knowledge/engineering/

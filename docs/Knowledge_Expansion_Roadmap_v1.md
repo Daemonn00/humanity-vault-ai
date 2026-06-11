@@ -89,7 +89,7 @@ ethical, and culturally continuous over time.
    Historically, poor sanitation has killed more people than war or
    famine combined - simple hygiene practices prevent epidemics.
 
-10. **[Survival] Basic Navigation Without GPS or Compass**
+10. **[Survival] Basic Navigation Without GPS or Compass** `[EXISTS]`
     Getting lost or unable to relocate resources/people is a major
     risk when modern infrastructure (GPS, maps, networks) is gone.
 
@@ -101,7 +101,7 @@ ethical, and culturally continuous over time.
 - Fire Starting Without Matches `[EXISTS]` - Top 10 #4
 - Emergency Shelter Construction `[EXISTS]` - Top 10 #6
 - Food & Water Storage and Preservation `[EXISTS]` - Top 10 #8
-- Basic Navigation Without GPS or Compass - Top 10 #10
+- Basic Navigation Without GPS or Compass `[EXISTS]` - Top 10 #10
 
 ### Medicine (3 - all in Top 10, no additions for this tier)
 
@@ -416,3 +416,18 @@ Basics.
 
 Top 10 is now 9/10 complete. Only remaining item: #10 (Basic
 Navigation Without GPS or Compass).
+
+### Sprint 4 (2026-06-11)
+
+One article authored, completing the final remaining Top 10 item:
+
+- **Basic Navigation Without GPS or Compass**
+  (`knowledge/survival/basic_navigation_without_gps_or_compass.md`) -
+  fulfills Top 10 #10. Covers sun navigation, star navigation,
+  landmark navigation, route tracking (pacing/markers), other
+  direction-finding clues, and limitations/safety considerations.
+
+Related Knowledge links added: Basic Navigation -> Basic Shelter
+Construction, Basic Navigation -> Emergency Fire Safety.
+
+Top 10 is now 10/10 complete (100%).

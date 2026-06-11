@@ -73,19 +73,12 @@ used, but any water from an unknown source should always be treated
 
 ## Benefits
 
-- Ensures a known, safe supply of drinking water is available
-  immediately during an emergency, before other water sources can be
-  assessed or treated
-- Reduces the risk of dehydration and waterborne illness during
-  disruptions to normal water supply
-- Simple container selection, storage, and rotation practices keep
-  stored water safe for long periods at minimal cost
-- Complements active purification methods (boiling, disinfection) for
-  a complete water safety strategy
+- Ensures a known, safe supply of drinking water is available immediately during an emergency, before other water sources can be assessed or treated
+- Reduces the risk of dehydration and waterborne illness during disruptions to normal water supply
+- Simple container selection, storage, and rotation practices keep stored water safe for long periods at minimal cost
+- Complements active purification methods (boiling, disinfection) for a complete water safety strategy
 
 ## Sources
 
-- Centers for Disease Control and Prevention (CDC) guidance on
-  emergency water storage and treatment
-- Federal Emergency Management Agency (FEMA) emergency water supply
-  recommendations
+- Centers for Disease Control and Prevention (CDC) guidance on emergency water storage and treatment
+- Federal Emergency Management Agency (FEMA) emergency water supply recommendations

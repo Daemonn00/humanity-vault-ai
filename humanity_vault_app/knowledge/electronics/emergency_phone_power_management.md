@@ -63,16 +63,12 @@ priority over long-term battery health.
 
 ## Benefits
 
-- Extends how long a phone can be used to call for help, send
-  messages, or receive emergency alerts during an outage
+- Extends how long a phone can be used to call for help, send messages, or receive emergency alerts during an outage
 - Uses only built-in phone settings - no extra equipment required
-- Helps prioritize limited power-bank or solar charging capacity
-  toward the most essential device functions
+- Helps prioritize limited power-bank or solar charging capacity toward the most essential device functions
 - Reduces the chance of a phone dying at a critical moment
 
 ## Sources
 
-- Federal Emergency Management Agency (FEMA) mobile device emergency
-  preparedness guidance
-- Battery University (Cadex Electronics) guidance on lithium-ion
-  battery care and power conservation
+- Federal Emergency Management Agency (FEMA) mobile device emergency preparedness guidance
+- Battery University (Cadex Electronics) guidance on lithium-ion battery care and power conservation

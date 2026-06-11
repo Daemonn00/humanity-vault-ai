@@ -61,19 +61,12 @@ preserve power for when it is most needed.
 
 ## Benefits
 
-- Helps families reconnect and coordinate even when local phone
-  networks and internet access fail
-- Identifies low-bandwidth methods (text messages, broadcast radio)
-  that often work when voice calls and data do not
-- Encourages simple preparation steps (written contact lists, agreed
-  meeting points, battery conservation) that require no special
-  equipment
-- Provides a foundation for understanding when and why two-way radios
-  become valuable
+- Helps families reconnect and coordinate even when local phone networks and internet access fail
+- Identifies low-bandwidth methods (text messages, broadcast radio) that often work when voice calls and data do not
+- Encourages simple preparation steps (written contact lists, agreed meeting points, battery conservation) that require no special equipment
+- Provides a foundation for understanding when and why two-way radios become valuable
 
 ## Sources
 
-- Federal Emergency Management Agency (FEMA) "Make a Plan" and
-  emergency communications guidance
-- American Red Cross emergency preparedness guidance on communication
-  plans
+- Federal Emergency Management Agency (FEMA) "Make a Plan" and emergency communications guidance
+- American Red Cross emergency preparedness guidance on communication plans

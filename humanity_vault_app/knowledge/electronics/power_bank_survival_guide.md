@@ -63,18 +63,12 @@ extending usable power indefinitely as long as there is sunlight.
 
 ## Benefits
 
-- Provides a portable, reusable source of backup power for
-  communication and lighting devices during outages
-- Solar or hand-crank compatible models can be recharged indefinitely
-  without grid power
-- Multiple-port models allow sharing power across a family or small
-  group
-- Periodic checking and proper storage ensure the power bank works
-  when actually needed
+- Provides a portable, reusable source of backup power for communication and lighting devices during outages
+- Solar or hand-crank compatible models can be recharged indefinitely without grid power
+- Multiple-port models allow sharing power across a family or small group
+- Periodic checking and proper storage ensure the power bank works when actually needed
 
 ## Sources
 
-- U.S. Consumer Product Safety Commission (CPSC) guidance on lithium-
-  ion battery safety and storage
-- Federal Emergency Management Agency (FEMA) emergency supply kit
-  recommendations
+- U.S. Consumer Product Safety Commission (CPSC) guidance on lithium-ion battery safety and storage
+- Federal Emergency Management Agency (FEMA) emergency supply kit recommendations

@@ -64,18 +64,12 @@ and tested periodically so they are known to work when needed.
 
 ## Benefits
 
-- Provides a way to receive critical information when mobile networks
-  and the internet are unavailable
-- Enables direct communication between people without dependence on
-  centralized infrastructure
-- License-free options (AM/FM receivers, FRS radios) offer
-  no-cost-of-entry resilience for individuals and families
-- Encourages advance preparation (licensing, practice, agreed
-  channels) that pays off significantly during an actual emergency
+- Provides a way to receive critical information when mobile networks and the internet are unavailable
+- Enables direct communication between people without dependence on centralized infrastructure
+- License-free options (AM/FM receivers, FRS radios) offer no-cost-of-entry resilience for individuals and families
+- Encourages advance preparation (licensing, practice, agreed channels) that pays off significantly during an actual emergency
 
 ## Sources
 
-- Federal Communications Commission (FCC) consumer guidance on FRS,
-  GMRS, CB, and amateur radio services
-- American Radio Relay League (ARRL) emergency communications
-  resources
+- Federal Communications Commission (FCC) consumer guidance on FRS, GMRS, CB, and amateur radio services
+- American Radio Relay League (ARRL) emergency communications resources

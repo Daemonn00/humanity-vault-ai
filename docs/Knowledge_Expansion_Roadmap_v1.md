@@ -551,3 +551,46 @@ each of the 7 Emergency Mode topics (Water, Fire, Medical, Shelter,
 Communication, Food & Foraging, Security & Defense) now links to 2-4
 curated articles, surfaced as a "Learn More" section on each
 Emergency topic screen.
+
+### Sprint 9 (2026-06-11)
+
+No new articles authored (per explicit Sprint 9 constraint - all
+effort focused on resolving the 13/31 article-loading discrepancy
+flagged during Sprint 8 verification).
+
+**Investigation findings:** the Top 25 corpus (31 articles) loads
+correctly in every code path tested:
+
+- `flutter test` (VM): `ArticlesRepository` loads 31/31 articles
+- `flutter build web --debug`: home screen shows "11 categories ·
+  31 articles"
+- `flutter build web` (release), loaded in a fresh browser session
+  with no service worker registrations or caches: home screen also
+  shows "11 categories · 31 articles"
+
+`AssetManifest.bin` and `AssetManifest.bin.json` are byte-identical
+between debug and release builds. The earlier "13 articles" reading
+came from a long-lived preview browser session (reused across Sprints
+1-8) that had accumulated stale cached state for `localhost:8082` and
+never reflected the rebuilt `main.dart.js`. **This was a stale
+preview-session artifact, not an application or build defect** -
+`ArticlesRepository.ensureLoaded()`, the asset manifest, and the web
+release build are all correct.
+
+**Regression protection added** (4 smoke tests, all passing):
+
+- `test/articles_repository_test.dart` - asserts loaded article count
+  matches the number of `knowledge/**/*.md` files (31/31)
+- `test/search_smoke_test.dart` - asserts Search Knowledge returns
+  expected results for a title query and a category query
+- `test/related_articles_smoke_test.dart` - asserts
+  `basic_shelter_construction`'s related articles resolve to real
+  articles, including `simple_structural_building_techniques`
+- `test/emergency_articles_smoke_test.dart` - asserts every Emergency
+  Mode `articleSlugs` entry resolves to a real article (no dangling
+  slugs)
+
+**Workflow note:** when verifying web release builds in a preview
+browser, prefer a fresh preview session/port over reusing a
+long-lived one, since stale cached `main.dart.js` can mask a correct
+rebuild.

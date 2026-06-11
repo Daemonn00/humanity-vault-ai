@@ -4,7 +4,9 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../shared/widgets/article_metadata_bar.dart';
 import '../../../shared/widgets/bullet_list.dart';
+import '../../../shared/widgets/related_article_tile.dart';
 import '../../../shared/widgets/section_card.dart';
+import '../data/articles_repository.dart';
 import '../models/article.dart';
 
 /// Displays the full content of a single article.
@@ -15,6 +17,9 @@ class ArticleDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final relatedArticles =
+        ArticlesRepository().getRelatedArticles(article);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(article.title),
@@ -72,6 +77,19 @@ class ArticleDetailScreen extends StatelessWidget {
             title: 'Sources',
             child: BulletList(items: article.sources),
           ),
+          if (relatedArticles.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.md),
+            SectionCard(
+              icon: Icons.link,
+              title: 'Related Knowledge',
+              child: Column(
+                children: [
+                  for (final related in relatedArticles)
+                    RelatedArticleTile(article: related),
+                ],
+              ),
+            ),
+          ],
         ],
       ),
     );

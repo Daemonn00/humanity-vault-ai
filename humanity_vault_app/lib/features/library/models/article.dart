@@ -7,6 +7,8 @@ class Article {
     required this.content,
     required this.benefits,
     required this.sources,
+    required this.slug,
+    this.relatedSlugs = const [],
     this.subcategory,
     this.author,
     this.lastUpdated,
@@ -31,6 +33,12 @@ class Article {
 
   /// Sources the article's information is drawn from.
   final List<String> sources;
+
+  /// Stable identifier derived from the article's filename (no extension).
+  final String slug;
+
+  /// Slugs of articles manually marked as related via frontmatter.
+  final List<String> relatedSlugs;
 
   /// Optional subcategory/topic within the category (e.g. "Water").
   final String? subcategory;

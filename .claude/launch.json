@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "flutter-web-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8082"],
+      "port": 8082,
+      "cwd": "humanity_vault_app/build/web"
+    }
+  ]
+}

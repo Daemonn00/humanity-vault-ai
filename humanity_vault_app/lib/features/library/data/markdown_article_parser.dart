@@ -83,6 +83,17 @@ class MarkdownArticleParser {
     return sections;
   }
 
+  /// Splits a comma-separated frontmatter value into trimmed, non-empty
+  /// items (e.g. `related_articles: foo, bar` -> `['foo', 'bar']`).
+  static List<String> splitList(String? value) {
+    if (value == null || value.isEmpty) return const [];
+    return value
+        .split(',')
+        .map((item) => item.trim())
+        .where((item) => item.isNotEmpty)
+        .toList();
+  }
+
   /// Extracts `- ` / `* ` bullet list items from a section's raw text.
   static List<String> extractBulletItems(String sectionText) {
     return sectionText

@@ -36,8 +36,11 @@ class ArticlesRepository {
       if (segments.length < 3) continue;
       final categoryFolder = segments[1];
 
+      final fileName = segments.last;
+      final slug = fileName.substring(0, fileName.length - '.md'.length);
+
       final raw = await rootBundle.loadString(assetPath);
-      final article = _parseArticle(raw);
+      final article = _parseArticle(raw, slug);
       if (article == null) continue;
 
       articlesByCategoryFolder.putIfAbsent(categoryFolder, () => []).add(article);
@@ -47,7 +50,7 @@ class ArticlesRepository {
     _loaded = true;
   }
 
-  static Article? _parseArticle(String raw) {
+  static Article? _parseArticle(String raw, String slug) {
     final doc = MarkdownArticleParser.parse(raw);
     final title = doc.field('title');
     final category = doc.field('category');
@@ -60,6 +63,8 @@ class ArticlesRepository {
       content: doc.section('main content'),
       benefits: MarkdownArticleParser.extractBulletItems(doc.section('benefits')),
       sources: MarkdownArticleParser.extractBulletItems(doc.section('sources')),
+      slug: slug,
+      relatedSlugs: MarkdownArticleParser.splitList(doc.field('related_articles')),
       subcategory: doc.field('subcategory'),
       author: doc.field('author'),
       lastUpdated: doc.field('last_updated'),
@@ -78,5 +83,49 @@ class ArticlesRepository {
     return _articlesByCategoryFolder.values
         .expand((articles) => articles)
         .toList();
+  }
+
+  /// Returns up to [limit] articles related to [article].
+  ///
+  /// Manually-listed `related_articles` slugs are returned first (in the
+  /// order given), followed by automatic suggestions: other articles
+  /// sharing the same subcategory, then the same category. The current
+  /// article is always excluded.
+  List<Article> getRelatedArticles(Article article, {int limit = 3}) {
+    final all = getAllArticles();
+    final related = <Article>[];
+    final seenSlugs = <String>{article.slug};
+
+    for (final slug in article.relatedSlugs) {
+      if (related.length >= limit) break;
+      for (final candidate in all) {
+        if (candidate.slug == slug && seenSlugs.add(candidate.slug)) {
+          related.add(candidate);
+          break;
+        }
+      }
+    }
+
+    if (article.subcategory != null) {
+      for (final candidate in all) {
+        if (related.length >= limit) break;
+        if (seenSlugs.contains(candidate.slug)) continue;
+        if (candidate.subcategory == article.subcategory) {
+          related.add(candidate);
+          seenSlugs.add(candidate.slug);
+        }
+      }
+    }
+
+    for (final candidate in all) {
+      if (related.length >= limit) break;
+      if (seenSlugs.contains(candidate.slug)) continue;
+      if (candidate.category == article.category) {
+        related.add(candidate);
+        seenSlugs.add(candidate.slug);
+      }
+    }
+
+    return related;
   }
 }

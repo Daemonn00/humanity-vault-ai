@@ -136,8 +136,10 @@ class HomeScreen extends StatelessWidget {
             icon: Icons.warning_amber,
             title: 'Emergency Mode',
             subtitle: 'Quick access to critical survival information',
-            iconBackgroundColor: AppColors.emergencySecondary,
+            iconBackgroundColor: Colors.white,
             iconColor: AppColors.emergencyPrimary,
+            backgroundColor: AppColors.emergencySecondary,
+            borderColor: AppColors.emergencyPrimary,
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(

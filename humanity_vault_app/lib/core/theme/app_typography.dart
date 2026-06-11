@@ -30,11 +30,13 @@ class AppTypography {
       color: AppColors.textPrimary,
     ),
     bodyLarge: TextStyle(
-      height: 1.5,
+      fontSize: 18,
+      height: 1.6,
       color: AppColors.textPrimary,
     ),
     bodyMedium: TextStyle(
-      height: 1.5,
+      fontSize: 16,
+      height: 1.6,
       color: AppColors.textPrimary,
     ),
     labelSmall: TextStyle(

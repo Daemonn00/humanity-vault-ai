@@ -13,6 +13,8 @@ class ActionCard extends StatelessWidget {
     required this.iconBackgroundColor,
     required this.iconColor,
     required this.onTap,
+    this.backgroundColor,
+    this.borderColor,
   });
 
   final IconData icon;
@@ -22,9 +24,24 @@ class ActionCard extends StatelessWidget {
   final Color iconColor;
   final VoidCallback onTap;
 
+  /// Optional card background color, used to make this action visually
+  /// stand apart from regular navigation entries (e.g. Emergency Mode).
+  final Color? backgroundColor;
+
+  /// Optional card border color, paired with [backgroundColor] for a
+  /// high-visibility entry point.
+  final Color? borderColor;
+
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: backgroundColor,
+      shape: borderColor == null
+          ? null
+          : RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+              side: BorderSide(color: borderColor!, width: 1.5),
+            ),
       child: InkWell(
         borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
         onTap: onTap,

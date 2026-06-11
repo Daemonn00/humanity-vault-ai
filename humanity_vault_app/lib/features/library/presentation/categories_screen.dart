@@ -17,11 +17,15 @@ class CategoriesScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Browse Categories'),
       ),
-      body: ListView.separated(
+      body: GridView.builder(
         padding: const EdgeInsets.all(AppSpacing.screenPadding),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: AppSpacing.md,
+          crossAxisSpacing: AppSpacing.md,
+          childAspectRatio: 1.2,
+        ),
         itemCount: categories.length,
-        separatorBuilder: (context, index) =>
-            const SizedBox(height: AppSpacing.sm),
         itemBuilder: (context, index) {
           final category = categories[index];
           return CategoryCard(

@@ -77,7 +77,9 @@ class EmergencyCategoryScreen extends StatelessWidget {
                 children: [
                   for (final article in relatedArticles)
                     ListTile(
-                      contentPadding: EdgeInsets.zero,
+                      contentPadding: const EdgeInsets.symmetric(
+                        vertical: AppSpacing.xs,
+                      ),
                       title: Text(article.title),
                       subtitle: Text(article.category),
                       trailing: const Icon(Icons.chevron_right),

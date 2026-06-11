@@ -31,10 +31,11 @@ class AppTheme {
         elevation: 0,
         color: AppColors.surface,
         surfaceTintColor: Colors.transparent,
+        shadowColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
           side: BorderSide(
-            color: colorScheme.outlineVariant.withValues(alpha: 0.4),
+            color: colorScheme.outlineVariant.withValues(alpha: 0.6),
           ),
         ),
       ),

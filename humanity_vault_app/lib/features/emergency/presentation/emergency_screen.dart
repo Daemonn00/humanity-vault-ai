@@ -24,13 +24,17 @@ class EmergencyScreen extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: AppSpacing.md,
           crossAxisSpacing: AppSpacing.md,
-          childAspectRatio: 1,
+          childAspectRatio: 1.3,
         ),
         itemCount: topics.length,
         itemBuilder: (context, index) {
           final topic = topics[index];
           return Card(
             color: AppColors.emergencySecondary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+              side: const BorderSide(color: AppColors.emergencyPrimary),
+            ),
             child: InkWell(
               borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
               onTap: () {
@@ -48,7 +52,7 @@ class EmergencyScreen extends StatelessWidget {
                   children: [
                     Icon(
                       topic.icon,
-                      size: 36,
+                      size: 44,
                       color: AppColors.emergencyPrimary,
                     ),
                     const SizedBox(height: AppSpacing.sm + AppSpacing.xs),

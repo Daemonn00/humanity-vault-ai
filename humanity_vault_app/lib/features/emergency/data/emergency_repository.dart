@@ -22,6 +22,12 @@ class EmergencyRepository {
         'Boiling does not remove chemical contaminants.',
         'Ration stored water until a reliable supply is confirmed.',
       ],
+      articleSlugs: [
+        'water_purification',
+        'recognizing_and_treating_dehydration',
+        'well_digging_and_safe_water_access',
+        'water_storage_and_long_term_water_safety',
+      ],
     ),
     EmergencyTopic(
       name: 'Fire',
@@ -36,6 +42,10 @@ class EmergencyRepository {
         'Never leave a fire unattended.',
         'Fully extinguish before leaving the area or sleeping.',
         'Use fire for warmth, cooking, water purification, and signaling.',
+      ],
+      articleSlugs: [
+        'fire_starting_without_matches',
+        'emergency_fire_safety',
       ],
     ),
     EmergencyTopic(
@@ -52,6 +62,11 @@ class EmergencyRepository {
         'Do not move someone with a suspected spinal injury unless necessary.',
         'Keep a basic first aid kit accessible at all times.',
       ],
+      articleSlugs: [
+        'basic_cpr',
+        'wound_care_and_bleeding_control',
+        'recognizing_and_treating_dehydration',
+      ],
     ),
     EmergencyTopic(
       name: 'Shelter',
@@ -66,6 +81,11 @@ class EmergencyRepository {
         'Protection from the elements is often more urgent than food.',
         'Avoid low ground prone to flooding or cold air pooling.',
         'Reinforce shelter before nightfall or worsening weather.',
+      ],
+      articleSlugs: [
+        'basic_shelter_construction',
+        'simple_structural_building_techniques',
+        'basic_hand_tools_and_their_uses',
       ],
     ),
     EmergencyTopic(
@@ -82,6 +102,12 @@ class EmergencyRepository {
         'Share your location and plans before separating from a group.',
         'Keep a written list of important contacts and frequencies.',
       ],
+      articleSlugs: [
+        'emergency_communications_basics',
+        'radio_communication_fundamentals',
+        'power_bank_survival_guide',
+        'emergency_phone_power_management',
+      ],
     ),
     EmergencyTopic(
       name: 'Food & Foraging',
@@ -97,6 +123,11 @@ class EmergencyRepository {
         'When in doubt, do without - misidentification can be fatal.',
         'Prioritize calorie-dense, easy-to-store foods.',
       ],
+      articleSlugs: [
+        'growing_staple_food_crops',
+        'seed_saving_basics',
+        'food_preservation_basics',
+      ],
     ),
     EmergencyTopic(
       name: 'Security & Defense',
@@ -111,6 +142,11 @@ class EmergencyRepository {
         'Awareness and avoidance are the best forms of defense.',
         'Maintain a low profile to avoid attracting unwanted attention.',
         'Establish a watch rotation if traveling or sheltering in a group.',
+      ],
+      articleSlugs: [
+        'foundational_ethics_and_decision_making_under_scarcity',
+        'critical_thinking_and_evaluating_information',
+        'lessons_from_historical_civilization_collapse_and_recovery',
       ],
     ),
   ];

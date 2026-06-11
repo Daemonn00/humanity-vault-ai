@@ -7,6 +7,7 @@ class EmergencyTopic {
     required this.icon,
     required this.steps,
     required this.reminders,
+    this.articleSlugs = const [],
   });
 
   /// Display name shown to the user.
@@ -20,4 +21,7 @@ class EmergencyTopic {
 
   /// Key reminders to keep in mind for this topic.
   final List<String> reminders;
+
+  /// Slugs of knowledge library articles related to this topic.
+  final List<String> articleSlugs;
 }

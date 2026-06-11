@@ -4,6 +4,9 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../shared/widgets/bullet_list.dart';
 import '../../../shared/widgets/section_card.dart';
+import '../../library/data/articles_repository.dart';
+import '../../library/models/article.dart';
+import '../../library/presentation/article_detail_screen.dart';
 import '../models/emergency_topic.dart';
 
 /// Displays guidance for a single emergency preparedness topic.
@@ -14,6 +17,15 @@ class EmergencyCategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final articlesBySlug = {
+      for (final article in ArticlesRepository().getAllArticles())
+        article.slug: article,
+    };
+    final relatedArticles = topic.articleSlugs
+        .map((slug) => articlesBySlug[slug])
+        .whereType<Article>()
+        .toList();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(topic.name),
@@ -56,6 +68,32 @@ class EmergencyCategoryScreen extends StatelessWidget {
             title: 'Key Reminders',
             child: BulletList(items: topic.reminders),
           ),
+          if (relatedArticles.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.md),
+            SectionCard(
+              icon: Icons.menu_book_outlined,
+              title: 'Learn More',
+              child: Column(
+                children: [
+                  for (final article in relatedArticles)
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(article.title),
+                      subtitle: Text(article.category),
+                      trailing: const Icon(Icons.chevron_right),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ArticleDetailScreen(article: article),
+                          ),
+                        );
+                      },
+                    ),
+                ],
+              ),
+            ),
+          ],
         ],
       ),
     );

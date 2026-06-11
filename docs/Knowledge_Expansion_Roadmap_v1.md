@@ -124,7 +124,7 @@ ethical, and culturally continuous over time.
   Foundational knowledge for making/maintaining all other tools and
   structures without powered equipment.
 - **Simple Structural Building Techniques** (timber framing/log
-  construction)
+  construction) `[EXISTS]`
   Enables durable shelter and community buildings beyond emergency
   lean-tos.
 
@@ -526,3 +526,28 @@ match).
 
 Top 25 is now 25/25 complete (100%). All 11 categories now contain at
 least one article, with Local Wisdom opened for the first time.
+
+### Sprint 8 (2026-06-11)
+
+Correction: the Sprint 7 entry above reported the Top 25 roadmap as
+complete, but the Construction item "Simple Structural Building
+Techniques" had not yet been authored and was not marked `[EXISTS]`.
+Sprint 8 closes this final gap:
+
+- **Simple Structural Building Techniques**
+  (`knowledge/construction/simple_structural_building_techniques.md`) -
+  fulfills the final Top 25 Construction item (timber framing, log
+  construction, post-and-beam joints, foundations, roof framing)
+
+Related Knowledge link added: Simple Structural Building Techniques
+<-> Basic Shelter Construction (reciprocal). Basic Hand Tools and
+Their Uses was already at its 3-link cap, so the link to Simple
+Structural Building Techniques is one-way.
+
+Top 25 is now genuinely 25/25 complete (100%).
+
+Sprint 8 also connects **Emergency Mode** to the knowledge library:
+each of the 7 Emergency Mode topics (Water, Fire, Medical, Shelter,
+Communication, Food & Foraging, Security & Defense) now links to 2-4
+curated articles, surfaced as a "Learn More" section on each
+Emergency topic screen.

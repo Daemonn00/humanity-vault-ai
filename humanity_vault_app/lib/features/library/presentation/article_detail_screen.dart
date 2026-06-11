@@ -17,80 +17,82 @@ class ArticleDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final relatedArticles =
-        ArticlesRepository().getRelatedArticles(article);
+    final relatedArticles = ArticlesRepository().getRelatedArticles(article);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(article.title),
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(AppSpacing.screenPadding),
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(AppSpacing.lg),
-            decoration: BoxDecoration(
-              color: AppColors.primary,
-              borderRadius: BorderRadius.circular(AppSpacing.heroRadius),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  article.title,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: Colors.white,
-                      ),
+      appBar: AppBar(title: Text(article.title)),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 680),
+          child: ListView(
+            padding: const EdgeInsets.all(AppSpacing.screenPadding),
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(AppSpacing.lg),
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(AppSpacing.heroRadius),
                 ),
-                const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
-                Chip(
-                  label: Text(article.category),
-                  backgroundColor: AppColors.accent,
-                  labelStyle: const TextStyle(color: AppColors.textPrimary),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      article.title,
+                      style: Theme.of(
+                        context,
+                      ).textTheme.headlineSmall?.copyWith(color: Colors.white),
+                    ),
+                    const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
+                    Chip(
+                      label: Text(article.category),
+                      backgroundColor: AppColors.accent,
+                      labelStyle: const TextStyle(color: AppColors.textPrimary),
+                    ),
+                  ],
+                ),
+              ),
+              ArticleMetadataBar(article: article),
+              const SizedBox(height: AppSpacing.md),
+              SectionCard(
+                icon: Icons.summarize_outlined,
+                title: 'Summary',
+                child: Text(article.summary),
+              ),
+              const SizedBox(height: AppSpacing.md),
+              SectionCard(
+                icon: Icons.menu_book_outlined,
+                title: 'Main Content',
+                child: Text(article.content),
+              ),
+              const SizedBox(height: AppSpacing.md),
+              SectionCard(
+                icon: Icons.check_circle_outline,
+                title: 'Benefits',
+                child: BulletList(items: article.benefits),
+              ),
+              const SizedBox(height: AppSpacing.md),
+              SectionCard(
+                icon: Icons.fact_check_outlined,
+                title: 'Sources',
+                child: BulletList(items: article.sources),
+              ),
+              if (relatedArticles.isNotEmpty) ...[
+                const SizedBox(height: AppSpacing.md),
+                SectionCard(
+                  icon: Icons.link,
+                  title: 'Related Knowledge',
+                  child: Column(
+                    children: [
+                      for (final related in relatedArticles)
+                        RelatedArticleTile(article: related),
+                    ],
+                  ),
                 ),
               ],
-            ),
+            ],
           ),
-          ArticleMetadataBar(article: article),
-          const SizedBox(height: AppSpacing.md),
-          SectionCard(
-            icon: Icons.summarize_outlined,
-            title: 'Summary',
-            child: Text(article.summary),
-          ),
-          const SizedBox(height: AppSpacing.md),
-          SectionCard(
-            icon: Icons.menu_book_outlined,
-            title: 'Main Content',
-            child: Text(article.content),
-          ),
-          const SizedBox(height: AppSpacing.md),
-          SectionCard(
-            icon: Icons.check_circle_outline,
-            title: 'Benefits',
-            child: BulletList(items: article.benefits),
-          ),
-          const SizedBox(height: AppSpacing.md),
-          SectionCard(
-            icon: Icons.fact_check_outlined,
-            title: 'Sources',
-            child: BulletList(items: article.sources),
-          ),
-          if (relatedArticles.isNotEmpty) ...[
-            const SizedBox(height: AppSpacing.md),
-            SectionCard(
-              icon: Icons.link,
-              title: 'Related Knowledge',
-              child: Column(
-                children: [
-                  for (final related in relatedArticles)
-                    RelatedArticleTile(article: related),
-                ],
-              ),
-            ),
-          ],
-        ],
+        ),
       ),
     );
   }

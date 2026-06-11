@@ -35,7 +35,7 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
           side: BorderSide(
-            color: colorScheme.outlineVariant.withValues(alpha: 0.6),
+            color: colorScheme.outline.withValues(alpha: 0.5),
           ),
         ),
       ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
+import '../../../shared/widgets/article_metadata_bar.dart';
 import '../../../shared/widgets/bullet_list.dart';
 import '../../../shared/widgets/section_card.dart';
 import '../models/article.dart';
@@ -46,6 +47,7 @@ class ArticleDetailScreen extends StatelessWidget {
               ],
             ),
           ),
+          ArticleMetadataBar(article: article),
           const SizedBox(height: AppSpacing.md),
           SectionCard(
             icon: Icons.summarize_outlined,

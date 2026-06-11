@@ -44,4 +44,20 @@ class AppColors {
   static const Color philosophy = Color(0xFF6E5A8A);
   static const Color islam = Color(0xFF2F7A5F);
   static const Color localWisdom = Color(0xFF8C6A4A);
+
+  // ---------------------------------------------------------------------
+  // Verification level badge colors
+  // ---------------------------------------------------------------------
+
+  /// "Verified Source" badge color.
+  static const Color verificationVerified = Color(0xFF4E7A4F);
+
+  /// "Community Verified" badge color.
+  static const Color verificationCommunity = Color(0xFF4D6B8C);
+
+  /// "Historical Source" badge color.
+  static const Color verificationHistorical = Color(0xFF8A6B47);
+
+  /// "Unverified" badge color.
+  static const Color verificationUnverified = Color(0xFF8A8A8A);
 }

@@ -130,12 +130,13 @@ ethical, and culturally continuous over time.
 
 ### Electronics (+2 new)
 
-- **Basic Circuits & Battery Power**
+- **Basic Circuits & Battery Power** `[EXISTS]`
   Understanding current/voltage/batteries enables repair and reuse of
   salvaged electronics - a multiplier skill.
-- **Building Simple Radios / Communication Devices**
+- **Building Simple Radios / Communication Devices** `[EXISTS]`
   Long-range communication is critical for coordination, warnings, and
   reconnecting isolated communities.
+  (Implemented as "Radio Communication Fundamentals", Sprint 2.)
 
 ### Engineering (+3 new)
 
@@ -145,7 +146,7 @@ ethical, and culturally continuous over time.
 - **Basic Mechanics for Tool & Equipment Repair** `[EXISTS]`
   Keeping existing tools/vehicles/pumps functional extends the life of
   scarce manufactured goods.
-- **Water Wheel & Wind Power Basics**
+- **Water Wheel & Wind Power Basics** `[EXISTS]`
   Renewable mechanical/electrical power without fuel supply chains -
   key for long-term self-sufficiency.
 
@@ -163,7 +164,7 @@ ethical, and culturally continuous over time.
 - **Foundational Ethics & Decision-Making Under Scarcity** `[EXISTS]`
   Guides hard choices (resource allocation, triage) with consistency
   and fairness when formal institutions are absent.
-- **Critical Thinking & Evaluating Information**
+- **Critical Thinking & Evaluating Information** `[EXISTS]`
   Protects against misinformation and poor decisions when no
   fact-checking infrastructure exists.
 
@@ -176,7 +177,7 @@ ethical, and culturally continuous over time.
 
 ### Local Wisdom (+1 new)
 
-- **Traditional Weather Prediction & Seasonal Indicators**
+- **Traditional Weather Prediction & Seasonal Indicators** `[EXISTS]`
   Low-tech forecasting (cloud/animal/plant signs) supports planting,
   travel, and shelter decisions without instruments.
 
@@ -493,3 +494,35 @@ now each have content; remaining Top 25 gaps: Engineering (Water
 Wheel & Wind Power Basics), Electronics (Basic Circuits & Battery
 Power), Philosophy (Critical Thinking & Evaluating Information), and
 Local Wisdom (Traditional Weather Prediction & Seasonal Indicators).
+
+### Sprint 7 (2026-06-11)
+
+Four articles authored, completing the **Top 25 roadmap (25/25,
+100%)** and opening the **Local Wisdom** category for the first time
+(no new code/category changes required - all folders were already
+registered):
+
+- **Traditional Weather Prediction and Seasonal Indicators**
+  (`knowledge/local_wisdom/traditional_weather_prediction_and_seasonal_indicators.md`) -
+  fulfills Top 25 Local Wisdom item, first Local Wisdom article
+- **Critical Thinking and Evaluating Information**
+  (`knowledge/philosophy/critical_thinking_and_evaluating_information.md`) -
+  fulfills Top 25 Philosophy item
+- **Water Wheel and Wind Power Basics**
+  (`knowledge/engineering/water_wheel_and_wind_power_basics.md`) -
+  fulfills Top 25 Engineering item, completes Engineering's Top 25 set (3 of 3)
+- **Basic Circuits and Battery Power**
+  (`knowledge/electronics/basic_circuits_and_battery_power.md`) -
+  fulfills Top 25 Electronics item, opens Electronics Top 25 progress
+
+Related Knowledge links added: Traditional Weather Prediction <->
+Growing Staple Food Crops, Traditional Weather Prediction <-> Basic
+Navigation, Critical Thinking <-> Foundational Ethics, Critical
+Thinking <-> Lessons from Civilization Collapse, Water Wheel & Wind
+Power <-> Simple Machines, Water Wheel & Wind Power <-> Basic
+Mechanics, Basic Circuits & Battery Power <-> Power Bank Survival
+Guide / Emergency Phone Power Management (automatic same-subcategory
+match).
+
+Top 25 is now 25/25 complete (100%). All 11 categories now contain at
+least one article, with Local Wisdom opened for the first time.

@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Community Verified
-related_articles: seed_saving_basics
+related_articles: seed_saving_basics, traditional_weather_prediction_and_seasonal_indicators
 ---
 
 # Growing Staple Food Crops

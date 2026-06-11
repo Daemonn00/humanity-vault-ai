@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Community Verified
-related_articles: basic_shelter_construction, emergency_fire_safety
+related_articles: basic_shelter_construction, emergency_fire_safety, traditional_weather_prediction_and_seasonal_indicators
 ---
 
 # Basic Navigation Without GPS or Compass

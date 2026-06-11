@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 2
 verification_level: Community Verified
-related_articles: simple_machines, basic_hand_tools_and_their_uses
+related_articles: simple_machines, basic_hand_tools_and_their_uses, water_wheel_and_wind_power_basics
 ---
 
 # Basic Mechanics for Tool and Equipment Repair

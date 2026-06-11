@@ -7,7 +7,7 @@ created_date: 2026-06-11
 last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Historical Source
-related_articles: foundational_ethics_and_decision_making_under_scarcity, how_writing_and_numeracy_systems_work
+related_articles: foundational_ethics_and_decision_making_under_scarcity, how_writing_and_numeracy_systems_work, critical_thinking_and_evaluating_information
 ---
 
 # Lessons from Historical Civilization Collapse and Recovery

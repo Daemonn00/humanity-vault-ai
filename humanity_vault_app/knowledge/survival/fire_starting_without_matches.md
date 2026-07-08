@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Community Verified
 related_articles: emergency_fire_safety
+terrain: tropical_rainforest, desert
 ---
 
 # Fire Starting Without Matches

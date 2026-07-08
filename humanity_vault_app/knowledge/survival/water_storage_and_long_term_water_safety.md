@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Verified Source
 related_articles: water_purification, recognizing_and_treating_dehydration, well_digging_and_safe_water_access
+terrain: desert, coastal, urban
 ---
 
 # Water Storage and Long-Term Water Safety

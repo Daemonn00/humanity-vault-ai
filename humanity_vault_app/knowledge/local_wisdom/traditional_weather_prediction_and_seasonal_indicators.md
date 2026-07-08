@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Historical Source
 related_articles: growing_staple_food_crops, basic_navigation_without_gps_or_compass
+terrain: tropical_rainforest, desert, coastal
 ---
 
 # Traditional Weather Prediction and Seasonal Indicators

@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 2
 verification_level: Community Verified
 related_articles: basic_shelter_construction, basic_hand_tools_and_their_uses
+terrain: tropical_rainforest, desert
 ---
 
 # Simple Structural Building Techniques

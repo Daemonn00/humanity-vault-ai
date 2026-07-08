@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 2
 verification_level: Verified Source
 related_articles: simple_machines, basic_mechanics_for_tool_and_equipment_repair
+terrain: tropical_rainforest, coastal
 ---
 
 # Water Wheel and Wind Power Basics

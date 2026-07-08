@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 2
 verification_level: Community Verified
 related_articles: water_purification, water_storage_and_long_term_water_safety, sanitation_hygiene_and_disease_prevention
+terrain: desert, coastal
 ---
 
 # Well Digging and Safe Water Access

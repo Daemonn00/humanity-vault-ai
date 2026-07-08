@@ -8,6 +8,7 @@ last_updated: 2026-06-11
 knowledge_level: Level 1
 verification_level: Verified Source
 related_articles: basic_hand_tools_and_their_uses, basic_navigation_without_gps_or_compass, simple_structural_building_techniques
+terrain: tropical_rainforest, desert, coastal
 ---
 
 # Basic Shelter Construction

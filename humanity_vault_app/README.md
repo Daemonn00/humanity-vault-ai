@@ -6,8 +6,10 @@ No internet connection, database, or AI is required to use it.
 
 ## Status: Alpha 2.0 UI Freeze - verified
 
-- 41 articles across all 11 categories
-- Verified quality: `flutter analyze` clean, `flutter test` 14/14 passing
+- 31 real knowledge articles across all 11 categories (`knowledge/`
+  contains 41 Markdown files in total, but 10 are per-category
+  `README.md` placeholders excluded from the app's article count)
+- Verified quality: `flutter analyze` clean, `flutter test` passing
 - Latest verified commit: `639363b`
 
 ## Capabilities

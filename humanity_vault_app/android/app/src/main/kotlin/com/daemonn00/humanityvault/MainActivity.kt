@@ -1,4 +1,4 @@
-package com.example.humanity_vault_app
+package com.daemonn00.humanityvault
 
 import io.flutter.embedding.android.FlutterActivity
 

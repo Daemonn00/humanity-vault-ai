@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.humanity_vault_app"
+    namespace = "com.daemonn00.humanityvault"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -15,8 +15,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.humanity_vault_app"
+        applicationId = "com.daemonn00.humanityvault"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

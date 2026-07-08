@@ -4,8 +4,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:humanity_vault_app/features/library/data/articles_repository.dart';
+import 'package:humanity_vault_app/features/library/data/categories_repository.dart';
 import 'package:humanity_vault_app/features/library/presentation/article_list_screen.dart';
 import 'package:humanity_vault_app/features/library/presentation/categories_screen.dart';
+import 'package:humanity_vault_app/shared/widgets/category_card.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -43,6 +45,47 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(ArticleListScreen), findsOneWidget);
+  });
+
+  testWidgets(
+      'shows real article counts and 01-11 index markers, without chevrons',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(1080, 3000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: CategoriesScreen()));
+    await tester.pumpAndSettle();
+
+    final categories = CategoriesRepository().getCategories();
+    for (var i = 0; i < categories.length; i++) {
+      final category = categories[i];
+      final card = find.ancestor(
+        of: find.text(category.name),
+        matching: find.byType(CategoryCard),
+      );
+
+      final count =
+          ArticlesRepository().getArticles(category.folderName).length;
+      final countLabel = count == 1 ? '1 article' : '$count articles';
+      expect(
+        find.descendant(of: card, matching: find.text(countLabel)),
+        findsOneWidget,
+        reason: '${category.name} should show its real article count',
+      );
+
+      final indexLabel = (i + 1).toString().padLeft(2, '0');
+      expect(
+        find.descendant(of: card, matching: find.text(indexLabel)),
+        findsOneWidget,
+        reason: '${category.name} should carry index marker $indexLabel',
+      );
+    }
+
+    expect(find.byIcon(Icons.chevron_right), findsNothing);
   });
 
   testWidgets(

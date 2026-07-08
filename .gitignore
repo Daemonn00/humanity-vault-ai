@@ -9,6 +9,9 @@ Thumbs.db
 *.ipr
 *.iws
 
+# Local AI tooling / session metadata
+.claude/
+
 # Logs
 *.log
 

@@ -4,11 +4,31 @@ The Flutter application for [Humanity Vault AI](../README.md) - an
 offline-first knowledge library for survival, recovery, and rebuilding.
 No internet connection, database, or AI is required to use it.
 
-## Status: Alpha 1.0
+## Status: Alpha 2.0 UI Freeze - verified
 
-- 31 articles across all 11 categories (Top 10 + Top 25 complete)
-- Browse Categories, Search, Article Detail, Related Knowledge, and
-  Emergency Mode are implemented and integrated
+- 41 articles across all 11 categories
+- Verified quality: `flutter analyze` clean, `flutter test` 14/14 passing
+- Latest verified commit: `639363b`
+
+## Capabilities
+
+- Offline-first local knowledge vault
+- Asset-based Markdown knowledge library
+- Local category and title search
+- Article detail pages
+- Emergency Mode with 7 emergency topics
+- Cross-referenced emergency articles
+- Alpha 2.0 tactile UI system
+- Narrow-phone overflow protection
+- No account required
+- No internet required for core knowledge access
+- AI optional and not yet implemented
+
+## Roadmap Status
+
+- Alpha 3.0: Terrain System - planned, not implemented
+- Alpha 4.0: Knowledge Packs - planned, not implemented
+- Alpha 5.0: Optional Offline AI Add-on - planned, not implemented
 
 ## Design Constraints
 

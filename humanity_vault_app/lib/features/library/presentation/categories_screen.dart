@@ -17,31 +17,34 @@ class CategoriesScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Browse Categories'),
       ),
-      body: GridView.builder(
-        padding: const EdgeInsets.all(AppSpacing.screenPadding),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: AppSpacing.md,
-          crossAxisSpacing: AppSpacing.md,
-          childAspectRatio: 1.2,
+      body: SafeArea(
+        top: false,
+        child: GridView.builder(
+          padding: const EdgeInsets.all(AppSpacing.screenPadding),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: AppSpacing.md,
+            crossAxisSpacing: AppSpacing.md,
+            childAspectRatio: 1.2,
+          ),
+          itemCount: categories.length,
+          itemBuilder: (context, index) {
+            final category = categories[index];
+            return CategoryCard(
+              icon: category.icon,
+              name: category.name,
+              color: category.color,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        ArticleListScreen(category: category),
+                  ),
+                );
+              },
+            );
+          },
         ),
-        itemCount: categories.length,
-        itemBuilder: (context, index) {
-          final category = categories[index];
-          return CategoryCard(
-            icon: category.icon,
-            name: category.name,
-            color: category.color,
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) =>
-                      ArticleListScreen(category: category),
-                ),
-              );
-            },
-          );
-        },
       ),
     );
   }

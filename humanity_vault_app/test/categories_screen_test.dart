@@ -44,4 +44,36 @@ void main() {
 
     expect(find.byType(ArticleListScreen), findsOneWidget);
   });
+
+  testWidgets(
+      'scrolls the final category fully above the Android system nav bar '
+      'on a narrow phone viewport', (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(375, 812);
+    tester.view.devicePixelRatio = 1.0;
+    // Simulate a typical Android 3-button navigation bar inset.
+    tester.view.padding = const FakeViewPadding(bottom: 48);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.view.resetPadding);
+
+    await tester.pumpWidget(const MaterialApp(home: CategoriesScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.drag(find.byType(GridView), const Offset(0, -2000));
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+    expect(find.text('Communication'), findsOneWidget);
+
+    final cardBottom = tester.getBottomLeft(find.text('Communication')).dy;
+    final safeVisibleBottom = 812 - 48;
+    expect(
+      cardBottom,
+      lessThan(safeVisibleBottom),
+      reason: 'The last category card must sit above the simulated system '
+          'navigation bar, with comfortable clearance, not just a few px.',
+    );
+  });
 }

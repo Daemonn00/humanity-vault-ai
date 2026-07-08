@@ -45,11 +45,13 @@ class CategoryCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
-              Text(
-                name,
-                style: Theme.of(context).textTheme.titleMedium,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+              Flexible(
+                child: Text(
+                  name,
+                  style: Theme.of(context).textTheme.titleMedium,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ],
           ),

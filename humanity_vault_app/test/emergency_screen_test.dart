@@ -42,4 +42,134 @@ void main() {
     expect(find.text('Learn More'), findsOneWidget);
     expect(find.text('Basic Shelter Construction'), findsOneWidget);
   });
+
+  testWidgets(
+      'no terrain selected preserves the baseline topic order',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(1080, 3000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: EmergencyScreen()));
+    await tester.pumpAndSettle();
+
+    final titleFinder = find.descendant(
+      of: find.byType(GridView),
+      matching: find.byType(Text),
+    );
+    final names = tester
+        .widgetList<Text>(titleFinder)
+        .map((widget) => widget.data!)
+        .toList();
+
+    expect(names, [
+      'Water',
+      'Fire',
+      'Medical',
+      'Shelter',
+      'Communication',
+      'Food & Foraging',
+      'Security & Defense',
+    ]);
+  });
+
+  testWidgets(
+      'selecting a terrain reorders topics and all remain visible/tappable',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(1080, 3000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: EmergencyScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.widgetWithText(ChoiceChip, 'Desert'));
+    await tester.pumpAndSettle();
+
+    final titleFinder = find.descendant(
+      of: find.byType(GridView),
+      matching: find.byType(Text),
+    );
+    final names = tester
+        .widgetList<Text>(titleFinder)
+        .map((widget) => widget.data!)
+        .toList();
+
+    // Desert's priority order starts with Water, Shelter - Water is
+    // already first, so Shelter moving to second position is the
+    // observable change from the baseline order.
+    expect(names.first, 'Water');
+    expect(names[1], 'Shelter');
+    expect(names.toSet(), {
+      'Water',
+      'Fire',
+      'Medical',
+      'Shelter',
+      'Communication',
+      'Food & Foraging',
+      'Security & Defense',
+    });
+
+    for (final name in names) {
+      expect(find.text(name), findsOneWidget);
+    }
+  });
+
+  testWidgets('tapping the selected chip again clears the selection',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(1080, 3000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: EmergencyScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.widgetWithText(ChoiceChip, 'Desert'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.widgetWithText(ChoiceChip, 'Desert'));
+    await tester.pumpAndSettle();
+
+    final titleFinder = find.descendant(
+      of: find.byType(GridView),
+      matching: find.byType(Text),
+    );
+    final names = tester
+        .widgetList<Text>(titleFinder)
+        .map((widget) => widget.data!)
+        .toList();
+
+    expect(names, [
+      'Water',
+      'Fire',
+      'Medical',
+      'Shelter',
+      'Communication',
+      'Food & Foraging',
+      'Security & Defense',
+    ]);
+  });
+
+  testWidgets('renders without overflow at a narrow 375x812 viewport',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(375, 812);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: EmergencyScreen()));
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+  });
 }

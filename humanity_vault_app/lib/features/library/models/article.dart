@@ -9,6 +9,7 @@ class Article {
     required this.sources,
     required this.slug,
     this.relatedSlugs = const [],
+    this.terrainIds = const [],
     this.subcategory,
     this.author,
     this.lastUpdated,
@@ -39,6 +40,10 @@ class Article {
 
   /// Slugs of articles manually marked as related via frontmatter.
   final List<String> relatedSlugs;
+
+  /// Terrain IDs this article is tagged with (see TerrainRegistry).
+  /// Empty when the article has no terrain affinity.
+  final List<String> terrainIds;
 
   /// Optional subcategory/topic within the category (e.g. "Water").
   final String? subcategory;

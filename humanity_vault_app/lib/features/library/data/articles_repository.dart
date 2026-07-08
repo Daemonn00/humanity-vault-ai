@@ -65,6 +65,7 @@ class ArticlesRepository {
       sources: MarkdownArticleParser.extractBulletItems(doc.section('sources')),
       slug: slug,
       relatedSlugs: MarkdownArticleParser.splitList(doc.field('related_articles')),
+      terrainIds: MarkdownArticleParser.splitList(doc.field('terrain')),
       subcategory: doc.field('subcategory'),
       author: doc.field('author'),
       lastUpdated: doc.field('last_updated'),

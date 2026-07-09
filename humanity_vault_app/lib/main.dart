@@ -15,7 +15,13 @@ import 'shared/widgets/action_card.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ArticlesRepository.ensureLoaded();
-  await PacksLoader.ensureLoaded();
+  // Defensive time bound on top of PacksLoader's own internal
+  // error-swallowing: pack loading must never delay app startup,
+  // regardless of platform or storage state.
+  await PacksLoader.ensureLoaded().timeout(
+    const Duration(seconds: 3),
+    onTimeout: () {},
+  );
   runApp(const HumanityVaultApp());
 }
 
@@ -53,9 +59,7 @@ class HomeScreen extends StatelessWidget {
             tooltip: 'About',
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const AboutScreen(),
-                ),
+                MaterialPageRoute(builder: (context) => const AboutScreen()),
               );
             },
           ),
@@ -74,31 +78,27 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(
-                  Icons.eco,
-                  size: 40,
-                  color: Colors.white,
-                ),
+                const Icon(Icons.eco, size: 40, color: Colors.white),
                 const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
                 Text(
                   'Humanity Vault',
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: Colors.white,
-                      ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.headlineMedium?.copyWith(color: Colors.white),
                 ),
                 const SizedBox(height: AppSpacing.xs),
                 Text(
                   'Knowledge for survival, recovery, and rebuilding.',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: AppColors.background,
-                      ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyLarge?.copyWith(color: AppColors.background),
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 Text(
                   '${categories.length} categories · $articleCount articles',
-                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                        color: AppColors.background,
-                      ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.labelSmall?.copyWith(color: AppColors.background),
                 ),
               ],
             ),
@@ -127,9 +127,7 @@ class HomeScreen extends StatelessWidget {
             iconColor: AppColors.primary,
             onTap: () {
               Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const SearchScreen(),
-                ),
+                MaterialPageRoute(builder: (context) => const SearchScreen()),
               );
             },
           ),

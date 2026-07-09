@@ -34,6 +34,8 @@ void main() {
       find.textContaining('11 categories · 31 articles'),
       findsOneWidget,
     );
+    expect(find.text('Knowledge Packs'), findsOneWidget);
+    expect(find.text('Import Knowledge Pack'), findsOneWidget);
   });
 
   testWidgets('is reachable from the Home screen app bar', (tester) async {

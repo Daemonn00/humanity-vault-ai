@@ -1,19 +1,43 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 import '../../library/data/articles_repository.dart';
+import '../../library/data/categories_repository.dart';
 import '../../library/data/markdown_article_parser.dart';
 import '../../library/models/article.dart';
 import '../../terrain/data/terrain_registry.dart';
 import '../models/pack_manifest.dart';
 import 'pack_storage.dart';
 
+/// The outcome of parsing one pack's article files.
+class PackParseResult {
+  const PackParseResult({
+    required this.articlesByCategoryFolder,
+    required this.acceptedCount,
+    required this.skippedCount,
+  });
+
+  /// Accepted articles, grouped by the existing category folder they
+  /// should merge into.
+  final Map<String, List<Article>> articlesByCategoryFolder;
+
+  /// Number of articles that parsed and validated successfully.
+  final int acceptedCount;
+
+  /// Number of article files that were skipped (malformed, unknown
+  /// category, or a duplicate slug).
+  final int skippedCount;
+}
+
 /// Loads already-installed Knowledge Packs and merges their articles
 /// into ArticlesRepository, after the core bundled articles have
 /// loaded.
 ///
 /// This is a foundation-only loader: it discovers and reads packs that
-/// already exist on disk. It does not import, download, or unzip
-/// anything - that is a separate, not-yet-built feature.
+/// already exist on disk. Importing a new pack (ZIP selection,
+/// extraction, validation, and committing to permanent storage) is a
+/// separate concern - see PackImporter.
 class PacksLoader {
   PacksLoader._();
 
@@ -25,6 +49,11 @@ class PacksLoader {
   /// caught and skipped so the core bundled articles are always usable
   /// regardless of pack state.
   static Future<void> ensureLoaded() async {
+    // Knowledge Packs are local-filesystem storage, an Android-focused
+    // concept - dart:io/path_provider do not behave the same way in a
+    // browser, so there is nothing to scan on web.
+    if (kIsWeb) return;
+
     try {
       await PackStorage.clearStaleStagingDirectory();
       await PackStorage.ensurePacksDirectoryExists();
@@ -41,19 +70,39 @@ class PacksLoader {
   /// temp directory, with no path_provider involved.
   ///
   /// Packs are processed in sorted folder-name order, and articles
-  /// within a pack in sorted file-name order, so that duplicate-slug
+  /// within a pack in sorted file-path order, so that duplicate-slug
   /// skipping is deterministic: the first occurrence encountered wins.
   static Future<void> loadPacksFrom(Directory packsDir) async {
     try {
       final packDirs = await PackStorage.listPackDirectoriesIn(packsDir);
-      final validTerrainIds =
-          TerrainRegistry.terrains.map((terrain) => terrain.id).toSet();
-      final knownSlugs =
-          ArticlesRepository().getAllArticles().map((a) => a.slug).toSet();
+      final validTerrainIds = TerrainRegistry.terrains
+          .map((terrain) => terrain.id)
+          .toSet();
+      final knownSlugs = ArticlesRepository()
+          .getAllArticles()
+          .map((a) => a.slug)
+          .toSet();
 
       for (final packDir in packDirs) {
         try {
-          await _loadPack(packDir, validTerrainIds, knownSlugs);
+          final manifestFile = File('${packDir.path}/$_manifestFileName');
+          if (!await manifestFile.exists()) continue;
+
+          final manifest = PackManifest.tryParse(
+            await manifestFile.readAsString(),
+          );
+          if (manifest == null) continue;
+
+          final result = await parsePackContents(
+            packDir,
+            validTerrainIds,
+            knownSlugs,
+          );
+          if (result.acceptedCount > 0) {
+            ArticlesRepository.mergeAdditionalArticles(
+              result.articlesByCategoryFolder,
+            );
+          }
         } catch (_) {
           // One broken pack must never block another valid pack.
           continue;
@@ -64,51 +113,86 @@ class PacksLoader {
     }
   }
 
-  static Future<void> _loadPack(
+  /// Parses every `.md` article file found anywhere under [packDir]
+  /// (the root `manifest.md` is ignored here - callers handle the
+  /// manifest separately), so articles may sit at the pack root or in
+  /// any subfolder.
+  ///
+  /// An article's target category folder is resolved from its own
+  /// `category:` frontmatter field (matched against the existing,
+  /// already-loaded category names) - not from its file location.
+  /// Malformed articles, articles whose category doesn't match an
+  /// existing category, and slugs already present in [knownSlugs] are
+  /// skipped; invalid terrain IDs are stripped while the article is
+  /// kept. [knownSlugs] is mutated in place with every newly-accepted
+  /// slug, so sequential calls across multiple packs stay deduplicated
+  /// against each other.
+  static Future<PackParseResult> parsePackContents(
     Directory packDir,
     Set<String> validTerrainIds,
     Set<String> knownSlugs,
   ) async {
-    final manifestFile = File('${packDir.path}/$_manifestFileName');
-    if (!await manifestFile.exists()) return;
+    final categoryFolderByDisplayName = {
+      for (final category in CategoriesRepository().getCategories())
+        category.name: category.folderName,
+    };
 
-    final manifest = PackManifest.tryParse(await manifestFile.readAsString());
-    if (manifest == null) return;
+    final articleFiles =
+        (await packDir.list(recursive: true).toList())
+            .whereType<File>()
+            .where(
+              (file) =>
+                  file.path.endsWith('.md') &&
+                  _relativePath(packDir, file) != _manifestFileName,
+            )
+            .toList()
+          ..sort((a, b) => a.path.compareTo(b.path));
 
     final articlesByCategoryFolder = <String, List<Article>>{};
+    var accepted = 0;
+    var skipped = 0;
 
-    final categoryDirs = (await packDir.list().toList())
-        .whereType<Directory>()
-        .toList()
-      ..sort((a, b) => a.path.compareTo(b.path));
-
-    for (final categoryDir in categoryDirs) {
-      final folderName = categoryDir.uri.pathSegments
-          .where((segment) => segment.isNotEmpty)
-          .last;
-      if (!ArticlesRepository.isKnownCategoryFolder(folderName)) continue;
-
-      final articleFiles = (await categoryDir.list().toList())
-          .whereType<File>()
-          .where((file) => file.path.endsWith('.md'))
-          .toList()
-        ..sort((a, b) => a.path.compareTo(b.path));
-
-      for (final articleFile in articleFiles) {
-        final article = await _tryParseArticle(articleFile, validTerrainIds);
-        if (article == null) continue;
-        if (knownSlugs.contains(article.slug)) continue;
-
-        knownSlugs.add(article.slug);
-        articlesByCategoryFolder
-            .putIfAbsent(folderName, () => [])
-            .add(article);
+    for (final articleFile in articleFiles) {
+      final article = await _tryParseArticle(articleFile, validTerrainIds);
+      if (article == null) {
+        skipped++;
+        continue;
       }
+
+      final folderName = categoryFolderByDisplayName[article.category];
+      if (folderName == null ||
+          !ArticlesRepository.isKnownCategoryFolder(folderName)) {
+        skipped++;
+        continue;
+      }
+      if (knownSlugs.contains(article.slug)) {
+        skipped++;
+        continue;
+      }
+
+      knownSlugs.add(article.slug);
+      articlesByCategoryFolder.putIfAbsent(folderName, () => []).add(article);
+      accepted++;
     }
 
-    if (articlesByCategoryFolder.isNotEmpty) {
-      ArticlesRepository.mergeAdditionalArticles(articlesByCategoryFolder);
+    return PackParseResult(
+      articlesByCategoryFolder: articlesByCategoryFolder,
+      acceptedCount: accepted,
+      skippedCount: skipped,
+    );
+  }
+
+  /// [file]'s path relative to [root], with separators normalized to
+  /// `/` regardless of platform - so a plain string comparison against
+  /// e.g. `'manifest.md'` works the same on Windows (which returns
+  /// backslash-separated paths from directory listings) as it does
+  /// elsewhere.
+  static String _relativePath(Directory root, File file) {
+    var relative = file.path;
+    if (relative.startsWith(root.path)) {
+      relative = relative.substring(root.path.length);
     }
+    return relative.replaceAll('\\', '/').replaceFirst(RegExp(r'^/+'), '');
   }
 
   static Future<Article?> _tryParseArticle(
@@ -117,8 +201,9 @@ class PacksLoader {
   ) async {
     try {
       final raw = await file.readAsString();
-      final fileName =
-          file.uri.pathSegments.where((segment) => segment.isNotEmpty).last;
+      final fileName = file.uri.pathSegments
+          .where((segment) => segment.isNotEmpty)
+          .last;
       final slug = fileName.substring(0, fileName.length - '.md'.length);
 
       final doc = MarkdownArticleParser.parse(raw);
@@ -126,22 +211,25 @@ class PacksLoader {
       final category = doc.field('category');
       if (title == null || category == null) return null;
 
-      final terrainIds = MarkdownArticleParser.splitList(doc.field('terrain'))
-          .where(validTerrainIds.contains)
-          .toList();
+      final terrainIds = MarkdownArticleParser.splitList(
+        doc.field('terrain'),
+      ).where(validTerrainIds.contains).toList();
 
       return Article(
         title: title,
         category: category,
         summary: doc.section('summary'),
         content: doc.section('main content'),
-        benefits:
-            MarkdownArticleParser.extractBulletItems(doc.section('benefits')),
-        sources:
-            MarkdownArticleParser.extractBulletItems(doc.section('sources')),
+        benefits: MarkdownArticleParser.extractBulletItems(
+          doc.section('benefits'),
+        ),
+        sources: MarkdownArticleParser.extractBulletItems(
+          doc.section('sources'),
+        ),
         slug: slug,
-        relatedSlugs:
-            MarkdownArticleParser.splitList(doc.field('related_articles')),
+        relatedSlugs: MarkdownArticleParser.splitList(
+          doc.field('related_articles'),
+        ),
         terrainIds: terrainIds,
         subcategory: doc.field('subcategory'),
         author: doc.field('author'),

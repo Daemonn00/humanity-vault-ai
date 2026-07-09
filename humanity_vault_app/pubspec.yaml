@@ -39,6 +39,14 @@ dependencies:
   # Knowledge Pack storage. No other storage/persistence dependency.
   path_provider: ^2.1.5
 
+  # Lets the user pick a single local ZIP file to import as a
+  # Knowledge Pack. No network/cloud picker use.
+  file_picker: ^8.1.7
+
+  # Extracts a picked Knowledge Pack ZIP into local staging storage.
+  # Pure-Dart, no native code beyond what file_picker already needs.
+  archive: ^3.6.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

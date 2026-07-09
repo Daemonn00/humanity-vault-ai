@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 
+import '../models/pack_manifest.dart';
+
 /// Resolves and manages the on-device directories used by Knowledge
 /// Packs.
 ///
 /// All packs live under the app's private Application Documents
-/// directory - no external/shared storage, no network. Nothing here
-/// imports content; it only resolves paths, creates missing
-/// directories, and safely lists what is already installed.
+/// directory - no external/shared storage, no network.
 class PackStorage {
   PackStorage._();
 
@@ -21,10 +21,9 @@ class PackStorage {
     return Directory('${documents.path}/$_packsDirName');
   }
 
-  /// The directory reserved for staging a pack during import before it
-  /// is committed to [packsDirectory]. Not used by any import logic
-  /// yet - only resolved and cleaned here so a future importer has a
-  /// safe, already-tested location to build on.
+  /// The directory used to stage a pack (extracting and validating it)
+  /// before it is committed to [packsDirectory]. A pack is only ever
+  /// moved into [packsDirectory] after it passes validation in full.
   static Future<Directory> stagingDirectory() async {
     final documents = await getApplicationDocumentsDirectory();
     return Directory('${documents.path}/$_stagingDirName');
@@ -78,5 +77,33 @@ class PackStorage {
     } catch (_) {
       return const [];
     }
+  }
+
+  /// Returns the `pack_id` of every installed pack with a readable,
+  /// valid manifest.
+  static Future<Set<String>> installedPackIds() async {
+    final dir = await packsDirectory();
+    return installedPackIdsIn(dir);
+  }
+
+  /// Returns the `pack_id` of every pack with a readable, valid
+  /// manifest found under [packsDir]. Unreadable or invalid manifests
+  /// are silently skipped - never throws. Kept separate from
+  /// [installedPackIds] so it can be exercised in tests against a
+  /// plain temp directory, with no path_provider involved.
+  static Future<Set<String>> installedPackIdsIn(Directory packsDir) async {
+    final ids = <String>{};
+    for (final dir in await listPackDirectoriesIn(packsDir)) {
+      try {
+        final manifestFile = File('${dir.path}/manifest.md');
+        if (!await manifestFile.exists()) continue;
+        final manifest =
+            PackManifest.tryParse(await manifestFile.readAsString());
+        if (manifest != null) ids.add(manifest.packId);
+      } catch (_) {
+        continue;
+      }
+    }
+    return ids;
   }
 }

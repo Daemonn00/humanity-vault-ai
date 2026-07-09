@@ -6,7 +6,11 @@ plugins {
 
 android {
     namespace = "com.daemonn00.humanityvault"
-    compileSdk = flutter.compileSdkVersion
+    // Pinned explicitly (was flutter.compileSdkVersion): a plugin
+    // dependency (flutter_plugin_android_lifecycle, via file_picker)
+    // requires compileSdk 36+. Android SDK Platform 36 is already
+    // installed locally.
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

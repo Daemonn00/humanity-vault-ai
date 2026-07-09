@@ -9,11 +9,13 @@ import 'features/library/data/categories_repository.dart';
 import 'features/emergency/presentation/emergency_screen.dart';
 import 'features/library/presentation/categories_screen.dart';
 import 'features/library/presentation/search_screen.dart';
+import 'features/packs/data/packs_loader.dart';
 import 'shared/widgets/action_card.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ArticlesRepository.ensureLoaded();
+  await PacksLoader.ensureLoaded();
   runApp(const HumanityVaultApp());
 }
 

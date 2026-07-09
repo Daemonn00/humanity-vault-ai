@@ -79,6 +79,27 @@ class ArticlesRepository {
     return _articlesByCategoryFolder[categoryFolder] ?? const [];
   }
 
+  /// Whether [categoryFolder] already has core articles loaded under
+  /// it. Used to gate Knowledge Pack articles to existing categories
+  /// only - a pack can never introduce a brand-new category.
+  static bool isKnownCategoryFolder(String categoryFolder) {
+    return _articlesByCategoryFolder.containsKey(categoryFolder);
+  }
+
+  /// Merges additional articles (e.g. from an installed Knowledge
+  /// Pack) into already-known category folders. Callers are
+  /// responsible for validation (known category, no duplicate slugs)
+  /// before calling this - it trusts its input and only appends.
+  static void mergeAdditionalArticles(
+    Map<String, List<Article>> articlesByCategoryFolder,
+  ) {
+    articlesByCategoryFolder.forEach((categoryFolder, articles) {
+      _articlesByCategoryFolder
+          .putIfAbsent(categoryFolder, () => [])
+          .addAll(articles);
+    });
+  }
+
   /// Returns all articles across every category, for searching.
   List<Article> getAllArticles() {
     return _articlesByCategoryFolder.values

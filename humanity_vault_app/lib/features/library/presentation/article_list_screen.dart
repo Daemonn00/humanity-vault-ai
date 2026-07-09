@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_spacing.dart';
+import '../../../shared/widgets/article_index_tile.dart';
 import '../data/articles_repository.dart';
 import '../models/category.dart';
 import 'article_detail_screen.dart';
@@ -41,16 +42,20 @@ class ArticleListScreen extends StatelessWidget {
                 ),
               ),
             )
-          : ListView.separated(
-              padding: const EdgeInsets.all(AppSpacing.screenPadding),
-              itemCount: articles.length,
-              separatorBuilder: (context, index) =>
-                  const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
-              itemBuilder: (context, index) {
-                final article = articles[index];
-                return Card(
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+          : SafeArea(
+              top: false,
+              child: ListView.separated(
+                padding: const EdgeInsets.all(AppSpacing.screenPadding),
+                itemCount: articles.length,
+                separatorBuilder: (context, index) =>
+                    const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
+                itemBuilder: (context, index) {
+                  final article = articles[index];
+                  return ArticleIndexTile(
+                    title: article.title,
+                    category: article.category,
+                    color: category.color,
+                    index: index + 1,
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
@@ -59,49 +64,9 @@ class ArticleListScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.all(AppSpacing.md),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 24,
-                            backgroundColor:
-                                category.color.withValues(alpha: 0.12),
-                            child: Icon(
-                              Icons.article_outlined,
-                              color: category.color,
-                            ),
-                          ),
-                          const SizedBox(width: AppSpacing.md),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  article.title,
-                                  style:
-                                      Theme.of(context).textTheme.titleMedium,
-                                ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  article.category,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyMedium
-                                      ?.copyWith(
-                                        color: colorScheme.onSurfaceVariant,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const Icon(Icons.chevron_right),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
     );
   }

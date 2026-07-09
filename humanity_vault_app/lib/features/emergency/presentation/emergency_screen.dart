@@ -44,34 +44,52 @@ class _EmergencyScreenState extends State<EmergencyScreen> {
               AppSpacing.screenPadding,
               0,
             ),
-            child: Wrap(
-              spacing: AppSpacing.sm,
-              runSpacing: AppSpacing.sm,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                for (final terrain in TerrainRegistry.terrains)
-                  ChoiceChip(
-                    label: Text(terrain.displayName),
-                    selected: _selectedTerrainId == terrain.id,
-                    selectedColor: AppColors.emergencyPrimary.withValues(
-                      alpha: 0.18,
-                    ),
-                    labelStyle: TextStyle(
-                      color: _selectedTerrainId == terrain.id
-                          ? AppColors.emergencyPrimary
-                          : AppColors.textPrimary,
-                    ),
-                    side: BorderSide(
-                      color: _selectedTerrainId == terrain.id
-                          ? AppColors.emergencyPrimary
-                          : AppColors.emergencySecondary,
-                    ),
-                    onSelected: (isSelected) {
-                      setState(() {
-                        _selectedTerrainId =
-                            isSelected ? terrain.id : null;
-                      });
-                    },
-                  ),
+                Text(
+                  'Terrain — optional',
+                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                ),
+                const SizedBox(height: AppSpacing.xs),
+                Wrap(
+                  spacing: AppSpacing.sm,
+                  runSpacing: AppSpacing.sm,
+                  children: [
+                    for (final terrain in TerrainRegistry.terrains)
+                      ChoiceChip(
+                        label: Text(terrain.displayName),
+                        selected: _selectedTerrainId == terrain.id,
+                        selectedColor: AppColors.emergencyPrimary.withValues(
+                          alpha: 0.28,
+                        ),
+                        checkmarkColor: AppColors.emergencyPrimary,
+                        labelStyle: TextStyle(
+                          color: _selectedTerrainId == terrain.id
+                              ? AppColors.emergencyPrimary
+                              : AppColors.textPrimary,
+                          fontWeight: _selectedTerrainId == terrain.id
+                              ? FontWeight.w600
+                              : FontWeight.w400,
+                        ),
+                        side: BorderSide(
+                          color: _selectedTerrainId == terrain.id
+                              ? AppColors.emergencyPrimary
+                              : AppColors.emergencySecondary,
+                          width:
+                              _selectedTerrainId == terrain.id ? 1.5 : 1.0,
+                        ),
+                        onSelected: (isSelected) {
+                          setState(() {
+                            _selectedTerrainId =
+                                isSelected ? terrain.id : null;
+                          });
+                        },
+                      ),
+                  ],
+                ),
               ],
             ),
           ),

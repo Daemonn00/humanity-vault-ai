@@ -31,4 +31,45 @@ void main() {
 
     expect(find.byType(ArticleDetailScreen), findsOneWidget);
   });
+
+  testWidgets(
+      'shows 01..N index markers in order, without chevrons, '
+      'and renders safely on a narrow phone with a system-nav inset',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+    final survival = CategoriesRepository()
+        .getCategories()
+        .firstWhere((c) => c.folderName == 'survival');
+    final articles = ArticlesRepository().getArticles(survival.folderName);
+
+    tester.view.physicalSize = const Size(375, 812);
+    tester.view.devicePixelRatio = 1.0;
+    tester.view.padding = const FakeViewPadding(bottom: 48);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.view.resetPadding);
+
+    await tester.pumpWidget(MaterialApp(
+      home: ArticleListScreen(category: survival),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.byIcon(Icons.chevron_right), findsNothing);
+
+    // Scroll through the whole list and confirm every index marker
+    // appears in the existing article order.
+    for (var i = 0; i < articles.length; i++) {
+      final marker = (i + 1).toString().padLeft(2, '0');
+      await tester.scrollUntilVisible(
+        find.text(marker),
+        200,
+        scrollable: find.byType(Scrollable),
+      );
+      expect(find.text(marker), findsOneWidget,
+          reason: 'index marker $marker should render for '
+              '${articles[i].title}');
+    }
+
+    expect(tester.takeException(), isNull);
+  });
 }

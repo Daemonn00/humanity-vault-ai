@@ -158,14 +158,44 @@ void main() {
     ]);
   });
 
+  testWidgets(
+      'labels the terrain selector and visually marks the selected chip',
+      (tester) async {
+    await ArticlesRepository.ensureLoaded();
+
+    tester.view.physicalSize = const Size(1080, 3000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: EmergencyScreen()));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Terrain — optional'), findsOneWidget);
+
+    await tester.tap(find.widgetWithText(ChoiceChip, 'Desert'));
+    await tester.pumpAndSettle();
+
+    final desertChip = tester.widget<ChoiceChip>(
+      find.widgetWithText(ChoiceChip, 'Desert'),
+    );
+    final coastalChip = tester.widget<ChoiceChip>(
+      find.widgetWithText(ChoiceChip, 'Coastal'),
+    );
+    expect(desertChip.selected, isTrue);
+    expect(coastalChip.selected, isFalse);
+  });
+
   testWidgets('renders without overflow at a narrow 375x812 viewport',
       (tester) async {
     await ArticlesRepository.ensureLoaded();
 
     tester.view.physicalSize = const Size(375, 812);
     tester.view.devicePixelRatio = 1.0;
+    tester.view.padding = const FakeViewPadding(bottom: 48);
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.view.resetPadding);
 
     await tester.pumpWidget(const MaterialApp(home: EmergencyScreen()));
     await tester.pumpAndSettle();

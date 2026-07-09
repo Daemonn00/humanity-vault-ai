@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
+import '../../../shared/widgets/article_index_tile.dart';
 import '../data/articles_repository.dart';
 import '../data/categories_repository.dart';
 import '../models/article.dart';
@@ -96,71 +97,48 @@ class _SearchScreenState extends State<SearchScreen> {
                           message: 'No matching articles found.',
                           colorScheme: colorScheme,
                         )
-                      : ListView.separated(
-                          itemCount: results.length,
-                          separatorBuilder: (context, index) =>
-                              const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
-                          itemBuilder: (context, index) {
-                            final article = results[index];
-                            final color = _colorForCategory(article.category);
-                            return Card(
-                              child: InkWell(
-                                borderRadius:
-                                    BorderRadius.circular(AppSpacing.cardRadius),
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          ArticleDetailScreen(article: article),
-                                    ),
+                      : Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              results.length == 1
+                                  ? '1 result'
+                                  : '${results.length} results',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
+                                  ?.copyWith(
+                                    color: colorScheme.onSurfaceVariant,
+                                  ),
+                            ),
+                            const SizedBox(height: AppSpacing.sm),
+                            Expanded(
+                              child: ListView.separated(
+                                itemCount: results.length,
+                                separatorBuilder: (context, index) =>
+                                    const SizedBox(
+                                        height: AppSpacing.sm + AppSpacing.xs),
+                                itemBuilder: (context, index) {
+                                  final article = results[index];
+                                  return ArticleIndexTile(
+                                    title: article.title,
+                                    category: article.category,
+                                    color:
+                                        _colorForCategory(article.category),
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              ArticleDetailScreen(
+                                                  article: article),
+                                        ),
+                                      );
+                                    },
                                   );
                                 },
-                                child: Padding(
-                                  padding: const EdgeInsets.all(AppSpacing.md),
-                                  child: Row(
-                                    children: [
-                                      CircleAvatar(
-                                        radius: 24,
-                                        backgroundColor:
-                                            color.withValues(alpha: 0.12),
-                                        child: Icon(
-                                          Icons.article_outlined,
-                                          color: color,
-                                        ),
-                                      ),
-                                      const SizedBox(width: AppSpacing.md),
-                                      Expanded(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              article.title,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .titleMedium,
-                                            ),
-                                            const SizedBox(height: 4),
-                                            Text(
-                                              article.category,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyMedium
-                                                  ?.copyWith(
-                                                    color: colorScheme
-                                                        .onSurfaceVariant,
-                                                  ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      const Icon(Icons.chevron_right),
-                                    ],
-                                  ),
-                                ),
                               ),
-                            );
-                          },
+                            ),
+                          ],
                         ),
             ),
           ],

@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:humanity_vault_app/features/library/data/article_search.dart';
 import 'package:humanity_vault_app/features/library/data/articles_repository.dart';
 import 'package:humanity_vault_app/features/library/presentation/article_detail_screen.dart';
 import 'package:humanity_vault_app/features/library/presentation/search_screen.dart';
@@ -44,12 +45,10 @@ void main() {
     await tester.enterText(find.byType(TextField), 'water');
     await tester.pumpAndSettle();
 
-    final matches = ArticlesRepository()
-        .getAllArticles()
-        .where((a) =>
-            a.title.toLowerCase().contains('water') ||
-            a.category.toLowerCase().contains('water'))
-        .length;
+    final matches = ArticleSearch.search(
+      ArticlesRepository().getAllArticles(),
+      'water',
+    ).length;
     final countLabel = matches == 1 ? '1 result' : '$matches results';
 
     expect(find.text(countLabel), findsOneWidget);

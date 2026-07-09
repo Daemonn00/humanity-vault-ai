@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../shared/widgets/article_index_tile.dart';
+import '../data/article_search.dart';
 import '../data/articles_repository.dart';
 import '../data/categories_repository.dart';
 import '../models/article.dart';
@@ -51,14 +52,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final query = _query.toLowerCase();
-    final results = query.isEmpty
-        ? const <Article>[]
-        : _allArticles
-            .where((article) =>
-                article.title.toLowerCase().contains(query) ||
-                article.category.toLowerCase().contains(query))
-            .toList();
+    final results = ArticleSearch.search(_allArticles, _query);
 
     return Scaffold(
       appBar: AppBar(
@@ -85,7 +79,7 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
             const SizedBox(height: AppSpacing.md),
             Expanded(
-              child: query.isEmpty
+              child: _query.isEmpty
                   ? _MessageState(
                       icon: Icons.search,
                       message: 'Type to search the knowledge vault.',

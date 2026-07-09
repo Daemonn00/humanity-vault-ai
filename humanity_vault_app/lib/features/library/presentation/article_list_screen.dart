@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_spacing.dart';
 import '../../../shared/widgets/article_index_tile.dart';
+import '../../../shared/widgets/bottom_safe_area.dart';
 import '../data/articles_repository.dart';
 import '../models/category.dart';
 import 'article_detail_screen.dart';
@@ -18,9 +19,7 @@ class ArticleListScreen extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(category.name),
-      ),
+      appBar: AppBar(title: Text(category.name)),
       body: articles.isEmpty
           ? Center(
               child: Padding(
@@ -42,8 +41,7 @@ class ArticleListScreen extends StatelessWidget {
                 ),
               ),
             )
-          : SafeArea(
-              top: false,
+          : BottomSafeArea(
               child: ListView.separated(
                 padding: const EdgeInsets.all(AppSpacing.screenPadding),
                 itemCount: articles.length,

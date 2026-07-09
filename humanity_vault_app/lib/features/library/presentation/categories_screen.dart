@@ -4,6 +4,7 @@ import '../../../core/theme/app_spacing.dart';
 import '../data/articles_repository.dart';
 import '../data/categories_repository.dart';
 import 'article_list_screen.dart';
+import '../../../shared/widgets/bottom_safe_area.dart';
 import '../../../shared/widgets/category_card.dart';
 
 /// Displays the list of knowledge categories available in the vault.
@@ -15,18 +16,10 @@ class CategoriesScreen extends StatelessWidget {
     final categories = CategoriesRepository().getCategories();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Browse Categories'),
-      ),
-      body: SafeArea(
-        top: false,
+      appBar: AppBar(title: const Text('Browse Categories')),
+      body: BottomSafeArea(
         child: GridView.builder(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.screenPadding,
-            AppSpacing.screenPadding,
-            AppSpacing.screenPadding,
-            AppSpacing.screenPadding + AppSpacing.sm,
-          ),
+          padding: const EdgeInsets.all(AppSpacing.screenPadding),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: AppSpacing.md,
@@ -41,13 +34,13 @@ class CategoriesScreen extends StatelessWidget {
               name: category.name,
               color: category.color,
               index: index + 1,
-              articleCount:
-                  ArticlesRepository().getArticles(category.folderName).length,
+              articleCount: ArticlesRepository()
+                  .getArticles(category.folderName)
+                  .length,
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) =>
-                        ArticleListScreen(category: category),
+                    builder: (context) => ArticleListScreen(category: category),
                   ),
                 );
               },

@@ -8,9 +8,13 @@ description: Four official Humanity Vault articles on visual and radio signaling
 **Unpublished editorial candidate — source verification pending.**
 
 This manifest and its four articles are an editorial draft, not an
-officially released pack. Every article's `verification_level` is
-currently `Unverified` because none of the sources cited in each
-article's `## Sources` section were directly read and confirmed during
-authoring. See REVIEW_NOTES.md for the full source-access log and the
-release gate that must close before this pack may be relabeled
-Verified Source, built into a ZIP, or published anywhere.
+officially released pack. Current per-article `verification_level`:
+Visual Signaling for Rescue and Rendezvous is `Verified Source`
+(FAA AIP GEN 3.6 was directly human-reviewed on 2026-07-10); Radio
+Channel Discipline and Battery Care, Improvised Compass Construction,
+and Basic Knots for Shelter and Gear Lashing remain `Unverified`
+because their cited sources have not yet been directly read and
+confirmed. See REVIEW_NOTES.md for the full source-access log and the
+release gate that must close before the remaining three articles may
+be relabeled Verified Source, and before this pack as a whole may be
+built into a ZIP or published anywhere.

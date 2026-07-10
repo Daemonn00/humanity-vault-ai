@@ -5,7 +5,7 @@ subcategory: Signaling
 author: Humanity Vault Contributors
 last_updated: 2026-07-10
 knowledge_level: Level 1
-verification_level: Unverified
+verification_level: Verified Source
 terrain: desert, coastal, urban
 related_articles: emergency_communications_basics, radio_channel_discipline_and_battery_care
 ---
@@ -14,25 +14,23 @@ related_articles: emergency_communications_basics, radio_channel_discipline_and_
 
 ## Summary
 
-When radio contact isn't possible, large and simple ground signals can help searchers or aircraft locate you. This article covers the general principles of visual signaling - it does not replace the official, complete ground-to-air visual signal code.
+A standardized ground-to-air visual signal code exists so that a survivor without radio contact can communicate a small set of basic messages - such as needing assistance, needing medical assistance, indicating yes or no, or giving general direction - to a search aircraft. This article explains that such a code exists and where to find the official version; it does not reproduce the code itself.
 
 ## Main Content
 
-Visual signaling works by making your position obvious from a distance - especially from the air, where a person on the ground can be very hard to spot. The core idea is simple: make your signal as large as you practically can, and make it stand out clearly from its surroundings.
+When radio contact with rescuers isn't possible, a standardized ground-to-air visual signal code allows a survivor to communicate a limited set of basic messages to a search aircraft using visible ground signals. This is not something to invent on the spot - it is an established, official system, so that trained aircrew can recognize a signal consistently and know what it is intended to mean.
 
-Build signals from whatever high-contrast materials are available: cut branches or logs laid against bare ground, dark rocks arranged on light sand, or brightly colored fabric spread out and weighted down against the wind. A signal that looks large enough to you on the ground can still be very hard to see from an aircraft, so err on the side of making it larger than seems necessary, and place it in the most open, unobstructed spot available - a clearing, ridge, beach, or rooftop rather than under tree cover.
+The code covers a small set of essential messages a survivor might need to send, including requiring assistance, requiring medical assistance, indicating yes or no, and general direction. Because the code is standardized and official, a search aircrew has a documented reference for interpreting a given signal, rather than having to guess at an improvised one.
 
-Simple, geometric shapes are easier to recognize than irregular piles or writing. An internationally recognized ground-to-air visual signal code exists for exactly this purpose, standardizing a small set of shapes and their meanings so that trained searchers and aircrew can recognize them consistently across countries. This article does not reproduce that code here; the complete, official version is publicly available from the U.S. Federal Aviation Administration's Aeronautical Information Publication (see Sources), and is worth reviewing - and keeping a printed copy of - before you need it.
+The complete, official version of this code is published by the U.S. Federal Aviation Administration in its Aeronautical Information Publication (see Sources). This article does not reproduce that code here; anyone who may need to rely on visual signaling should review the official FAA publication directly, and consider keeping a printed reference copy, before they need it.
 
-If you believe an aircraft or search party may be responding to your signal, keep the signal in place and visible rather than moving it or dismantling it - and if you have a secondary way to draw attention (light, movement, sound) at the moment a searcher appears to be close, use it in addition to your ground signal, not instead of it.
-
-Visual signaling improves your chances of being noticed - it does not guarantee that anyone will see it, understand it, or be able to reach you. Treat it as one part of a broader effort to be found, alongside any working communication method you have.
+Editorial note: visual signaling is one possible way to become easier to find. It does not guarantee that a signal will be seen, correctly understood, or acted upon, and should be treated as one part of a broader effort to be found, not a substitute for other means of getting help.
 
 ## Benefits
 
 - Works without electricity, batteries, or radio equipment
-- Can be built and maintained indefinitely once materials are gathered
-- Uses an internationally recognized signal system rather than an improvised one
+- Uses an internationally recognized, official signal system rather than an improvised one
+- Communicates specific, essential messages - such as needing assistance - rather than a vague or ambiguous signal
 
 ## Sources
 

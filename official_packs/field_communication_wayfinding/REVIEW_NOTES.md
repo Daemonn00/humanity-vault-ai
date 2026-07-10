@@ -16,8 +16,13 @@ any of them as verified:
 
 1. **FAA AIP GEN 3.6 Search and Rescue**
    (faa.gov/air_traffic/publications/atpubs/aip_html/part1_gen_section_3.6.html) -
-   HTTP 403 on direct fetch; Wayback Machine access is unavailable to
-   this tooling. Not read.
+   HTTP 403 on automated fetch during the original authoring session
+   (Wayback Machine access is unavailable to this tooling); **directly
+   human-reviewed on 2026-07-10** by a human reviewer, including
+   FIG GEN 3.6-1 "Ground-Air Visual Code for Use by Survivors" and the
+   FAA's reference to Visual Emergency Signals across FIG GEN 3.6-1
+   through FIG GEN 3.6-17. See "FAA-verified scope for Article 1"
+   below for exactly what this review does and does not support.
 2. **IARU/ARRL "Ethics and Operating Procedures for the Radio Amateur"**
    (arrl.org/files/file/DXCC/Eth-operating-EN-ARRL-CORR-JAN-2011.pdf) -
    the PDF fetched but could not be converted to readable text (binary/
@@ -61,11 +66,13 @@ consistently across many independent references on these topics),
 rather than restating anything as if it were a verified quote or
 detail from one of the six documents. Concretely:
 
-- Article 1 describes the general *concept* of a standardized
-  ground-air visual code and explicitly declines to reproduce any
-  specific symbol or exact size figure, deferring entirely to the FAA
-  page as "the complete, official version," rather than asserting any
-  detail from it directly.
+- Article 1 was revised on 2026-07-10 after direct human review of the
+  FAA source (see "FAA-verified scope for Article 1" below) - its
+  factual claims are now limited to what that direct review actually
+  supports, rather than the earlier general/topical framing. It still
+  declines to reproduce any specific symbol, figure number, or exact
+  size/dimension, deferring entirely to the FAA publication as "the
+  complete, official version."
 - Article 2 describes only generic, widely-known radio etiquette
   (listen first, keep it brief, stay calm) and generic battery-care
   practice (avoid heat/damage, keep spares charged), with no figure,
@@ -85,8 +92,11 @@ detail from one of the six documents. Concretely:
 
 | Article | Claim in the article | Source it is associated with | Directly verified this session? |
 |---|---|---|---|
-| 1 | An internationally recognized ground-air visual signal code exists for this purpose | ICAO Annex 12 / FAA AIP GEN 3.6 | No - topical match only, not a direct read |
-| 1 | Build signals large, high-contrast, in open ground | General practical knowledge, not attributed to a specific source figure | N/A (deliberately not sourced to a specific number) |
+| 1 | A standardized ground-air visual signal code exists for survivors | FAA AIP GEN 3.6 | **Yes - directly human-reviewed 2026-07-10** |
+| 1 | The code communicates messages such as needing assistance, needing medical assistance, yes/no, and general direction | FAA AIP GEN 3.6 | **Yes - directly human-reviewed 2026-07-10** |
+| 1 | FAA publishes the official visual-code figures | FAA AIP GEN 3.6 | **Yes - directly human-reviewed 2026-07-10** |
+| 1 | (Removed) Build signals from cloth/rocks/branches; large/simple/high-contrast construction advice; leave a signal in place; add movement or sound | Was general practical knowledge, not FAA-attributed | Removed 2026-07-10 - not supported by the direct FAA review, not weakened but deleted |
+| 1 | Editorial note that visual signaling does not guarantee rescue | Editorial caution, explicitly not attributed to FAA | N/A by design - must not be sourced to FAA |
 | 2 | Listen before transmitting, keep messages brief, stay calm | IARU/ARRL Ethics and Operating Procedures | No - topical match only, not a direct read |
 | 2 | Keep batteries charged, cool, dry, away from damage | CPSC battery safety guidance | No - topical match only, not a direct read |
 | 3 | Magnetizing a needle by one-direction stroking, then suspending/floating it | FM 21-76 Chapter 18 | No - table of contents confirms the chapter exists; content not read |
@@ -95,12 +105,45 @@ detail from one of the six documents. Concretely:
 | 4 | Lashing two poles by wrapping and cinching | FM 21-76 Chapter 12 | No - table of contents confirms the section exists; content not read |
 | 4 | Not rated for climbing/rescue/fall-arrest/lifting a person | Deliberate exclusion required by this task, independent of any source | N/A |
 
+## FAA-verified scope for Article 1 (2026-07-10)
+
+A human reviewer directly opened FAA Aeronautical Information
+Publication, GEN 3.6 Search and Rescue, including FIG GEN 3.6-1
+"Ground-Air Visual Code for Use by Survivors" and the FAA's reference
+to Visual Emergency Signals across FIG GEN 3.6-1 through FIG GEN
+3.6-17.
+
+**Directly supported by this review, and now the only factual scope of
+Article 1's Summary and Main Content:**
+- A standardized ground-air visual code exists for survivors.
+- The code communicates messages such as requiring assistance,
+  requiring medical assistance, indicating yes/no, and general
+  direction.
+- FAA publishes official visual-code figures.
+
+**Not directly verified by this review, and removed from the article
+rather than weakened:**
+- Specific material suggestions (cloth, rocks, branches, fabric).
+- "Large/simple/high-contrast" signal construction advice.
+- Leaving a signal in place once made.
+- Adding movement or sound to a signal.
+- Any guarantee or probability of rescue (a brief editorial safety
+  caution is retained in the article, but is explicitly not
+  attributed to FAA).
+
+Article 1 also excludes, per this task and consistent with the
+original hard boundary below: frequencies, procedures, code tables,
+exact symbols, dimensions, or copied FAA wording.
+
 ## Hard boundary checklist
 
-- [x] Article 1 explains signaling principles only; does not reproduce
-      the ICAO/FAA symbol table; directs readers to the FAA AIP for
-      the official complete code; includes no aviation emergency
-      frequency; does not claim rescue/visibility/response is
+- [x] Article 1 explains signaling principles only, now limited to the
+      FAA-verified scope above; does not reproduce the ICAO/FAA symbol
+      table, exact symbols, figure numbers, or dimensions; directs
+      readers to the FAA AIP for the official complete code; includes
+      no aviation emergency frequency; retains a brief non-guarantee
+      safety caution framed as editorial, not attributed to FAA; does
+      not claim rescue/visibility/response is
       guaranteed.
 - [x] Article 2 covers listen-first, concise/factual messages,
       scheduled check-ins, and general battery care only; names no
@@ -117,37 +160,52 @@ detail from one of the six documents. Concretely:
       fall-arrest, or lifting a person; contains no tactical,
       trap-making, weapon, or evasion content.
 
-## Verification level: reclassified to Unverified
+## Verification level: per-article status (updated 2026-07-10)
 
-Every article's frontmatter previously read `verification_level:
-Verified Source`. That label was not earned: per the source-access log
-above, none of the six primary sources were directly read this
-session, so the specific real-source alignment claimed in each
-`## Sources` list was never confirmed against the actual document
-text.
+Originally, every article's frontmatter read `verification_level:
+Verified Source`, a label that was not earned - none of the six
+primary sources had been directly read, so the real-source alignment
+claimed in each `## Sources` list was never confirmed against the
+actual document text. All four articles were reclassified to
+`Unverified` as a result (see the original reasoning retained below).
+
+**Update, 2026-07-10:** Article 1 (Visual Signaling for Rescue and
+Rendezvous) has since had its one relevant source - FAA AIP GEN 3.6 -
+directly human-reviewed (see "FAA-verified scope for Article 1"
+above), and its Summary/Main Content have been rewritten so every
+factual claim is limited to what that direct review actually supports.
+Article 1's frontmatter is therefore changed back to
+`verification_level: Verified Source`, on the strength of that direct
+review - not the earlier, unearned basis. **Articles 2, 3, and 4
+remain `Unverified`** - their sources have still not been directly
+read, and their release gate below still applies to them unchanged.
 
 This project's authoring standard (docs/Knowledge_Authoring_Standard_
 v1.md, Section 7) defines exactly four allowed `verification_level`
 values: `Verified Source`, `Community Verified`, `Historical Source`,
-`Unverified`. Of these, `Unverified` - "Not yet reviewed; included for
+`Unverified`. `Unverified` - "Not yet reviewed; included for
 completeness but should be reviewed before being treated as
-authoritative" - is the accurate description of this pack's actual
-state, and is not itself an invented value. All four articles'
-frontmatter has been changed from `Verified Source` to `Unverified`
-accordingly. `Community Verified` was considered and rejected: it
-describes content a community review process has already confirmed
-accurate, and no such review has happened yet - only a single
-author's draft, awaiting review.
+authoritative" - remains the accurate description of Articles 2-4's
+actual state, and is not itself an invented value. `Community
+Verified` was considered and rejected for those three: it describes
+content a community review process has already confirmed accurate,
+and no such review has happened yet for them - only a single author's
+draft, awaiting review.
 
 ## Release gate
 
-This pack may not be relabeled `Verified Source` (or any status other
-than `Unverified`) until **a human reviewer has personally opened and
-read all six sources** listed in the source-access log above, against
-the actual document text, and confirmed (or corrected) every claim in
-the claim-to-source map against what those sources actually say.
+**Articles 2, 3, and 4** may not be relabeled `Verified Source` (or
+any status other than `Unverified`) until **a human reviewer has
+personally opened and read** their respective sources listed in the
+source-access log above, against the actual document text, and
+confirmed (or corrected) every claim in the claim-to-source map
+against what those sources actually say. **Article 1's gate for its
+FAA-based claims has closed** as of the 2026-07-10 direct review
+described above; it may still be revisited if its scope or sourcing
+changes again in the future.
 
-Until that gate is closed:
+Until Articles 2-4's gate is closed, and regardless of Article 1's
+status:
 
 - No ZIP archive may be built from this folder.
 - No checksum may be computed or published.
@@ -158,7 +216,10 @@ Until that gate is closed:
 
 ## Status
 
-Editable Markdown source only, reclassified as an unpublished
-editorial draft. Not built into a ZIP. Not checksummed. Not published.
-Not yet Founder-approved. `verification_level: Unverified` on all four
-articles until the release gate above is closed.
+Editable Markdown source only, still an unpublished editorial draft
+overall - not built into a ZIP, not checksummed, not published, not
+yet Founder-approved as a pack. Per-article verification status:
+Article 1 (Visual Signaling for Rescue and Rendezvous) is
+`verification_level: Verified Source`, on the strength of the direct
+FAA review described above. Articles 2, 3, and 4 remain
+`verification_level: Unverified` until their own release gates close.

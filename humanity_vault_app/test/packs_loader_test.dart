@@ -339,4 +339,108 @@ pack_version: 1.0.0
     expect(all.any((a) => a.slug == 'broken_pack_slug'), isFalse);
     expect(all.any((a) => a.slug == 'valid_pack_alongside_broken'), isTrue);
   });
+
+  group('installedPackSummariesIn', () {
+    test('a valid pack summarizes its manifest fields and article count',
+        () async {
+      final root = Directory.systemTemp.createTempSync('hv_summaries_valid_');
+      addTearDown(() => root.deleteSync(recursive: true));
+
+      _createPack(
+        root,
+        'pack_alpha',
+        manifest: '''
+---
+pack_id: test_pack
+pack_name: Test Pack
+pack_version: 1.0.0
+description: A short description.
+---
+''',
+        articlesByRelativePath: {
+          'survival/summary_slug_one.md': _article(title: 'Article One'),
+          'survival/summary_slug_two.md': _article(title: 'Article Two'),
+        },
+      );
+
+      final summaries = await PacksLoader.installedPackSummariesIn(root);
+
+      expect(summaries.length, 1);
+      final summary = summaries.single;
+      expect(summary.isReadable, isTrue);
+      expect(summary.manifest!.packName, 'Test Pack');
+      expect(summary.manifest!.packVersion, '1.0.0');
+      expect(summary.manifest!.description, 'A short description.');
+      expect(summary.articleCount, 2);
+    });
+
+    test('a pack with no manifest.md is summarized as unreadable, not '
+        'omitted', () async {
+      final root = Directory.systemTemp.createTempSync('hv_summaries_nomf_');
+      addTearDown(() => root.deleteSync(recursive: true));
+
+      Directory('${root.path}/pack_no_manifest').createSync(recursive: true);
+
+      final summaries = await PacksLoader.installedPackSummariesIn(root);
+
+      expect(summaries.length, 1);
+      expect(summaries.single.isReadable, isFalse);
+      expect(summaries.single.folderName, 'pack_no_manifest');
+      expect(summaries.single.manifest, isNull);
+      expect(summaries.single.articleCount, isNull);
+    });
+
+    test('a pack with an invalid manifest is summarized as unreadable, not '
+        'omitted', () async {
+      final root = Directory.systemTemp.createTempSync('hv_summaries_badmf_');
+      addTearDown(() => root.deleteSync(recursive: true));
+
+      _createPack(
+        root,
+        'pack_bad_manifest',
+        manifest: '''
+---
+pack_id: bad_pack
+pack_name: Bad Pack
+---
+''',
+      );
+
+      final summaries = await PacksLoader.installedPackSummariesIn(root);
+
+      expect(summaries.length, 1);
+      expect(summaries.single.isReadable, isFalse);
+      expect(summaries.single.folderName, 'pack_bad_manifest');
+    });
+
+    test('the article count reflects only this pack\'s own valid articles, '
+        'ignoring core corpus/other-pack slug collisions', () async {
+      final coreSlug = ArticlesRepository().getAllArticles().first.slug;
+
+      final root = Directory.systemTemp.createTempSync('hv_summaries_dup_');
+      addTearDown(() => root.deleteSync(recursive: true));
+
+      _createPack(
+        root,
+        'pack_dup',
+        manifest: _validManifest,
+        articlesByRelativePath: {
+          'survival/$coreSlug.md': _article(title: 'Shadows Core Slug'),
+        },
+      );
+
+      final summaries = await PacksLoader.installedPackSummariesIn(root);
+
+      expect(summaries.single.articleCount, 1);
+    });
+
+    test('returns an empty list for a missing or empty directory', () async {
+      final missingDir = Directory(
+        '${Directory.systemTemp.path}/hv_summaries_missing_'
+        '${DateTime.now().microsecondsSinceEpoch}',
+      );
+
+      expect(await PacksLoader.installedPackSummariesIn(missingDir), isEmpty);
+    });
+  });
 }

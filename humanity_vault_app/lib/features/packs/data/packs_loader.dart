@@ -7,6 +7,7 @@ import '../../library/data/categories_repository.dart';
 import '../../library/data/markdown_article_parser.dart';
 import '../../library/models/article.dart';
 import '../../terrain/data/terrain_registry.dart';
+import '../models/installed_pack_summary.dart';
 import '../models/pack_manifest.dart';
 import 'pack_storage.dart';
 
@@ -180,6 +181,79 @@ class PacksLoader {
       acceptedCount: accepted,
       skippedCount: skipped,
     );
+  }
+
+  /// Returns a display-ready summary for every installed pack. Unlike
+  /// [loadPacksFrom], packs with a missing or unparsable manifest are
+  /// never skipped - they are summarized as unreadable so they remain
+  /// visible (and removable) in the Pack Library UI instead of
+  /// silently disappearing.
+  static Future<List<InstalledPackSummary>> installedPackSummaries() async {
+    final packsDir = await PackStorage.packsDirectory();
+    return installedPackSummariesIn(packsDir);
+  }
+
+  /// As [installedPackSummaries], scanning [packsDir] directly. Kept
+  /// separate so it can be exercised in tests against a plain temp
+  /// directory, with no path_provider involved.
+  ///
+  /// Each pack's [InstalledPackSummary.articleCount] reflects only its
+  /// own valid articles, computed independently of any other pack or
+  /// the core corpus - this keeps the number stable regardless of
+  /// install/load order, at the cost of not reflecting cross-pack
+  /// duplicate-slug skipping that would happen at real load time.
+  static Future<List<InstalledPackSummary>> installedPackSummariesIn(
+    Directory packsDir,
+  ) async {
+    final validTerrainIds = TerrainRegistry.terrains
+        .map((terrain) => terrain.id)
+        .toSet();
+    final summaries = <InstalledPackSummary>[];
+
+    for (final packDir in await PackStorage.listPackDirectoriesIn(packsDir)) {
+      final folderName = packDir.uri.pathSegments
+          .where((segment) => segment.isNotEmpty)
+          .last;
+      try {
+        final manifestFile = File('${packDir.path}/$_manifestFileName');
+        if (!await manifestFile.exists()) {
+          summaries.add(
+            InstalledPackSummary(directory: packDir, folderName: folderName),
+          );
+          continue;
+        }
+
+        final manifest = PackManifest.tryParse(
+          await manifestFile.readAsString(),
+        );
+        if (manifest == null) {
+          summaries.add(
+            InstalledPackSummary(directory: packDir, folderName: folderName),
+          );
+          continue;
+        }
+
+        final result = await parsePackContents(
+          packDir,
+          validTerrainIds,
+          <String>{},
+        );
+        summaries.add(
+          InstalledPackSummary(
+            directory: packDir,
+            folderName: folderName,
+            manifest: manifest,
+            articleCount: result.acceptedCount,
+          ),
+        );
+      } catch (_) {
+        summaries.add(
+          InstalledPackSummary(directory: packDir, folderName: folderName),
+        );
+      }
+    }
+
+    return summaries;
   }
 
   /// [file]'s path relative to [root], with separators normalized to

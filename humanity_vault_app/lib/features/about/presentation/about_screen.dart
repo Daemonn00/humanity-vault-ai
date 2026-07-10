@@ -12,6 +12,9 @@ import '../../../shared/widgets/section_card.dart';
 import '../../library/data/articles_repository.dart';
 import '../../library/data/categories_repository.dart';
 import '../../packs/data/pack_importer.dart';
+import '../../packs/data/packs_loader.dart';
+import '../../packs/models/installed_pack_summary.dart';
+import '../../packs/presentation/pack_library_screen.dart';
 
 /// Static screen describing Humanity Vault AI's mission, core
 /// principles, and current library status - plus a minimal local
@@ -169,6 +172,23 @@ class _AboutScreenState extends State<AboutScreen> {
                       isImporting: _isImporting,
                       onTap: _isImporting ? null : _importKnowledgePack,
                     ),
+                    const SizedBox(height: AppSpacing.sm + AppSpacing.xs),
+                    FutureBuilder<List<InstalledPackSummary>>(
+                      future: PacksLoader.installedPackSummaries(),
+                      builder: (context, snapshot) {
+                        final count = snapshot.data?.length;
+                        return ManagePacksRow(
+                          count: count,
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) => const PackLibraryScreen(),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -223,6 +243,52 @@ class ImportPackRow extends StatelessWidget {
                 )
               else
                 const Icon(Icons.chevron_right),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The tappable "Manage Installed Packs" row, shown beneath
+/// [ImportPackRow] in the About screen's Knowledge Packs section.
+/// [count] is null while the installed-pack count is still loading,
+/// in which case no count is shown rather than a placeholder.
+class ManagePacksRow extends StatelessWidget {
+  const ManagePacksRow({super.key, required this.count, required this.onTap});
+
+  final int? count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(AppSpacing.md),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundColor: AppColors.primary.withValues(alpha: 0.12),
+                child: const Icon(
+                  Icons.inventory_2_outlined,
+                  color: AppColors.primary,
+                ),
+              ),
+              const SizedBox(width: AppSpacing.md),
+              Expanded(
+                child: Text(
+                  count == null
+                      ? 'Manage Installed Packs'
+                      : 'Manage Installed Packs ($count)',
+                ),
+              ),
+              const Icon(Icons.chevron_right),
             ],
           ),
         ),

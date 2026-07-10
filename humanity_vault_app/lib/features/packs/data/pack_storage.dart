@@ -106,4 +106,18 @@ class PackStorage {
     }
     return ids;
   }
+
+  /// Permanently deletes [packDir] and everything in it. Returns true
+  /// on success (including if [packDir] was already gone), false if
+  /// deletion failed. Never throws - the caller decides how to report
+  /// failure to the user.
+  static Future<bool> removePack(Directory packDir) async {
+    try {
+      if (!await packDir.exists()) return true;
+      await packDir.delete(recursive: true);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
 }

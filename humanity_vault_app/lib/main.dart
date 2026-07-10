@@ -6,6 +6,7 @@ import 'core/theme/app_theme.dart';
 import 'features/about/presentation/about_screen.dart';
 import 'features/library/data/articles_repository.dart';
 import 'features/library/data/categories_repository.dart';
+import 'features/ask_vault/presentation/ask_vault_screen.dart';
 import 'features/emergency/presentation/emergency_screen.dart';
 import 'features/library/presentation/categories_screen.dart';
 import 'features/library/presentation/search_screen.dart';
@@ -146,6 +147,21 @@ class HomeScreen extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => const EmergencyScreen(),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: AppSpacing.md),
+            ActionCard(
+              icon: Icons.help_outline,
+              title: 'Ask the Vault',
+              subtitle: 'Find exact passages that answer your question',
+              iconBackgroundColor: AppColors.primary.withValues(alpha: 0.12),
+              iconColor: AppColors.primary,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const AskVaultScreen(),
                   ),
                 );
               },

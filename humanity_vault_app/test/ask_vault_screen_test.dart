@@ -15,6 +15,9 @@ import 'package:humanity_vault_app/features/library/presentation/article_detail_
 import 'package:humanity_vault_app/features/library/presentation/search_screen.dart';
 import 'package:humanity_vault_app/features/packs/data/packs_loader.dart';
 
+String _plainTextOf(List<TextSpan> spans) =>
+    spans.map((span) => span.text ?? '').join();
+
 Future<void> _installPack(
   Directory root,
   String folderName,
@@ -39,6 +42,85 @@ pack_version: 1.0.0
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+
+  group('buildHighlightedSpans', () {
+    test('reconstructs the exact original text', () {
+      const text = 'Purify water by boiling it for at least one minute.';
+      final spans = buildHighlightedSpans(
+        text: text,
+        terms: const ['water', 'boiling'],
+        baseStyle: null,
+        highlightStyle: null,
+      );
+
+      expect(_plainTextOf(spans), text);
+    });
+
+    test('a whole-word match is highlighted with the given style', () {
+      const highlightStyle = TextStyle(fontWeight: FontWeight.w700);
+      final spans = buildHighlightedSpans(
+        text: 'Please start the fire safely.',
+        terms: const ['start'],
+        baseStyle: null,
+        highlightStyle: highlightStyle,
+      );
+
+      expect(
+        spans.any((s) => s.text == 'start' && s.style == highlightStyle),
+        isTrue,
+      );
+    });
+
+    test('whole-word rule: "art" does not highlight inside "start"', () {
+      const highlightStyle = TextStyle(fontWeight: FontWeight.w700);
+      final spans = buildHighlightedSpans(
+        text: 'Please start the fire safely.',
+        terms: const ['art'],
+        baseStyle: null,
+        highlightStyle: highlightStyle,
+      );
+
+      // No span isolates "art" as its own highlighted piece, and the
+      // plain text is still reconstructed exactly (nothing was split
+      // out of "start").
+      expect(
+        spans.any((s) => s.text == 'art' && s.style == highlightStyle),
+        isFalse,
+      );
+      expect(
+        _plainTextOf(spans),
+        'Please start the fire safely.',
+      );
+    });
+
+    test('matching is case-insensitive', () {
+      const highlightStyle = TextStyle(fontWeight: FontWeight.w700);
+      final spans = buildHighlightedSpans(
+        text: 'WATER is essential.',
+        terms: const ['water'],
+        baseStyle: null,
+        highlightStyle: highlightStyle,
+      );
+
+      expect(
+        spans.any((s) => s.text == 'WATER' && s.style == highlightStyle),
+        isTrue,
+      );
+    });
+
+    test('an empty term list renders one plain span with the base style',
+        () {
+      const baseStyle = TextStyle(fontWeight: FontWeight.w400);
+      final spans = buildHighlightedSpans(
+        text: 'No terms to highlight here.',
+        terms: const [],
+        baseStyle: baseStyle,
+        highlightStyle: null,
+      );
+
+      expect(spans, [const TextSpan(text: 'No terms to highlight here.', style: baseStyle)]);
+    });
+  });
 
   setUpAll(() async {
     await ArticlesRepository.ensureLoaded();
@@ -270,5 +352,160 @@ A short summary about zzzqqqsafearea number $i.
       reason: 'The bottom-most Ask the Vault result must sit above the '
           'simulated system navigation bar, with comfortable clearance.',
     );
+  });
+
+  testWidgets(
+      'a safety-classified article always shows the summary, never the '
+      '"Best-matching passage" label, even with a perfect body match',
+      (tester) async {
+    final root = Directory.systemTemp.createTempSync('hv_ask_screen_safety_');
+    addTearDown(() => root.deleteSync(recursive: true));
+
+    const summaryText = 'A short safety-classified summary, unrelated.';
+    await tester.runAsync(() => _installPack(root, 'phase_b_safety_pack', {
+          'medicine/phase_b_safety_slug.md': '''
+---
+title: Zzzqqqsafetyterm Fixture
+category: Medicine
+---
+## Summary
+$summaryText
+## Main Content
+An unrelated first paragraph.
+
+A paragraph clearly and only about zzzqqqsafetyterm.
+
+An unrelated third paragraph.
+''',
+        }));
+
+    await tester.pumpWidget(const MaterialApp(home: AskVaultScreen()));
+
+    await tester.enterText(find.byType(TextField), 'zzzqqqsafetyterm');
+    await tester.tap(find.text('Ask'));
+    await tester.pump();
+
+    expect(find.text('Zzzqqqsafetyterm Fixture'), findsOneWidget);
+    expect(find.text(summaryText), findsOneWidget);
+    expect(
+      find.text('Best-matching passage (not the full article)'),
+      findsNothing,
+    );
+    expect(
+      find.text('Safety-related - read the full article before acting'),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets(
+      'a non-safety article with a clear unique paragraph winner shows '
+      'that passage and the "Best-matching passage" label', (tester) async {
+    final root =
+        Directory.systemTemp.createTempSync('hv_ask_screen_nonsafety_');
+    addTearDown(() => root.deleteSync(recursive: true));
+
+    const winningParagraph =
+        'A paragraph clearly and only about zzzqqqnonsafetyterm.';
+    await tester.runAsync(() => _installPack(root, 'phase_b_nonsafety_pack', {
+          'communication/phase_b_nonsafety_slug.md': '''
+---
+title: Zzzqqqnonsafetyterm Fixture
+category: Communication
+---
+## Summary
+An unrelated summary that does not mention the unique term.
+## Main Content
+An unrelated first paragraph about general communication basics.
+
+$winningParagraph
+
+An unrelated third paragraph about something else entirely.
+''',
+        }));
+
+    await tester.pumpWidget(const MaterialApp(home: AskVaultScreen()));
+
+    await tester.enterText(find.byType(TextField), 'zzzqqqnonsafetyterm');
+    await tester.tap(find.text('Ask'));
+    await tester.pump();
+
+    expect(find.text('Zzzqqqnonsafetyterm Fixture'), findsOneWidget);
+    expect(find.text(winningParagraph), findsOneWidget);
+    expect(
+      find.text('Best-matching passage (not the full article)'),
+      findsOneWidget,
+    );
+    expect(
+      find.text('Safety-related - read the full article before acting'),
+      findsNothing,
+    );
+    // The excerpt still carries the universal verbatim label.
+    expect(find.text('Exact source text'), findsOneWidget);
+  });
+
+  testWidgets(
+      'a taller card from a longer content excerpt still clears the '
+      'Android system nav bar at 375x812 with a 48px inset, and Open '
+      'source still works', (tester) async {
+    final root =
+        Directory.systemTemp.createTempSync('hv_ask_screen_longexcerpt_');
+    addTearDown(() => root.deleteSync(recursive: true));
+
+    final longWinningParagraph =
+        '${List.generate(60, (i) => 'word$i').join(' ')} '
+        'zzzqqqlongexcerptterm.';
+    await tester.runAsync(() => _installPack(root, 'phase_b_long_pack', {
+          'communication/phase_b_long_slug.md': '''
+---
+title: Zzzqqqlongexcerptterm Fixture
+category: Communication
+---
+## Summary
+An unrelated short summary.
+## Main Content
+An unrelated first paragraph.
+
+$longWinningParagraph
+
+An unrelated third paragraph.
+''',
+        }));
+
+    tester.view.physicalSize = const Size(375, 812);
+    tester.view.devicePixelRatio = 1.0;
+    tester.view.padding = const FakeViewPadding(bottom: 48);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.view.resetPadding);
+
+    await tester.pumpWidget(const MaterialApp(home: AskVaultScreen()));
+
+    await tester.enterText(find.byType(TextField), 'zzzqqqlongexcerptterm');
+    await tester.tap(find.text('Ask'));
+    await tester.pump();
+
+    expect(tester.takeException(), isNull);
+    expect(find.text(longWinningParagraph), findsOneWidget);
+
+    await tester.scrollUntilVisible(
+      find.text('Open source'),
+      300.0,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.pump();
+
+    final buttonBottom = tester.getBottomLeft(find.text('Open source')).dy;
+    const safeVisibleBottom = 812 - 48;
+    expect(
+      buttonBottom,
+      lessThan(safeVisibleBottom),
+      reason: 'The taller result card must still sit above the simulated '
+          'system navigation bar, with comfortable clearance.',
+    );
+
+    await tester.tap(find.text('Open source'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(ArticleDetailScreen), findsOneWidget);
   });
 }

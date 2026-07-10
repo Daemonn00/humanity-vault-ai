@@ -8,6 +8,7 @@ import '../../library/data/categories_repository.dart';
 import '../../library/models/article.dart';
 import '../../library/presentation/article_detail_screen.dart';
 import '../../library/presentation/search_screen.dart';
+import '../data/ask_vault_excerpt.dart';
 import '../data/ask_vault_safety.dart';
 import '../data/ask_vault_search.dart';
 
@@ -29,6 +30,13 @@ class _AskVaultScreenState extends State<AskVaultScreen> {
   final TextEditingController _controller = TextEditingController();
   List<Article>? _results;
 
+  /// The exact query text that produced [_results] - kept separate from
+  /// [_controller]'s live text so that editing the field after a
+  /// submission (without resubmitting) can never desync the query used
+  /// for excerpt/highlight term resolution from the results actually
+  /// shown.
+  String _submittedQuery = '';
+
   @override
   void dispose() {
     _controller.dispose();
@@ -38,6 +46,7 @@ class _AskVaultScreenState extends State<AskVaultScreen> {
   void _submit() {
     final query = _controller.text;
     setState(() {
+      _submittedQuery = query;
       _results = AskVaultSearch.search(
         ArticlesRepository().getAllArticles(),
         query,
@@ -100,6 +109,7 @@ class _AskVaultScreenState extends State<AskVaultScreen> {
                           return _AskVaultResultTile(
                             article: article,
                             color: _colorForCategory(article.category),
+                            submittedQuery: _submittedQuery,
                           );
                         },
                       ),
@@ -177,16 +187,30 @@ class _AskVaultNoResultState extends StatelessWidget {
 }
 
 class _AskVaultResultTile extends StatelessWidget {
-  const _AskVaultResultTile({required this.article, required this.color});
+  const _AskVaultResultTile({
+    required this.article,
+    required this.color,
+    required this.submittedQuery,
+  });
 
   final Article article;
   final Color color;
+  final String submittedQuery;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     final isSafety = isSafetyClassified(article);
+    final terms = resolveQueryTerms(article, submittedQuery);
+    final excerpt = selectExcerpt(
+      article,
+      terms,
+      isSafetyClassified: isSafety,
+    );
+    final isContentPassage =
+        excerpt.source == AskVaultExcerptSource.contentParagraph;
+    final bodyStyle = textTheme.bodyMedium;
 
     return Card(
       clipBehavior: Clip.antiAlias,
@@ -207,13 +231,32 @@ class _AskVaultResultTile extends StatelessWidget {
                     ?.copyWith(color: colorScheme.onSurfaceVariant),
               ),
               const SizedBox(height: AppSpacing.sm),
-              Text(article.summary, style: textTheme.bodyMedium),
+              Text.rich(
+                TextSpan(
+                  children: buildHighlightedSpans(
+                    text: excerpt.text,
+                    terms: terms,
+                    baseStyle: bodyStyle,
+                    highlightStyle: bodyStyle?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ),
               const SizedBox(height: AppSpacing.sm),
               Text(
                 'Exact source text',
                 style: textTheme.labelSmall
                     ?.copyWith(color: colorScheme.onSurfaceVariant),
               ),
+              if (isContentPassage) ...[
+                const SizedBox(height: 2),
+                Text(
+                  'Best-matching passage (not the full article)',
+                  style: textTheme.labelSmall
+                      ?.copyWith(color: colorScheme.onSurfaceVariant),
+                ),
+              ],
               if (isSafety) ...[
                 const SizedBox(height: 2),
                 Text(
@@ -243,4 +286,51 @@ class _AskVaultResultTile extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Splits [text] into [TextSpan]s so that every whole-word, case-
+/// insensitive occurrence of a term in [terms] renders with
+/// [highlightStyle] and everything else renders with [baseStyle] -
+/// concatenating every span's text always reproduces [text] exactly, so
+/// highlighting can never add, remove, reorder, or alter a character.
+/// Word boundaries (`\b`) mean a term such as "art" never highlights
+/// inside an unrelated word such as "start".
+List<TextSpan> buildHighlightedSpans({
+  required String text,
+  required List<String> terms,
+  required TextStyle? baseStyle,
+  required TextStyle? highlightStyle,
+}) {
+  final cleanTerms = terms
+      .map((term) => term.trim())
+      .where((term) => term.isNotEmpty)
+      .toSet()
+      .toList();
+  if (cleanTerms.isEmpty) {
+    return [TextSpan(text: text, style: baseStyle)];
+  }
+
+  final pattern = RegExp(
+    r'\b(' + cleanTerms.map(RegExp.escape).join('|') + r')\b',
+    caseSensitive: false,
+  );
+
+  final spans = <TextSpan>[];
+  var lastEnd = 0;
+  for (final match in pattern.allMatches(text)) {
+    if (match.start > lastEnd) {
+      spans.add(
+        TextSpan(text: text.substring(lastEnd, match.start), style: baseStyle),
+      );
+    }
+    spans.add(
+      TextSpan(text: text.substring(match.start, match.end), style: highlightStyle),
+    );
+    lastEnd = match.end;
+  }
+  if (lastEnd < text.length) {
+    spans.add(TextSpan(text: text.substring(lastEnd), style: baseStyle));
+  }
+
+  return spans;
 }

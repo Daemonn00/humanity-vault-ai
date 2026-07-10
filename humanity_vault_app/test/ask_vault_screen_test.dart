@@ -508,4 +508,67 @@ An unrelated third paragraph.
 
     expect(find.byType(ArticleDetailScreen), findsOneWidget);
   });
+
+  testWidgets(
+      'highlighting uses the response\'s supplied matchedTerms, not raw '
+      'query terms: a filler word stripped by bilingual normalization is '
+      'never highlighted, even though it appears literally in the text',
+      (tester) async {
+    final root = Directory.systemTemp.createTempSync('hv_ask_screen_filler_');
+    addTearDown(() => root.deleteSync(recursive: true));
+
+    const summaryText = 'The zzzqqqfillertest is clearly explained here.';
+    await tester.runAsync(() => _installPack(root, 'phase_b1_filler_pack', {
+          'communication/phase_b1_filler_slug.md': '''
+---
+title: Zzzqqqfillertest Fixture
+category: Communication
+---
+## Summary
+$summaryText
+''',
+        }));
+
+    await tester.pumpWidget(const MaterialApp(home: AskVaultScreen()));
+
+    // "how"/"do"/"i" appear nowhere in the fixture, so the raw pass
+    // matches nothing and AskVaultSearch falls back to the bilingual-
+    // normalized query, whose only surviving term is "zzzqqqfillertest".
+    await tester.enterText(
+      find.byType(TextField),
+      'how do i zzzqqqfillertest',
+    );
+    await tester.tap(find.text('Ask'));
+    await tester.pump();
+
+    expect(find.text('Zzzqqqfillertest Fixture'), findsOneWidget);
+
+    final richText = tester
+        .widgetList<RichText>(find.byType(RichText))
+        .firstWhere((rt) => rt.text.toPlainText() == summaryText);
+    // Text.rich(mySpan) wraps mySpan inside an additional outer TextSpan
+    // that Flutter's own Text widget creates to carry the effective
+    // style, so the actual highlight spans built by buildHighlightedSpans
+    // are one level deeper than RichText.text itself.
+    final outerSpan = richText.text as TextSpan;
+    final mySpan = outerSpan.children!.single as TextSpan;
+    final children = mySpan.children!.cast<TextSpan>();
+
+    bool isBold(TextSpan span) => span.style?.fontWeight == FontWeight.w700;
+
+    expect(
+      children.any((c) => c.text == 'zzzqqqfillertest' && isBold(c)),
+      isTrue,
+      reason: 'The normalized term supplied by AskVaultSearchResponse '
+          'must be highlighted.',
+    );
+    expect(
+      children.any(
+        (c) => (c.text == 'The' || c.text == 'is') && isBold(c),
+      ),
+      isFalse,
+      reason: 'A filler word stripped during normalization must never be '
+          'highlighted, even though it appears literally in the summary.',
+    );
+  });
 }

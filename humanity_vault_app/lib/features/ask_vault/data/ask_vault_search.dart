@@ -1,6 +1,32 @@
 import '../../library/data/article_search.dart';
 import '../../library/models/article.dart';
 
+/// Which query pass ([AskVaultSearch.search]'s raw attempt or its
+/// bilingual-normalized fallback) produced an [AskVaultSearchResponse].
+enum AskVaultQueryPass { raw, normalized }
+
+/// The result of one [AskVaultSearch.search] call: the matched articles,
+/// plus the exact query-term context that produced them - the single
+/// source of truth for which terms actually matched, so callers (excerpt
+/// selection, highlighting) never need to re-derive or guess this.
+///
+/// [matchedTerms] and [queryPass] describe the whole response, not any
+/// one article individually: [AskVaultSearch.search] tries the raw query
+/// first and only falls back to the bilingual-normalized query if the
+/// raw pass matches nothing at all, so every article in [articles] -
+/// however many there are - was always found by the same single pass.
+class AskVaultSearchResponse {
+  const AskVaultSearchResponse({
+    required this.articles,
+    required this.matchedTerms,
+    required this.queryPass,
+  });
+
+  final List<Article> articles;
+  final List<String> matchedTerms;
+  final AskVaultQueryPass? queryPass;
+}
+
 /// Retrieval-only "Ask the Vault" search: a single-turn layer over the
 /// existing [ArticleSearch], never modifying it.
 ///
@@ -24,16 +50,26 @@ class AskVaultSearch {
     'ini', 'gimana', 'dong',
   ];
 
-  /// Returns up to [maxResults] articles that directly answer [rawQuery],
-  /// or an empty list if nothing in the Vault supports an answer.
+  /// Returns up to [maxResults] articles that directly answer [rawQuery]
+  /// plus the exact term context that produced them, or an empty,
+  /// context-less response if nothing in the Vault supports an answer.
   ///
   /// Pass 1 searches [rawQuery] as typed. Only if that yields no eligible
   /// result does pass 2 strip a small fixed list of English/Indonesian
   /// filler words and search again - [ArticleSearch.search] itself is
   /// called unchanged in both passes.
-  static List<Article> search(List<Article> articles, String rawQuery) {
+  static AskVaultSearchResponse search(
+    List<Article> articles,
+    String rawQuery,
+  ) {
     final trimmed = rawQuery.trim();
-    if (trimmed.isEmpty) return const [];
+    if (trimmed.isEmpty) {
+      return const AskVaultSearchResponse(
+        articles: [],
+        matchedTerms: [],
+        queryPass: null,
+      );
+    }
 
     final rawTerms = _termsOf(trimmed);
     final firstPass = _eligible(
@@ -41,18 +77,40 @@ class AskVaultSearch {
       rawTerms,
     );
     if (firstPass.isNotEmpty) {
-      return firstPass.take(maxResults).toList();
+      return AskVaultSearchResponse(
+        articles: firstPass.take(maxResults).toList(),
+        matchedTerms: rawTerms,
+        queryPass: AskVaultQueryPass.raw,
+      );
     }
 
     final normalized = _normalizeBilingual(trimmed);
-    if (normalized.isEmpty) return const [];
+    if (normalized.isEmpty) {
+      return const AskVaultSearchResponse(
+        articles: [],
+        matchedTerms: [],
+        queryPass: null,
+      );
+    }
 
     final normalizedTerms = _termsOf(normalized);
     final secondPass = _eligible(
       ArticleSearch.search(articles, normalized),
       normalizedTerms,
     );
-    return secondPass.take(maxResults).toList();
+    if (secondPass.isEmpty) {
+      return const AskVaultSearchResponse(
+        articles: [],
+        matchedTerms: [],
+        queryPass: null,
+      );
+    }
+
+    return AskVaultSearchResponse(
+      articles: secondPass.take(maxResults).toList(),
+      matchedTerms: normalizedTerms,
+      queryPass: AskVaultQueryPass.normalized,
+    );
   }
 
   static List<String> _termsOf(String query) => query

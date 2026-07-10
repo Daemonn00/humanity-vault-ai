@@ -28,14 +28,7 @@ class AskVaultScreen extends StatefulWidget {
 
 class _AskVaultScreenState extends State<AskVaultScreen> {
   final TextEditingController _controller = TextEditingController();
-  List<Article>? _results;
-
-  /// The exact query text that produced [_results] - kept separate from
-  /// [_controller]'s live text so that editing the field after a
-  /// submission (without resubmitting) can never desync the query used
-  /// for excerpt/highlight term resolution from the results actually
-  /// shown.
-  String _submittedQuery = '';
+  AskVaultSearchResponse? _response;
 
   @override
   void dispose() {
@@ -46,8 +39,7 @@ class _AskVaultScreenState extends State<AskVaultScreen> {
   void _submit() {
     final query = _controller.text;
     setState(() {
-      _submittedQuery = query;
-      _results = AskVaultSearch.search(
+      _response = AskVaultSearch.search(
         ArticlesRepository().getAllArticles(),
         query,
       );
@@ -63,7 +55,8 @@ class _AskVaultScreenState extends State<AskVaultScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final results = _results;
+    final response = _response;
+    final results = response?.articles;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Ask the Vault')),
@@ -109,7 +102,7 @@ class _AskVaultScreenState extends State<AskVaultScreen> {
                           return _AskVaultResultTile(
                             article: article,
                             color: _colorForCategory(article.category),
-                            submittedQuery: _submittedQuery,
+                            matchedTerms: response!.matchedTerms,
                           );
                         },
                       ),
@@ -190,22 +183,21 @@ class _AskVaultResultTile extends StatelessWidget {
   const _AskVaultResultTile({
     required this.article,
     required this.color,
-    required this.submittedQuery,
+    required this.matchedTerms,
   });
 
   final Article article;
   final Color color;
-  final String submittedQuery;
+  final List<String> matchedTerms;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     final isSafety = isSafetyClassified(article);
-    final terms = resolveQueryTerms(article, submittedQuery);
     final excerpt = selectExcerpt(
       article,
-      terms,
+      matchedTerms,
       isSafetyClassified: isSafety,
     );
     final isContentPassage =
@@ -235,7 +227,7 @@ class _AskVaultResultTile extends StatelessWidget {
                 TextSpan(
                   children: buildHighlightedSpans(
                     text: excerpt.text,
-                    terms: terms,
+                    terms: matchedTerms,
                     baseStyle: bodyStyle,
                     highlightStyle: bodyStyle?.copyWith(
                       fontWeight: FontWeight.w700,

@@ -1,11 +1,12 @@
 // Unit tests for ask_vault_excerpt.dart: the deterministic, verbatim-only
-// excerpt selector used by Phase B ("Better Extractive Relevance"), plus
-// its query-term resolution helper. Every test treats AskVaultSearch as
-// an unmodified dependency - none of these tests touch ask_vault_search.dart.
+// excerpt selector used by Phase B ("Better Extractive Relevance").
+// selectExcerpt takes its query terms as a plain parameter - it has no
+// dependency on ask_vault_search.dart and never re-derives terms itself
+// (see ask_vault_search_test.dart for the matchedTerms/queryPass
+// contract that supplies this parameter in real use).
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:humanity_vault_app/features/ask_vault/data/ask_vault_excerpt.dart';
-import 'package:humanity_vault_app/features/ask_vault/data/ask_vault_search.dart';
 import 'package:humanity_vault_app/features/library/models/article.dart';
 
 Article _article({
@@ -164,43 +165,6 @@ void main() {
           .contains(excerpt.text);
       expect(isExactlySummary || isExactlyOneParagraph, isTrue);
       expect(isExactlySummary && isExactlyOneParagraph, isFalse);
-    });
-  });
-
-  group('resolveQueryTerms parity with AskVaultSearch', () {
-    test('when the raw query alone matches, the raw terms are returned',
-        () {
-      final article = _article(
-        slug: 'a',
-        title: 'Water Purification',
-        summary: 'Boil water for at least one minute before drinking.',
-      );
-
-      final results = AskVaultSearch.search([article], 'water purification');
-      expect(results, [article]);
-
-      final terms = resolveQueryTerms(article, 'water purification');
-      expect(terms, ['water', 'purification']);
-    });
-
-    test('when only the bilingual-normalized query matches, the '
-        'normalized terms are returned', () {
-      final article = _article(
-        slug: 'a',
-        title: 'Water Purification',
-        summary: 'Purify water by boiling it for at least one minute.',
-      );
-
-      // Sanity check: the raw query alone does not match (forces
-      // AskVaultSearch's normalized fallback), mirroring
-      // ask_vault_search_test.dart's own equivalent case.
-      expect(
-        AskVaultSearch.search([article], 'how do I purify water'),
-        [article],
-      );
-
-      final terms = resolveQueryTerms(article, 'how do I purify water');
-      expect(terms, ['purify', 'water']);
     });
   });
 }

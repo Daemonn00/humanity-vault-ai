@@ -2,6 +2,14 @@
 // the existing ArticleSearch used by the "Ask the Vault" screen. Every
 // test here treats ArticleSearch as an unmodified dependency - none of
 // these tests touch article_search.dart or its own test suite.
+//
+// AskVaultSearch.search returns an AskVaultSearchResponse (articles +
+// matchedTerms + queryPass) rather than a plain List<Article> - the
+// single source of truth for which query-term set actually produced a
+// given result, so callers (excerpt selection, highlighting) never need
+// to re-derive or guess it. Most tests below only assert on
+// response.articles, matching this file's original behavioral coverage;
+// a dedicated group asserts the matchedTerms/queryPass contract itself.
 
 import 'dart:io';
 
@@ -43,9 +51,9 @@ void main() {
       summary: 'Boil water for at least one minute before drinking.',
     );
 
-    final results = AskVaultSearch.search([article], 'water purification');
+    final response = AskVaultSearch.search([article], 'water purification');
 
-    expect(results, [article]);
+    expect(response.articles, [article]);
   });
 
   test('bilingual normalization is only attempted when pass 1 yields no '
@@ -61,12 +69,12 @@ void main() {
 
     expect(ArticleSearch.search([article], 'how do I purify water'), isEmpty);
 
-    final results = AskVaultSearch.search(
+    final response = AskVaultSearch.search(
       [article],
       'how do I purify water',
     );
 
-    expect(results, [article]);
+    expect(response.articles, [article]);
   });
 
   test('an all-filler-word query (English) returns no results without a '
@@ -77,7 +85,10 @@ void main() {
       summary: 'Boil water for at least one minute before drinking.',
     );
 
-    expect(AskVaultSearch.search([article], 'how do i'), isEmpty);
+    expect(
+      AskVaultSearch.search([article], 'how do i').articles,
+      isEmpty,
+    );
   });
 
   test('an all-filler-word query (Indonesian) returns no results without '
@@ -88,7 +99,10 @@ void main() {
       summary: 'Boil water for at least one minute before drinking.',
     );
 
-    expect(AskVaultSearch.search([article], 'bagaimana cara'), isEmpty);
+    expect(
+      AskVaultSearch.search([article], 'bagaimana cara').articles,
+      isEmpty,
+    );
   });
 
   test(
@@ -136,11 +150,14 @@ void main() {
     // narrower Ask the Vault behavior below).
     expect(ArticleSearch.search(all, 'solar').length, all.length);
 
-    final results = AskVaultSearch.search(all, 'solar');
+    final response = AskVaultSearch.search(all, 'solar');
 
-    expect(results, containsAll([tier0Title, tier1Category, tier2Summary]));
-    expect(results, isNot(contains(tier3BenefitsOnly)));
-    expect(results, isNot(contains(tier4ContentOnly)));
+    expect(
+      response.articles,
+      containsAll([tier0Title, tier1Category, tier2Summary]),
+    );
+    expect(response.articles, isNot(contains(tier3BenefitsOnly)));
+    expect(response.articles, isNot(contains(tier4ContentOnly)));
   });
 
   test('a title/category match with an empty summary is skipped, not '
@@ -152,7 +169,10 @@ void main() {
       content: 'Boiling is one reliable method.',
     );
 
-    expect(AskVaultSearch.search([article], 'water purification'), isEmpty);
+    expect(
+      AskVaultSearch.search([article], 'water purification').articles,
+      isEmpty,
+    );
   });
 
   test('a title/category match with a whitespace-only summary is treated '
@@ -163,7 +183,10 @@ void main() {
       summary: '   \n  ',
     );
 
-    expect(AskVaultSearch.search([article], 'water purification'), isEmpty);
+    expect(
+      AskVaultSearch.search([article], 'water purification').articles,
+      isEmpty,
+    );
   });
 
   test('benefits/sources-only and content-only matches are always '
@@ -182,7 +205,10 @@ void main() {
     );
 
     expect(
-      AskVaultSearch.search([benefitsOnly, contentOnly], 'purifying water'),
+      AskVaultSearch.search(
+        [benefitsOnly, contentOnly],
+        'purifying water',
+      ).articles,
       isEmpty,
     );
   });
@@ -198,9 +224,9 @@ void main() {
       ),
     );
 
-    final results = AskVaultSearch.search(articles, 'water purification');
+    final response = AskVaultSearch.search(articles, 'water purification');
 
-    expect(results.length, 3);
+    expect(response.articles.length, 3);
   });
 
   test('every returned article\'s excerpt (its own summary field) is '
@@ -211,10 +237,81 @@ void main() {
       summary: 'Boil water for at least one minute before drinking.',
     );
 
-    final results = AskVaultSearch.search([article], 'water purification');
+    final response = AskVaultSearch.search([article], 'water purification');
 
-    expect(results.single.summary, article.summary);
-    expect(results.single.summary.trim(), isNotEmpty);
+    expect(response.articles.single.summary, article.summary);
+    expect(response.articles.single.summary.trim(), isNotEmpty);
+  });
+
+  group('AskVaultSearchResponse matchedTerms and queryPass', () {
+    test('a successful raw-query response exposes the exact raw terms '
+        'and AskVaultQueryPass.raw', () {
+      final article = _article(
+        slug: 'a',
+        title: 'Water Purification',
+        summary: 'Boil water for at least one minute before drinking.',
+      );
+
+      final response = AskVaultSearch.search([article], 'Water Purification');
+
+      expect(response.articles, [article]);
+      expect(response.matchedTerms, ['water', 'purification']);
+      expect(response.queryPass, AskVaultQueryPass.raw);
+    });
+
+    test('a successful bilingual-normalized fallback response exposes '
+        'the exact normalized terms and AskVaultQueryPass.normalized',
+        () {
+      final article = _article(
+        slug: 'a',
+        title: 'Water Purification',
+        summary: 'Purify water by boiling it for at least one minute.',
+      );
+
+      // Sanity check: the raw query alone does not match (forces the
+      // normalized fallback).
+      expect(
+        AskVaultSearch.search([article], 'how do I purify water').articles,
+        [article],
+      );
+
+      final response = AskVaultSearch.search(
+        [article],
+        'how do I purify water',
+      );
+
+      expect(response.matchedTerms, ['purify', 'water']);
+      expect(response.queryPass, AskVaultQueryPass.normalized);
+    });
+
+    test('a no-result response returns empty articles, empty '
+        'matchedTerms, and a null queryPass', () {
+      final article = _article(
+        slug: 'a',
+        title: 'Water Purification',
+        summary: 'Boil water for at least one minute before drinking.',
+      );
+
+      final response = AskVaultSearch.search(
+        [article],
+        'zzz_nonexistent_query_term_12345',
+      );
+
+      expect(response.articles, isEmpty);
+      expect(response.matchedTerms, isEmpty);
+      expect(response.queryPass, isNull);
+    });
+
+    test('an empty query string returns empty articles, empty '
+        'matchedTerms, and a null queryPass', () {
+      final article = _article(slug: 'a', title: 'Water Purification');
+
+      final response = AskVaultSearch.search([article], '   ');
+
+      expect(response.articles, isEmpty);
+      expect(response.matchedTerms, isEmpty);
+      expect(response.queryPass, isNull);
+    });
   });
 
   group('installed Knowledge Pack articles', () {
@@ -251,12 +348,15 @@ A pack-only summary about signaling for rescue.
 
       await PacksLoader.loadPacksFrom(root);
 
-      final results = AskVaultSearch.search(
+      final response = AskVaultSearch.search(
         ArticlesRepository().getAllArticles(),
         'signaling for rescue',
       );
 
-      expect(results.any((a) => a.slug == 'pack_only_ask_vault_slug'), isTrue);
+      expect(
+        response.articles.any((a) => a.slug == 'pack_only_ask_vault_slug'),
+        isTrue,
+      );
     });
   });
 }

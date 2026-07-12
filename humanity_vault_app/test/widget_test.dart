@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:humanity_vault_app/features/ask_vault/presentation/ask_vault_screen.dart';
 import 'package:humanity_vault_app/features/library/data/articles_repository.dart';
+import 'package:humanity_vault_app/features/vault_hub/presentation/vault_hub_screen.dart';
 import 'package:humanity_vault_app/main.dart';
 
 void main() {
@@ -26,6 +27,7 @@ void main() {
     expect(find.text('Search Knowledge'), findsOneWidget);
     expect(find.text('Emergency Mode'), findsOneWidget);
     expect(find.text('Ask the Vault'), findsOneWidget);
+    expect(find.text('Vault Hub'), findsOneWidget);
     expect(find.text('11 categories · 31 articles'), findsOneWidget);
   });
 
@@ -45,14 +47,15 @@ void main() {
     await tester.pumpAndSettle();
 
     const safeVisibleBottom = 812 - 48;
-    // Ask the Vault is the newest, most exploratory action, so it is
-    // appended after Emergency Mode rather than inserted before it -
-    // every card, not just the last, must still clear the nav bar.
+    // Each new Home action is appended after the previous ones rather
+    // than inserted before them - every card, not just the last, must
+    // still clear the nav bar.
     for (final label in [
       'Browse Categories',
       'Search Knowledge',
       'Emergency Mode',
       'Ask the Vault',
+      'Vault Hub',
     ]) {
       await tester.scrollUntilVisible(find.text(label), 300.0);
       await tester.pumpAndSettle();
@@ -93,5 +96,25 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(AskVaultScreen), findsOneWidget);
+  });
+
+  testWidgets('tapping Vault Hub opens the Vault Hub screen',
+      (WidgetTester tester) async {
+    await ArticlesRepository.ensureLoaded();
+    await tester.pumpWidget(const HumanityVaultApp());
+    await tester.pumpAndSettle();
+
+    await tester.scrollUntilVisible(find.text('Vault Hub'), 300.0);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Vault Hub'));
+    // VaultHubScreen kicks off a real network fetch on open (via the
+    // default IoHttpFetcher), which never resolves under flutter_test's
+    // fake-async pump loop - pumpAndSettle would hang waiting for it,
+    // so a bounded pump is used instead, matching how this screen's own
+    // tests avoid pumpAndSettle during its loading state.
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.byType(VaultHubScreen), findsOneWidget);
   });
 }

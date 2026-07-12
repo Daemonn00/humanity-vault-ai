@@ -11,6 +11,7 @@ import 'features/emergency/presentation/emergency_screen.dart';
 import 'features/library/presentation/categories_screen.dart';
 import 'features/library/presentation/search_screen.dart';
 import 'features/packs/data/packs_loader.dart';
+import 'features/vault_hub/presentation/vault_hub_screen.dart';
 import 'shared/widgets/action_card.dart';
 import 'shared/widgets/bottom_safe_area.dart';
 
@@ -162,6 +163,21 @@ class HomeScreen extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => const AskVaultScreen(),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: AppSpacing.md),
+            ActionCard(
+              icon: Icons.storefront_outlined,
+              title: 'Vault Hub',
+              subtitle: 'Browse and install official Knowledge Packs',
+              iconBackgroundColor: AppColors.primary.withValues(alpha: 0.12),
+              iconColor: AppColors.primary,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const VaultHubScreen(),
                   ),
                 );
               },

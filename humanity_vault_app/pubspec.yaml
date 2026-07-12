@@ -47,6 +47,10 @@ dependencies:
   # Pure-Dart, no native code beyond what file_picker already needs.
   archive: ^3.6.1
 
+  # SHA-256 checksum verification for Vault Hub pack downloads, before
+  # a downloaded ZIP is ever handed to PackImporter.
+  crypto: ^3.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

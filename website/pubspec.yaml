@@ -1,0 +1,23 @@
+name: humanity_vault_website
+description: >
+  Standalone build tool for the official Humanity Vault website - a
+  static, read-only site. Renders content/pages/*.html fragments and
+  content/docs/*.md + content/changelog.md through one shared layout
+  into dist/. Never touches humanity_vault_app/, registry_generator/,
+  or registry/registry.json. See README.md.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  # Build-time Markdown -> HTML rendering for Documentation and the
+  # Changelog, per the approved requirement that these are static
+  # Markdown, build-time rendered. Official dart-lang package, no
+  # transitive dependency bloat.
+  markdown: ^7.2.2
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0

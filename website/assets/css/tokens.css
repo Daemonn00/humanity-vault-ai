@@ -1,0 +1,92 @@
+/*
+ * Design tokens for the Humanity Vault website.
+ *
+ * Colors, spacing, and type sizes mirror
+ * humanity_vault_app/lib/core/theme/{app_colors,app_spacing,app_typography}.dart
+ * exactly, per the approved Website Design System v1 - the website
+ * reuses the app's existing palette rather than introducing a new one.
+ * Tokens marked "web-only" have no app equivalent (Material derives
+ * them automatically there) and are new, same-family additions.
+ */
+
+:root {
+  /* Colors - from app_colors.dart */
+  --color-primary: #2F5D50;
+  --color-accent: #D4B26A;
+  --color-background: #F5F4EE;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #2A2A2A;
+  --color-emergency-primary: #C7772B;
+  --color-emergency-secondary: #F2E6D8;
+
+  --color-verification-verified: #4E7A4F;
+  --color-verification-community: #4D6B8C;
+  --color-verification-historical: #8A6B47;
+  --color-verification-unverified: #8A8A8A;
+
+  --color-category-survival: #4E7A4F;
+  --color-category-medicine: #5B8FA8;
+  --color-category-agriculture: #7D9C55;
+  --color-category-engineering: #7A7A7A;
+  --color-category-electronics: #4D6B8C;
+  --color-category-construction: #8A6B47;
+  --color-category-history: #A67C52;
+  --color-category-philosophy: #6E5A8A;
+  --color-category-islam: #2F7A5F;
+  --color-category-local-wisdom: #8C6A4A;
+  --color-category-communication: #B05A3C;
+
+  /* Web-only: border color for flat/bordered cards (no shadows) */
+  --color-border: #E0DED4;
+  /* Web-only: focus ring reuses primary */
+  --color-focus-ring: #2F5D50;
+  --color-on-primary: #FFFFFF;
+
+  /* Spacing - from app_spacing.dart, 8pt grid */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --radius-card: 16px;
+  --radius-button: 8px;
+  --radius-hero: 20px;
+  --radius-pill: 999px;
+
+  /* Typography - system fonts only, per app_typography.dart's own
+     "Uses system fonts for offline reliability" rule, carried over to
+     the website for brand/behavior consistency. */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --font-size-h1: 2rem;          /* 32px */
+  --font-size-h2: 1.5rem;        /* 24px */
+  --font-size-title: 1.125rem;   /* 18px */
+  --font-size-body: 1rem;        /* 16px */
+  --font-size-body-lg: 1.125rem; /* 18px */
+  --font-size-label: 0.8125rem;  /* 13px */
+
+  --line-height-heading: 1.3;
+  --line-height-body: 1.6;
+  --line-height-label: 1.4;
+
+  --weight-heading: 700;
+  --weight-title: 600;
+  --weight-label: 500;
+
+  /* Layout */
+  --container-max: 1200px;
+  --content-max: 680px;
+  --touch-target-min: 44px;
+
+  /* Motion - short and functional only, never decorative */
+  --duration-fast: 150ms;
+  --duration-standard: 200ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark mode is explicitly deferred per the approved Design System v1
+     (the app itself ships light mode only, with no dark reference to
+     stay consistent with) - intentionally left unset here. */
+}

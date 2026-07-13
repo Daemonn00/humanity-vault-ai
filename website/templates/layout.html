@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} · Humanity Vault</title>
+<meta name="description" content="{{description}}">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav">
+  <div class="site-nav__bar">
+    <a class="site-nav__brand" href="/">Humanity Vault</a>
+    <button class="site-nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation menu">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav aria-label="Primary">
+      <ul class="site-nav__list" id="nav-list">
+{{nav_items}}
+        <li><a class="site-nav__link site-nav__link--external" href="https://github.com/Daemonn00/humanity-vault-ai" target="_blank" rel="noopener">GitHub
+          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="container">
+{{content}}
+</main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <strong>Humanity Vault</strong>
+      <p class="site-footer__meta">Knowledge for survival, recovery, and rebuilding.<br>Free forever. Offline-first. No account required.</p>
+    </div>
+    <ul class="site-footer__list">
+{{footer_nav_items}}
+      <li><a href="https://github.com/Daemonn00/humanity-vault-ai" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="/assets/js/nav.js"></script>
+{{extra_scripts}}
+</body>
+</html>

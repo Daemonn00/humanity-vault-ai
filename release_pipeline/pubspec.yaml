@@ -1,0 +1,29 @@
+name: release_pipeline
+description: >
+  Standalone tool implementing the official Knowledge Pack release
+  workflow: packages a reviewed pack directory into a release ZIP,
+  verifies version/filename/checksum/article-count consistency, and
+  proves - via a dry run against the existing Registry Generator -
+  that the packaged release would produce a valid registry entry
+  before any real GitHub Release is created. Never modifies
+  humanity_vault_app/, registry_generator/, official_packs/, or
+  registry/registry.json. See README.md and RELEASE_CHECKLIST.md.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  archive: ^3.6.1
+  crypto: ^3.0.3
+  # Reuses the existing, unmodified Registry Generator's manifest/
+  # article reading and validation logic directly, rather than
+  # duplicating it a third time (Vault Hub already carries one
+  # temporary mirror of this schema; this tool avoids adding another).
+  registry_generator:
+    path: ../registry_generator
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0

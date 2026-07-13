@@ -1,0 +1,13 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    # This package deliberately reuses registry_generator's manifest/
+    # article reading and validation logic directly (PackReader,
+    # PackValidation, RegistryGenerator, ReleaseSource) rather than
+    # duplicating it a third time - registry_generator has no public
+    # barrel export, and adding one would be a change to its
+    # architecture, which this task explicitly forbids. Importing its
+    # lib/src/ files directly is therefore intentional, not an
+    # oversight.
+    implementation_imports: false

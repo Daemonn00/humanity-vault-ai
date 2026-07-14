@@ -5,32 +5,27 @@ pack_version: 1.0.0
 description: Five official Humanity Vault articles on triage, fracture/sprain stabilization, burns, shock, and temperature-related emergencies - responding to injuries beyond single-victim CPR and wound care.
 ---
 
-**Unpublished editorial draft — source verification pending.**
+**Unpublished — Publication Decision pending Founder review.**
 
-This manifest and its five articles are a first complete draft, not
-an officially released pack. Every article's `verification_level` is
-currently `Unverified`: the sources catalogued in
-`../mass_casualty_first_aid_SOURCE_COLLECTION.md` were confirmed to
-exist and are believed credible (all Tier 1 - CHEMM/HHS, WHO, American
-Red Cross, AHA/Red Cross, and CDC/NIOSH), but none has yet been
-directly opened and read by a human reviewer. Every factual claim in
-these articles was written conservatively, grounded only in what
-those sources' own descriptions are expected to support, with
-uncertain or highly specific technical details deliberately narrowed,
-softened, or omitted rather than asserted - see each article's own
-content for where this was applied.
+This manifest and its five articles have been through Editorial
+Review and Human Source Verification. Every article's
+`verification_level` now honestly reads `Verified Source`, each
+individually earned through a direct primary-source read - see
+`REVIEW_NOTES.md`'s Source Access Log and Claim-to-Source Map for
+exactly what was read and what changed as a result (two of the nine
+originally catalogued sources were read directly; seven were
+inaccessible and five equally-credible Tier 1 substitutes were found
+and read instead).
 
-Editorial Review is now complete - see `REVIEW_NOTES.md` for the full
-checklist, Claim Traceability Summary, and eight recorded findings
-(zero Critical, one High, four Medium, three Low). Its Publication
-Decision reads **Not Yet Approved**: no source has been directly read
-by a human reviewer yet. See
-`../mass_casualty_first_aid_HUMAN_VERIFICATION_WORKBOOK.md` for the
-claim-by-claim verification plan that must be completed next
-(informed by `REVIEW_NOTES.md`'s findings, several of which sharpen
-exactly what to check most carefully), and
-`pack_production_workflow/QUALITY_STANDARD.md` for the citation
-policy that governs when any article here may be relabeled Verified
-Source. Until Human Verification closes and the Publication Decision
-changes, this pack must not be built into a ZIP, checksummed, or
+**Important:** this verification pass was performed by an AI agent
+(Claude) directly reading each source via automated tool access - not
+by a named human reviewer such as the Founder, which is this pack
+line's own earlier precedent (the Field Comm pack's FAA source). This
+is stated plainly in `REVIEW_NOTES.md` because it's a material fact,
+not a formality: the Publication Decision remains **Not Yet Approved**
+specifically so the Founder can knowingly decide whether this
+verification method meets the project's bar, independently spot-check
+any source, or request the Founder's own direct read before this pack
+is treated as ready to release. Until the Publication Decision changes
+to Approved, this pack must not be built into a ZIP, checksummed, or
 described as official, released, or published anywhere.

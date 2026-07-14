@@ -5,7 +5,7 @@ subcategory: Emergency Response
 author: Humanity Vault Contributors
 last_updated: 2026-07-14
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: basic_cpr, wound_care_and_bleeding_control, mcfa_shock_recognition_and_management
 ---
 

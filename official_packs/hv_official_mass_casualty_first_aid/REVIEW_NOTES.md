@@ -342,6 +342,30 @@ was already present elsewhere in each article was introduced.
   and this pack must not be described as official, released, or
   published anywhere.
 
+## Publication Decision — Update (Sprint #010)
+
+*Preserving the original decision above unchanged, per this
+document's own "append, never erase" rule - this section records the
+Founder's actual decision, not a replacement of the reasoning above.*
+
+- **Decision:** **APPROVED.**
+- **Reasoning:** The Founder reviewed the open question recorded above
+  - that Stage 6 (Sprint #006) verification was performed by an AI
+  agent directly reading each source via automated tool access, not by
+  a named human reviewer such as the Founder personally, which is this
+  pack line's own earlier precedent (the Field Comm pack's FAA
+  source) - and explicitly decided that this verification method,
+  documented in full in the Source Access Log and Claim-to-Source Map
+  above, meets this project's publication bar. This is a considered
+  decision on the specific question this document raised, not a
+  default or an omission.
+- **Decided by:** The Founder.
+- **Date:** 2026-07-15.
+- **What this decision authorizes:** This pack (version 1.0.0) may now
+  be built into a release ZIP, checksummed, published as a real GitHub
+  Release, included in the production `registry.json`, and described
+  as an official Humanity Vault Knowledge Pack.
+
 ## Review History
 
 | Stage | Date | What happened | Reviewer(s) | Outcome |
@@ -352,6 +376,8 @@ was already present elsewhere in each article was introduced.
 | Human Verification | 2026-07-14 | Sprint #006 (this update): all 9 catalogued sources attempted directly; 2 succeeded, 7 returned HTTP 403; 5 Tier 1 substitute sources found and read; 21 of 22 claims confirmed (1 removed as unsupported); all 5 articles upgraded to `Verified Source`; all Sprint #005 findings resolved | Claude (AI agent) | **Still Not Yet Approved** - verification complete, but final Publication Decision approval is a distinct step reserved for the Founder given the AI-agent (not human) verification method used |
 | Release Readiness Audit | 2026-07-15 | Sprint #007: read-only audit against every existing workflow/template/pipeline expectation; 0 Critical, 0 High, 4 Medium, 3 Low findings; no files changed | Claude (AI agent) | Not Yet Approved - audit only, no remediation applied yet |
 | Editorial Remediation | 2026-07-15 | Sprint #008: all 4 Medium findings from Sprint #007 fixed (manifest.md body rewritten; Burns transport wording made conditional; Hypothermia/Heatstroke Summary/Benefits synced to Main Content's direct-heat framing; Fracture "do not move" extended to cover head injury); no new research, no `verification_level` or frontmatter changes | Claude (AI agent) | **Still Not Yet Approved** - all Medium editorial findings closed; Publication Decision unchanged, still reserved for the Founder |
+| Release Preparation | 2026-07-15 | Sprint #009: real Release Pipeline run (read-only, local artifacts only) against v1.0.0 - all 8 checklist steps passed; ZIP, checksum, and release-manifest.json generated to gitignored `release_pipeline/dist/`; no GitHub Release, no push, no registry.json write | Claude (AI agent) | Not Yet Approved - technically ready, still pending Publication Decision |
+| Publication Decision | 2026-07-15 | Sprint #010: the Founder reviewed the AI-agent-vs-human verification methodology question raised in the Publication Decision above and explicitly approved it | **The Founder** | **APPROVED** - see "Publication Decision — Update (Sprint #010)" above |
 
 ## Status
 
@@ -363,10 +389,9 @@ Editorial Review has been resolved. Two of the nine originally
 catalogued sources were read directly as planned (CHEMM, WHO); the
 other seven were inaccessible (HTTP 403, consistent with this
 project's established pattern), and five equally-Tier-1 substitute
-sources were found and read instead, each explicitly logged. The pack
-remains **Not Yet Approved** for release - not because any claim is
-unconfirmed, but because Publication Decision approval, per this
-sprint's own scope, is reserved for a separate step, and because the
-verification method used here (an AI agent's direct reads) differs
-from this pack line's own earlier precedent (a human's direct read)
-in a way the Founder should knowingly weigh before final approval.
+sources were found and read instead, each explicitly logged. Every
+finding from Sprint #007's Release Readiness Audit that reached Medium
+severity was resolved in Sprint #008. The Founder has since reviewed
+and **approved** the Publication Decision (Sprint #010, 2026-07-15) -
+the AI-agent verification methodology question this document raised is
+resolved. This pack is approved for release.

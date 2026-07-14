@@ -1,10 +1,45 @@
 {
   "registry_schema_version": "1",
-  "generated_at": "2026-07-12T01:39:26.545009Z",
+  "generated_at": "2026-07-14T21:55:16.761065Z",
   "generator_version": "0.1.0",
-  "pack_count": 0,
+  "pack_count": 1,
   "source_repositories": [
     "Daemonn00/humanity-vault-ai"
   ],
-  "packs": []
+  "packs": [
+    {
+      "pack_id": "hv_official_mass_casualty_first_aid",
+      "pack_name": "Mass Casualty & Trauma First Aid",
+      "description": "Five official Humanity Vault articles on triage, fracture/sprain stabilization, burns, shock, and temperature-related emergencies - responding to injuries beyond single-victim CPR and wound care.",
+      "category_tags": [
+        "Medicine"
+      ],
+      "trust_tier": "official",
+      "verification_summary": "Verified Source",
+      "latest_version": "1.0.0",
+      "asset_type": "knowledge_pack",
+      "license": null,
+      "dependencies": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publish_date": "2026-07-14T21:53:35.000Z",
+          "changelog_summary": "Five official Humanity Vault articles covering emergency response beyond single-victim CPR and wound care.\r\n\r\n## Articles\r\n\r\n- Triage Basics for Multiple Casualties\r\n- Fracture and Sprain Stabilization\r\n- Burn Assessment and Field Treatment\r\n- Shock Recognition and Management\r\n- Hypothermia and Heatstroke Field Response\r\n\r\n## Verification\r\n\r\n- **Verification Summary:** Verified Source (all 5 articles)\r\n- **SHA-256:** `abce0c932b2c6d6aa1ee4fecf94cd4a4c3c0dca14466ba52cca55f3e6cdb2d05`\r\n\r\n## Installation\r\n\r\n### Humanity Vault App\r\n\r\nAfter this release has been added to the published registry, open **Vault Hub**, locate **Mass Casualty & Trauma First Aid**, and tap **Install**.\r\n\r\nThe app will download this ZIP, verify its SHA-256 checksum against the published registry entry, and install it automatically.\r\n\r\n### Manual Installation\r\n\r\n1. Download the ZIP asset attached to this release.\r\n2. Open the Humanity Vault app.\r\n3. Go to **About → Import Knowledge Pack**.\r\n4. Select the downloaded ZIP file.\r\n5. Restart the app after the import completes.\r\n\r\n## Compatibility\r\n\r\nNo minimum app version is currently enforced for Official Knowledge Pack imports (Registry Schema v1).\r\n\r\nThe package includes the required `manifest.md` at the ZIP root containing:\r\n\r\n- `pack_id`\r\n- `pack_name`\r\n- `pack_version`\r\n\r\n## Package Information\r\n\r\n- **Package ID:** `hv_official_mass_casualty_first_aid`\r\n- **Version:** `1.0.0`\r\n- **Category:** Medicine\r\n- **Articles:** 5",
+          "download_url": "https://github.com/Daemonn00/humanity-vault-ai/releases/download/hv_official_mass_casualty_first_aid-v1.0.0/hv_official_mass_casualty_first_aid-v1.0.0.zip",
+          "sha256": "abce0c932b2c6d6aa1ee4fecf94cd4a4c3c0dca14466ba52cca55f3e6cdb2d05",
+          "size_bytes": 9178,
+          "article_count": 5,
+          "compatibility": {
+            "min_app_version": null,
+            "recommended_app_version": null
+          },
+          "deprecated": false,
+          "deprecated_reason": null,
+          "replacement_pack_id": null,
+          "archived": false,
+          "source_commit": "04e083d5bb4c3325665902ec66b8c0c8a58840b3"
+        }
+      ]
+    }
+  ]
 }

@@ -34,5 +34,4 @@ Editorial note: visual signaling is one possible way to become easier to find. I
 
 ## Sources
 
-- International Civil Aviation Organization (ICAO), Annex 12 to the Convention on International Civil Aviation - Search and Rescue
 - Federal Aviation Administration (FAA), Aeronautical Information Publication, GEN 3.6 Search and Rescue

@@ -4,9 +4,9 @@ category: Survival
 subcategory: Navigation
 author: Humanity Vault Contributors
 last_updated: 2026-07-10
-knowledge_level: Level 1
+knowledge_level: Level 2
 verification_level: Unverified
-terrain: tropical_rainforest, desert
+terrain: tropical_rainforest, desert, coastal
 related_articles: basic_navigation_without_gps_or_compass
 ---
 

@@ -6,7 +6,7 @@ author: Humanity Vault Contributors
 last_updated: 2026-07-10
 knowledge_level: Level 1
 verification_level: Unverified
-terrain: urban, coastal
+terrain: urban, coastal, desert, tropical_rainforest
 related_articles: radio_communication_fundamentals, power_bank_survival_guide, visual_signaling_for_rescue_and_rendezvous
 ---
 

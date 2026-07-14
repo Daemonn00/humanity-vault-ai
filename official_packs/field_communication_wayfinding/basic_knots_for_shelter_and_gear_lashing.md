@@ -6,7 +6,7 @@ author: Humanity Vault Contributors
 last_updated: 2026-07-10
 knowledge_level: Level 1
 verification_level: Unverified
-terrain: tropical_rainforest, coastal
+terrain: tropical_rainforest, coastal, desert
 related_articles: basic_shelter_construction, basic_hand_tools_and_their_uses
 ---
 

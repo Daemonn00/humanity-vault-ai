@@ -20,11 +20,17 @@ uncertain or highly specific technical details deliberately narrowed,
 softened, or omitted rather than asserted - see each article's own
 content for where this was applied.
 
-See `../mass_casualty_first_aid_HUMAN_VERIFICATION_WORKBOOK.md` for
-the claim-by-claim verification plan that must be completed next, and
+Editorial Review is now complete - see `REVIEW_NOTES.md` for the full
+checklist, Claim Traceability Summary, and eight recorded findings
+(zero Critical, one High, four Medium, three Low). Its Publication
+Decision reads **Not Yet Approved**: no source has been directly read
+by a human reviewer yet. See
+`../mass_casualty_first_aid_HUMAN_VERIFICATION_WORKBOOK.md` for the
+claim-by-claim verification plan that must be completed next
+(informed by `REVIEW_NOTES.md`'s findings, several of which sharpen
+exactly what to check most carefully), and
 `pack_production_workflow/QUALITY_STANDARD.md` for the citation
 policy that governs when any article here may be relabeled Verified
-Source. Editorial Review (per `editorial_review_template/`) and Human
-Verification have not yet begun. Until that process closes, this pack
-must not be built into a ZIP, checksummed, or described as official,
-released, or published anywhere.
+Source. Until Human Verification closes and the Publication Decision
+changes, this pack must not be built into a ZIP, checksummed, or
+described as official, released, or published anywhere.

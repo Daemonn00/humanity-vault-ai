@@ -6,7 +6,7 @@ author: Humanity Vault Contributors
 last_updated: 2026-07-14
 knowledge_level: Level 2
 verification_level: Unverified
-related_articles: recognizing_and_treating_dehydration, mcfa_shock_recognition_and_management
+related_articles: recognizing_and_treating_dehydration, basic_cpr, mcfa_shock_recognition_and_management
 ---
 
 # Hypothermia and Heatstroke Field Response

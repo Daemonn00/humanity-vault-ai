@@ -6,7 +6,7 @@ author: Humanity Vault Contributors
 last_updated: 2026-07-14
 knowledge_level: Level 2
 verification_level: Unverified
-related_articles: wound_care_and_bleeding_control, mcfa_fracture_and_sprain_stabilization, mcfa_burn_assessment_and_field_treatment
+related_articles: wound_care_and_bleeding_control, mcfa_fracture_and_sprain_stabilization, mcfa_burn_assessment_and_field_treatment, mcfa_triage_basics_for_multiple_casualties, mcfa_hypothermia_and_heatstroke_field_response
 ---
 
 # Shock Recognition and Management

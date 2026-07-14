@@ -19,7 +19,7 @@ Cooling a burn promptly with clean, cool running water - and avoiding several co
 
 For an ordinary thermal burn (from heat, not electricity or chemicals), do not start first aid before making sure you are safe first (for example, switching off an electrical current or wearing gloves around a chemical). Cool the burned area with clean, running water. Avoid using ice directly on a burn, since ice can deepen the injury, and avoid prolonged cooling, since cooling for too long can lead to hypothermia - the goal is to cool the burn, not to create a new problem.
 
-Several traditional home remedies should not be used on a burn: do not apply paste, oil, or turmeric (haldi), and do not apply raw cotton directly to the burn. Do not apply any material directly to the wound, since it might become infected, and do not apply topical medication until the person has been placed under appropriate medical care. Once cooled, wrap the person in a clean cloth or sheet and arrange transport to the nearest appropriate medical care.
+Several traditional home remedies should not be used on a burn: do not apply paste, oil, or turmeric (haldi), and do not apply raw cotton directly to the burn. Do not apply any material directly to the wound, since it might become infected, and do not apply topical medication until the person has been placed under appropriate medical care. Once cooled, cover the area with a clean cloth or sheet. If the burn meets any of the criteria below for needing professional care, arrange transport to the nearest appropriate medical care.
 
 Do not open blisters until topical antimicrobials can be applied by a health-care provider. An intact blister helps protect the healing skin underneath.
 

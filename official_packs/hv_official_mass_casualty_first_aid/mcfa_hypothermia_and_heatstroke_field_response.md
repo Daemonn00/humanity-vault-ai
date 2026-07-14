@@ -13,7 +13,7 @@ related_articles: recognizing_and_treating_dehydration, basic_cpr, mcfa_shock_re
 
 ## Summary
 
-Hypothermia (dangerously low body temperature) and heatstroke (dangerously high body temperature) are both medical emergencies, and both have a common mistake to avoid: rewarming a hypothermic person too quickly, or giving fluids to someone with heatstroke who is confused or losing consciousness, can make things worse rather than better.
+Hypothermia (dangerously low body temperature) and heatstroke (dangerously high body temperature) are both medical emergencies, and both have a common mistake to avoid: using direct heat - such as hot water, a heating pad, or a heat lamp - to rewarm a hypothermic person, or giving fluids to someone with heatstroke who is confused or losing consciousness, can make things worse rather than better.
 
 ## Main Content
 
@@ -30,7 +30,7 @@ Both conditions share a common thread: the instinct to "fix it fast" (a hot bath
 ## Benefits
 
 - Recognizing early signs of both conditions can prompt faster, safer action
-- Knowing what not to do (rapid rewarming, giving fluids to a confused person) avoids two commonly-made mistakes
+- Knowing what not to do (using direct heat to rewarm someone, giving fluids to a confused person) avoids two commonly-made mistakes
 - Complements existing Humanity Vault guidance on dehydration, covering both temperature extremes
 
 ## Sources

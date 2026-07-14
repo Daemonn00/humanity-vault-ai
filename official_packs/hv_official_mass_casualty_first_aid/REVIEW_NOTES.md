@@ -270,6 +270,52 @@ Not applied**, unchanged from Sprint #005 - remains a stylistic-only
 observation, not acted on, consistent with "do not optimize wording
 for style" in this sprint's own instructions.
 
+## Editorial Remediation (Sprint #008)
+
+*Applied 2026-07-15, following the read-only Sprint #007 Release
+Readiness Audit. This section records what changed; the audit's own
+findings are not restated here in full - see the Sprint #007 report
+for the original findings and reasoning.*
+
+Only the four Medium findings from Sprint #007 were addressed. No new
+research was performed, no source was added or re-read, and no
+`verification_level` or frontmatter field was changed on any article.
+
+- **M-1 (manifest.md):** The temporary editorial/process narrative
+  (Publication Decision status, AI-agent-vs-human verification
+  commentary) was removed from the manifest body and replaced with a
+  short, permanent, public-facing description of the pack's five
+  articles. That editorial narrative is not lost - it remains recorded
+  in full above in this document, which stays the canonical editorial
+  history. The manifest no longer states a Publication Decision status
+  at all; **this file (REVIEW_NOTES.md) remains the only authoritative
+  source for whether this pack is approved for release.**
+- **M-2 (Burns article):** The instruction to "arrange transport to the
+  nearest appropriate medical care" was made explicitly conditional on
+  the severity criteria already stated later in the same article
+  (large, deep, face/hands/genitals, electrical/chemical, or infected),
+  instead of reading as an unconditional step for every burn. No
+  medical claim changed; only the internal logic was made consistent.
+- **M-3 (Hypothermia/Heatstroke article):** The Summary line and one
+  Benefits bullet were rewritten to use the same "no direct heat"
+  framing already used in Main Content (and already confirmed against
+  MedlinePlus in Sprint #006), replacing the earlier speed-based
+  "too quickly / rapid rewarming" framing that was no longer accurate
+  to what the article's own body actually says.
+- **M-4 (Fracture article):** The "do not move" instruction was
+  extended from "a suspected spine injury" to "a suspected head, neck,
+  or spine injury," matching the head/neck/back grouping the article's
+  own call-for-emergency-help sentence already used. No new claim was
+  introduced - this closed a gap between two sentences in the same
+  paragraph, not a new assertion.
+
+**Post-remediation check:** all four modified files were re-read in
+full after editing. No new internal inconsistencies were introduced,
+no frontmatter field changed on any file, `verification_level` remains
+`Verified Source` on all five articles (unchanged), no source was
+added, removed, or re-cited differently, and no new claim beyond what
+was already present elsewhere in each article was introduced.
+
 ## Publication Decision
 
 - **Pack:** `hv_official_mass_casualty_first_aid`
@@ -304,6 +350,8 @@ for style" in this sprint's own instructions.
 | Writing | 2026-07-14 | Sprint #004: manifest + all 5 articles drafted, all `Unverified`, conservative wording applied to flagged Critical claims | Claude (AI agent) | Draft complete |
 | Editorial Review | 2026-07-14 | Sprint #005: full structural/consistency/traceability review; 8 findings (0 Critical, 1 High, 4 Medium, 3 Low); 2 purely-editorial metadata fixes applied | Claude (AI agent) | Not Yet Approved - proceeds to Human Verification |
 | Human Verification | 2026-07-14 | Sprint #006 (this update): all 9 catalogued sources attempted directly; 2 succeeded, 7 returned HTTP 403; 5 Tier 1 substitute sources found and read; 21 of 22 claims confirmed (1 removed as unsupported); all 5 articles upgraded to `Verified Source`; all Sprint #005 findings resolved | Claude (AI agent) | **Still Not Yet Approved** - verification complete, but final Publication Decision approval is a distinct step reserved for the Founder given the AI-agent (not human) verification method used |
+| Release Readiness Audit | 2026-07-15 | Sprint #007: read-only audit against every existing workflow/template/pipeline expectation; 0 Critical, 0 High, 4 Medium, 3 Low findings; no files changed | Claude (AI agent) | Not Yet Approved - audit only, no remediation applied yet |
+| Editorial Remediation | 2026-07-15 | Sprint #008: all 4 Medium findings from Sprint #007 fixed (manifest.md body rewritten; Burns transport wording made conditional; Hypothermia/Heatstroke Summary/Benefits synced to Main Content's direct-heat framing; Fracture "do not move" extended to cover head injury); no new research, no `verification_level` or frontmatter changes | Claude (AI agent) | **Still Not Yet Approved** - all Medium editorial findings closed; Publication Decision unchanged, still reserved for the Founder |
 
 ## Status
 

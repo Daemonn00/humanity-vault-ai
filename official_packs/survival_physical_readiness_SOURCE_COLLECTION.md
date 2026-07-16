@@ -5,17 +5,17 @@ as the Research Plan above.*
 
 **Stage note, stated plainly per this project's established
 discipline:** every source below was found via `WebSearch` during this
-planning sprint and its existence, general content, and access path
-were confirmed. **None of these sources has yet been directly opened
-and read in full** - that is Human Source Verification, a separate,
-later stage (matching this pack line's own precedent: the Mass
-Casualty pack's Sprint #003 Source Collection vs. its Sprint #006
-Human Source Verification, performed weeks apart with real `WebFetch`
-reads). **No claim below is `Verified Source`. No claim below may be
-marked `Verified Source` until it has been directly opened and read.**
-Realistic starting `verification_level` values are `Unverified` or, at
-most, `Community Verified` where the underlying fact is
-well-established general knowledge independent of any one source.
+planning sprint. A first real Human Source Verification pass (via
+direct `WebFetch` reads) was then performed the same day - results are
+recorded per-source below and in full in
+`survival_physical_readiness_HUMAN_VERIFICATION_WORKBOOK.md`'s
+"Verification Pass #1 Results" section. **No claim in this pack is yet
+`Verified Source`** - even sources that were successfully read still
+require the corresponding articles to actually be drafted and checked
+against the confirmed wording (per this project's standard process);
+several sources remain entirely unread (blocked) and need either a
+further access attempt or a substitute source before their claims can
+be confirmed at all.
 
 ## Pack
 
@@ -35,12 +35,12 @@ well-established general knowledge independent of any one source.
 - **Source quality tier:** Tier 1 - official international health
   agency, primary guideline document
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary only. The NCBI
-        Bookshelf hosting matches the pattern already proven directly
-        readable for the CDC Yellow Book during the Mass Casualty
-        pack's Sprint #006 - a reasonable, but unconfirmed, signal for
-        this source's accessibility. Direct read is a task for Human
-        Source Verification.
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17. Confirmed the
+        NCBI Bookshelf hosting is directly readable, matching the CDC
+        Yellow Book pattern from the Mass Casualty pack's Sprint #006.
+        Confirmed specific, quotable wording for Claims A1, A2, A3, B1,
+        B2, and C1 - see the Human Verification Workbook for exact
+        quotes.
 - **Collected by:** Claude (AI agent)
 - **Date:** 2026-07-17
 
@@ -51,14 +51,11 @@ well-established general knowledge independent of any one source.
 - **Source quality tier:** Tier 1 - official national public-health
   agency
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary only. **Access risk
-        flagged:** `cdc.gov` direct pages returned HTTP 403 to
-        automated `WebFetch` during the Mass Casualty pack's Sprint
-        #006 for multiple CDC URLs. This may recur. No fallback mirror
-        was identified for this specific page during this pass -
-        Human Source Verification should attempt a direct read first
-        and search for an alternative Tier 1/2 mirror (or a different
-        CDC-adjacent Tier 1 source) if blocked.
+  - [x] No - direct `WebFetch` attempted on 2026-07-17, returned HTTP
+        403, as flagged as a risk in advance. Claims B1 and B2, which
+        this source was meant to support, were fully confirmed via the
+        WHO 2020 Guidelines instead (see above), so this source is no
+        longer required for this pack's currently-planned claims.
 
 ### Source: CDC Physical Activity Basics — "Older Adult Activity: An Overview" and "What Counts as Physical Activity for Older Adults"
 
@@ -68,7 +65,13 @@ well-established general knowledge independent of any one source.
   2 Claim 3; Article 3 Claims 1 & 3
 - **Source quality tier:** Tier 1
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - same `cdc.gov` access risk as above, flagged identically.
+  - [x] No - direct `WebFetch` attempted on 2026-07-17, returned HTTP
+        403. A `restoredcdc.org` mirror attempt for the same content
+        was also tried and also returned HTTP 403. Claim C1 was fully
+        confirmed via WHO instead; Claims B3 and C3 remain unconfirmed
+        and need either a further access attempt against this exact
+        content or a substitute source before drafting - see the
+        Human Verification Workbook's Verification Pass #1 Results.
 
 ### Source: NIOSH, "Ergonomic Guidelines for Manual Material Handling" (DHHS/NIOSH Publication No. 2007-131)
 
@@ -77,10 +80,13 @@ well-established general knowledge independent of any one source.
 - **Source quality tier:** Tier 1 - official national occupational-
   safety research agency, primary technical guideline
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary only. Same `cdc.gov`
-        (via `/niosh/`) domain access risk noted above applies to this
-        PDF as well; Human Source Verification should attempt the
-        direct PDF fetch and note the outcome honestly either way.
+  - [x] No - direct `WebFetch` attempted on 2026-07-17, returned HTTP
+        403, as flagged as a risk in advance (same `cdc.gov` block
+        affecting the CDC pages above). Claim D1 remains entirely
+        unconfirmed - this is the pack's most significant remaining
+        sourcing gap. A future pass should try an alternative NIOSH
+        access path (e.g. a non-`cdc.gov`-hosted mirror) or a
+        substitute Tier 1/2 occupational-safety source.
 
 ### Source: ACSM Position Stand, "Progression Models in Resistance Training for Healthy Adults" (2009)
 
@@ -99,10 +105,13 @@ well-established general knowledge independent of any one source.
   Stand (2009), accessed via [host]" per this project's honesty
   discipline, not cited as if accessed directly from ACSM/the journal.
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary only. Human Source
-        Verification should attempt the original journal/ACSM-hosted
-        version first, per the Research Plan's note, and fall back to
-        the mirror only if the original cannot be reached.
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17, using the
+        `tourniquets.org` mirror (the original journal/ACSM-hosted
+        version was not separately attempted in this pass - a future
+        pass should still try it first per the Research Plan's note,
+        and this mirror-sourced read should be cited honestly as such
+        if the mirror remains the actual access path used). Confirmed
+        specific wording for Claims A1 and B2.
 - **Note:** search results also surfaced a newer 2026 ACSM update,
   "Resistance Training Prescription for Muscle Function, Hypertrophy,
   and Physical Performance in Healthy Adults." This is not adopted as
@@ -123,12 +132,16 @@ well-established general knowledge independent of any one source.
   statement of two established sports-medicine professional societies
   (ACSM and ECSS)
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary and PubMed abstract
-        only. The full original statement's direct accessibility
-        (versus abstract-only) needs confirmation at Human Source
-        Verification; the *ACSM's Health & Fitness Journal* companion
-        summary (journals.lww.com) may be a useful Tier 1 supplement
-        if the original consensus statement itself is paywalled.
+  - [x] Yes, the PubMed abstract - directly read via `WebFetch` on
+        2026-07-17. **Abstract only, not the full consensus
+        statement** - the complete original document's accessibility
+        was not tested this pass. Confirmed wording for Claims E1 and
+        E2. Claim E3 (pain-vs-discomfort) is not addressed by the
+        abstract text and remains unconfirmed - the full statement (or
+        the *ACSM's Health & Fitness Journal* companion summary) should
+        be attempted in a future pass if more detail is needed, though
+        the Verification Workbook's conservative fallback for E3 does
+        not depend on finding it.
 
 ### Source: OSHA, Heat Illness Prevention guidance ("Heat - Overview," "Heat Illness Prevention Campaign," OSHA-NIOSH Heat Illness Infosheet)
 
@@ -147,7 +160,12 @@ well-established general knowledge independent of any one source.
   a genuinely positive accessibility signal for this domain, though it
   must still be independently re-attempted, not assumed.
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary only this pass.
+  - [x] Yes - `osha.gov/heat/worker-information` directly read via
+        `WebFetch` on 2026-07-17, confirming this domain remains
+        directly accessible (as it was for the Mass Casualty pack's
+        Sprint #006). Used only as supplementary cross-reference
+        content for Article 3's work-pacing framing, per plan - not
+        the sole support for any Critical claim.
 
 ### Source: Peer-reviewed review, "Physiological impact of load carriage exercise" (PMC)
 
@@ -157,7 +175,16 @@ well-established general knowledge independent of any one source.
 - **Source quality tier:** Tier 2 - peer-reviewed academic review
   article, not a primary public-health/occupational guideline
 - **Was it directly opened and read in full during this pass?**
-  - [ ] No - found via `WebSearch` result summary only.
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17. **This read
+        materially changed this pack's plan for the better**: it
+        explicitly confirmed no established civilian load-threshold
+        percentage exists in this literature and that available data
+        is almost exclusively military/occupational - positively
+        validating, rather than merely assuming, the qualitative
+        fallback already planned for Claim D2. It also explicitly does
+        not address gradual load-progression protocols (Claim D3),
+        which now falls back to the general progression principle
+        already confirmed via WHO/ACSM.
 - **Note:** this source supports the *general physiological
   principle* (load increases physical strain, injury risk rises past a
   threshold) reasonably well, but the *specific numeric
@@ -171,20 +198,22 @@ well-established general knowledge independent of any one source.
   caution against treating military doctrine as automatically
   civilian-appropriate.
 
-## Collection Summary
+## Collection Summary (updated after Verification Pass #1, 2026-07-17)
 
-| Article | Claims with a Tier 1/2 candidate source identified | Claims with no clear source found | Realistic starting `verification_level` |
-|---|---|---|---|
-| 1. Understanding Physical Readiness and Progressive Adaptation | 3 of 3 | 0 | Unverified (no source yet directly read) |
-| 2. Building Functional Strength and Aerobic Endurance | 3 of 3 | 0 | Unverified |
-| 3. Mobility, Balance, and Sustained Work Capacity | 3 of 3 | 0 | Unverified |
-| 4. Load Carrying and Physically-Loaded Survival Tasks | 3 of 4 fully; Claim 2's specific numeric threshold not clearly sourced | 0 claims entirely unsupported, but Claim 2 needs qualitative fallback | Unverified |
-| 5. Recovery and Injury Prevention for Physical Training | 4 of 4 | 0 | Unverified |
+| Article | Claims directly confirmed via a real read | Claims with a confirmed fallback (source read, but doesn't support the specific claim) | Claims still entirely unread/unconfirmed | Realistic status if drafted today |
+|---|---|---|---|---|
+| 1. Understanding Physical Readiness and Progressive Adaptation | 3 of 3 (A1, A2, A3) | 0 | 0 | Could reach `Verified Source` if written to match confirmed wording exactly |
+| 2. Building Functional Strength and Aerobic Endurance | 2 of 3 (B1, B2) | 0 | 1 (B3 - CDC blocked, general fallback available) | `Community Verified` unless B3 is softened to the already-confirmed general principle, or a working source is found |
+| 3. Mobility, Balance, and Sustained Work Capacity | 1 of 3 (C1, strongly) | 1 (C2 - source read, doesn't address this specific claim) | 1 (C3 - CDC blocked, no substitute found) | `Community Verified` at best without further sourcing for C3 |
+| 4. Load Carrying and Physically-Loaded Survival Tasks | 0 of 4 directly, but D2's *qualitative* fallback is now positively source-confirmed | 1 (D3 - source read, doesn't address progression) | 1 (D1 - NIOSH blocked, no substitute found) | `Unverified`/`Community Verified` - D1 is this pack's most significant remaining gap |
+| 5. Recovery and Injury Prevention for Physical Training | 2 of 4 (E1, E2) | 1 (E3 - source read, doesn't address this specific distinction) | 1 (E4 - no primary source pinned down; a mismatched source was found and deliberately rejected) | `Community Verified` unless E4 is sourced or written as general safety knowledge |
 
-**Every article in this pack should begin drafting (a future stage,
-not this one) at `Unverified`**, consistent with this project's
-established discipline that Source Collection identifies candidates,
-not confirmations - exactly the same honest starting point the Mass
-Casualty pack used at its own equivalent stage, before its later Human
-Source Verification sprint raised articles to `Verified Source` based
-on actual direct reads.
+**No article is ready to be marked `Verified Source` yet.** Real
+progress was made - roughly half of the 16 planned claims now have
+direct, quotable confirmation, and two more (D2, C2/D3/E3-style
+non-support findings) are now honestly *better* understood than before
+this pass, since the absence of support was itself confirmed rather
+than assumed. The remaining gaps (B3, C3, D1, E4) are genuine, named,
+and each has either a stated fallback or a concrete next step - see
+`survival_physical_readiness_HUMAN_VERIFICATION_WORKBOOK.md`'s
+Verification Pass #1 Results section for the complete picture.

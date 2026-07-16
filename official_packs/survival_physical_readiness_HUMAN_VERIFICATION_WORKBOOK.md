@@ -18,6 +18,60 @@ final article text will match word-for-word.
 **File placement note:** sibling of `official_packs/`, same safe
 pattern as the Research Plan and Source Collection above.
 
+## Verification Pass #1 Results (2026-07-17)
+
+A first real Human Source Verification pass was performed via direct
+`WebFetch` reads of the candidate sources logged in
+`survival_physical_readiness_SOURCE_COLLECTION.md`. Results, honestly,
+were mixed - consistent with this pack line's own established pattern
+of some sources being directly readable and others blocked:
+
+**Successfully opened and read in full:**
+- WHO 2020 Guidelines on Physical Activity and Sedentary Behaviour
+  (NCBI Bookshelf) - strong, specific confirmation for multiple claims.
+- ACSM Position Stand, "Progression Models in Resistance Training for
+  Healthy Adults" (2009), via the `tourniquets.org` mirror.
+- ACSM/ECSS Joint Consensus Statement on overtraining syndrome
+  (PubMed abstract).
+- Peer-reviewed review, "Physiological impact of load carriage
+  exercise" (PMC) - notably, this read **confirmed the absence** of an
+  established civilian load-threshold figure, which validates rather
+  than weakens the Research Plan's conservative fallback for Claim D2.
+- OSHA worker-facing heat guidance (`osha.gov/heat/worker-information`)
+  - supplementary cross-reference only, as planned.
+
+**Blocked or not successfully read this pass:**
+- Both CDC direct pages (`cdc.gov/physical-activity-basics/...`) -
+  HTTP 403, matching the exact risk already flagged in the Research
+  Plan from the Mass Casualty pack's prior experience.
+- A `restoredcdc.org` mirror attempt for the same content - also HTTP
+  403.
+- NIOSH's Manual Material Handling PDF (`cdc.gov/niosh/...`) - HTTP
+  403 (same `cdc.gov` domain block).
+- A specific OSHA lifting/carrying sub-page - HTTP 404 at the
+  attempted URL (a wrong path, not a confirmed absence of OSHA content
+  on this topic - worth a corrected re-attempt in a future pass).
+- A clean, primary, lay-public source for cardiovascular exercise
+  warning signs (Claim E4) was not pinned down this pass. A widely
+  corroborated "chest pain / severe shortness of breath / dizziness or
+  faintness / new confusion / sudden sweating or pallor" list was
+  found, but traced to secondary health-content sites, not a directly
+  read primary AHA or CDC page. **A separate, genuinely different
+  source was also found and deliberately rejected as a poor claim
+  match**: ACSM's clinical exercise-*testing* termination criteria
+  (ECG changes, blood-pressure-drop thresholds) - these require
+  equipment this pack's reader won't have and are the wrong claim for
+  a lay, unsupervised-training audience. Using them would have been a
+  real citation-discipline failure (a real Tier 1 source, wrongly
+  matched to a claim it doesn't actually support for this audience) -
+  flagged here explicitly as a mismatch that was caught and avoided,
+  not used.
+
+Article-by-article claim tables below are updated with these real
+results. **No article reaches `Verified Source` in this pass** - each
+still has at least one claim either unconfirmed or requiring
+conservative rewording before that status would be honestly earned.
+
 ---
 
 ## Article 1: Understanding Physical Readiness and Progressive Adaptation
@@ -59,9 +113,9 @@ mirrors).
 
 | # | Claim | Source | Page/Section | Result | Notes |
 |---|---|---|---|---|---|
-| A1 | Progressive overload + recovery required for adaptation | WHO 2020 Guidelines; ACSM Progression Models | | | |
-| A2 | "Start low, go slow" reduces injury risk | WHO 2020 Guidelines | | | |
-| A3 | General professional-consultation caveat | WHO 2020 Guidelines | | | |
+| A1 | Progressive overload + recovery required for adaptation | WHO 2020 Guidelines; ACSM Progression Models | Executive Summary; ACSM PDF body | **Pass** | ACSM: "continued progression is necessary for continued improvements in strength." WHO's older-adult section confirms gradual-increase language. |
+| A2 | "Start low, go slow" reduces injury risk | WHO 2020 Guidelines | Executive Summary (older adults section) | **Pass, exact wording found** | WHO: "should start by doing small amounts of physical activity, and gradually increase the frequency, intensity and duration over time." Article should use this phrasing closely. |
+| A3 | General professional-consultation caveat | WHO 2020 Guidelines | Executive Summary | **Pass, rewritten** | Actual confirmed wording is more specific than originally planned: WHO states pre-exercise medical clearance is "generally unnecessary" for light/moderate activity without contraindications - the claim should be rewritten to say most people can begin light-to-moderate activity without clearance, while those with existing conditions or planning vigorous activity should check first, rather than a generic blanket caveat. |
 
 ---
 
@@ -98,9 +152,9 @@ numeric claims warrant careful, exact reading rather than skimming).
 
 | # | Claim | Source | Page/Section | Result | Notes |
 |---|---|---|---|---|---|
-| B1 | Aerobic + strength activity combination, most weeks | WHO 2020 Guidelines; CDC Adult Activity | | | |
-| B2 | Major muscle groups, not one area | CDC Adult Activity | | | |
-| B3 | Reduced/gradual rebuilding for older/deconditioned readers | CDC Older Adult Activity | | | |
+| B1 | Aerobic + strength activity combination, most weeks | WHO 2020 Guidelines | Executive Summary | **Pass, exact figures found** | WHO: "at least 150–300 minutes of moderate-intensity aerobic physical activity; or at least 75–150 minutes of vigorous-intensity" + "muscle-strengthening activities... all major muscle groups on 2 or more days a week." CDC page (originally planned second source) was blocked (HTTP 403); WHO alone fully supports this claim. |
+| B2 | Major muscle groups, not one area | WHO 2020 Guidelines; ACSM Progression Models | Executive Summary; ACSM PDF body | **Pass** | Confirmed independently by both sources. CDC (originally planned) blocked; not needed given WHO+ACSM confirmation. |
+| B3 | Reduced/gradual rebuilding for older/deconditioned readers | CDC Older Adult Activity | | **Not confirmed this pass** | CDC page blocked (HTTP 403); `restoredcdc.org` mirror attempt also blocked. WHO's general older-adult "start small, gradually increase" language (already used for A2) partially supports a general version of this claim, but not the more specific "restarting after a break/illness" framing originally planned. **Fallback: write this claim as the same general gradual-start principle already confirmed for A2, not a more specific restart-after-break claim, unless a working CDC source is found in a future pass.** |
 
 ---
 
@@ -139,9 +193,9 @@ progression sourcing).
 
 | # | Claim | Source | Page/Section | Result | Notes |
 |---|---|---|---|---|---|
-| C1 | Balance activity reduces fall risk | CDC Older Adult Activity | | | |
-| C2 | Duration-before-intensity progression for sustained work | ACSM progression material | | | |
-| C3 | Alternative activities for mobility limitations | CDC What Counts (Older Adults) | | | |
+| C1 | Balance activity reduces fall risk | WHO 2020 Guidelines | Executive Summary | **Pass, strong exact confirmation** | WHO: "varied multicomponent physical activity that emphasizes functional balance and strength training at moderate or greater intensity, on 3 or more days a week, to enhance functional capacity and prevent falls." CDC (originally planned) blocked; WHO alone fully supports this claim, arguably more precisely than originally planned. |
+| C2 | Duration-before-intensity progression for sustained work | ACSM progression material | | **Not directly confirmed this pass** | ACSM's read content addressed resistance-training progression (sets/reps/load) specifically, not endurance/sustained-work duration-vs-intensity progression. **Fallback: rephrase to lean on the general progressive-overload principle already confirmed (A1), rather than an endurance-specific claim this source doesn't actually make.** |
+| C3 | Alternative activities for mobility limitations | CDC What Counts (Older Adults) | | **Not confirmed this pass** | CDC page blocked (HTTP 403). No substitute source was found in this pass. **This is the pack's least-supported planned claim; write conservatively and generally (e.g., "some activity is possible and valuable even with limitations, and any activity is better than none") without attributing specific phrasing to an unread source, or seek a substitute Tier 1/2 source in a future pass.** |
 
 ---
 
@@ -192,10 +246,10 @@ identified if neither directly supports a civilian-specific number).
 
 | # | Claim | Source | Page/Section | Result | Notes |
 |---|---|---|---|---|---|
-| D1 | Lifting/carrying risk factors beyond load alone | NIOSH Manual Material Handling | | | |
-| D2 | Load-threshold injury risk (qualitative or, if confirmable, quantitative) | Load carriage physiological review | | | |
-| D3 | Gradual duration/frequency-before-weight progression | (cross-reference to Article 1's progression sourcing) | | | |
-| D4 | Framing synthesis - no independent source required | N/A | N/A | N/A | Confirm only that it accurately reflects Articles 2-3 |
+| D1 | Lifting/carrying risk factors beyond load alone | NIOSH Manual Material Handling | | **Not confirmed this pass** | NIOSH PDF blocked (HTTP 403, same `cdc.gov` domain block as the CDC pages). An OSHA lifting/carrying sub-page was also attempted at a guessed URL and returned HTTP 404 - a wrong path, not a confirmed absence of OSHA content; worth a corrected re-attempt. **This is the pack's most significant remaining sourcing gap.** |
+| D2 | Load-threshold injury risk (qualitative only) | Load carriage physiological review | Body text | **Pass - confirms the fallback itself, not a number** | Source explicitly states "no explicit threshold is identified" and that data is "almost exclusively from military and occupational populations... Civilian data are minimal." This *positively confirms* the Research Plan's own fallback decision: write this claim qualitatively (risk rises with load, no established civilian number) rather than stating any specific percentage. Do not use the "10%/22% of bodyweight" figures found during initial search - now confirmed as unsupported by the one peer-reviewed source that was actually read. |
+| D3 | Gradual duration/frequency-before-weight progression | Load carriage physiological review | | **Not addressed by this source** | The review "does not address gradual load progression protocols." **Fallback: lean on the already-confirmed general progression principle (A1) rather than a load-carriage-specific claim.** |
+| D4 | Framing synthesis - no independent source required | N/A | N/A | N/A | Confirm only that it accurately reflects Articles 2-3 once drafted. |
 
 ---
 
@@ -245,10 +299,10 @@ rather than skimming).
 
 | # | Claim | Source | Page/Section | Result | Notes |
 |---|---|---|---|---|---|
-| E1 | Recovery required for adaptation | ACSM/ECSS Consensus Statement | | | |
-| E2 | Overtraining is real, recognized, distinct from normal fatigue | ACSM/ECSS Consensus Statement | | | |
-| E3 | Discomfort-vs-pain distinction (conservative framing) | ACSM/ECSS Consensus Statement | | | |
-| E4 | Cardiovascular warning signs requiring medical evaluation | (general cardiovascular warning-sign source, to be identified at verification) | | | |
+| E1 | Recovery required for adaptation | ACSM/ECSS Consensus Statement | Abstract | **Pass** | "Successful training must... avoid the combination of excessive overload plus inadequate recovery." Functional overreaching "will eventually lead to an improvement in performance after recovery." |
+| E2 | Overtraining is real, recognized, distinct from normal fatigue | ACSM/ECSS Consensus Statement | Abstract | **Pass** | Confirms the three-state distinction (functional overreaching / non-functional overreaching / overtraining syndrome) and lists "fatigue, performance decline, and mood disturbances" plus hormonal/immune changes as recognized signs. |
+| E3 | Discomfort-vs-pain distinction (conservative framing) | ACSM/ECSS Consensus Statement | Abstract | **Not directly confirmed** | The abstract discusses fatigue/performance/mood symptoms, not a specific pain-vs-normal-discomfort framework. **Fallback required exactly as planned: write this claim in general, cautious terms ("if in doubt, treat it as an injury signal and stop") without attributing a precise boundary to this or any source.** |
+| E4 | Cardiovascular warning signs requiring medical evaluation | Not yet pinned to a primary source | | **Not confirmed this pass** | A widely corroborated lay-public list (chest pain, severe shortness of breath, dizziness/faintness, new confusion, sudden sweating/pallor) was found but traced to secondary health-content sites, not a directly read primary source. A genuinely different ACSM source (clinical exercise-*testing* termination criteria - ECG/blood-pressure-based) was found and **deliberately rejected as a claim mismatch**: it requires monitoring equipment this pack's reader won't have and is written for supervised clinical testing, not unsupervised lay training - using it would misattribute a real source to a claim it doesn't actually support for this audience. **This claim needs either a corrected search for a genuine lay-public primary source (CDC/AHA), or must be written as general safety knowledge without a specific citation, in a future pass.** |
 
 ---
 
@@ -282,3 +336,28 @@ should govern every fallback decision during future Writing and
 Verification stages - **especially D2 and E3, which this workbook
 identifies as the two claims most likely to need their planned
 specificity reduced during actual verification.**
+
+## Verification Pass #1 — Outcome Summary (2026-07-17)
+
+Of 16 planned claims: **9 directly confirmed** with quotable wording
+(A1, A2, A3, B1, B2, C1, E1, E2, plus D2's fallback itself positively
+confirmed), **3 confirmed as not addressed by their planned source**
+(C2, D3, E3 - meaning the source was actually read, and honestly does
+not support that specific claim, which is different from and more
+useful than "not yet checked"), and **4 remain genuinely unread or
+unconfirmed** (B3, C3, D1, E4), each blocked by a specific, named
+access failure or an as-yet-unfound primary source rather than by lack
+of effort. One deliberate rejection is recorded: a real ACSM source
+was found for E4 and correctly judged the wrong claim match (clinical
+testing criteria, not lay training guidance) rather than force-fit.
+
+**This pack is not ready for Writing to begin with the expectation of
+`Verified Source` status.** A realistic path forward: draft all five
+articles now at `Unverified`/`Community Verified` as appropriate,
+writing every flagged claim to its stated conservative fallback where
+verification is incomplete, then run a second Human Source
+Verification pass specifically targeting the four open gaps (B3, C3,
+D1, E4) before requesting Editorial Review - mirroring this pack
+line's own Mass Casualty precedent, where Editorial Review preceded
+final Human Source Verification and multiple passes were normal, not
+exceptional.

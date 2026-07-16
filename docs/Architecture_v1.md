@@ -1,5 +1,43 @@
 # Humanity Vault AI - Architecture v1
 
+## Status Notice
+
+This document is a **long-range architectural vision**, written early
+in the project's life. It is not a declaration that every component
+described below currently exists, and it should not be read as
+current, enforced architecture. Several concepts here (SQLite, FAISS,
+a `llama.cpp`/GGUF AI Runtime Layer, the `.hvs` Knowledge Seed format,
+a full "Media" database table, the broader source-label list in
+Section 11) are not implemented in the repository today. The
+currently-implemented system is simpler: Markdown files loaded via
+Flutter's `AssetManifest`, no database, no AI runtime, and Official
+Knowledge Packs distributed as ZIP archives (see
+`docs/Knowledge_Authoring_Standard_v1.md`, `registry_generator/`, and
+`release_pipeline/` for the actual, current, authoritative
+implementation).
+
+This document's ideas are preserved, not deleted or rewritten to
+match current code - they remain a legitimate long-range direction.
+Actual implementation status must always be determined from the
+repository and from current implementation documentation
+(`docs/Knowledge_Authoring_Standard_v1.md`, `README.md`,
+`humanity_vault_app/README.md`), never assumed from this document
+alone. Any future implementation of ideas described here remains
+subject to `docs/Project_Charter_v1.md` and
+`docs/Canon_Philosophy_v1.md`. No specific technology named below
+(SQLite, FAISS, llama.cpp, GGUF, or any named model family) is
+permanently locked in merely because it appears in this document -
+these are illustrative choices from an early planning pass, not
+binding commitments.
+
+The Visual Knowledge Engine vision in Section 9 - including its
+stated priority order (Real Photos, then Technical Diagrams, then
+Educational Illustrations, then AI Generated Visuals) and its "AI
+visuals must be labeled" rule - remains intact below and is not
+contradicted by `docs/Canon_Philosophy_v1.md`; the Canon gives this
+long-standing vision a more rigorous foundation (see the Canon's
+Sections 6, 7, and 14) rather than replacing it.
+
 ## 1. System Overview
 
 Humanity Vault AI is an offline-first knowledge preservation platform designed to store, distribute, search, verify, and preserve practical, scientific, cultural, historical, ethical, and spiritual knowledge.
@@ -435,6 +473,25 @@ Future models should work without redesigning the application.
 ---
 
 ## 11. Truth Layer
+
+**Status note:** the list below is an early, exploratory sketch of
+*source-type/provenance* categories (what kind of authority backs a
+claim - a government publication, an academic paper, a named
+tradition), not the currently-enforced *verification-status* enum.
+The actual, currently-implemented and enforced values are the four
+`verification_level` values defined in
+`docs/Knowledge_Authoring_Standard_v1.md` Section 7 (`Verified
+Source`, `Community Verified`, `Historical Source`, `Unverified`),
+which describe how confirmed a claim is, not what kind of source backs
+it. These are two different, non-overlapping questions that this
+early sketch did not yet distinguish - notably, "Verified Source"
+appears in both lists but is used differently in each: here as one
+peer example among several source types, and in the actual enforced
+enum as the strongest of four ordered confidence levels. This section
+is preserved as historical/exploratory vision, not as an alternate or
+superseded verification standard - `Knowledge_Authoring_Standard_v1.md`
+Section 7 is the sole authoritative source for `verification_level`
+values, and nothing in this section changes that.
 
 Every knowledge item receives a source label.
 

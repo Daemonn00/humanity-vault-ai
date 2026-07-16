@@ -4,6 +4,18 @@
 
 Preserve humanity's practical, scientific, cultural, historical, ethical, and spiritual knowledge in an offline-first, open-source platform accessible even when internet infrastructure is unavailable.
 
+## Philosophical Foundation
+
+This Charter is the operative founding authority of Humanity Vault.
+[`Canon_Philosophy_v1.md`](Canon_Philosophy_v1.md) interprets and
+expands the philosophical foundation beneath this Charter's mission -
+it does not override it. Where the two could be read as conflicting,
+this Charter governs.
+
+Project Charter
+&nbsp;&nbsp;&nbsp;&nbsp;↓
+Canon Philosophy
+
 ## Core Principles
 
 * Offline First

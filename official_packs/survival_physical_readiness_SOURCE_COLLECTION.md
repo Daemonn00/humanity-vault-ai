@@ -198,15 +198,46 @@ be confirmed at all.
   caution against treating military doctrine as automatically
   civilian-appropriate.
 
+### Source: MedlinePlus (U.S. National Library of Medicine, National Institutes of Health), "Muscle aches"
+
+- **Citation/URL:** `medlineplus.gov/ency/article/003178.htm`
+- **Which claim(s) it supports:** Article 5 Claims E3 (partially) and
+  E4 - found and directly read independently during this sprint's own
+  quality check (separate from, and additional to, the sources
+  originally identified in this pack's planning pass), specifically
+  because E3 and E4 were both flagged as unconfirmed. This is the same
+  Tier 1 NIH/NLM source family already directly verified and used in
+  `hv_official_mass_casualty_first_aid`.
+- **Source quality tier:** Tier 1 - official U.S. government medical
+  reference (NIH/NLM)
+- **Was it directly opened and read in full during this pass?**
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17. Confirms
+        general muscle-pain-from-overuse framing ("pain tends to
+        involve specific muscles and starts during or just after the
+        activity") and, more usefully, a concrete, quotable
+        duration-based warning threshold: **"Contact your provider if:
+        Your muscle pain lasts more than 3 days"** - along with severe
+        unexplained pain, signs of infection (swelling/redness), and
+        emergency-level signs (muscle weakness, inability to move a
+        body part). This is genuinely better sourcing for E4 than
+        anything found in the original planning pass, and gives E3 a
+        concrete, source-backed duration threshold it previously
+        lacked, though the page does not itself use the words
+        "soreness vs. injury" - the article should paraphrase this
+        distinction from the duration/severity signs actually given,
+        not invent a soreness-specific framing MedlinePlus doesn't use.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-17
+
 ## Collection Summary (updated after Verification Pass #1, 2026-07-17)
 
 | Article | Claims directly confirmed via a real read | Claims with a confirmed fallback (source read, but doesn't support the specific claim) | Claims still entirely unread/unconfirmed | Realistic status if drafted today |
 |---|---|---|---|---|
-| 1. Understanding Physical Readiness and Progressive Adaptation | 3 of 3 (A1, A2, A3) | 0 | 0 | Could reach `Verified Source` if written to match confirmed wording exactly |
+| 1. Understanding Physical Readiness and Progressive Adaptation | 2 of 3 (A1, A2) | 0 | 1 (A3 - independent recheck did not reproduce the planned quote; see Human Verification Workbook) | `Community Verified` unless A3 is re-sourced (e.g. from CDC's already-corroborated chronic-condition framing) or written as general, unattributed practical knowledge |
 | 2. Building Functional Strength and Aerobic Endurance | 2 of 3 (B1, B2) | 0 | 1 (B3 - CDC blocked, general fallback available) | `Community Verified` unless B3 is softened to the already-confirmed general principle, or a working source is found |
 | 3. Mobility, Balance, and Sustained Work Capacity | 1 of 3 (C1, strongly) | 1 (C2 - source read, doesn't address this specific claim) | 1 (C3 - CDC blocked, no substitute found) | `Community Verified` at best without further sourcing for C3 |
 | 4. Load Carrying and Physically-Loaded Survival Tasks | 0 of 4 directly, but D2's *qualitative* fallback is now positively source-confirmed | 1 (D3 - source read, doesn't address progression) | 1 (D1 - NIOSH blocked, no substitute found) | `Unverified`/`Community Verified` - D1 is this pack's most significant remaining gap |
-| 5. Recovery and Injury Prevention for Physical Training | 2 of 4 (E1, E2) | 1 (E3 - source read, doesn't address this specific distinction) | 1 (E4 - no primary source pinned down; a mismatched source was found and deliberately rejected) | `Community Verified` unless E4 is sourced or written as general safety knowledge |
+| 5. Recovery and Injury Prevention for Physical Training | 3 of 4 (E1, E2, E4 - MedlinePlus found and read after the initial pass, closing this gap) | 1 (E3 - partially supported by MedlinePlus's duration threshold, but not its own soreness-specific framing) | 0 | `Community Verified`, close to `Verified Source` pending E3's exact final wording |
 
 **No article is ready to be marked `Verified Source` yet.** Real
 progress was made - roughly half of the 16 planned claims now have

@@ -77,12 +77,17 @@ future topic should be held to the same evidentiary rigor as
 safety-critical medical content, per the Canon's own note that it can
 prevent a single acute bad outcome from a single read.
 
-**Explicitly not decided by this entry:** final article prose, actual
-source verification (candidate sources have been found via search, not
-yet directly read - see the Source Collection's own stated stage
-limits), or release sequencing. These remain for future Writing and
-Human Source Verification sprints, per the existing
-`pack_production_workflow/` process.
+**Explicitly not decided by this entry:** final article prose or
+release sequencing. A first Human Source Verification pass has already
+been performed against several candidate sources (see
+`..._HUMAN_VERIFICATION_WORKBOOK.md`'s "Verification Pass #1
+Results," independently spot-checked and partially corrected during
+this sprint's own quality check) - 9 of 16 planned claims are directly
+confirmed with quotable wording, 4 remain genuinely open (blocked
+sources or an unconfirmed quotation), and no article yet honestly
+supports `Verified Source`. A further verification pass targeting the
+remaining gaps, followed by Writing, per the existing
+`pack_production_workflow/` process, remains the next step.
 
 ### Aquaponics / Resilient Food Production (future direction, not an approved pack)
 

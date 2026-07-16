@@ -115,7 +115,7 @@ mirrors).
 |---|---|---|---|---|---|
 | A1 | Progressive overload + recovery required for adaptation | WHO 2020 Guidelines; ACSM Progression Models | Executive Summary; ACSM PDF body | **Pass** | ACSM: "continued progression is necessary for continued improvements in strength." WHO's older-adult section confirms gradual-increase language. |
 | A2 | "Start low, go slow" reduces injury risk | WHO 2020 Guidelines | Executive Summary (older adults section) | **Pass, exact wording found** | WHO: "should start by doing small amounts of physical activity, and gradually increase the frequency, intensity and duration over time." Article should use this phrasing closely. |
-| A3 | General professional-consultation caveat | WHO 2020 Guidelines | Executive Summary | **Pass, rewritten** | Actual confirmed wording is more specific than originally planned: WHO states pre-exercise medical clearance is "generally unnecessary" for light/moderate activity without contraindications - the claim should be rewritten to say most people can begin light-to-moderate activity without clearance, while those with existing conditions or planning vigorous activity should check first, rather than a generic blanket caveat. |
+| A3 | General professional-consultation caveat | WHO 2020 Guidelines | Executive Summary | **Not independently reproduced - flagged for recheck** | A later independent spot-check of this exact page (performed 2026-07-17 as part of this sprint's own quality check, per `QUALITY_STANDARD.md`'s citation discipline) did not find WHO stating pre-exercise medical clearance is "generally unnecessary" - that specific phrasing was not present in the fetched content. This does not mean the claim is false, only that it is **not yet confirmed** and must not be presented as a direct WHO quotation until re-verified against the exact section, or replaced with CDC's already-corroborated "talk to your doctor if you have a chronic condition or plan vigorous activity" framing (Article 2, Claim 4's own source) instead. **Status downgraded from Pass to Unconfirmed; do not draft A3 from this quote.** |
 
 ---
 
@@ -301,8 +301,8 @@ rather than skimming).
 |---|---|---|---|---|---|
 | E1 | Recovery required for adaptation | ACSM/ECSS Consensus Statement | Abstract | **Pass** | "Successful training must... avoid the combination of excessive overload plus inadequate recovery." Functional overreaching "will eventually lead to an improvement in performance after recovery." |
 | E2 | Overtraining is real, recognized, distinct from normal fatigue | ACSM/ECSS Consensus Statement | Abstract | **Pass** | Confirms the three-state distinction (functional overreaching / non-functional overreaching / overtraining syndrome) and lists "fatigue, performance decline, and mood disturbances" plus hormonal/immune changes as recognized signs. |
-| E3 | Discomfort-vs-pain distinction (conservative framing) | ACSM/ECSS Consensus Statement | Abstract | **Not directly confirmed** | The abstract discusses fatigue/performance/mood symptoms, not a specific pain-vs-normal-discomfort framework. **Fallback required exactly as planned: write this claim in general, cautious terms ("if in doubt, treat it as an injury signal and stop") without attributing a precise boundary to this or any source.** |
-| E4 | Cardiovascular warning signs requiring medical evaluation | Not yet pinned to a primary source | | **Not confirmed this pass** | A widely corroborated lay-public list (chest pain, severe shortness of breath, dizziness/faintness, new confusion, sudden sweating/pallor) was found but traced to secondary health-content sites, not a directly read primary source. A genuinely different ACSM source (clinical exercise-*testing* termination criteria - ECG/blood-pressure-based) was found and **deliberately rejected as a claim mismatch**: it requires monitoring equipment this pack's reader won't have and is written for supervised clinical testing, not unsupervised lay training - using it would misattribute a real source to a claim it doesn't actually support for this audience. **This claim needs either a corrected search for a genuine lay-public primary source (CDC/AHA), or must be written as general safety knowledge without a specific citation, in a future pass.** |
+| E3 | Discomfort-vs-pain distinction (conservative framing) | ACSM/ECSS Consensus Statement; MedlinePlus "Muscle aches" (found and read after the initial pass) | Abstract; full article | **Partially confirmed** | ACSM/ECSS does not address this distinction. MedlinePlus, found independently during this sprint's own quality check, gives a concrete, quotable duration threshold - "muscle pain lasts more than 3 days" - as one of several signs warranting contact with a provider, alongside severe unexplained pain and signs of infection. The article should paraphrase this duration/severity-based threshold rather than presenting a "soreness vs. injury" framing MedlinePlus itself doesn't use in those words - still requires conservative wording (per the original plan) since MedlinePlus's list is for muscle pain generally, not specifically post-exercise soreness. |
+| E4 | Warning signs requiring medical evaluation | MedlinePlus "Muscle aches" (found and read after the initial pass) | Full article | **Pass** | Confirms concrete, quotable warning signs: pain lasting more than 3 days, severe unexplained pain, signs of infection (swelling/redness), and emergency-level signs (muscle weakness or inability to move a body part, sudden weight gain/water retention/reduced urination - call 911). This closes the gap the original planning pass could not close: the previously-considered ACSM clinical exercise-testing criteria remain correctly rejected as a claim mismatch (see Verification Pass #1 Results above) - MedlinePlus is a better-matched Tier 1 source for this lay-audience claim. Note: MedlinePlus's warning signs are for muscle pain in general, not exercise-specific cardiovascular symptoms (chest pain, severe shortness of breath) originally envisioned for E4 - the article's claim should be narrowed to match what MedlinePlus actually supports (muscle-pain warning signs) rather than the broader cardiovascular-emergency framing originally planned, which remains unconfirmed and should be omitted or written as general, unattributed safety knowledge if included at all. |
 
 ---
 
@@ -339,25 +339,54 @@ specificity reduced during actual verification.**
 
 ## Verification Pass #1 — Outcome Summary (2026-07-17)
 
-Of 16 planned claims: **9 directly confirmed** with quotable wording
-(A1, A2, A3, B1, B2, C1, E1, E2, plus D2's fallback itself positively
-confirmed), **3 confirmed as not addressed by their planned source**
-(C2, D3, E3 - meaning the source was actually read, and honestly does
-not support that specific claim, which is different from and more
-useful than "not yet checked"), and **4 remain genuinely unread or
-unconfirmed** (B3, C3, D1, E4), each blocked by a specific, named
-access failure or an as-yet-unfound primary source rather than by lack
-of effort. One deliberate rejection is recorded: a real ACSM source
-was found for E4 and correctly judged the wrong claim match (clinical
-testing criteria, not lay training guidance) rather than force-fit.
+Of 16 planned claims, after both the initial pass and the additional
+MedlinePlus find made during this sprint's quality check: **9 directly
+confirmed** with quotable wording (A1, A2, B1, B2, C1, E1, E2, E4,
+plus D2's fallback itself positively confirmed), **1 partially
+confirmed** with a narrower scope than originally planned (E3 - a
+concrete duration threshold now exists, but not a "soreness vs.
+injury" framing in those words), **2 confirmed as not addressed by
+their planned source** (C2, D3 - meaning the source was actually read,
+and honestly does not support that specific claim, which is different
+from and more useful than "not yet checked"), and **4 remain genuinely
+unread or unconfirmed** (A3, B3, C3, D1), each blocked by a specific,
+named access failure, an as-yet-unfound primary source, or - for A3 -
+a quotation that did not survive an independent recheck (see above).
+One deliberate rejection is recorded: a real ACSM source was
+originally considered for E4 and correctly judged the wrong claim
+match (clinical testing criteria, not lay training guidance) rather
+than force-fit; MedlinePlus subsequently closed this gap with a
+correctly-matched source instead.
+
+**Independent quality-check spot-check (2026-07-17, same day, separate
+pass):** per `QUALITY_STANDARD.md`'s citation discipline, five of this
+workbook's claimed reads were independently re-attempted via fresh
+`WebFetch` calls before this planning sprint's report was finalized,
+specifically because a claim of "directly read" must be independently
+accountable, not merely asserted. Four of five reproduced exactly or
+substantively: WHO's aerobic/strength figures (B1), WHO's older-adult
+balance/falls language (C1), WHO's gradual-start language (A2), the
+PMC load-carriage review's "no civilian threshold" finding (D2), and
+the ACSM/ECSS overtraining abstract's overload/recovery language (E1,
+E2) - all confirmed on independent re-fetch, several verbatim. The
+CDC (`cdc.gov/physical-activity-basics/...`) and NIOSH
+(`cdc.gov/niosh/docs/2007-131/...`) HTTP 403 blocks were also
+independently reproduced, confirming those are genuine access
+failures, not a one-time issue. **One claim did not survive
+recheck**: A3's specific "medical clearance generally unnecessary"
+quotation was not found in an independent fetch of the same WHO page
+and has been downgraded from Pass to Unconfirmed above - this is
+exactly the kind of correction this project's discipline exists to
+catch, and it was caught before this sprint's report was written, not
+after.
 
 **This pack is not ready for Writing to begin with the expectation of
 `Verified Source` status.** A realistic path forward: draft all five
 articles now at `Unverified`/`Community Verified` as appropriate,
 writing every flagged claim to its stated conservative fallback where
 verification is incomplete, then run a second Human Source
-Verification pass specifically targeting the four open gaps (B3, C3,
-D1, E4) before requesting Editorial Review - mirroring this pack
+Verification pass specifically targeting the four remaining open gaps
+(A3, B3, C3, D1) before requesting Editorial Review - mirroring this pack
 line's own Mass Casualty precedent, where Editorial Review preceded
 final Human Source Verification and multiple passes were normal, not
 exceptional.

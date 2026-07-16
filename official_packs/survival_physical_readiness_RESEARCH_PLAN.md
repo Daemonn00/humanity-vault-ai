@@ -233,9 +233,13 @@ writing.
     needing careful, conservative wording** - this is inherently a
     judgment-call distinction and must not be stated as a bright
     line
-  - Claim 4 → general cardiovascular warning-sign guidance;
-    cross-link to `recognizing_and_treating_dehydration` and the Mass
-    Casualty pack's `mcfa_shock_recognition_and_management` /
+  - Claim 4 → MedlinePlus (NIH/NLM), "Muscle aches"
+    (medlineplus.gov/ency/article/003178.htm) - found and directly
+    read during Source Collection, closing this claim's original
+    sourcing gap with a muscle-pain-specific (not general
+    cardiovascular) warning-sign list; cross-link to
+    `recognizing_and_treating_dehydration` and the Mass Casualty
+    pack's `mcfa_shock_recognition_and_management` /
     `mcfa_hypothermia_and_heatstroke_field_response` for what to do if
     a warning sign actually occurs, rather than duplicating emergency
     treatment content here

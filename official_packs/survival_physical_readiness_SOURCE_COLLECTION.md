@@ -4,18 +4,20 @@
 as the Research Plan above.*
 
 **Stage note, stated plainly per this project's established
-discipline:** every source below was found via `WebSearch` during this
-planning sprint. A first real Human Source Verification pass (via
-direct `WebFetch` reads) was then performed the same day - results are
+discipline:** every source below was found via `WebSearch` during the
+original planning sprint. Two Human Source Verification passes (via
+direct `WebFetch` reads) have since been performed - results are
 recorded per-source below and in full in
 `survival_physical_readiness_HUMAN_VERIFICATION_WORKBOOK.md`'s
-"Verification Pass #1 Results" section. **No claim in this pack is yet
-`Verified Source`** - even sources that were successfully read still
-require the corresponding articles to actually be drafted and checked
-against the confirmed wording (per this project's standard process);
-several sources remain entirely unread (blocked) and need either a
-further access attempt or a substitute source before their claims can
-be confirmed at all.
+"Verification Pass #1 Results" and "Verification Pass #2 Results"
+sections. As of Pass #2 (targeted closure sprint), **all 16 planned
+claims across the pack's five articles have either direct source
+support, a source-backed replacement or narrowing, or an explicit
+conservative fallback - zero remain open.** **No claim in this pack is
+yet `Verified Source`** - even sources that were successfully read
+still require the corresponding articles to actually be drafted and
+checked against the confirmed wording (per this project's standard
+process, never assumed from a plan alone).
 
 ## Pack
 
@@ -229,22 +231,77 @@ be confirmed at all.
 - **Collected by:** Claude (AI agent)
 - **Date:** 2026-07-17
 
-## Collection Summary (updated after Verification Pass #1, 2026-07-17)
+### Source: MedlinePlus (NIH/NLM), "Exercise and Physical Fitness"
 
-| Article | Claims directly confirmed via a real read | Claims with a confirmed fallback (source read, but doesn't support the specific claim) | Claims still entirely unread/unconfirmed | Realistic status if drafted today |
+- **Citation/URL:** `medlineplus.gov/exerciseandphysicalfitness.html`
+- **Which claim(s) it supports:** Article 1 Claim A3 (replaces the
+  original, unconfirmed WHO quotation)
+- **Source quality tier:** Tier 1 - official U.S. government medical
+  reference (NIH/NLM), same source family already established in this
+  pack line
+- **Was it directly opened and read in full during this pass?**
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17, during the
+        targeted closure sprint. Confirms: "Before you start, check
+        with your health care provider, especially if you have
+        trouble moving, balancing, or worry that exercise might not
+        be safe for you," plus general "build up your activity level
+        slowly" guidance.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-17
+
+### Source: MedlinePlus (NIH/NLM), "Exercise for Older Adults"
+
+- **Citation/URL:** `medlineplus.gov/exerciseforolderadults.html`
+- **Which claim(s) it supports:** Article 2 Claim B3
+- **Source quality tier:** Tier 1 - official U.S. government medical
+  reference (NIH/NLM)
+- **Was it directly opened and read in full during this pass?**
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17. Confirms:
+        "If you have not been active, you can start slowly and work up
+        to your goal." Also independently re-confirms C1 (balance
+        exercises prevent falls) as a secondary benefit of this read.
+        Does **not** address alternative activities for mobility
+        limitations (was considered, but not used, for C3 - WHO was
+        the better-matched source for that claim instead).
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-17
+
+### Source: CCOHS (Canadian Centre for Occupational Health and Safety), "NIOSH Lifting Equation - Assessing Relevant Handling Factors"
+
+- **Citation/URL:** `ccohs.ca/oshanswers/ergonomics/niosh/assessing.html`
+- **Which claim(s) it supports:** Article 4 Claim D1 - a directly-read
+  substitute for the NIOSH primary document, which remained blocked
+  (HTTP 403) through two separate verification passes.
+- **Source quality tier:** Tier 1 - recognized national occupational-
+  health authority (Canadian government-affiliated), per this sprint's
+  own explicitly allowed source classes. Directly summarizes and cites
+  the same underlying NIOSH Lifting Equation research this claim
+  always targeted - if used, the eventual article's `## Sources` entry
+  must cite CCOHS explicitly, not NIOSH directly, since NIOSH's own
+  document was never successfully read.
+- **Was it directly opened and read in full during this pass?**
+  - [x] Yes - directly read via `WebFetch` on 2026-07-17. Confirms
+        distance-from-body and lifting frequency as explicit injury-
+        risk factors beyond load weight, plus posture-dependent
+        multipliers in the underlying NIOSH equation.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-17
+
+## Collection Summary (updated after Verification Pass #2 / Targeted Closure Sprint, 2026-07-17)
+
+| Article | Claims directly confirmed, replaced, or narrowed via a real read | Claims with an explicit conservative fallback (source read, doesn't support the specific claim) | Claims still entirely unread/unconfirmed | Realistic status if drafted today |
 |---|---|---|---|---|
-| 1. Understanding Physical Readiness and Progressive Adaptation | 2 of 3 (A1, A2) | 0 | 1 (A3 - independent recheck did not reproduce the planned quote; see Human Verification Workbook) | `Community Verified` unless A3 is re-sourced (e.g. from CDC's already-corroborated chronic-condition framing) or written as general, unattributed practical knowledge |
-| 2. Building Functional Strength and Aerobic Endurance | 2 of 3 (B1, B2) | 0 | 1 (B3 - CDC blocked, general fallback available) | `Community Verified` unless B3 is softened to the already-confirmed general principle, or a working source is found |
-| 3. Mobility, Balance, and Sustained Work Capacity | 1 of 3 (C1, strongly) | 1 (C2 - source read, doesn't address this specific claim) | 1 (C3 - CDC blocked, no substitute found) | `Community Verified` at best without further sourcing for C3 |
-| 4. Load Carrying and Physically-Loaded Survival Tasks | 0 of 4 directly, but D2's *qualitative* fallback is now positively source-confirmed | 1 (D3 - source read, doesn't address progression) | 1 (D1 - NIOSH blocked, no substitute found) | `Unverified`/`Community Verified` - D1 is this pack's most significant remaining gap |
-| 5. Recovery and Injury Prevention for Physical Training | 3 of 4 (E1, E2, E4 - MedlinePlus found and read after the initial pass, closing this gap) | 1 (E3 - partially supported by MedlinePlus's duration threshold, but not its own soreness-specific framing) | 0 | `Community Verified`, close to `Verified Source` pending E3's exact final wording |
+| 1. Understanding Physical Readiness and Progressive Adaptation | 3 of 3 (A1, A2, A3-replaced via MedlinePlus) | 0 | 0 | `Community Verified` - A3 is a replaced/narrowed claim, not a verbatim WHO quotation, so `Verified Source` is not automatic even though every claim now has support |
+| 2. Building Functional Strength and Aerobic Endurance | 3 of 3 (B1, B2, B3-verified via MedlinePlus) | 0 | 0 | Could reach `Verified Source` if drafted to match confirmed wording exactly |
+| 3. Mobility, Balance, and Sustained Work Capacity | 2 of 3 (C1, C3-narrowed via WHO) | 1 (C2 - source read, doesn't address this specific claim; leans on A1) | 0 | `Community Verified` - C3's narrowed scope and C2's fallback keep this below `Verified Source` |
+| 4. Load Carrying and Physically-Loaded Survival Tasks | 1 of 4 directly (D1-verified via CCOHS), plus D2's qualitative fallback positively confirmed | 1 (D3 - source read, doesn't address progression; leans on A1) | 0 | `Community Verified` - D1 is sourced via CCOHS (not NIOSH directly), D2 stays deliberately non-numeric |
+| 5. Recovery and Injury Prevention for Physical Training | 3 of 4 (E1, E2, E4) | 1 (E3 - partially supported by MedlinePlus's duration threshold, not its own soreness-specific framing) | 0 | `Community Verified`, close to `Verified Source` pending E3's exact final wording |
 
-**No article is ready to be marked `Verified Source` yet.** Real
-progress was made - roughly half of the 16 planned claims now have
-direct, quotable confirmation, and two more (D2, C2/D3/E3-style
-non-support findings) are now honestly *better* understood than before
-this pass, since the absence of support was itself confirmed rather
-than assumed. The remaining gaps (B3, C3, D1, E4) are genuine, named,
-and each has either a stated fallback or a concrete next step - see
+**No article is ready to be marked `Verified Source` yet, but zero
+claims remain open across all 16.** Every planned claim across all
+five articles now has one of: direct source support, a source-backed
+replacement/narrowing, or an explicit conservative fallback already
+assigned. See
 `survival_physical_readiness_HUMAN_VERIFICATION_WORKBOOK.md`'s
-Verification Pass #1 Results section for the complete picture.
+Verification Pass #1 and Pass #2 Results sections for the complete,
+preserved history of every attempt - successful and blocked alike.

@@ -72,13 +72,55 @@ results. **No article reaches `Verified Source` in this pass** - each
 still has at least one claim either unconfirmed or requiring
 conservative rewording before that status would be honestly earned.
 
+## Verification Pass #2 Results (2026-07-17, Targeted Closure Sprint)
+
+A second, narrowly-targeted pass addressed only the four claims left
+open after Pass #1 (A3, B3, C3, D1), per this sprint's explicit scope.
+No other claim was re-opened or re-litigated.
+
+**Re-attempted and still blocked (confirming Pass #1's findings were
+not one-time issues):**
+- `cdc.gov/physical-activity-basics/guidelines/chronic-health-conditions-and-disabilities.html`
+  - HTTP 403 (the A3/C3 substitute candidate).
+- `nia.nih.gov/health/exercise-and-physical-activity/exercising-safely`
+  and `nia.nih.gov/health/exercise-and-physical-activity` - both HTTP
+  405 (a different failure mode than `cdc.gov`'s 403, but still not
+  directly readable).
+- `medlineplus.gov/seniorshealth.html` - readable, but confirmed to be
+  a hub page with no specific content on gradual progression or
+  mobility-limitation alternatives; correctly not used as a source for
+  any claim, only as a pointer to the page that was actually used
+  (`exerciseforolderadults.html`).
+
+**Newly and successfully read, closing all four gaps:**
+- MedlinePlus, "Exercise and Physical Fitness"
+  (`medlineplus.gov/exerciseandphysicalfitness.html`) - resolves A3.
+- MedlinePlus, "Exercise for Older Adults"
+  (`medlineplus.gov/exerciseforolderadults.html`) - resolves B3.
+- WHO 2020 Guidelines (NCBI Bookshelf, `NBK566046`), re-read for a
+  different section than Pass #1's - resolves C3 (narrowed).
+- CCOHS, "NIOSH Lifting Equation - Assessing Relevant Handling
+  Factors" (`ccohs.ca/oshanswers/ergonomics/niosh/assessing.html`) -
+  resolves D1 (source substituted for the still-blocked NIOSH primary
+  document).
+
+**Closure outcomes:** A3 Replaced, B3 Verified, C3 Narrowed, D1
+Verified (source substituted). No claim was Removed - a genuine,
+appropriately-scoped source was found for all four. No rejected
+universal load-percentage figure was reintroduced (D1 concerns risk
+*factors*, not a specific number - D2's own separate, already-resolved
+qualitative fallback is unaffected and unchanged). No unsupported
+medical-clearance rule was introduced - A3's final claim is narrower
+and more conservative than the original plan, not broader.
+
 ---
 
 ## Article 1: Understanding Physical Readiness and Progressive Adaptation
 
 **Sources:** WHO 2020 Guidelines on Physical Activity and Sedentary
 Behaviour; ACSM Position Stand, "Progression Models in Resistance
-Training for Healthy Adults" (2009)
+Training for Healthy Adults" (2009); MedlinePlus, "Exercise and
+Physical Fitness" (added Verification Pass #2, resolves A3)
 
 | # | Planned claim | Priority |
 |---|---|---|
@@ -115,13 +157,16 @@ mirrors).
 |---|---|---|---|---|---|
 | A1 | Progressive overload + recovery required for adaptation | WHO 2020 Guidelines; ACSM Progression Models | Executive Summary; ACSM PDF body | **Pass** | ACSM: "continued progression is necessary for continued improvements in strength." WHO's older-adult section confirms gradual-increase language. |
 | A2 | "Start low, go slow" reduces injury risk | WHO 2020 Guidelines | Executive Summary (older adults section) | **Pass, exact wording found** | WHO: "should start by doing small amounts of physical activity, and gradually increase the frequency, intensity and duration over time." Article should use this phrasing closely. |
-| A3 | General professional-consultation caveat | WHO 2020 Guidelines | Executive Summary | **Not independently reproduced - flagged for recheck** | A later independent spot-check of this exact page (performed 2026-07-17 as part of this sprint's own quality check, per `QUALITY_STANDARD.md`'s citation discipline) did not find WHO stating pre-exercise medical clearance is "generally unnecessary" - that specific phrasing was not present in the fetched content. This does not mean the claim is false, only that it is **not yet confirmed** and must not be presented as a direct WHO quotation until re-verified against the exact section, or replaced with CDC's already-corroborated "talk to your doctor if you have a chronic condition or plan vigorous activity" framing (Article 2, Claim 4's own source) instead. **Status downgraded from Pass to Unconfirmed; do not draft A3 from this quote.** |
+| A3 | General professional-consultation caveat | WHO 2020 Guidelines (attempt 1, failed recheck) → **MedlinePlus, "Exercise and Physical Fitness" (Verification Pass #2, 2026-07-17)** | Executive Summary (WHO, unconfirmed); full article (MedlinePlus, confirmed) | **RESOLVED - REPLACED** | **History, preserved:** the original WHO "medical clearance generally unnecessary" quotation did not survive an independent recheck (see the entry this replaces, retained below for the record). A `cdc.gov` chronic-conditions substitute was then attempted directly via `WebFetch` and returned HTTP 403 (same domain block affecting this pack's other CDC candidates). **Resolution:** MedlinePlus (NIH/NLM), `medlineplus.gov/exerciseandphysicalfitness.html`, directly read via `WebFetch` on 2026-07-17, confirms: "Before you start, check with your health care provider, especially if you have trouble moving, balancing, or worry that exercise might not be safe for you." **Final claim (replaced, narrower and more conservative than originally planned):** most people can begin light or moderate activity without special clearance; check with a healthcare provider first specifically if you have trouble moving or balancing, or are otherwise unsure whether activity is safe for you - not a generic "some people should consult a professional" caveat, and not a clinical checklist of conditions. |
+| *(superseded, retained per this project's "never silently overwrite a failed attempt" discipline)* | A3 original attempt | WHO 2020 Guidelines | Executive Summary | **Not independently reproduced on recheck** | The original claimed "medical clearance generally unnecessary" quotation was not found on independent re-fetch of this page on 2026-07-17. Not used in the final claim above. |
 
 ---
 
 ## Article 2: Building Functional Strength and Aerobic Endurance
 
 **Sources:** WHO 2020 Guidelines; CDC "Adult Activity: An Overview"
+(blocked, not required - WHO fully supports B1/B2); MedlinePlus,
+"Exercise for Older Adults" (added Verification Pass #2, resolves B3)
 
 | # | Planned claim | Priority |
 |---|---|---|
@@ -154,14 +199,15 @@ numeric claims warrant careful, exact reading rather than skimming).
 |---|---|---|---|---|---|
 | B1 | Aerobic + strength activity combination, most weeks | WHO 2020 Guidelines | Executive Summary | **Pass, exact figures found** | WHO: "at least 150–300 minutes of moderate-intensity aerobic physical activity; or at least 75–150 minutes of vigorous-intensity" + "muscle-strengthening activities... all major muscle groups on 2 or more days a week." CDC page (originally planned second source) was blocked (HTTP 403); WHO alone fully supports this claim. |
 | B2 | Major muscle groups, not one area | WHO 2020 Guidelines; ACSM Progression Models | Executive Summary; ACSM PDF body | **Pass** | Confirmed independently by both sources. CDC (originally planned) blocked; not needed given WHO+ACSM confirmation. |
-| B3 | Reduced/gradual rebuilding for older/deconditioned readers | CDC Older Adult Activity | | **Not confirmed this pass** | CDC page blocked (HTTP 403); `restoredcdc.org` mirror attempt also blocked. WHO's general older-adult "start small, gradually increase" language (already used for A2) partially supports a general version of this claim, but not the more specific "restarting after a break/illness" framing originally planned. **Fallback: write this claim as the same general gradual-start principle already confirmed for A2, not a more specific restart-after-break claim, unless a working CDC source is found in a future pass.** |
+| B3 | Reduced/gradual rebuilding for older/deconditioned readers | CDC Older Adult Activity (blocked) → **MedlinePlus, "Exercise for Older Adults" (Verification Pass #2, 2026-07-17)** | | **RESOLVED - VERIFIED** | **History, preserved:** CDC direct page and its `restoredcdc.org` mirror both remained blocked (HTTP 403) on re-attempt. **Resolution:** MedlinePlus (NIH/NLM), `medlineplus.gov/exerciseforolderadults.html`, directly read via `WebFetch` on 2026-07-17, confirms exactly this claim's core: "If you have not been active, you can start slowly and work up to your goal." Same page also independently re-confirms C1 (balance exercises prevent falls), corroborating rather than contradicting the already-verified claim. **Final claim (verified, narrowed to match exact source support):** someone who hasn't been active can start slowly and work up gradually toward their goal, rather than starting at full intensity - the more specific "restarting after a break/illness" framing originally envisioned is dropped as not directly supported by this source. |
 
 ---
 
 ## Article 3: Mobility, Balance, and Sustained Work Capacity
 
-**Sources:** CDC "Older Adult Activity" and "What Counts as Physical
-Activity for Older Adults"; ACSM progression-principle material
+**Sources:** WHO 2020 Guidelines (primary, replacing blocked CDC
+pages - supports C1 and, via Verification Pass #2, C3-narrowed); ACSM
+progression-principle material (does not address C2 - see fallback)
 
 | # | Planned claim | Priority |
 |---|---|---|
@@ -195,15 +241,18 @@ progression sourcing).
 |---|---|---|---|---|---|
 | C1 | Balance activity reduces fall risk | WHO 2020 Guidelines | Executive Summary | **Pass, strong exact confirmation** | WHO: "varied multicomponent physical activity that emphasizes functional balance and strength training at moderate or greater intensity, on 3 or more days a week, to enhance functional capacity and prevent falls." CDC (originally planned) blocked; WHO alone fully supports this claim, arguably more precisely than originally planned. |
 | C2 | Duration-before-intensity progression for sustained work | ACSM progression material | | **Not directly confirmed this pass** | ACSM's read content addressed resistance-training progression (sets/reps/load) specifically, not endurance/sustained-work duration-vs-intensity progression. **Fallback: rephrase to lean on the general progressive-overload principle already confirmed (A1), rather than an endurance-specific claim this source doesn't actually make.** |
-| C3 | Alternative activities for mobility limitations | CDC What Counts (Older Adults) | | **Not confirmed this pass** | CDC page blocked (HTTP 403). No substitute source was found in this pass. **This is the pack's least-supported planned claim; write conservatively and generally (e.g., "some activity is possible and valuable even with limitations, and any activity is better than none") without attributing specific phrasing to an unread source, or seek a substitute Tier 1/2 source in a future pass.** |
+| C3 | Alternative activities for mobility limitations | CDC What Counts (blocked) → **WHO 2020 Guidelines, re-read for its disability/functional-ability section (Verification Pass #2, 2026-07-17)** | | **RESOLVED - NARROWED** | **History, preserved:** CDC page remained blocked (HTTP 403) on re-attempt; no substitute directly supporting the specific "alternative/substitute activities" framing was found. **Resolution:** a second, targeted re-read of the WHO 2020 Guidelines (NCBI Bookshelf, `NBK566046`) - the same source already used for A1/A2/B1/B2/C1 - specifically for disability/functional-ability content confirms: "Older adults should be as physically active as their functional ability allows, and adjust their level of effort for physical activity relative to their level of fitness," and, more broadly, "Doing some physical activity is better than doing none." **Final claim (narrowed - this is the correct closure option, not a full verification):** activity should be scaled to a person's current functional ability rather than avoided entirely because of a limitation, and some activity is always better than none. The original, more specific "alternative activities can substitute for standard ones" framing is **dropped** - WHO's own guidelines do not provide specific modified-activity protocols for particular limitations, and inventing that specificity would go beyond what any source here supports. |
 
 ---
 
 ## Article 4: Load Carrying and Physically-Loaded Survival Tasks
 
 **Sources:** NIOSH, "Ergonomic Guidelines for Manual Material
-Handling"; peer-reviewed review, "Physiological impact of load
-carriage exercise"
+Handling" (blocked throughout - never directly read); CCOHS, "NIOSH
+Lifting Equation - Assessing Relevant Handling Factors" (added
+Verification Pass #2, resolves D1 as a directly-read substitute);
+peer-reviewed review, "Physiological impact of load carriage exercise"
+(resolves D2's qualitative fallback)
 
 | # | Planned claim | Priority |
 |---|---|---|
@@ -246,7 +295,7 @@ identified if neither directly supports a civilian-specific number).
 
 | # | Claim | Source | Page/Section | Result | Notes |
 |---|---|---|---|---|---|
-| D1 | Lifting/carrying risk factors beyond load alone | NIOSH Manual Material Handling | | **Not confirmed this pass** | NIOSH PDF blocked (HTTP 403, same `cdc.gov` domain block as the CDC pages). An OSHA lifting/carrying sub-page was also attempted at a guessed URL and returned HTTP 404 - a wrong path, not a confirmed absence of OSHA content; worth a corrected re-attempt. **This is the pack's most significant remaining sourcing gap.** |
+| D1 | Lifting/carrying risk factors beyond load alone | NIOSH Manual Material Handling (blocked) → **CCOHS, "NIOSH Lifting Equation - Assessing Relevant Handling Factors" (Verification Pass #2, 2026-07-17)** | Full page | **RESOLVED - VERIFIED (source substituted)** | **History, preserved:** the NIOSH PDF remained blocked (HTTP 403, same `cdc.gov` domain block) on re-attempt this pass; a corrected OSHA lifting/carrying URL was not located either. **Resolution:** the Canadian Centre for Occupational Health and Safety (CCOHS) - a recognized national occupational-health authority, per this sprint's own allowed source classes - directly read via `WebFetch` on 2026-07-17 (`ccohs.ca/oshanswers/ergonomics/niosh/assessing.html`). This page explicitly summarizes and cites the same NIOSH Lifting Equation research this claim originally targeted, and confirms each named risk factor directly: "if the situation requires frequent lifts or lifting loads far away from the body, there is an increased risk of injury" (distance, frequency), plus the equation's own Frequency Multiplier and posture/coupling-dependent Vertical Multiplier factors (posture). **Final claim (verified, source honestly cited as CCOHS's summary of NIOSH's research, not as a direct NIOSH read):** lifting and carrying injury risk rises with load, distance from the body, frequency of lifting, and posture - not from load weight alone. The eventual article's `## Sources` entry must cite CCOHS explicitly (summarizing NIOSH research), not NIOSH directly, since NIOSH's own primary document was never successfully read. |
 | D2 | Load-threshold injury risk (qualitative only) | Load carriage physiological review | Body text | **Pass - confirms the fallback itself, not a number** | Source explicitly states "no explicit threshold is identified" and that data is "almost exclusively from military and occupational populations... Civilian data are minimal." This *positively confirms* the Research Plan's own fallback decision: write this claim qualitatively (risk rises with load, no established civilian number) rather than stating any specific percentage. Do not use the "10%/22% of bodyweight" figures found during initial search - now confirmed as unsupported by the one peer-reviewed source that was actually read. |
 | D3 | Gradual duration/frequency-before-weight progression | Load carriage physiological review | | **Not addressed by this source** | The review "does not address gradual load progression protocols." **Fallback: lean on the already-confirmed general progression principle (A1) rather than a load-carriage-specific claim.** |
 | D4 | Framing synthesis - no independent source required | N/A | N/A | N/A | Confirm only that it accurately reflects Articles 2-3 once drafted. |
@@ -337,56 +386,39 @@ Verification stages - **especially D2 and E3, which this workbook
 identifies as the two claims most likely to need their planned
 specificity reduced during actual verification.**
 
-## Verification Pass #1 — Outcome Summary (2026-07-17)
+## Verification Outcome Summary (Pass #1 + Pass #2, 2026-07-17)
 
-Of 16 planned claims, after both the initial pass and the additional
-MedlinePlus find made during this sprint's quality check: **9 directly
-confirmed** with quotable wording (A1, A2, B1, B2, C1, E1, E2, E4,
-plus D2's fallback itself positively confirmed), **1 partially
-confirmed** with a narrower scope than originally planned (E3 - a
-concrete duration threshold now exists, but not a "soreness vs.
-injury" framing in those words), **2 confirmed as not addressed by
-their planned source** (C2, D3 - meaning the source was actually read,
-and honestly does not support that specific claim, which is different
-from and more useful than "not yet checked"), and **4 remain genuinely
-unread or unconfirmed** (A3, B3, C3, D1), each blocked by a specific,
-named access failure, an as-yet-unfound primary source, or - for A3 -
-a quotation that did not survive an independent recheck (see above).
-One deliberate rejection is recorded: a real ACSM source was
-originally considered for E4 and correctly judged the wrong claim
-match (clinical testing criteria, not lay training guidance) rather
-than force-fit; MedlinePlus subsequently closed this gap with a
-correctly-matched source instead.
+Of 16 planned claims, after Pass #1, its same-day independent
+spot-check, and this targeted closure sprint's Pass #2: **12 directly
+confirmed or replaced with quotable wording** (A1, A2, A3-replaced,
+B1, B2, B3, C1, C3-narrowed, E1, E2, E4, plus D1 and D2's fallback
+each independently confirmed), **1 partially confirmed** with a
+narrower scope than originally planned (E3 - a concrete duration
+threshold exists, but not a "soreness vs. injury" framing in those
+words), and **2 confirmed as not addressed by their planned source,
+with an explicit conservative fallback already assigned** (C2, D3 -
+both instructed to lean on the already-confirmed general
+progressive-overload principle, A1, rather than an endurance/load-
+specific claim their sources don't actually make). **Zero claims
+remain open.** One deliberate rejection is recorded from Pass #1: a
+real ACSM source was originally considered for E4 and correctly judged
+the wrong claim match, later closed by MedlinePlus instead.
 
-**Independent quality-check spot-check (2026-07-17, same day, separate
-pass):** per `QUALITY_STANDARD.md`'s citation discipline, five of this
-workbook's claimed reads were independently re-attempted via fresh
-`WebFetch` calls before this planning sprint's report was finalized,
-specifically because a claim of "directly read" must be independently
-accountable, not merely asserted. Four of five reproduced exactly or
-substantively: WHO's aerobic/strength figures (B1), WHO's older-adult
-balance/falls language (C1), WHO's gradual-start language (A2), the
-PMC load-carriage review's "no civilian threshold" finding (D2), and
-the ACSM/ECSS overtraining abstract's overload/recovery language (E1,
-E2) - all confirmed on independent re-fetch, several verbatim. The
-CDC (`cdc.gov/physical-activity-basics/...`) and NIOSH
-(`cdc.gov/niosh/docs/2007-131/...`) HTTP 403 blocks were also
-independently reproduced, confirming those are genuine access
-failures, not a one-time issue. **One claim did not survive
-recheck**: A3's specific "medical clearance generally unnecessary"
-quotation was not found in an independent fetch of the same WHO page
-and has been downgraded from Pass to Unconfirmed above - this is
-exactly the kind of correction this project's discipline exists to
-catch, and it was caught before this sprint's report was written, not
-after.
+**Independent quality-check spot-check (Pass #1, same day):** per
+`QUALITY_STANDARD.md`'s citation discipline, five of Pass #1's claimed
+reads were independently re-attempted via fresh `WebFetch` calls
+before that pass's report was finalized. Four of five reproduced
+exactly or substantively; one (A3's original WHO quotation) did not
+and was downgraded - the exact failure this targeted closure sprint
+then resolved via a replacement source.
 
-**This pack is not ready for Writing to begin with the expectation of
-`Verified Source` status.** A realistic path forward: draft all five
-articles now at `Unverified`/`Community Verified` as appropriate,
-writing every flagged claim to its stated conservative fallback where
-verification is incomplete, then run a second Human Source
-Verification pass specifically targeting the four remaining open gaps
-(A3, B3, C3, D1) before requesting Editorial Review - mirroring this pack
-line's own Mass Casualty precedent, where Editorial Review preceded
-final Human Source Verification and multiple passes were normal, not
-exceptional.
+**This pack is now ready for Writing with an honest,
+evidence-supported drafting target.** No article should be drafted
+directly to `Verified Source` without a final check against the actual
+written prose (per this project's standard process - direct source
+confirmation of a plan is never the same as confirming the final
+sentences), but every one of the 16 planned claims now has either
+direct source support, an explicit narrowed/replaced final form, or an
+explicit conservative fallback - none remain genuinely open. See the
+Research Plan's companion "Pre-Writing Claim Freeze" section for the
+full per-claim audit.

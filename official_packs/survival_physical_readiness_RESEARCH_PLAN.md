@@ -102,6 +102,15 @@ writing.
   - [x] Yes - the professional-consultation caveat is safety-adjacent
         and must not become an individualized medical clearance
         statement.
+- **RESOLVED (Targeted Closure Sprint, 2026-07-17):** Claim 3
+  (A3) is **Replaced**. The original WHO quotation did not survive
+  independent recheck; MedlinePlus, "Exercise and Physical Fitness,"
+  directly read this sprint, now supports a narrower, more
+  conservative final claim: check with a healthcare provider before
+  starting specifically if you have trouble moving or balancing, or
+  are otherwise unsure whether activity is safe for you - not a
+  generic professional-consultation caveat. See the Human Verification
+  Workbook's Verification Pass #2 Results for the full record.
 
 ## Article 2: Building Functional Strength and Aerobic Endurance
 
@@ -131,6 +140,12 @@ writing.
 - **Safety sensitivity:**
   - [x] Yes - intensity/progression guidance is safety-adjacent per
         Part 4's explicit list.
+- **RESOLVED (Targeted Closure Sprint, 2026-07-17):** Claim 3
+  (B3) is **Verified**. MedlinePlus, "Exercise for Older Adults,"
+  directly read this sprint, confirms: "If you have not been active,
+  you can start slowly and work up to your goal." The more specific
+  "restarting after a break/illness" framing originally envisioned is
+  dropped as not directly supported.
 
 ## Article 3: Mobility, Balance, and Sustained Work Capacity
 
@@ -163,6 +178,18 @@ writing.
 - **Safety sensitivity:**
   - [x] Yes - balance/fall-risk content for older or deconditioned
         readers is safety-adjacent.
+- **RESOLVED (Targeted Closure Sprint, 2026-07-17):** Claim 3
+  (C3) is **Narrowed**. WHO 2020 Guidelines, re-read for its
+  functional-ability content, confirms: "Older adults should be as
+  physically active as their functional ability allows, and adjust
+  their level of effort... relative to their level of fitness," and
+  "Doing some physical activity is better than doing none." The
+  original "alternative activities can substitute" framing is dropped
+  - WHO's own guidelines provide no specific modified-activity
+  protocols for particular limitations, and asserting that specificity
+  would go beyond what any source supports. Final claim: scale activity
+  to functional ability rather than avoiding it entirely; some activity
+  is always better than none.
 
 ## Article 4: Load Carrying and Physically-Loaded Survival Tasks
 
@@ -207,6 +234,16 @@ writing.
   - [x] Yes - **Critical** candidate: load-carrying injury guidance
         is squarely inside Part 4's safety-boundary list (load
         progression).
+- **RESOLVED (Targeted Closure Sprint, 2026-07-17):** Claim 1
+  (D1) is **Verified, with the source substituted**. NIOSH's own
+  primary document remained blocked (HTTP 403) through two separate
+  verification passes. CCOHS (Canadian Centre for Occupational Health
+  and Safety) - a recognized national occupational-health authority
+  directly summarizing the same NIOSH Lifting Equation research -
+  was directly read instead and confirms distance-from-body, lifting
+  frequency, and posture as risk factors beyond load weight alone. The
+  eventual article must cite CCOHS explicitly (as a summary of NIOSH
+  research), not NIOSH directly.
 
 ## Article 5: Recovery and Injury Prevention for Physical Training
 
@@ -318,6 +355,56 @@ writing.
   Source Collection should attempt the original journal/ACSM-hosted
   version first and only use a mirror if the original cannot be
   reached, noting the mirror explicitly if used.
+
+## Pre-Writing Claim Freeze (Targeted Closure Sprint, 2026-07-17)
+
+A full audit of all 16 planned claims across the five proposed
+articles, performed after resolving A3, B3, C3, and D1 - not a
+re-verification of everything from scratch, but a confirmation that no
+claim was missed.
+
+| Claim | Article | Status |
+|---|---|---|
+| A1 | 1 | Direct source support (WHO + ACSM) |
+| A2 | 1 | Direct source support (WHO, exact wording) |
+| A3 | 1 | **Replaced** this sprint (MedlinePlus) |
+| B1 | 2 | Direct source support (WHO, exact figures) |
+| B2 | 2 | Direct source support (WHO + ACSM) |
+| B3 | 2 | **Verified** this sprint (MedlinePlus) |
+| C1 | 3 | Direct source support (WHO, exact wording) |
+| C2 | 3 | Explicit conservative fallback (leans on A1's general
+      progression principle - source read, doesn't address this
+      specific endurance-progression claim) |
+| C3 | 3 | **Narrowed** this sprint (WHO, functional-ability framing) |
+| D1 | 4 | **Verified, source substituted** this sprint (CCOHS) |
+| D2 | 4 | Explicit conservative, non-numeric fallback (positively
+      confirmed by the load-carriage review - no civilian threshold
+      exists) |
+| D3 | 4 | Explicit conservative fallback (leans on A1 - source read,
+      doesn't address load-carriage-specific progression) |
+| D4 | 4 | Synthesis/framing claim - no independent source required,
+      confirm only that drafted text accurately reflects Articles 2-3 |
+| E1 | 5 | Direct source support (ACSM/ECSS, exact wording) |
+| E2 | 5 | Direct source support (ACSM/ECSS, exact wording) |
+| E3 | 5 | Partially confirmed, narrowed scope (MedlinePlus duration
+      threshold; conservative wording required regardless) |
+| E4 | 5 | Direct source support (MedlinePlus, exact wording) |
+
+Every one of the 16 planned claims now has one of: direct source
+support, a source-backed replacement or narrowing, or an explicit
+conservative drafting boundary. No hidden open claim was found beyond
+the four this sprint targeted.
+
+**PRE-WRITING CLAIM SET: READY FOR DRAFTING**
+
+This does not mean every article will draft to `Verified Source` -
+several claims (A3, C2, C3, D2, D3, E3) are explicitly scoped to a
+narrower or more conservative final form than originally envisioned,
+and realistic starting `verification_level` per article remains
+`Community Verified` for most of this pack (see the Source
+Collection's Collection Summary table) - a false "everything is
+`Verified Source`-ready" reading of this freeze would be inaccurate
+and is explicitly not what this status means.
 
 ## Ready to write?
 

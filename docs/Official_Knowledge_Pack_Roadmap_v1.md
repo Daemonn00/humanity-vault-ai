@@ -32,28 +32,38 @@ records topic-level scope and status only.
 
 ## 3. Approved Future Topics (Scope Only - Not Yet Authored)
 
-### Survival Physical Readiness (provisional name)
+### Survival Physical Readiness
 
-**Status: Approved topic, pre-research.** No article list has been
-decided, no sources have been researched, and no release batch has
-been assigned. "Survival Physical Readiness" is a provisional working
-name, not yet fixed against any existing pack-naming convention.
+**Status: Research and Source Collection complete (pre-writing).**
+Research confirmed "Survival Physical Readiness" as a workable,
+non-generic public-facing name - it avoids fitness-culture branding,
+aligns with this project's existing Emergency/Survival terminology, and
+is retained as final rather than provisional. Proposed `pack_id`:
+`hv_official_survival_physical_readiness`. See
+`official_packs/survival_physical_readiness_RESEARCH_PLAN.md`,
+`..._SOURCE_COLLECTION.md`, and `..._HUMAN_VERIFICATION_WORKBOOK.md`
+for the full record. **No release batch is assigned** - no persisted
+roadmap governance in this repository currently defines release
+batches, so none is fabricated here.
 
 **Founder decision recorded:** Physical Readiness / Survival Physical
 Capability is a genuine Humanity Vault knowledge domain and should be
 incorporated into the Official Knowledge Pack line.
 
-**Intended knowledge scope, at minimum:**
+**Proposed article architecture (5 articles, not yet written):**
 
-- functional strength
-- aerobic endurance
-- work capacity
-- mobility
-- load carrying
-- progressive physical adaptation
-- recovery
-- injury prevention
-- physically-loaded survival skills
+1. Understanding Physical Readiness and Progressive Adaptation
+2. Building Functional Strength and Aerobic Endurance
+3. Mobility, Balance, and Sustained Work Capacity
+4. Load Carrying and Physically-Loaded Survival Tasks
+5. Recovery and Injury Prevention for Physical Training
+
+Together these cover the full intended knowledge scope: functional
+strength, aerobic endurance, work capacity, mobility, load carrying,
+progressive physical adaptation, recovery, injury prevention, and
+physically-loaded survival skills. See the Research Plan for the
+grouping rationale (avoiding both one-article-per-bullet fragmentation
+and a single oversized article).
 
 **Governing framing, per
 [`Canon_Philosophy_v1.md`](Canon_Philosophy_v1.md) Section 11:**
@@ -67,10 +77,12 @@ future topic should be held to the same evidentiary rigor as
 safety-critical medical content, per the Canon's own note that it can
 prevent a single acute bad outcome from a single read.
 
-**Explicitly not decided by this entry:** final pack name, article
-list, sources, verification approach, or release sequencing. These
-remain for a future Research Plan / Source Collection sprint, per the
-existing `pack_production_workflow/` process.
+**Explicitly not decided by this entry:** final article prose, actual
+source verification (candidate sources have been found via search, not
+yet directly read - see the Source Collection's own stated stage
+limits), or release sequencing. These remain for future Writing and
+Human Source Verification sprints, per the existing
+`pack_production_workflow/` process.
 
 ### Aquaponics / Resilient Food Production (future direction, not an approved pack)
 

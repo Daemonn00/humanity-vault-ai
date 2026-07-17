@@ -1,12 +1,48 @@
 {
   "registry_schema_version": "1",
-  "generated_at": "2026-07-17T07:43:23.911108Z",
+  "generated_at": "2026-07-17T13:01:11.100599Z",
   "generator_version": "0.1.0",
-  "pack_count": 2,
+  "pack_count": 3,
   "source_repositories": [
     "Daemonn00/humanity-vault-ai"
   ],
   "packs": [
+    {
+      "pack_id": "hv_official_field_comm_wayfinding",
+      "pack_name": "Field Communication & Wayfinding",
+      "description": "Four official Humanity Vault articles on visual and radio signaling, improvised navigation, and field knot-tying for staying findable and oriented without infrastructure.",
+      "category_tags": [
+        "Communication",
+        "Construction",
+        "Survival"
+      ],
+      "trust_tier": "official",
+      "verification_summary": "Verified Source",
+      "latest_version": "1.0.0",
+      "asset_type": "knowledge_pack",
+      "license": null,
+      "dependencies": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publish_date": "2026-07-17T12:56:29.000Z",
+          "changelog_summary": "Four official Humanity Vault articles focused on communication, navigation, signaling, and practical field skills when normal infrastructure or equipment is unavailable.\r\n\r\n## Articles\r\n\r\n- **Visual Signaling for Rescue and Rendezvous** — Learn the principles behind standardized ground-to-air visual signaling for communicating essential information to search and rescue aircraft when radio communication is unavailable.\r\n- **Two-Way Radio Channel Discipline and Battery Care** — Practical guidance for keeping shared radio communication clear, efficient, and usable while preserving limited battery power.\r\n- **Improvised Compass Construction** — Learn how to create a simple backup directional tool using magnetized steel when a proper compass is unavailable, including its important limitations.\r\n- **Basic Knots for Shelter and Gear Lashing** — Essential knot and lashing concepts for joining poles, building simple shelter structures, and securing equipment.\r\n\r\n## Verification\r\n\r\n**Verification Summary:** Verified Source (all 4 articles)\r\n\r\nEvery article in this pack has been reviewed against directly accessed source material, with unsupported or mismatched claims corrected during the verification process.\r\n\r\n**SHA-256:** `05a1e61963b9a09b66d359245be9e3d7ca0485fd82abfc37fec14275014858ee`\r\n\r\n## Installation\r\n\r\n### Humanity Vault App\r\n\r\nOpen **Vault Hub**, locate **Field Communication & Wayfinding**, and tap **Install**.\r\n\r\nThe Humanity Vault app will download the Knowledge Pack and verify its SHA-256 checksum against the official registry before installation.\r\n\r\n### Manual Installation\r\n\r\n1. Download `hv_official_field_comm_wayfinding-v1.0.0.zip` from this release.\r\n2. Open the Humanity Vault app.\r\n3. Go to **About → Import Knowledge Pack**.\r\n4. Select the downloaded ZIP file.\r\n5. Complete the import process.\r\n\r\n## Package Information\r\n\r\n- **Pack ID:** `hv_official_field_comm_wayfinding`\r\n- **Version:** `1.0.0`\r\n- **Articles:** 4\r\n- **Categories:** Communication, Construction, Survival\r\n- **Verification:** Verified Source\r\n- **Format:** Offline-readable Markdown Knowledge Pack\r\n\r\n## Integrity\r\n\r\nYou can verify the downloaded package using the following SHA-256 checksum:\r\n\r\n`05a1e61963b9a09b66d359245be9e3d7ca0485fd82abfc37fec14275014858ee`",
+          "download_url": "https://github.com/Daemonn00/humanity-vault-ai/releases/download/hv_official_field_comm_wayfinding-v1.0.0/hv_official_field_comm_wayfinding-v1.0.0.zip",
+          "sha256": "05a1e61963b9a09b66d359245be9e3d7ca0485fd82abfc37fec14275014858ee",
+          "size_bytes": 6660,
+          "article_count": 4,
+          "compatibility": {
+            "min_app_version": null,
+            "recommended_app_version": null
+          },
+          "deprecated": false,
+          "deprecated_reason": null,
+          "replacement_pack_id": null,
+          "archived": false,
+          "source_commit": "093368473c660d244d356fe258e531bdcabdc3ee"
+        }
+      ]
+    },
     {
       "pack_id": "hv_official_mass_casualty_first_aid",
       "pack_name": "Mass Casualty & Trauma First Aid",
@@ -37,7 +73,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "93362bb0b8f20f560606f1354d3822773a70ee64"
+          "source_commit": "093368473c660d244d356fe258e531bdcabdc3ee"
         }
       ]
     },
@@ -71,7 +107,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "93362bb0b8f20f560606f1354d3822773a70ee64"
+          "source_commit": "093368473c660d244d356fe258e531bdcabdc3ee"
         }
       ]
     }

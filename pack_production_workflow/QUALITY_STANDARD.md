@@ -64,9 +64,12 @@ the claim as general, unattributed practical knowledge.
 ## 4. Citation policy
 
 - A claim may only be attributed to a source that was **directly
-  opened and read** by a named human - not a search-result summary,
-  not a source's own landing page describing itself, not an AI-
-  generated overview of the source.
+  opened and read** by a named verifier - a human reviewer, or an AI
+  agent meeting every condition in Section 9's AI-Agent Verification
+  Policy - not a search-result summary, not a source's own landing
+  page describing itself, not an AI-generated overview of the source,
+  and not a source merely recalled from a prior session without being
+  freshly re-read.
 - If a source could not be directly read despite a genuine attempt,
   the claim is written as general, non-source-specific practical
   knowledge, or is dropped - it is never presented as if the
@@ -169,3 +172,162 @@ be a change to `registry_generator`'s architecture, which is out of
 scope for this task and every other task so far in this project's
 history. This gap should be flagged to the founder as future,
 separately-scoped work - not silently worked around here.
+
+## 9. AI-Agent Verification Policy
+
+Established following three complete, independently end-to-end-
+verified production cycles (Mass Casualty & Trauma First Aid,
+Survival Physical Readiness, Field Communication & Wayfinding) in
+which the Founder individually and explicitly reviewed and accepted
+AI-agent-performed direct source verification every time it was
+proposed, without exception, including for emergency-medicine content.
+This section formalizes that already-accepted practice as a standing
+policy, so it no longer requires a fresh Founder methodology waiver
+for every new pack - while leaving every other gate in this document,
+and in `editorial_review_template/`, exactly as strict as it already
+was.
+
+### 9.1 Four governance layers
+
+Verification is treated as four distinct layers, never conflated:
+
+- **Verification Execution** - the act of opening a specific source,
+  reading its actual content, and comparing it against a specific
+  claim. May be performed by a named human reviewer or by an AI agent
+  meeting every condition in 9.2 below. The executor's identity does
+  not by itself determine trust - the evidence it produces does.
+- **Verification Evidence** - the durable, auditable record in
+  `REVIEW_NOTES.md` (Source Access Log, Claim-to-Source Map, reviewer
+  sign-off) showing exactly what was attempted, what was read, what
+  wasn't, and what happened as a result. This is the load-bearing
+  artifact a future reviewer actually checks - not the executor's
+  identity.
+- **Verification Status** - the article's `verification_level`
+  frontmatter value, earned strictly from the Evidence per
+  `editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`'s
+  weakest-link rule. A verification pass having occurred is never
+  sufficient by itself; every claim-row must independently read `Yes`
+  or `N/A`.
+- **Publication Authorization** - the Founder's own, separate,
+  non-delegable decision that a specific pack version may be released,
+  recorded via `06_PUBLICATION_DECISION_TEMPLATE.md`. This layer is
+  unaffected by this section: it was never about who performed
+  verification, and it remains a human (Founder) decision in every
+  case - no exception is created here.
+
+### 9.2 Conditions for AI-agent Verification Execution to be accepted
+
+An AI-agent verification pass produces evidence eligible for
+`Verified Source` status only if all of the following hold - exactly
+what this project has actually practiced across all three released
+packs, restated here as a standing requirement rather than a claim to
+be individually re-approved each time:
+
+1. The source was directly opened and its actual content materially
+   read - never a search-result summary, a source's own landing/about
+   page, or content merely recalled from a prior session without
+   being freshly re-read.
+2. Each meaningful factual claim attributed to that source was
+   individually checked against what the source actually says.
+3. Every access attempt - successful or not - is recorded honestly in
+   the Source Access Log, including failures (HTTP errors, unreadable
+   PDFs, truncated text).
+4. A source that could not be directly read is never marked verified,
+   regardless of how plausible or well-known it is.
+5. A substitute source is used and documented only as an explicit
+   substitute, with the reason the original could not be used, per
+   `02_SOURCE_VERIFICATION_CHECKLIST.md`.
+6. A claim not supported by directly-read source text is removed,
+   narrowed, rewritten to match what the source actually says, or left
+   `Unverified` - never presented at its original strength on the
+   strength of an unread or partially-read source.
+7. A citation-content mismatch (a cited source that, on direct
+   reading, turns out not to actually describe the claim it was cited
+   for) is recorded as a finding, not silently corrected without a
+   trace.
+8. Safety-critical claims receive the heightened scrutiny in 9.3
+   below, in addition to - never instead of - conditions 1-7.
+9. The full trail remains auditable in `REVIEW_NOTES.md`, with a
+   reviewer sign-off explicitly identifying the executor as an AI
+   agent - never presented as, or left ambiguous with, a human
+   reviewer.
+10. `verification_level` is set from the Claim-to-Source Map's actual
+    result, never assigned merely because a verification pass
+    occurred.
+11. Founder Publication Approval remains a separate, required, human
+    decision before release, regardless of how verification was
+    performed (9.1's fourth layer, unchanged).
+
+These are not new rules - they are what
+`02_SOURCE_VERIFICATION_CHECKLIST.md` and
+`03_CLAIM_VERIFICATION_TEMPLATE.md` already required. This section
+makes explicit that meeting them is what earns trust, not the
+executor's species.
+
+### 9.3 Heightened scrutiny for high-severity content
+
+Most safety-relevant content - general first aid, emergency-response
+principles, structural/electrical/navigational cautions - is
+adequately protected by 9.2 together with the Safety content rules
+(Section 3) and this project's default practice of narrowing or
+dropping any claim that isn't directly supported. This is not
+theoretical: Mass Casualty & Trauma First Aid's triage, burn, shock,
+fracture, and hypothermia/heatstroke content went through exactly this
+methodology, and the Founder reviewed and approved it.
+
+A narrow set of claim types carries higher failure cost than narrowing
+can fully mitigate, because the article must state a specific,
+actionable number or step rather than a general caution: **specific
+medication dosages, invasive medical or surgical procedures,
+childbirth/obstetric management, specific toxic-substance handling
+thresholds, and specific electrical or structural load-bearing
+figures.** For a claim of this kind:
+
+- AI-agent Verification Execution (9.2) still applies in full - it is
+  not replaced.
+- In addition, before that specific claim may be marked directly
+  verified, a named human reviewer must personally read the same
+  source passage the AI agent read and confirm, in a Reviewer Sign-off
+  block, that it supports the claim as written. This is a targeted
+  confirmation of the specific high-severity claim, not a full
+  re-verification of the article or pack.
+- If no human reviewer performs this confirmation, the claim is
+  written as a general caution directing the reader to a qualified
+  professional or authoritative reference, rather than stated as a
+  specific verified figure or procedure.
+
+This is a **mandatory additional review** rule, narrowly scoped to the
+claim types listed above - it is not a broader classification system
+and does not apply to general safety content already covered by 9.2
+and Section 3. A Founder spot-check of a small claim sample before
+Publication Decision is **recommended, not mandatory**, for any other
+safety-relevant pack.
+
+### 9.4 Terminology
+
+The editorial stage some packs' `REVIEW_NOTES.md` label "Human Source
+Verification" keeps that name unchanged - renaming it has real
+migration cost (every historical `REVIEW_NOTES.md` and workbook that
+uses it) and no benefit sufficient to justify it. Read the name as
+describing the *rigor* required - direct, first-hand, source-level
+verification, as opposed to secondhand or summary-based checking -
+rather than exclusively the species of who performs it.
+
+### 9.5 What this section does not change
+
+- It does not weaken Section 4's citation policy, Section 3's safety
+  rules, or `editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`'s
+  weakest-link rule in any way.
+- It does not authorize publishing anything - `06_PUBLICATION_DECISION_
+  TEMPLATE.md`'s Founder-only gate is unchanged.
+- It does not apply retroactively to change any already-released
+  pack's `verification_level`, and it does not alter any historical
+  `REVIEW_NOTES.md` entry - those remain the accurate record of what
+  was actually decided at the time.
+- It does not extend to anything outside source verification during
+  pack production - it has no bearing on, and does not reference,
+  `docs/Canon_Philosophy_v1.md` Section 13's separate treatment of AI
+  at application runtime (Ask the Vault or any future AI feature),
+  which concerns AI-generated Representations shown to end users, a
+  different activity from an AI agent directly reading a real source
+  document during editorial production.

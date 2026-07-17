@@ -4,8 +4,10 @@ Work through this once per **source** a pack cites (not once per
 claim - a single source may support several claims; see
 `03_CLAIM_VERIFICATION_TEMPLATE.md` for the per-claim record). The
 purpose of this checklist is to force an honest answer to one
-question: *did a human actually open and read this source's real
-content*, or was it only found and described secondhand?
+question: *did a named verifier - a human reviewer, or an AI agent
+meeting `QUALITY_STANDARD.md` §9's conditions - actually open and read
+this source's real content*, or was it only found and described
+secondhand?
 
 A search-engine summary, an AI-generated overview, a source's own
 "about" or landing page, or a citation in another document are **not**
@@ -43,8 +45,9 @@ exactly as the existing precedent does.
 
 ## Verification outcome
 
-- [ ] **Directly verified** - a named human (see below) personally
-      opened and read this source's actual content.
+- [ ] **Directly verified** - a named verifier (a human reviewer, or
+      an AI agent meeting `QUALITY_STANDARD.md` §9's conditions - see
+      below) personally opened and read this source's actual content.
 - [ ] **Not directly verified** - every attempt above failed, or only
       secondhand descriptions of the source were available.
 

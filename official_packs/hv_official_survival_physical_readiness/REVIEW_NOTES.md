@@ -520,29 +520,45 @@ document). No changes needed.
   and this pack must not be described as official, released, or
   published anywhere.
 
+## Founder Publication Decision (Update)
+
+*Preserving the decision above unchanged, per this document's own
+"append, never erase" rule - this section records the Founder's actual
+decision, not a replacement of the reasoning above.*
+
+- **Decision:** **APPROVED.**
+- **Reasoning:** The Founder reviewed the Stage 6 Human Source
+  Verification result recorded above: all five articles earned
+  `Verified Source` through direct, this-pass primary-source reads
+  against the actual final prose. Findings: 0 Critical, 0 High, 0
+  Medium, 2 Low (both non-blocking - see Editorial Findings, above).
+  The Founder knowingly and explicitly accepts the AI-agent-performed
+  direct-source verification methodology used for this pack's Stage 6,
+  under the same precedent already accepted for
+  `hv_official_mass_casualty_first_aid`. This approval applies
+  specifically to `hv_official_survival_physical_readiness` version
+  1.0.0 and does not automatically waive verification requirements for
+  any future pack.
+- **Decided by:** The Founder.
+- **Date:** 2026-07-17.
+- **What this decision authorizes:** This pack (version 1.0.0) may now
+  be built into a release ZIP, checksummed, and prepared for a real
+  GitHub Release, and described as an official Humanity Vault
+  Knowledge Pack once actually published.
+
 ## Version Review History
 
 | Version | Date | What changed | Review outcome | Reviewer(s) | Publication decision |
 |---|---|---|---|---|---|
 | 1.0.0 | 2026-07-17 | Initial authoring (Writing sprint) and first Editorial Review: 2 minor unsupported details found and fixed by narrowing; 1 Medium population-context finding recorded, unresolved; 2 Low findings recorded, no fix needed | Editorial Review complete; 0 Critical, 0 High, 1 Medium, 2 Low findings; all 5 articles `Unverified` | Claude (AI agent) | Not Yet Approved |
 | 1.0.0 | 2026-07-17 | Human Source Verification (Stage 6, this update): every source re-opened and read against final prose; Medium-1 (population-context) resolved via evidence-based rewrites to Article 3; a provider-vs-911 urgency gap found and fixed in Article 5; the 2009 ACSM Position Stand could not be re-read this pass and was removed from Articles 1-2's Sources (claims remained fully supported without it) | All 5 articles upgraded to `Verified Source`; 0 unresolved findings | Claude (AI agent) | **Still Not Yet Approved** - verification complete, but Publication Decision is reserved for the Founder given the AI-agent (not human) verification method used |
+| 1.0.0 | 2026-07-17 | Founder Publication Decision: reviewed the Stage 6 result and explicitly approved publication, accepting the AI-agent verification methodology for this pack and version | No content change; decision only | The Founder | **APPROVED** |
 
 ## Status
 
-All five articles now honestly read `verification_level: Verified
-Source`, each individually earned through this pass's direct
-primary-source reads against the actual final prose - not carried over
-from pre-writing research or the prior Editorial Review. Medium-1
-(Article 3's population-context precision) is resolved, not merely
-narrowed around: real evidence was found distinguishing WHO's
-general-population "some activity is better than none" principle from
-its older-adult-specific balance and functional-ability guidance, and
-the article now attributes each honestly. A second, previously
-unflagged issue (Article 5 mixing provider-level and 911-level warning
-signs) was found and fixed using a more complete source read. The 2009
-ACSM Position Stand could not be re-accessed this pass and was removed
-from the two articles that had cited it, without weakening either
-article's actual claims. The pack remains **Not Yet Approved** for
-release - not because any claim is unconfirmed, but because Publication
-Decision approval, consistent with this pack line's own precedent, is
-reserved for a separate step the Founder must knowingly take.
+All five articles honestly read `verification_level: Verified Source`,
+each individually earned through direct primary-source reads against
+the actual final prose. The Founder has reviewed that result and
+**approved** this pack for release at version 1.0.0, explicitly
+accepting the AI-agent verification methodology for this pack. This
+pack is approved to proceed to Release Pipeline.

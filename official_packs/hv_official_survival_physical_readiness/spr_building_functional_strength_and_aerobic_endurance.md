@@ -5,7 +5,7 @@ subcategory: Strength and Endurance
 author: Humanity Vault Contributors
 last_updated: 2026-07-17
 knowledge_level: Level 1
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: spr_understanding_physical_readiness_and_progressive_adaptation, spr_load_carrying_and_physically_loaded_survival_tasks, spr_recovery_and_injury_prevention_for_physical_training, recognizing_and_treating_dehydration
 ---
 
@@ -34,5 +34,4 @@ This article does not prescribe specific exercises, repetition counts, sets, or 
 ## Sources
 
 - World Health Organization, WHO Guidelines on Physical Activity and Sedentary Behaviour (2020)
-- American College of Sports Medicine, Position Stand, "Progression Models in Resistance Training for Healthy Adults" (2009)
 - MedlinePlus (U.S. National Library of Medicine, National Institutes of Health), Exercise for Older Adults

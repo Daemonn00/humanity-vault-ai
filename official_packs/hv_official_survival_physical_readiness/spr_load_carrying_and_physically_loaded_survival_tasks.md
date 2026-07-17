@@ -5,7 +5,7 @@ subcategory: Load Carrying
 author: Humanity Vault Contributors
 last_updated: 2026-07-17
 knowledge_level: Level 1
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: spr_understanding_physical_readiness_and_progressive_adaptation, spr_building_functional_strength_and_aerobic_endurance, spr_recovery_and_injury_prevention_for_physical_training, well_digging_and_safe_water_access, basic_shelter_construction, simple_structural_building_techniques, mcfa_fracture_and_sprain_stabilization
 ---
 

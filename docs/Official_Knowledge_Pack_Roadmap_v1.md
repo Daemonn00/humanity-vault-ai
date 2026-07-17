@@ -51,28 +51,53 @@ records topic-level scope and status only.
 
 ## 3. In Production (Not Yet Released)
 
-No pack is currently in production. All three packs that have reached
-drafting or beyond (Section 2, above) are released.
+### Water Treatment at Scale
+
+**Status: Founder Approved — Research / Pre-Writing.**
+Proposed `pack_id`: `hv_official_water_treatment_at_scale`.
+
+- **Approved by:** The Founder, 2026-07-17. This approval authorizes
+  research and pre-writing preparation only - it does **not**
+  authorize Writing, Editorial Review completion, `Verified Source`
+  status for any claim, Release Pipeline execution, or publication.
+  Those remain separate, later gates per
+  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`, exactly as
+  every previously-released pack went through them.
+- **Current stage:** Research Plan and Source Collection completed;
+  see `official_packs/water_treatment_at_scale_RESEARCH_PLAN.md`,
+  `official_packs/water_treatment_at_scale_SOURCE_COLLECTION.md`, and
+  `official_packs/water_treatment_at_scale_HUMAN_VERIFICATION_WORKBOOK.md`
+  for the full record. No `manifest.md`, no articles, and no pack
+  directory under `official_packs/` exist yet - Writing has not begun.
+- **Scope:** Community/systems-scale water capability (source
+  assessment and protection, community-scale collection and
+  pre-treatment, filtration and disinfection beyond single-person
+  scale, storage/distribution/recontamination prevention, and
+  monitoring/maintenance/rebuilding) - explicitly distinct from the
+  core corpus's existing household-level water content
+  (`water_purification.md`, `water_storage_and_long_term_water_safety.md`,
+  `well_digging_and_safe_water_access.md`), which this pack
+  cross-links to rather than duplicates. Aquaponics/food-production
+  content (Section 5, below) is explicitly out of scope for this pack.
 
 ## 4. Named But Not Yet Started
 
-**Water Treatment at Scale** and **Emergency Shelter Systems** are
-named in this reconciliation only because a prior, unpersisted planning
-discussion referenced them alongside Field Communication and Mass
-Casualty as a four-pack "Launch Batch 1." No such batch document was
-ever committed to this repository - the only trace of it anywhere in
+**Emergency Shelter Systems** is named in this reconciliation only
+because a prior, unpersisted planning discussion referenced it
+alongside Field Communication, Mass Casualty, and Water Treatment at
+Scale as a four-pack "Launch Batch 1." No such batch document was ever
+committed to this repository - the only trace of it anywhere in
 `official_packs/` is two passing mentions inside
 `mass_casualty_first_aid_RESEARCH_PLAN.md`'s own header ("Launch Batch
 1, pack 2 of 4"). Per this document's own standing rule (Section 1),
 undocumented prior plans are not treated as governance.
 
-**Neither topic has any production artifact of any kind** - no
-directory, no Research Plan, no Source Collection, and no Founder-
-recorded topic approval of the kind Survival Physical Readiness
-received before its own production began (Section 2, above). They are
-recorded here only as named-but-unstarted, not as approved or
-scheduled. `pack_id`, article architecture, and scope remain entirely
-undecided.
+**This topic has no production artifact of any kind** - no directory,
+no Research Plan, no Source Collection, and no Founder-recorded topic
+approval of the kind Water Treatment at Scale just received (Section
+3, above). It is recorded here only as named-but-unstarted, not as
+approved or scheduled. `pack_id`, article architecture, and scope
+remain entirely undecided.
 
 ## 5. Approved Future Topics (Scope Only - Not Yet Authored)
 
@@ -113,23 +138,21 @@ not as a one-directional sequence.
 
 ## 6. Recommended Next Production Target
 
-The previous recommendation in this section - finish
-`hv_official_field_comm_wayfinding` - is now complete (Section 2,
-above). With all three drafted packs released, no unreleased Official
-Knowledge Pack currently has any production artifact: Water Treatment
-at Scale and Emergency Shelter Systems (Section 4) remain named but
-unstarted, and Aquaponics (Section 5) remains a recorded future
-direction, not an approved topic. This document does not select a
-next production target on its own initiative - starting a new topic
-requires a separate Founder decision to move one of Section 4's or
-Section 5's entries to "approved," the same step Survival Physical
-Readiness and Field Communication & Wayfinding each received before
-their own production began.
+Fulfilled. The previous recommendation in this section - approve and
+begin Water Treatment at Scale - is now the pack in active research
+(Section 3, above). Emergency Shelter Systems (Section 4) remains
+named but unstarted, and Aquaponics (Section 5) remains a recorded
+future direction, not an approved topic; this document does not
+select either as a next target on its own initiative.
 
 ## 7. Next Steps (Not Actioned By This Document)
 
-- A Founder decision on which topic (if any) to approve next - Water
-  Treatment at Scale, Emergency Shelter Systems, or Aquaponics - is
-  the prerequisite for any further Official Knowledge Pack production.
-  This document records that decision when it is made; it does not
-  make it.
+- Complete Writing, Editorial Review, and Human/AI-agent Source
+  Verification for Water Treatment at Scale, per
+  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md` and
+  `pack_production_workflow/QUALITY_STANDARD.md` §9 - followed by its
+  own separate Founder Publication Decision before any release step.
+  This document records that progress when it happens; it does not
+  perform it.
+- A Founder decision on Emergency Shelter Systems or Aquaponics
+  remains a prerequisite before either could begin production.

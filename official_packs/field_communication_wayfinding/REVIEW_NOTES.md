@@ -631,6 +631,56 @@ Until the Founder records that separate decision as Approved:
 - This pack must not be described as "official," "released," or
   "published" anywhere - it remains an unpublished editorial draft.
 
+## Founder Publication Decision (2026-07-17)
+
+*Appended per this document's "append, never erase" rule. This section
+records a new, distinct decision - it does not alter or remove the
+"Not Yet Approved" decision and its conditions recorded above; that
+record remains accurate for its own point in time, and the history of
+how this pack moved from Not Yet Approved through verification closure
+to this approval is preserved in full in "Version Review History"
+below.*
+
+- **Decision:** **APPROVED**
+- **Decided by:** The Founder
+- **Date:** 2026-07-17
+- **Scope:** `hv_official_field_comm_wayfinding` v1.0.0 specifically -
+  this approval does not extend to any future version or any other
+  pack.
+- **Basis of the decision, as reviewed and accepted by the Founder:**
+  - All 4 of 4 articles are now `Verified Source`.
+  - The three previously-`Unverified` articles have completed direct
+    source-verification closure (Stage 6, above).
+  - Inaccessible or non-supportive original sources (IARU/ARRL, CPSC,
+    FM 21-76 Ch. 12, Scouting America Troop Leader Resources) were not
+    falsely retained as verified - each was either replaced with a
+    genuinely-read substitute or, in FM 21-76 Ch. 12's case, confirmed
+    to never have supported the claim in the first place.
+  - Substitute sources (MDARC, USFA/FEMA, Scout Life, Pioneering Merit
+    Badge Online Reference, FM 21-76 Ch. 18 via full-text mirror) were
+    directly read and are fully documented in the Stage 6 section
+    above.
+  - One genuine historical citation-content mismatch (FM 21-76 Ch. 12
+    never describing the Basic Knots lashing technique it was cited
+    for) was discovered and corrected this pass.
+  - All Critical, High, Medium, and Low editorial findings for this
+    pack are closed.
+  - The pack-wide verification summary, applying the project's
+    weakest-link rule, is `Verified Source`.
+  - AI-agent-performed source verification was explicitly authorized
+    for this pack/version by the Founder Governance Decision recorded
+    above, and this Publication Decision is made with that
+    authorization and its scope fully in view.
+  - The existing Visual Signaling for Rescue and Rendezvous article
+    retains its prior Founder-reviewed FAA verification (2026-07-10),
+    unchanged by this pass.
+  - No technical or editorial blocker remains against this pack.
+- **Authorizes:** Proceeding to Release Preparation for
+  `hv_official_field_comm_wayfinding` v1.0.0.
+- **Does not authorize:** Creating the GitHub Release, tagging, pushing,
+  or any other publication action in this same sprint - those remain
+  separate, later steps subject to their own review.
+
 ## Version Review History
 
 *(New section, backfilled 2026-07-14 per `editorial_review_template/
@@ -647,6 +697,7 @@ altered or removed.)*
 | 1.0.0 | 2026-07-14 | Remediation: ICAO Annex 12 removed from Article 1 after verification attempts failed (Source Access Log #7); reviewer identities added to this file; terrain tags reviewed and adjusted on 3 articles; Improvised Compass `knowledge_level` raised to Level 2; `manifest.md` disclaimer refreshed; this file restructured to match `editorial_review_template/05_PACK_REVIEW_REPORT_TEMPLATE.md` | Critical and High audit findings resolved; Medium findings addressed where genuinely justified | Claude (AI agent) | Not Yet Approved (whole pack) - 3 of 4 articles remain `Unverified` |
 | 1.0.0 | 2026-07-17 | Founder Governance Decision: AI-agent direct source verification explicitly authorized for this pack, under the same precedent already accepted for the two released packs | Decision only, no content change | The Founder | Not Yet Approved - authorization to verify, not to publish |
 | 1.0.0 | 2026-07-17 | Stage 6 Human Source Verification: all three remaining `Unverified` articles checked against directly-read sources (originals where accessible, genuine substitutes where not); Radio Channel Discipline re-sourced with no body-text change needed; Improvised Compass's magnetization/suspension materials narrowed to match the source exactly; Basic Knots' lashing technique rewritten and re-sourced after discovering its original citation never actually described the technique | All 3 articles upgraded to `Verified Source`; pack-wide weakest-link summary now `Verified Source` across all 4 articles | Claude (AI agent) | **Still Not Yet Approved** - verification complete; publication approval is a distinct, separate Founder decision |
+| 1.0.0 | 2026-07-17 | Founder Publication Decision: Founder reviewed the complete Stage 6 verification result and approved this pack/version for publication, authorizing Release Preparation | Decision only, no content change | The Founder | **APPROVED** - Release Preparation authorized; GitHub Release publication not yet authorized |
 
 ## Status
 

@@ -331,3 +331,22 @@ rather than exclusively the species of who performs it.
   which concerns AI-generated Representations shown to end users, a
   different activity from an AI agent directly reading a real source
   document during editorial production.
+
+### 9.6 Founder Ratification
+
+- **Ratified by:** The Founder
+- **Date:** 2026-07-17
+- **Scope:** This entire Section 9, as recorded in commit `eae08d3`,
+  unchanged.
+- **Decision:** The Founder has explicitly reviewed and ratified this
+  standing AI-Agent Verification Policy. Per-pack methodology waivers
+  (the pattern used for the first three released packs) are no longer
+  required, provided every condition in 9.2 is satisfied. Per-pack
+  Founder Publication Decisions remain mandatory and separate for
+  every Official Knowledge Pack version (9.1's fourth layer, 9.5's
+  second bullet - unchanged by this ratification). The 9.3 high-risk
+  escalation requirements remain mandatory, unchanged.
+- **What this ratification does not do:** it does not expand, narrow,
+  or reinterpret any condition in 9.1-9.5 - it is a decision to accept
+  the policy exactly as written in commit `eae08d3`, not a revision of
+  it.

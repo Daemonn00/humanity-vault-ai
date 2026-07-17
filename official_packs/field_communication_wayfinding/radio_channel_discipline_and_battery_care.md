@@ -3,9 +3,9 @@ title: Two-Way Radio Channel Discipline and Battery Care
 category: Communication
 subcategory: Radio
 author: Humanity Vault Contributors
-last_updated: 2026-07-10
+last_updated: 2026-07-17
 knowledge_level: Level 1
-verification_level: Unverified
+verification_level: Verified Source
 terrain: urban, coastal, desert, tropical_rainforest
 related_articles: radio_communication_fundamentals, power_bank_survival_guide, visual_signaling_for_rescue_and_rendezvous
 ---
@@ -34,5 +34,5 @@ Which radio service, frequency, and license (if any) is legal to use varies sign
 
 ## Sources
 
-- International Amateur Radio Union (IARU) / American Radio Relay League (ARRL), Ethics and Operating Procedures for the Radio Amateur
-- U.S. Consumer Product Safety Commission (CPSC), battery safety guidance (general storage and handling hazards)
+- Mount Diablo Amateur Radio Club (MDARC), Operating Procedures
+- U.S. Fire Administration (part of the Federal Emergency Management Agency), Battery Storage Safety

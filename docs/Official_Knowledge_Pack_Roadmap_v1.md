@@ -34,43 +34,25 @@ records topic-level scope and status only.
   (Vault Hub discovery, Official Website, Pack Detail, download,
   checksum, real `PackImporter` import, and multi-pack coexistence with
   Mass Casualty). See its `REVIEW_NOTES.md` for the full record.
+- **Field Communication & Wayfinding** (`hv_official_field_comm_wayfinding`,
+  `official_packs/field_communication_wayfinding/`) - **Released
+  v1.0.0.** All 4 articles `Verified Source` (Visual Signaling
+  single-sourced to the Founder's own direct FAA review; the remaining
+  three verified via a Founder-authorized AI-agent verification pass
+  using directly-read substitute sources where the originally-cited
+  sources proved inaccessible or, in one case, never actually
+  supported the claim cited to them); Founder Publication Decision
+  Approved; registered in `registry/registry.json`, live GitHub
+  Release published and independently verified end-to-end (Vault Hub
+  three-pack discovery, Official Website, Pack Detail, download,
+  checksum, real `PackImporter` import, and three-pack coexistence
+  with Mass Casualty and Survival Physical Readiness). See its
+  `REVIEW_NOTES.md` for the full record.
 
 ## 3. In Production (Not Yet Released)
 
-### Field Communication & Wayfinding
-
-**Status, per its own `REVIEW_NOTES.md` (authoritative, not duplicated
-here in full): Not Yet Approved - 1 of 4 articles complete.**
-`pack_id`: `hv_official_field_comm_wayfinding`.
-
-- **Visual Signaling for Rescue and Rendezvous** - `verification_level:
-  Verified Source`. Its sole source (FAA AIP GEN 3.6) was directly
-  human-reviewed by the Founder on 2026-07-10; the article's scope was
-  narrowed to match exactly what that review supports.
-- **Two-Way Radio Channel Discipline and Battery Care**,
-  **Improvised Compass Construction**, and
-  **Basic Knots for Shelter and Gear Lashing** - all three remain
-  `verification_level: Unverified`. Their originally-cited sources
-  (IARU/ARRL, CPSC, FM 21-76 Ch. 12 and 18, Scouting America) were each
-  genuinely attempted via multiple access strategies during authoring
-  and never successfully read in full (a mix of HTTP 403, unreadable
-  binary PDF content, and truncated archive.org text) - recorded in
-  full in the pack's own Source Access Log.
-- A pre-drafting `field_communication_wayfinding_HUMAN_VERIFICATION_WORKBOOK.md`
-  already exists as a sibling of `official_packs/`, prepared for the
-  remaining three articles' verification work.
-- **Notable open governance question, not resolved by this entry:**
-  this pack's own Publication Decision explicitly requires the
-  remaining three articles' sources to be "personally opened and read
-  by **a human reviewer**" - written before this project later
-  established, and the Founder twice explicitly accepted (for
-  `hv_official_mass_casualty_first_aid` and
-  `hv_official_survival_physical_readiness`), an AI-agent-performed
-  direct-source-verification precedent. Whether that newer precedent
-  extends to this pack, or whether this pack's stricter, already-
-  recorded condition should be honored as-is, is a genuine open
-  question for the Founder to decide before its next verification
-  sprint - not assumed either way here.
+No pack is currently in production. All three packs that have reached
+drafting or beyond (Section 2, above) are released.
 
 ## 4. Named But Not Yet Started
 
@@ -131,43 +113,23 @@ not as a one-directional sequence.
 
 ## 6. Recommended Next Production Target
 
-**Finish `hv_official_field_comm_wayfinding`** (Section 3, above) - not
-a new pack. Reasoning, evaluated against remaining effort, launch-value
-gap closed, dependency value, current readiness, and production
-momentum:
-
-- **Remaining effort is small and well-scoped**: 3 of 4 articles are
-  already written; only source verification (via substitute Tier 1
-  sources, since the originals were never successfully read) and a
-  final Editorial Review pass remain - comparable in scope to the
-  single Targeted Verification Closure sprint already proven twice this
-  production line.
-- **Closes an already-open gap** rather than opening a new one: this
-  pack has been sitting at "1 of 4 articles complete" since before
-  either released pack existed.
-- **No dependency blockers** on any other pack.
-- **By far the most ready** of any unreleased topic - a real Editorial
-  Review, a real Source Access Log, and a pre-drafted Human
-  Verification Workbook already exist; Water Treatment at Scale and
-  Emergency Shelter Systems (Section 4) have zero production artifacts.
-- **Directly reuses fresh, proven momentum**: the exact substitute-
-  source-finding technique that closed Survival Physical Readiness's
-  own blocked-source gaps (government/major-org domains returning HTTP
-  403, resolved via equally-credible Tier 1 alternatives) is the same
-  technique this pack's remaining three articles need.
+The previous recommendation in this section - finish
+`hv_official_field_comm_wayfinding` - is now complete (Section 2,
+above). With all three drafted packs released, no unreleased Official
+Knowledge Pack currently has any production artifact: Water Treatment
+at Scale and Emergency Shelter Systems (Section 4) remain named but
+unstarted, and Aquaponics (Section 5) remains a recorded future
+direction, not an approved topic. This document does not select a
+next production target on its own initiative - starting a new topic
+requires a separate Founder decision to move one of Section 4's or
+Section 5's entries to "approved," the same step Survival Physical
+Readiness and Field Communication & Wayfinding each received before
+their own production began.
 
 ## 7. Next Steps (Not Actioned By This Document)
 
-- A Targeted Verification Closure sprint for
-  `hv_official_field_comm_wayfinding`'s three remaining `Unverified`
-  articles, per the existing `pack_production_workflow/` process, is
-  the recommended next production sprint. It should first resolve the
-  open governance question recorded in Section 3 (human-reviewer
-  condition vs. the newer AI-agent-verification precedent) before
-  beginning source work.
-- Water Treatment at Scale and Emergency Shelter Systems (Section 4)
-  remain unscheduled pending a separate future Founder decision to move
-  either from "named" to "approved topic," the same status Aquaponics
-  already holds.
-- Aquaponics remains unscheduled pending a separate future Founder
-  decision to move it from "recorded direction" to "approved topic."
+- A Founder decision on which topic (if any) to approve next - Water
+  Treatment at Scale, Emergency Shelter Systems, or Aquaponics - is
+  the prerequisite for any further Official Knowledge Pack production.
+  This document records that decision when it is made; it does not
+  make it.

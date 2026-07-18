@@ -1,8 +1,8 @@
 {
   "registry_schema_version": "1",
-  "generated_at": "2026-07-18T06:33:46.061373Z",
+  "generated_at": "2026-07-18T16:25:53.477460Z",
   "generator_version": "0.1.0",
-  "pack_count": 4,
+  "pack_count": 5,
   "source_repositories": [
     "Daemonn00/humanity-vault-ai"
   ],
@@ -39,7 +39,42 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
+          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
+        }
+      ]
+    },
+    {
+      "pack_id": "hv_official_emergency_shelter_systems",
+      "pack_name": "Emergency Shelter Systems",
+      "description": "Four official Humanity Vault articles on shelter beyond a single household - choosing and planning a site for a group or settlement, manufactured and rapidly-deployable shelter forms, staying warm without fire or carbon-monoxide risk, and running a shared shelter over time.",
+      "category_tags": [
+        "Construction",
+        "Survival"
+      ],
+      "trust_tier": "official",
+      "verification_summary": "Verified Source",
+      "latest_version": "1.0.0",
+      "asset_type": "knowledge_pack",
+      "license": null,
+      "dependencies": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publish_date": "2026-07-18T16:23:08.000Z",
+          "changelog_summary": "Four official Humanity Vault articles on shelter beyond a single household: choosing and planning a site for a group or settlement, manufactured and rapidly-deployable shelter forms, staying warm without fire or carbon-monoxide risk, and running a shared shelter over time.\r\n\r\n## Articles\r\n\r\n1. Shelter Site Selection and System Planning\r\n2. Tarps, Tents, and Rapidly-Deployable Shelter Forms\r\n3. Thermal Management, Ventilation, and Fire Safety in Shelter Systems\r\n4. Communal and Transitional Shelter: Occupancy, Maintenance, and Adaptation\r\n\r\n## Verification Summary\r\n\r\nVerified Source (4 of 4 articles) — independently verified through formal post-drafting Human/AI-agent Source Verification against all underlying UNHCR, USFA, and EPA sources.\r\n\r\n## Package Details\r\n\r\n- Package ID: `hv_official_emergency_shelter_systems`\r\n- Version: `1.0.0`\r\n- Category: Construction, Survival\r\n- Article count: 4\r\n- SHA-256: `0a7655e9784baa266363e7d6395f4dc81a26e7aefc032da9ae56a5b23d3bbdd2`\r\n\r\n## Installation\r\n\r\n### Through Vault Hub (Recommended)\r\n\r\nOpen Vault Hub inside the Humanity Vault app, find **Emergency Shelter Systems** in the official pack list, and tap **Install**. The app verifies the SHA-256 automatically before installing.\r\n\r\n### Manual Installation\r\n\r\n1. Download `hv_official_emergency_shelter_systems-v1.0.0.zip` from this release.\r\n2. Verify its SHA-256 matches:\r\n   `0a7655e9784baa266363e7d6395f4dc81a26e7aefc032da9ae56a5b23d3bbdd2`\r\n3. Open the Humanity Vault app.\r\n4. Use the **Import Pack** option and select the downloaded ZIP.\r\n\r\n## Compatibility\r\n\r\nCompatible with the current Humanity Vault app knowledge-pack format. No special app version is required beyond standard official-pack import support.",
+          "download_url": "https://github.com/Daemonn00/humanity-vault-ai/releases/download/hv_official_emergency_shelter_systems-v1.0.0/hv_official_emergency_shelter_systems-v1.0.0.zip",
+          "sha256": "0a7655e9784baa266363e7d6395f4dc81a26e7aefc032da9ae56a5b23d3bbdd2",
+          "size_bytes": 10922,
+          "article_count": 4,
+          "compatibility": {
+            "min_app_version": null,
+            "recommended_app_version": null
+          },
+          "deprecated": false,
+          "deprecated_reason": null,
+          "replacement_pack_id": null,
+          "archived": false,
+          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
         }
       ]
     },
@@ -73,7 +108,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
+          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
         }
       ]
     },
@@ -107,7 +142,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
+          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
         }
       ]
     },
@@ -142,7 +177,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
+          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
         }
       ]
     }

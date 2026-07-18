@@ -77,6 +77,18 @@ this Workbook's original wording. No claim failed outright.
 - **Editorial generalization from an existing core article (not a new
   external claim):** 1 (A3)
 
+**Founder confirmation recorded, 2026-07-18:** all 8 claims requiring
+§9.3 mandatory human confirmation (B2, D1, D2, D3, D4, D5, E3, F3) are
+now CONFIRMED by the Founder, in their final, narrowed/corrected form
+- see `water_treatment_at_scale_FOUNDER_CONFIRMATION_PACKET.md` for
+the full per-claim record and checkboxes. This satisfies the §9.3
+requirement for these 8 claims, for this pack/version only. It does
+not itself set any article's `verification_level` (Writing starts
+every article at `Unverified`, per `WRITING_GUIDELINES.md`, regardless
+of how much pre-writing confirmation occurred) and does not constitute
+Editorial Review or post-drafting Human Source Verification, both of
+which remain separate, later stages against the actual final prose.
+
 Article 4 (Disinfection at Batch and Community Scale) is this pack's
 single highest-verification-burden article: every one of its 6 claims
 either requires §9.3 mandatory human confirmation or is a non-dosing

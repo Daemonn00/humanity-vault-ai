@@ -237,7 +237,11 @@ operator role does both on an ongoing basis.
   numeric dosing/concentration/contact-time claim in this article is
   flagged for §9.3 mandatory human confirmation (see Verification
   Workbook) before it may be marked directly verified - this is the
-  pack's single highest-risk article.
+  pack's single highest-risk article. **Update, 2026-07-18: all 5
+  flagged claims (D1-D5) were Founder-confirmed** - see
+  `water_treatment_at_scale_FOUNDER_CONFIRMATION_PACKET.md`. Writing
+  still starts at `Unverified` per `WRITING_GUIDELINES.md`; this
+  confirmation closes the §9.3 pre-writing gate, not Editorial Review.
 - **Fallback:** if human confirmation is not completed before writing
   must proceed, state dosing/contact-time/residual figures as
   "typical ranges reported by [named source]" with an explicit

@@ -73,13 +73,11 @@ limit from this one process step.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -150,13 +148,11 @@ that looks like a ready-to-apply instruction.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18. Both sources' ranges must be presented side by side, attributed by name, never merged.
 
 ---
 
@@ -207,13 +203,11 @@ does not itself state it.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -281,13 +275,11 @@ which point in the system each number describes.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 - the narrowed, three-tier wording specifically, not the original single-range wording.
 
 ---
 
@@ -336,13 +328,11 @@ mg/L ceiling as agreed by both sources.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 - single-source (Oxfam WASH) attribution specifically.
 
 ---
 
@@ -391,13 +381,11 @@ device, upstream of the contact/consumption points covered in D3).
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -458,13 +446,11 @@ procedure/duration to this source, since it does not state either.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 - the 50 mg/L figure only; the "differs from routine dosing" framing to be written as the article's own general reasoning, not attributed to this source.
 
 ---
 
@@ -531,13 +517,11 @@ long-term limit.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes:
-
-____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above - health-based/short-term/dual/aesthetic-only distinctions preserved.
 
 ---
 
@@ -687,18 +671,31 @@ sourcing problem.
 
 ## Founder Confirmation Summary
 
-| Claim | Result | Action needed from Founder |
+| Claim | Result | Founder Decision |
 |---|---|---|
-| B2 | PASS | Confirm as written |
-| D1 | PASS (method); dual-source figures must stay separate | Confirm the side-by-side presentation approach |
-| D2 | PASS | Confirm as written |
-| D3 | NARROWED | Confirm the three-tier rewrite, not the original single-range wording |
-| D4 | NARROWED | Confirm single-source (Oxfam-only) attribution |
-| D5 | PASS | Confirm as written |
-| E3 | NARROWED | Confirm the 50 mg/L figure only; confirm the "differs from routine dosing" framing will be labeled as general reasoning, not sourced |
-| F3 | PASS | Confirm as written |
+| B2 | PASS | **CONFIRMED**, 2026-07-18 |
+| D1 | PASS (method); dual-source figures must stay separate | **CONFIRMED**, 2026-07-18 |
+| D2 | PASS | **CONFIRMED**, 2026-07-18 |
+| D3 | NARROWED | **CONFIRMED**, 2026-07-18 (narrowed three-tier wording) |
+| D4 | NARROWED | **CONFIRMED**, 2026-07-18 (single-source attribution) |
+| D5 | PASS | **CONFIRMED**, 2026-07-18 |
+| E3 | NARROWED | **CONFIRMED**, 2026-07-18 (figure only, framing separated) |
+| F3 | PASS | **CONFIRMED**, 2026-07-18 |
 
 **0 claims failed outright (no CONFLICT FOUND / NOT READY result).**
-**3 of 8 were narrowed by this re-audit** (D3, D4, E3) - all 3 remain
-confirmable, just with more precise wording than the pre-existing
-Workbook used.
+**3 of 8 were narrowed by this re-audit** (D3, D4, E3) - all 3
+confirmed in their narrowed, corrected form, not the original
+pre-existing Workbook wording.
+
+## Record of Completion
+
+**All 8 claims requiring `QUALITY_STANDARD.md` §9.3 mandatory human
+confirmation are now CONFIRMED by the Founder, 2026-07-18, in their
+final, narrowed form as recorded in this packet.** This satisfies the
+§9.3 mandatory-human-confirmation requirement for these 8 claims, for
+`hv_official_water_treatment_at_scale` this pack/version only - it
+does not waive §9.3 for any other pack, any future version of this
+pack, or any claim not listed here. It does not itself set any
+article's `verification_level`, and it does not constitute Editorial
+Review, post-drafting Human Source Verification, or Founder
+Publication Approval - each remains a separate, later gate.

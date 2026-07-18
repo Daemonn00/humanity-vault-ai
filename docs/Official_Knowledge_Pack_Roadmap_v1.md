@@ -58,50 +58,26 @@ records topic-level scope and status only.
   coexistence with Mass Casualty, Survival Physical Readiness, and
   Field Communication & Wayfinding). See its `REVIEW_NOTES.md` for the
   full record.
+- **Emergency Shelter Systems** (`hv_official_emergency_shelter_systems`,
+  `official_packs/hv_official_emergency_shelter_systems/`) -
+  **Released v1.0.0.** All 4 articles `Verified Source`; Founder
+  Publication Decision Approved; registered in `registry/registry.json`,
+  live GitHub Release published and independently verified end-to-end
+  (Vault Hub five-pack discovery, Official Website, Pack Detail,
+  download, checksum, real `PackImporter` import, and five-pack
+  coexistence with Mass Casualty, Survival Physical Readiness, Field
+  Communication & Wayfinding, and Water Treatment at Scale). See its
+  `REVIEW_NOTES.md` for the full record.
 
 ## 3. In Production (Not Yet Released)
 
-### Emergency Shelter Systems
-
-**Status: Founder Approved — Research / Source Collection.**
-Proposed `pack_id`: `hv_official_emergency_shelter_systems`.
-
-- **Approved by:** The Founder, 2026-07-18. This approval authorizes
-  research, scope definition, and source collection only - it does
-  **not** authorize Writing, creation of the final pack directory or
-  `manifest.md`, Editorial Review completion, `Verified Source` status
-  for any claim, Release Pipeline execution, or publication. Those
-  remain separate, later gates per
-  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`.
-- **Current stage:** Research Plan, Source Collection, and pre-writing
-  Human Verification Workbook completed; see
-  `official_packs/emergency_shelter_systems_RESEARCH_PLAN.md`,
-  `official_packs/emergency_shelter_systems_SOURCE_COLLECTION.md`, and
-  `official_packs/emergency_shelter_systems_HUMAN_VERIFICATION_WORKBOOK.md`
-  for the full record. No `manifest.md`, no articles, and no pack
-  directory under `official_packs/` exist yet - Writing has not begun.
-  One proposed article (anchoring/wind-resistance) currently has
-  weaker direct-source verification than the other four - see the
-  Research Plan for the specific gap and recommended closure step
-  before Writing proceeds on that article.
-- **Scope:** Systems-scale emergency, transitional, and communal
-  shelter (site selection and settlement planning, tarps/tents/
-  rapidly-deployable shelter forms, anchoring and weather resistance,
-  thermal management/ventilation/fire safety, and communal/
-  transitional occupancy and maintenance) - explicitly distinct from
-  the core corpus's existing individual/wilderness shelter content
-  (`basic_shelter_construction.md`), permanent building content
-  (`simple_structural_building_techniques.md`), fire-making/fire-
-  safety content (`fire_starting_without_matches.md`,
-  `emergency_fire_safety.md`), and the released Field Communication &
-  Wayfinding pack's lashing-technique article, all of which this pack
-  cross-links to rather than duplicates.
+No topic is currently in production. Emergency Shelter Systems
+(Section 2, above) completed its full production cycle and is now
+released.
 
 ## 4. Named But Not Yet Started
 
-No topic is currently named-but-unstarted. Emergency Shelter Systems
-(Section 3, above) moved directly from this section into active
-research this sprint.
+No topic is currently named-but-unstarted.
 
 ## 5. Approved Future Topics (Scope Only - Not Yet Authored)
 
@@ -144,20 +120,19 @@ not as a one-directional sequence.
 
 Fulfilled. The previous recommendation in this section - approve and
 begin Water Treatment at Scale - is complete; it is released (Section
-2, above). Emergency Shelter Systems (Section 3, above) is now the
-pack in active research. Aquaponics (Section 5, below) remains a
-recorded future direction, not an approved topic; this document does
-not select it as a next target on its own initiative.
+2, above). Emergency Shelter Systems, the pack that was in active
+research at the time of the previous update, is also now complete and
+released (Section 2, above). No topic is currently named-but-unstarted
+(Section 4) or in production (Section 3). Aquaponics (Section 5,
+below) remains a recorded future direction, not an approved topic;
+this document does not select it as a next target on its own
+initiative.
 
 ## 7. Next Steps (Not Actioned By This Document)
 
-- Close the anchoring/wind-resistance source-verification gap flagged
-  in Emergency Shelter Systems' Research Plan (Section 3, above),
-  then complete Writing, Editorial Review, and Human/AI-agent Source
-  Verification per `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`
-  and `pack_production_workflow/QUALITY_STANDARD.md` §9 - followed by
-  its own separate Founder Publication Decision before any release
-  step. This document records that progress when it happens; it does
-  not perform it.
+- No pack is currently in production. A new topic requires a Founder
+  approval decision (research/scope/source-collection authorization)
+  before production work of any kind may begin, per
+  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`.
 - A Founder decision on Aquaponics remains a prerequisite before it
   could begin production.

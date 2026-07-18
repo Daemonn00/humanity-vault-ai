@@ -1,8 +1,8 @@
 {
   "registry_schema_version": "1",
-  "generated_at": "2026-07-17T13:01:11.100599Z",
+  "generated_at": "2026-07-18T06:33:46.061373Z",
   "generator_version": "0.1.0",
-  "pack_count": 3,
+  "pack_count": 4,
   "source_repositories": [
     "Daemonn00/humanity-vault-ai"
   ],
@@ -39,7 +39,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "093368473c660d244d356fe258e531bdcabdc3ee"
+          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
         }
       ]
     },
@@ -73,7 +73,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "093368473c660d244d356fe258e531bdcabdc3ee"
+          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
         }
       ]
     },
@@ -107,7 +107,42 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "093368473c660d244d356fe258e531bdcabdc3ee"
+          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
+        }
+      ]
+    },
+    {
+      "pack_id": "hv_official_water_treatment_at_scale",
+      "pack_name": "Water Treatment at Scale",
+      "description": "Six official Humanity Vault articles on community and systems-scale water treatment - assessing demand and protecting sources, pre-treating and filtering water beyond a single household, disinfecting a shared supply, storing and distributing it safely, and monitoring and maintaining the system over time.",
+      "category_tags": [
+        "Engineering",
+        "Survival"
+      ],
+      "trust_tier": "official",
+      "verification_summary": "Verified Source",
+      "latest_version": "1.0.0",
+      "asset_type": "knowledge_pack",
+      "license": null,
+      "dependencies": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publish_date": "2026-07-18T06:31:15.000Z",
+          "changelog_summary": "# Water Treatment at Scale v1.0.0\r\n\r\nSix official Humanity Vault articles focused on community and systems-scale water treatment: assessing water needs and protecting shared sources, pre-treating and filtering water beyond a single household, disinfecting shared supplies, storing and distributing treated water safely, and monitoring and maintaining water systems over time.\r\n\r\nThis pack is specifically designed for systems serving more than one household. It complements, rather than duplicates, Humanity Vault's existing household-scale water knowledge.\r\n\r\n## Articles\r\n\r\n- **Assessing Community Water Needs and Protecting the Source**  \r\n  Understanding group water requirements, distribution constraints, and protection of shared water sources from contamination.\r\n\r\n- **Pre-Treating Water at Community Scale**  \r\n  Sedimentation, coagulation, and roughing filtration methods for preparing turbid water before filtration or disinfection.\r\n\r\n- **Filtration Systems Beyond Single-Person Scale**  \r\n  Slow sand filtration and its application to continuous community-scale water treatment.\r\n\r\n- **Disinfection at Batch and Community Scale**  \r\n  Chlorine dosing, contact time, residual measurement, and adjustment as an interconnected treatment process rather than a fixed universal recipe.\r\n\r\n- **Safe Storage, Distribution, and Preventing Recontamination**  \r\n  Storage tanks, distribution systems, and practices for reducing recontamination after water has been treated.\r\n\r\n- **Monitoring Water Quality and Maintaining the System Over Time**  \r\n  Field testing, contamination classification, chemical guideline interpretation, system monitoring, and long-term maintenance.\r\n\r\n## Verification\r\n\r\nAll 6 articles are classified as **Verified Source**.\r\n\r\nThe cited sources were directly opened and reviewed, and factual and numerical claims were checked against source material through both pre-writing claim confirmation and formal post-drafting source verification.\r\n\r\n**SHA-256:**\r\n\r\n`5fbaf3086671df28ef461eab6e70febbb29ba141d720827245a4469acadc3b1e`\r\n\r\n## Installation\r\n\r\n### Through Vault Hub\r\n\r\nOpen **Vault Hub** in the Humanity Vault app, find **Water Treatment at Scale** in the Official Packs list, and select **Install**.\r\n\r\nVault Hub verifies the package's SHA-256 checksum before installation.\r\n\r\n### Manual Installation\r\n\r\n1. Download `hv_official_water_treatment_at_scale-v1.0.0.zip` from this release.\r\n2. Verify that its SHA-256 checksum matches the value listed above.\r\n3. Open Humanity Vault.\r\n4. Use the **Import Pack** option and select the downloaded ZIP file.\r\n\r\n## Package Information\r\n\r\n- **Pack ID:** `hv_official_water_treatment_at_scale`\r\n- **Version:** `1.0.0`\r\n- **Categories:** Engineering, Survival\r\n- **Articles:** 6\r\n- **Verification:** Verified Source\r\n- **Format:** Markdown (`.md`)\r\n- **Offline-readable:** Yes\r\n\r\n## Important Scope Note\r\n\r\nThis knowledge pack provides reference material for understanding and operating community-scale water treatment systems.\r\n\r\nWater treatment conditions vary by source quality, contamination, equipment, environment, and local circumstances. Operational values presented in the pack must be interpreted within their documented source context rather than treated as universal settings.\r\n\r\nWhere authoritative sources provide different operational ranges, the pack preserves those differences transparently instead of combining them into a single universal recommendation.",
+          "download_url": "https://github.com/Daemonn00/humanity-vault-ai/releases/download/hv_official_water_treatment_at_scale-v1.0.0/hv_official_water_treatment_at_scale-v1.0.0.zip",
+          "sha256": "5fbaf3086671df28ef461eab6e70febbb29ba141d720827245a4469acadc3b1e",
+          "size_bytes": 15484,
+          "article_count": 6,
+          "compatibility": {
+            "min_app_version": null,
+            "recommended_app_version": null
+          },
+          "deprecated": false,
+          "deprecated_reason": null,
+          "replacement_pack_id": null,
+          "archived": false,
+          "source_commit": "4a679d60b97f5eee52563acf4bb5c6f1b2004820"
         }
       ]
     }

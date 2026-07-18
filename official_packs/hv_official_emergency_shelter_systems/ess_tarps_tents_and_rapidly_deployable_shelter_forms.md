@@ -6,7 +6,7 @@ author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 1
 verification_level: Unverified
-related_articles: ess_shelter_site_selection_and_system_planning, ess_thermal_management_ventilation_and_fire_safety, basic_shelter_construction, basic_knots_for_shelter_and_gear_lashing
+related_articles: ess_shelter_site_selection_and_system_planning, ess_thermal_management_ventilation_and_fire_safety, ess_communal_and_transitional_shelter_occupancy_and_maintenance, basic_shelter_construction, basic_knots_for_shelter_and_gear_lashing
 ---
 
 # Tarps, Tents, and Rapidly-Deployable Shelter Forms
@@ -54,9 +54,8 @@ force of wind, and tents in particular are specifically noted as more
 vulnerable to failure in these conditions than some other shelter
 types. A shelter that is not securely anchored to the ground is more
 vulnerable to wind damage, but the correct anchoring method depends on
-the specific shelter's design and the ground it's set up on - loose
-sand, hard-packed soil, and rocky ground all call for different
-approaches. Rather than a single universal technique, follow the
+the specific shelter's design and the ground conditions it's set up
+on. Rather than a single universal technique, follow the
 anchoring instructions that come with a manufactured tent, or seek out
 a qualified, experienced source for improvised anchoring appropriate
 to the actual equipment and conditions at hand. No generic instruction

@@ -71,9 +71,7 @@ separate from the fire-fuel-and-CO concerns above.** Keep anything
 that can burn at least 3 feet away from any heat source - space
 heaters, fireplaces, wood stoves, radiators, or candles alike - and
 turn a space heater off whenever leaving the room or going to sleep.
-Never use an oven to try to heat a shelter; ovens are not designed for
-sustained heating use and add to the carbon-monoxide and fire risks
-already described above.
+Never use an oven to try to heat a shelter.
 
 **Planning ahead reduces how much heating is needed in the first
 place.** In cold climates, a stove with roughly 5 to 7 kilowatts of

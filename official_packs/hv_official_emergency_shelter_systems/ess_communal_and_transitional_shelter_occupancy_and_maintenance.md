@@ -5,7 +5,7 @@ subcategory: Shelter
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: ess_shelter_site_selection_and_system_planning, ess_tarps_tents_and_rapidly_deployable_shelter_forms
 ---
 
@@ -51,14 +51,14 @@ shelter long-term rather than just occupying it.
 
 Shelter responses are generally understood as a progression rather
 than a single fixed endpoint: an emergency response addresses
-immediate protection, and over time, through coordination between
-affected communities, government authorities, and development
-partners, that response can move toward more durable, transitional, or
-permanent solutions. Not every situation reaches that later stage
-quickly, or at all, but treating emergency shelter as a starting point
-rather than a permanent condition shapes how a system should be
-planned and maintained from the beginning - built to be improved, not
-just built once.
+immediate protection, and in situations that continue for a long time,
+the goal is to link relief, rehabilitation, and longer-term
+development rather than treating emergency, transitional, and durable
+shelter as strictly separate stages. Not every situation reaches a
+more durable stage quickly, or at all, but treating emergency shelter
+as a starting point rather than a permanent condition shapes how a
+system should be planned and maintained from the beginning - built to
+be improved, not just built once.
 
 ## Benefits
 

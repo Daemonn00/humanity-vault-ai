@@ -5,7 +5,7 @@ subcategory: Shelter
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: ess_tarps_tents_and_rapidly_deployable_shelter_forms, ess_communal_and_transitional_shelter_occupancy_and_maintenance, basic_shelter_construction, sanitation_hygiene_and_disease_prevention, wts_assessing_community_water_needs_and_protecting_the_source
 ---
 
@@ -54,9 +54,11 @@ A settlement also needs to be sited at a safe distance from hazards
 that affect everyone living there: general waste sites are commonly
 kept at least 1 kilometer away, sites with hazardous waste specifically
 at least 5 kilometers away, and ecologically protected areas at least
-15 kilometers away. Military installations and similarly dangerous
-locations are also kept at a distance, commonly at least 1 kilometer.
-Natural water sources are given their own protective buffer, commonly
+15 kilometers away. Military installations and other potentially
+dangerous locations are also kept "an appropriate distance" away,
+though without one fixed figure the way the dumpsite and protected-
+area distances have. Natural water sources are given their own
+protective buffer, commonly
 around 50 meters, to prevent both drowning risk and water
 contamination. These are settlement-scale planning distances for
 whoever is choosing where an entire camp or settlement goes - they are

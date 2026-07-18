@@ -511,7 +511,16 @@ explicit "safe editorial fix" authority.
   separate, explicit Founder Publication Decision, matching the
   precedent of every previously-released pack.
 
-### Why `verification_level` stays `Unverified`
+**Update, 2026-07-18 (Stage 6):** condition (1) above is now complete
+- see "Stage 6 Formal Post-Drafting Source Verification" below. All 4
+articles are honestly `Verified Source` and condition (2) is complete.
+**This does not change the Decision itself, which remains Not Yet
+Approved above** - condition (3), a separate and explicit Founder
+Publication Decision, has not been made and is not made by this
+update. This document continues to record the pack as **Not Yet
+Approved** until the Founder records that decision.
+
+### Why `verification_level` stays `Unverified` (superseded, see Stage 6 update above - preserved as the accurate record of the Editorial Review pass's own reasoning at the time)
 
 Every claim row in the Claim-to-Source Map above reads "Yes" for
 representation and boundary-adherence - this might look like the
@@ -529,6 +538,289 @@ where the initial draft drifted slightly past those boundaries in
 ways the Founder never saw or approved. That is exactly why Stage 6
 exists as a separate, later step, not folded into this one.
 
+## Stage 6 Formal Post-Drafting Source Verification (2026-07-18)
+
+Performed by Claude (AI agent), under the ratified standing AI-Agent
+Verification Policy (`pack_production_workflow/QUALITY_STANDARD.md`
+§9). This is the independent, word-for-word verification pass Stage 5
+Editorial Review explicitly deferred. Every source below was
+re-opened and re-read fresh this pass via direct `WebFetch` - not
+recalled from the Research Plan, Source Collection, Founder
+Confirmation Packet, or Editorial Review's own quotations.
+
+### Source Access Log (Stage 6)
+
+All 7 distinct source pages underlying the pack's claims were
+re-fetched fresh this pass. **All 7 were successfully accessed - no
+substitute source was needed.**
+
+| Source | Organization | Claims covered | Result |
+|---|---|---|---|
+| Principles & Standards for Settlement Planning | UNHCR | A1, A2, A3, A4, A7 | Re-read; all figures re-confirmed exactly, **plus new, unused-but-available figures noted (toilet-to-shelter 50m, water-source 500m, ventilation-opening 10%/5%) - not added to the frozen claim set, see below** |
+| Safe and Secure Settlements | UNHCR | A4, A5 | Re-read; **discrepancy found and corrected** - see "Genuine Findings," below |
+| Emergency Shelter Solutions and Standards | UNHCR | B1-B5, C1, D7, E5, E6 | Re-read; all figures re-confirmed exactly |
+| Settlement and Shelter (index/typology page) | UNHCR | E1 | Re-read; all 6 typology names re-confirmed exactly |
+| Carbon Monoxide | USFA | D1 (partial), D2 (partial), D3 | Re-read; exact match, zero drift |
+| Heating Fire Safety | USFA | D6 | Re-read; exact match, zero drift |
+| Power Outages and Indoor Air Quality (IAQ) | EPA | D1 (partial), D2 (partial), D4 | Re-read; exact match, zero drift, confirmed the "gas stoves or ovens" phrasing is gas-specific (relevant to the Genuine Findings below) |
+
+### Genuine Findings This Pass
+
+**1. Article 1, A5 - military-installation distance figure could not
+be re-confirmed.** The final prose stated "Military installations and
+similarly dangerous locations are also kept at a distance, commonly
+at least 1 kilometer." A fresh, targeted re-read of the "Safe and
+Secure Settlements" page - specifically searching for every sentence
+mentioning "military" - found only: *"Ensure the site is an
+appropriate distance from military installations and other
+potentially dangerous locations."* **No numeric distance is stated
+for military installations anywhere on this page** - the page's only
+"1 km" figure applies to standard dumpsites, a different hazard
+category entirely. This appears to be a carry-over imprecision from
+the original Research sprint's read (likely a conflation of the
+dumpsite figure with the separately-stated, unnumbered military-
+distance qualifier, both appearing near each other in the source).
+**Fixed**: the specific "1 kilometer" figure was removed and replaced
+with the source's own qualitative "an appropriate distance" language,
+explicitly noting no fixed figure exists for this hazard category the
+way it does for dumpsites and protected areas. The correctly-sourced
+dumpsite (1km/5km) and protected-area (15km) figures were not
+touched.
+
+**2. Article 4, E6 - named coordinating actors not explicitly stated
+by the source.** The final prose attributed the emergency-to-durable
+shelter progression to "coordination between affected communities,
+government authorities, and development partners." The directly-read
+source states only: *"an approach that is able to breach the division
+between emergency, transitional, and durable shelter and that links
+relief, rehabilitation and development should be sought"* - it does
+not name specific coordinating actors. **Fixed**: rewritten to track
+the source's own framing (linking relief/rehabilitation/development,
+breaching the division between shelter stages) without asserting a
+specific list of named actors the source doesn't state.
+
+**3. Available-but-unused precision, noted and deliberately not
+added:** the fresh re-read of "Principles & Standards for Settlement
+Planning" surfaced three figures not in the pack's frozen claim set -
+toilets "not more than 50m from shelter," water sources "max. 500m
+from household," and ventilation/window openings "at least 10 per
+cent"/"at least 5 per cent" of floor area. **None were added this
+pass.** Adding new factual claims during Stage 6 verification - even
+from an already-cited source - would introduce content that never
+went through Writing, Editorial Review, or (for the ventilation
+figures, which are safety-adjacent) Founder confirmation. These are
+recorded here as legitimate candidates for a future version, not
+inserted into v1.0.0's frozen architecture.
+
+### Final-Prose Claim-to-Source Verification Map
+
+All 27 frozen active claims independently re-verified against fresh
+source reads and the corrected final wording. Result: **27 of 27 PASS
+after the 2 fixes above** (2 required PASS WITH NARROWING before
+reaching this state; 25 PASS without further change). No claim reads
+REWRITE REQUIRED (unresolved), REMOVE, or UNRESOLVED. C3 confirmed
+still absent; C4 confirmed still out of scope; no removed or rejected
+claim returned. No meaningful factual claim was found outside the
+frozen 27 requiring its own new entry (the "available-but-unused"
+figures above are source content, not article content).
+
+### Anchoring/Ground-Condition Verification Result
+
+Re-verified against a fresh read of "Emergency Shelter Solutions and
+Standards": tent wind/snow vulnerability re-confirmed exactly ("may
+be unstable in high winds or heavy snow; difficult to heat"). No
+source this pass yielded any specific anchoring technique, hardware,
+angle, or spacing content - the corrected general/qualitative wording
+from Stage 5 remains the most that can be honestly supported. **PASS,
+no further change needed** - independently re-confirmed clean, no new
+procedural implication found.
+
+### Oven/Heater/CO/Fire-Safety Verification Result
+
+Re-verified against fresh EPA and USFA reads. **Confirmed the Stage 5
+fix genuinely resolved the overreach, not merely reworded it**: EPA's
+own CO-risk sentence specifically names "gas stoves or ovens" (gas-
+specific), which the article's D1 paragraph already correctly mirrors
+("Gas stoves and ovens"). USFA's separate Heating Fire Safety page
+states only "Never use an oven to heat your home" with no stated
+mechanism and no gas/electric distinction - exactly matching the
+article's corrected D6 sentence ("Never use an oven to try to heat a
+shelter"), which no longer asserts an invented CO mechanism. The two
+"oven" mentions in the article (D1's gas-specific CO context, D6's
+general fire-safety context) are correctly kept in their own sourced
+scopes, not merged into one over-broad claim.
+
+### Founder-Confirmed D1-D6 Re-Verification
+
+| Claim | Fresh source result | Current prose result | Verdict |
+|---|---|---|---|
+| D1 | Exact match (USFA + EPA) | Matches confirmed boundary; added CO-properties clause traces to the same source + uncontroversial general knowledge | **PASS** |
+| D2 | Exact match (USFA + EPA) | Matches confirmed boundary ("shelter" generalization); added sentence is synthesis, no new figure | **PASS** |
+| D3 | Exact match (USFA) | Matches confirmed boundary; added sentence is synthesis | **PASS** |
+| D4 | Exact match (EPA), all 5 precautions confirmed present in source | Matches confirmed boundary, all 5 present together | **PASS** |
+| D6 | Exact match (USFA) | Matches confirmed boundary exactly after Stage 5's fix; independently re-confirmed the fix was correct, not cosmetic | **PASS** |
+
+**5 of 5 remain inside both their source boundary and their Founder-
+confirmed drafting boundary.** None expanded, weakened a categorical
+rule, converted a contextual rule into a universal one, or introduced
+a new number.
+
+### Article 3 Heightened Safety Verification Result
+
+Every categorical word ("never," "must," "keep") checked against its
+source: all are directly justified - the sources themselves use
+equally categorical language ("Never use charcoal in a fireplace,"
+"Never close the damper," "Never run a car... inside a garage," "Keep
+anything that can burn at least 3 feet..."). No categorical,
+source-supported rule was softened for stylistic caution; no
+contextual rule (e.g. the pH/temperature-style conditionals that don't
+apply here) was strengthened into a false universal. Fuel-burning
+devices, generators, CO alarms, vented fireplaces, and space heaters
+remain distinctly separated, not generalized into each other.
+
+### Full Numeric Verification (Independently Rebuilt, Not Copied)
+
+21 numbers independently re-found across all 4 current article files
+(same count as Editorial Review's, confirmed by independent rebuild,
+not assumed): A1 (2-4%, 10%), A2 (3m, 1.5m), A3 (45, 30, 29 sqm), A4
+(2m, 2x, 30m, 300m), A5 (1km, 5km, 15km, 50m - **the military "1km"
+figure removed this pass, so A5 now contributes 3 numbers instead of
+4**), A7 (1:50), B1 (3.5 sqm), B2 (4.5-5.5 sqm), D6 (3 feet), D7 (5-7
+kW, 40-70 sqm). Every remaining number re-verified against a freshly
+re-read source with exact unit, range, and qualifier preserved. No
+transcription error, no changed unit, no accidental conversion, no
+merged range found anywhere else. No independent arithmetic
+verification was required (this pack contains no unit-conversion
+claim, unlike Water Treatment at Scale's L/h/m² example).
+
+### Humanitarian Planning-Figure Verification Result
+
+Every A-series and B-series figure re-classified against the source's
+own category: A1 (drainage guidance), A2 (siting/water-protection
+guidance), A3 (space-allocation planning standard), A4 (spacing/
+firebreak planning standard), A5 (distance-from-hazard planning
+standard, now correctly missing a figure it never had for the
+military sub-case), A7 (infrastructure planning ratio), B1-B2 (minimum
+planning standard by climate). **None reclassified as an individual
+safety requirement** - the source material itself frames all of these
+as settlement/planning-level guidance, and the article's existing
+"planning target, not a guarantee" framing (and A5's explicit
+settlement-vs-individual-household sentence) correctly preserves this
+throughout.
+
+### Shelter-Form/Structural-Boundary Verification Result
+
+Re-verified against "Emergency Shelter Solutions and Standards":
+shelter-type comparisons (tents, plastic sheeting, prefab units)
+match the source's own comparison table content exactly; tent
+vulnerability statement matches exactly; structural-demand statements
+remain qualitative (no figure introduced); anchoring statements remain
+inside the verified boundary (re-confirmed above); manufacturer/
+qualified-guidance referral is represented honestly, with no invented
+technical detail added during this verification pass.
+
+### Article 4 Verification Result
+
+E1 (typologies) re-confirmed exact match against a fresh read of the
+index page (all 6 names identical). E4/E5 cross-references correctly
+point back to already-verified A7/B5 content rather than restating
+figures. E6 required and received the fix described above. No source-
+specific planning figure was found generalized beyond its actual
+context (E4's infrastructure ratios remain explicitly "the same
+planning ratios... continue to matter," not restated with new
+numbers).
+
+### Claims Rewritten
+
+1. **Article 1 (Shelter Site Selection and System Planning)** - A5's
+   military-installation distance sentence rewritten to remove the
+   unconfirmable "1 kilometer" figure, replaced with the source's own
+   qualitative framing.
+2. **Article 4 (Communal and Transitional Shelter...)** - E6's
+   progression sentence rewritten to remove the unconfirmed named-
+   actor list, replaced with framing that tracks the source's actual
+   language.
+
+### Claims Removed
+
+None - both issues were resolved by narrowing/rewriting, not removing
+the underlying claim entirely (A5 still correctly states military
+installations are sited at a distance; E6 still correctly states a
+progression exists).
+
+### Sources Sections Changed
+
+None. Every source cited in every article's `## Sources` section was
+re-confirmed this pass to have been actually opened and to genuinely
+support that article's content. No source was added or removed.
+
+### Per-Article Verification Result
+
+| Article | Result | Reasoning |
+|---|---|---|
+| Shelter Site Selection and System Planning | **Verified Source** | All 7 claims (A1-A7) PASS after the A5 fix; re-verified independently against fresh source reads |
+| Tarps, Tents, and Rapidly-Deployable Shelter Forms | **Verified Source** | All 8 claims (B1-B6, C1-C2) PASS; the Stage 5 anchoring fix re-confirmed clean with no further drift |
+| Thermal Management, Ventilation, and Fire Safety in Shelter Systems | **Verified Source** | All 8 claims (D1-D8) PASS, including all 5 Founder-confirmed high-risk claims re-verified individually against both source and confirmed boundary |
+| Communal and Transitional Shelter: Occupancy, Maintenance, and Adaptation | **Verified Source** | All 4 claims (E1, E4-E6) PASS after the E6 fix |
+
+Applied honestly per-article, not as a batch - each article was
+independently re-derived from its own claim rows, and 2 of the 4
+articles required an actual content fix before reaching this result,
+not a rubber stamp.
+
+## Verification Level: Per-Article Status (Updated, Stage 6)
+
+| Article | `verification_level` | Why |
+|---|---|---|
+| Shelter Site Selection and System Planning | **Verified Source** | All claims independently re-verified against fresh source reads, 2026-07-18; 1 claim (A5's military-distance figure) corrected |
+| Tarps, Tents, and Rapidly-Deployable Shelter Forms | **Verified Source** | All claims independently re-verified; Stage 5's anchoring fix re-confirmed clean |
+| Thermal Management, Ventilation, and Fire Safety in Shelter Systems | **Verified Source** | All claims, including all 5 Founder-confirmed high-risk claims, independently re-verified against both fresh source reads and their confirmed boundaries |
+| Communal and Transitional Shelter: Occupancy, Maintenance, and Adaptation | **Verified Source** | All claims independently re-verified; 1 claim (E6's actor-list) corrected |
+
+### Expected Pack-Wide Verification Summary
+
+Applying `registry_generator`'s existing weakest-link rule
+(`PackValidation.verificationSummary`): all 4 articles read `Verified
+Source`, and the set contains no `Unverified` article, so the
+pack-wide verification summary is **`Verified Source`**.
+
+### Unresolved Findings
+
+None blocking. The three "available-but-unused precision" figures
+noted above (toilet/water distances, ventilation-opening percentages)
+are recorded as legitimate future-version candidates, not open
+blockers for v1.0.0.
+
+## Reviewer Sign-off (Stage 6)
+
+- **Reviewer name/handle:** Claude (AI agent)
+- **Date:** 2026-07-18
+- **Scope:** Formal post-drafting source verification of all 4
+  articles' final prose (post-Editorial-Review, commit `c8e900a`), all
+  27 frozen claims, all 5 Founder-confirmed high-risk claims, all 21
+  numeric claims, and dedicated re-audits of the two areas Editorial
+  Review had already found drift in.
+- **Sources personally opened and read this pass:** all 7 - UNHCR's
+  Principles & Standards for Settlement Planning, Safe and Secure
+  Settlements, Emergency Shelter Solutions and Standards, and the
+  Settlement and Shelter index page; USFA's Carbon Monoxide and
+  Heating Fire Safety pages; EPA's Power Outages and Indoor Air
+  Quality page - each independently re-fetched this pass, not
+  recalled from any planning artifact or the Editorial Review's own
+  quotations.
+- **Statement:** I confirm every claim marked `Verified Source` above
+  was checked by me, this pass, against a source I personally opened
+  and read fresh. This pass did **not** rubber-stamp the frozen 27
+  claims or the Founder-confirmed 5 - it independently found and
+  corrected two genuine cases where final prose exceeded what a fresh,
+  careful re-read of the cited source actually supports (A5's
+  military-distance figure, E6's named-actor list), neither of which
+  Stage 5 Editorial Review had caught. This satisfies
+  `pack_production_workflow/QUALITY_STANDARD.md` §9's formal post-
+  drafting Human/AI-agent Source Verification requirement for this
+  pack/version. It does not constitute, and is explicitly not, a
+  Founder Publication Decision.
+
 ## Version Review History
 
 | Version | Date | What changed | Review outcome | Reviewer(s) | Publication decision |
@@ -538,6 +830,7 @@ exists as a separate, later step, not folded into this one.
 | 1.0.0 | 2026-07-18 | Founder high-risk confirmation recorded for D1, D2, D3, D4, D6 in their exact drafting boundaries | Pre-writing confirmation gate closed | Claude (AI agent); The Founder | Not Yet Approved (still pre-writing) |
 | 1.0.0 | 2026-07-18 | Stage 4 Writing: manifest.md + 4 articles drafted from the frozen, confirmed claim set; former Article 3 (anchoring) folded into Tarps/Tents article after its verified content proved too thin to stand alone | Draft complete, all 4 articles `Unverified` | Claude (AI agent) | Not Yet Approved |
 | 1.0.0 | 2026-07-18 | Editorial Review of final draft: Claim-to-Source Map built fresh against final prose; article-architecture, anchoring/structural-safety, Article 3 heightened-safety, full numeric-claim, humanitarian-planning-target, ownership/overlap, Sources-section, metadata/terrain, related-articles, and visual-comprehension audits performed; 2 content-overreach issues found and fixed (Article 2 ground-type examples, Article 3 oven CO-risk causal claim), 1 missing reciprocal link fixed | 0 Critical, 0 High, 0 Medium findings remain open (3 found, all fixed) | Claude (AI agent) | **Not Yet Approved** - pending formal post-drafting Source Verification and a separate Founder Publication Decision |
+| 1.0.0 | 2026-07-18 | Stage 6 formal post-drafting Human/AI-agent Source Verification: all 7 underlying sources re-opened and re-read fresh against final prose; found and corrected 2 genuine cases of claim drift Editorial Review had not caught (A5's unconfirmable military-distance figure, E6's unconfirmed named-actor list); all 5 Founder-confirmed high-risk claims re-verified individually against both source and confirmed boundary, all PASS; 3 available-but-unused source figures noted for a future version, deliberately not added | All 4 articles upgraded to `Verified Source`; pack-wide weakest-link summary now `Verified Source` | Claude (AI agent) | **Still Not Yet Approved** - source verification complete; publication approval is a distinct, separate Founder decision |
 
 ## Status
 
@@ -557,3 +850,18 @@ Critical or High finding remains unresolved (none was found). The two
 Medium-equivalent findings (the content-overreach issues) were fixed
 during this pass, not merely logged as Stage 6 blockers. The
 Claim-to-Source Map is complete.
+
+**Update, 2026-07-18 (Stage 6):** formal post-drafting source
+verification is now complete - see "Stage 6 Formal Post-Drafting
+Source Verification" above for the full record. This independent pass
+found and corrected 2 further genuine cases of claim drift that
+Editorial Review had not caught (A5's military-distance figure, E6's
+named-actor list) - confirming why Stage 6 exists as its own separate,
+independent step rather than being assumed from Stage 5's traceability
+work. All 4 articles are now honestly upgraded to `verification_level:
+Verified Source`, and the pack-wide weakest-link summary is `Verified
+Source`. The pack remains **Not Yet Approved** for release - not
+because any claim is unconfirmed, but because a separate, explicit
+Founder Publication Decision has not yet been made. Nothing about this
+update erases or reinterprets the Editorial Review findings above,
+which remain the accurate record of that pass.

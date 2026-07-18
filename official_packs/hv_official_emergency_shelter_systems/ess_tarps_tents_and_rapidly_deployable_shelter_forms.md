@@ -5,7 +5,7 @@ subcategory: Fieldcraft
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 1
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: ess_shelter_site_selection_and_system_planning, ess_thermal_management_ventilation_and_fire_safety, ess_communal_and_transitional_shelter_occupancy_and_maintenance, basic_shelter_construction, basic_knots_for_shelter_and_gear_lashing
 ---
 

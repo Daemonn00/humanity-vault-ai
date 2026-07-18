@@ -172,10 +172,25 @@ risk that would have warranted the gate.
 22: A1-A7, B1-B6, C1, C2 (replaced form), D5, D7-D8, E1 (title-scope
 only), E4-E6.
 
+**Update, 2026-07-18 (Founder High-Risk Confirmation):** all 5 claims
+requiring confirmation (D1, D2, D3, D4, D6) are now **CONFIRMED** by
+the Founder, in their exact drafting boundaries as recorded in
+`emergency_shelter_systems_FOUNDER_CONFIRMATION_PACKET.md`. This
+satisfies the high-risk confirmation gate for these 5 claims, for this
+pack/version only - it authorizes proceeding to Stage 4 Writing. It
+does not itself set any article's `verification_level` (Writing starts
+every article at `Unverified`, per `WRITING_GUIDELINES.md`) and does
+not constitute Editorial Review, formal post-drafting Source
+Verification, or Founder Publication Approval, each a separate, later
+stage.
+
+**Final pre-writing claim set: 27 active claims, 0 unresolved, 5 of 5
+required Founder confirmations complete.** Writing may now proceed
+from this frozen claim set.
+
 **This Workbook does not itself verify anything and does not
-authorize Writing.** It is the claim-by-claim map a future Editorial
-Review will re-check independently, per
-`editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`. The
-claim set is now frozen for the next stage (Founder high-risk
-confirmation, then Writing) - any further change requires a new,
-explicitly-recorded revision, not a silent edit.
+authorize Writing on its own - Writing is now authorized by the
+Founder's confirmation recorded immediately above, not by this
+document.** It is the claim-by-claim map a future Editorial Review
+will re-check independently, per
+`editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`.

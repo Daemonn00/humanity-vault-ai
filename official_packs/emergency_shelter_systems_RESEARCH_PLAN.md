@@ -288,12 +288,13 @@ overcrowding.
   article**, directly comparable to Water Treatment at Scale's
   Disinfection article. Indoor CO poisoning is a leading cause of
   accidental death in exactly the sheltering-in-place / temporary-
-  heating scenario this pack addresses. **D1, D2, D3, D4, and D6 are
-  now frozen for Founder high-risk confirmation** - see
-  `emergency_shelter_systems_FOUNDER_CONFIRMATION_PACKET.md`. D5, D7,
-  and D8 do not require this gate (D5 states a safer-alternative
-  contrast, not a hazard rule; D7-D8 are planning figures, not binary
-  safety rules).
+  heating scenario this pack addresses. **D1, D2, D3, D4, and D6 were
+  Founder-confirmed 2026-07-18** - see
+  `emergency_shelter_systems_FOUNDER_CONFIRMATION_PACKET.md`. Writing
+  is authorized to proceed on these 5 claims within their exact
+  confirmed boundaries. D5, D7, and D8 do not require this gate (D5
+  states a safer-alternative contrast, not a hazard rule; D7-D8 are
+  planning figures, not binary safety rules).
 - **Overlap/cross-links:** `emergency_fire_safety.md`,
   `fire_starting_without_matches.md`.
 - **Proposed category:** Survival

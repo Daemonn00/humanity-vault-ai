@@ -71,11 +71,11 @@ either source does not itself support.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes: ____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -114,11 +114,11 @@ distance.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes: ____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -151,11 +151,11 @@ elsewhere in this pack (A6) and in Water Treatment at Scale.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes: ____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -196,11 +196,11 @@ rest as complete guidance would misrepresent the source.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes: ____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -239,11 +239,11 @@ specification.
 
 **Founder Decision:**
 
-[ ] CONFIRMED
+[x] CONFIRMED
 [ ] REJECTED
 [ ] NEEDS REVISION
 
-Founder notes: ____________________________
+Founder notes: Confirmed 2026-07-18 against the exact drafting boundary above.
 
 ---
 
@@ -297,17 +297,26 @@ technical-note pages.
 
 | Claim | §9.3 basis | Founder Decision |
 |---|---|---|
-| D1 | Analogy (toxic-substance) + conservative high-consequence inclusion | [ ] Pending |
-| D2 | Analogy (toxic-substance) + conservative high-consequence inclusion | [ ] Pending |
-| D3 | Conservative high-consequence inclusion (detection/mitigation for D1/D2) | [ ] Pending |
-| D4 | Analogy (toxic-substance, charcoal/CO clause) + conservative high-consequence inclusion | [ ] Pending |
-| D6 | Conservative high-consequence inclusion (explicitly a "heater... fire" claim family per this sprint's task instructions) | [ ] Pending |
+| D1 | Analogy (toxic-substance) + conservative high-consequence inclusion | **CONFIRMED**, 2026-07-18 |
+| D2 | Analogy (toxic-substance) + conservative high-consequence inclusion | **CONFIRMED**, 2026-07-18 |
+| D3 | Conservative high-consequence inclusion (detection/mitigation for D1/D2) | **CONFIRMED**, 2026-07-18 |
+| D4 | Analogy (toxic-substance, charcoal/CO clause) + conservative high-consequence inclusion | **CONFIRMED**, 2026-07-18 |
+| D6 | Conservative high-consequence inclusion (explicitly a "heater... fire" claim family per this sprint's task instructions) | **CONFIRMED**, 2026-07-18 |
 
-**No box has been pre-checked. No Founder confirmation has occurred
-yet.** This packet is preparation for the Founder's personal review,
-not a substitute for it.
+**All 5 boxes now checked, 2026-07-18.** 0 claims rejected, 0 claims
+requiring revision.
 
 ## Record of Completion
 
-*(To be filled in only after the Founder actually completes the
-review above - left blank by design in this sprint.)*
+**All 5 claims requiring `QUALITY_STANDARD.md` §9.3-analogous high-
+risk confirmation are now CONFIRMED by the Founder, 2026-07-18, in
+their exact drafting boundaries as recorded in this packet.** This
+satisfies the high-risk-confirmation gate for these 5 claims, for
+`hv_official_emergency_shelter_systems` this pack/version only - it
+does not waive §9.3 (or its analogical extension) for any other pack,
+any future version of this pack, or any claim not listed here, and it
+is explicitly **not** a general governance precedent. It authorizes
+proceeding to Stage 4 Writing only. It does not itself set any
+article's `verification_level`, and it does not constitute Editorial
+Review, formal post-drafting Source Verification, or Founder
+Publication Approval - each remains a separate, later gate.

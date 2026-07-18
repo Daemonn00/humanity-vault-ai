@@ -448,7 +448,16 @@ consistent, but did not itself perform or formally close that pass.
   from that pass; (3) a separate, explicit Founder Publication
   Decision, matching the precedent of every previously-released pack.
 
-### Why `verification_level` stays `Unverified`
+**Update, 2026-07-18 (Stage 6):** condition (1) above is now complete
+- see "Stage 6 Formal Post-Drafting Source Verification" below. All 6
+articles are honestly `Verified Source` and condition (2) is complete.
+**This does not change the Decision itself, which remains Not Yet
+Approved above** - condition (3), a separate and explicit Founder
+Publication Decision, has not been made and is not made by this
+update. This document continues to record the pack as **Not Yet
+Approved** until the Founder records that decision.
+
+### Why `verification_level` stays `Unverified` (superseded, see Stage 6 update above - preserved as the accurate record of the Editorial Review pass's own reasoning at the time)
 
 Every claim row in the Claim-to-Source Map reads `Yes` or `N/A` - none
 reads `No`. This might look, at first glance, like the precondition
@@ -472,6 +481,7 @@ and remains the next required step.
 | 1.0.0 | 2026-07-18 | 8 §9.3 claims re-audited fresh (3 narrowed: D3, D4, E3), Founder Confirmation Packet created and all 8 claims CONFIRMED by the Founder | Pre-writing §9.3 gate closed | Claude (AI agent); The Founder | Not Yet Approved (still pre-writing) |
 | 1.0.0 | 2026-07-18 | Stage 4 Writing: manifest.md + 6 articles drafted from the frozen, confirmed claim set; self-audit found and fixed one numeric equivalence error (Article 3 flow rates) and tightened Article 4 source attribution | Draft complete, all 6 articles `Unverified` | Claude (AI agent) | Not Yet Approved |
 | 1.0.0 | 2026-07-18 | Editorial Review of final draft: Claim-to-Source Map built fresh against final prose; heightened Article 4 review; numeric-claim audit; targeted Article 3/5/6 audits; §9.3 eight-claim traceability check; content-boundaries, metadata/terrain, related-article, and visual-comprehension reviews; one terrain over-tagging fixed (Article 4) | 0 Critical, 0 High, 1 Medium (terrain over-tagging, fixed), 1 Low (terrain genuineness on remaining 5 articles, flagged not fixed), 1 informational (Article 2 synthesis phrasing flagged for Stage 6) | Claude (AI agent) | **Not Yet Approved** - pending formal post-drafting Source Verification and a separate Founder Publication Decision |
+| 1.0.0 | 2026-07-18 | Stage 6 formal post-drafting Human/AI-agent Source Verification: all 12 underlying sources re-opened and re-read fresh against final prose; found and fixed one genuine mis-sourcing (Article 6's F1 content actually comes from Oxfam's "Chlorination in Emergencies" page, not "Water Quality Analysis," Sources section corrected) and one wording overreach (Article 2's "smallest dose" narrowed to track the source's own "optimal dose... determined experimentally" language); all 8 §9.3 claims re-confirmed against fresh source reads with no expansion; all 20 numeric claims re-verified with no new error; C3 and F2 spot-checks both PASS | All 6 articles upgraded to `Verified Source`; pack-wide weakest-link summary now `Verified Source` | Claude (AI agent) | **Still Not Yet Approved** - source verification complete; publication approval is a distinct, separate Founder decision |
 
 ## Status
 
@@ -483,3 +493,363 @@ one metadata defect found and fixed. All 6 articles remain
 `verification_level: Unverified` pending formal post-drafting Human/
 AI-agent Source Verification against the exact final wording - not yet
 performed. Publication Decision: **Not Yet Approved.**
+
+**Update, 2026-07-18 (Stage 6):** formal post-drafting source
+verification is now complete - see "Stage 6 Formal Post-Drafting
+Source Verification" below for the full record. All 6 articles are
+honestly upgraded to `verification_level: Verified Source`, and the
+pack-wide weakest-link summary is `Verified Source`. The pack remains
+**Not Yet Approved** for release - not because any claim is
+unconfirmed, but because a separate, explicit Founder Publication
+Decision has not yet been made. Nothing about this update erases or
+reinterprets the Editorial Review findings above, which remain the
+accurate record of that pass.
+
+## Stage 6 Formal Post-Drafting Source Verification (2026-07-18)
+
+Performed by Claude (AI agent), under the ratified standing AI-Agent
+Verification Policy (`pack_production_workflow/QUALITY_STANDARD.md`
+§9, Founder-ratified). Every source below was independently re-opened
+and re-read this pass via direct `WebFetch` - not recalled from the
+Research Plan, Source Collection, Human Verification Workbook, or
+Founder Confirmation Packet's quotations, and not assumed from
+Editorial Review's traceability check.
+
+### Source Access Log (Stage 6)
+
+All 12 source pages underlying the pack's claims were re-fetched fresh
+and re-read this pass. **All 12 were successfully accessed - no
+substitute source was needed.**
+
+| Source | Organization | Claims covered | Result |
+|---|---|---|---|
+| Community Distribution System (D.7) | eCompendium | A1, A2, E4 | Re-read; exact match to prior record |
+| Water Safety Planning | WHO | A4 | Re-read; exact match |
+| (Assisted) Sedimentation (T.4) | eCompendium | B1, B2 | Re-read; exact match; jar-test method uses "series of beakers... optimal dose," not "smallest dose" - see Claims Rewritten |
+| Roughing Filtration (T.1) | eCompendium | B3 | Re-read; exact match, including explicit "should not be used as a single-step treatment... Chlorination is always advised" |
+| Chlorination (T.6) | eCompendium | B4, D1, D2, D3, D6 | Re-read; exact match |
+| Slow Sand Filtration (T.9) | eCompendium | C1, C2, C3, C5 | Re-read; exact match |
+| Slow Sand Filtration, Module 6 | SSWM University Course | C1, C2, C3, C5 | Re-read; exact match |
+| Biosand Filter | CAWST WASH Resources | C4 | Re-read; exact match |
+| Chlorination in Emergencies | Oxfam WASH | D1, D2, D3, D4, **F1** | Re-read; exact match for D1-D4; **discovered this page, not "Water Quality Analysis," is F1's actual source - see Claims Rewritten / Sources Changed** |
+| Point-of-Supply Chlorination (H.7) | eCompendium | D5 | Re-read; exact match |
+| Water Storage Tank, Long-Term Locally Built (D.6) | eCompendium | E1, E2, E3 | Re-read; exact match |
+| Water Quality Analysis in Emergency Situations | Oxfam WASH | F2, F3, F4 | Re-read; exact match for F2-F4; **confirmed this page does NOT contain DPD1/test-strip content (F1) despite the original Sources section citing it for that purpose** |
+
+**No source substitution was necessary anywhere in this pass** - every
+originally-cited source remained accessible and, with the one F1
+exception above, supported exactly what it was cited for.
+
+### Final-Prose Claim-to-Source Verification Map
+
+| Claim | Final wording checked against | Result |
+|---|---|---|
+| A1 | eCompendium D.7: "enough water for personal and domestic hygiene (at least 15 L/person/day)" | PASS |
+| A2 | eCompendium D.7: "at least 5 metres," "0.125 L/s... 250 users per tap," "500 metres... 30 minutes" | PASS (article omits the 5m pressure figure - conservative, not an error) |
+| A3 | Internal cross-link, not an external source claim | GENERAL KNOWLEDGE / EDITORIAL SYNTHESIS |
+| A4 | WHO: "all steps in water supply from catchment to consumer," "focus on high priority risks," "incremental improvements... systematically over time" | PASS |
+| B1 | eCompendium T.4: "settle water for one hour... top 80% of the bottle... clarified enough" | PASS |
+| B2 | eCompendium T.4: "pH of around 6 to 8," "cannot exceed 0.2 mg/L for health reasons... adjusting the pH... or filtering through a Rapid Sand Filter" | PASS |
+| B1/B2 dose-selection sentence | eCompendium T.4: "actual optimal dose... determined experimentally by a 'jar test' using a series of beakers containing an increasing dose of coagulant" | **PASS WITH NARROWING - rewritten this pass, see Claims Rewritten** |
+| B3 | eCompendium T.1: "up to 500 NTU," "reducing... by up to 90%," "about 10 NTU is desired," "should not be used as a single-step treatment... Chlorination is always advised" | PASS |
+| B4 | eCompendium T.6: "turbidity should be less than 5 NTU... up to 20 NTU... for short periods" | PASS (article states this qualitatively without the exact NTU figures - conservative) |
+| C1 | eCompendium T.9: "turbidity of up to 10 NTU... peaks of up to 50 NTU tolerated"; SSWM: "below 30 NTU and preferably below 10 NTU" | PASS - both ranges given honestly |
+| C2 | eCompendium T.9: "0.1-0.4 m/h," "0.6-1.2 m," "1.0-1.5 m"; SSWM: "0.1-0.3 m³/h per square metre... 100-300 litres per hour per square metre" | PASS - both ranges kept separate, internal unit conversion re-verified correct (see Numeric Verification) |
+| C3 | eCompendium T.9: ">95%... >99%"; SSWM: "below 1.0 NTU, a 90 to 99% reduction" | PASS WITH NARROWING (minor) - the article's turbidity-linkage parenthetical is explicit in SSWM's phrasing specifically, less explicit in eCompendium's; substance remains accurate, no rewrite required - see "C3 Spot-Check" below |
+| C4 | CAWST: household biosand filter manual; "institutional scale use, such as that of schools" (iSSF) | PASS |
+| C5 | eCompendium T.9 + SSWM: "manually scraping off the top layer" | PASS |
+| D1 | eCompendium T.6: "1-6 mg/L (0.5-2 mg/L for non-turbid water)"; Oxfam: "2.0 mg/l... <10 NTU... 4.0-5.0 mg/l... 10-100 NTU" | PASS - see "Article 4 Verification" below |
+| D2 | eCompendium T.6: "30-minute contact period"; Oxfam: "doubled with each 10°C temperature drop," "pH < 8.0... higher... concentrations and/or more contact time" | PASS |
+| D3 | Oxfam: "0.5 mg/l" / "1.2 mg/l" (distribution, by condition), "0.2 mg/l" (point of delivery), "0.2 mg/l... at household level" | PASS - note: Oxfam also states a pH-conditional "0.4 mg/l" household variant not included in the article's D3 paragraph; adequately covered elsewhere in the article's general pH-compensation statement (D2) - no rewrite required |
+| D4 | Oxfam: "should never exceed 4.0-5.0 mg/l"; eCompendium T.6 re-checked, confirmed no upper number stated | PASS |
+| D5 | eCompendium H.7: "around 2 mg/L," "10-30 L/min," "1500-2500 L," manufacturer-variance caveat | PASS |
+| D6 | eCompendium T.6: "trihalomethanes that are carcinogenic in the long term" | PASS |
+| E1 | eCompendium D.6: "at least one day," "up to three days... solar- or wind-powered pumping" | PASS |
+| E2 | eCompendium D.6: "screened ventilation pipe... prevent pressure or vacuum" | PASS |
+| E3 | eCompendium D.6: "Shock chlorination (at a rate of 50mg/L)" - re-confirmed the source states only the figure and its O&M context, nothing about flushing or routine-dose comparison | PASS - see "Article 5 Verification" below |
+| E4 | eCompendium D.7: "negative pressure and subsequent contamination at leaking joints," "water pipes should be laid above wastewater pipes" | PASS |
+| F1 | Oxfam **"Chlorination in Emergencies"** (not "Water Quality Analysis"): "DPD 1 tablets... pink in proportion to... FRC," "Pool Testers... cheap... not precise," "Photometers... more precise," "test strips are easier to use but less accurate" | **PASS after Sources section correction** - see Claims Rewritten / Sources Changed |
+| F2 | Oxfam Water Quality Analysis: "0 = Guideline compliant," "1-10 = Tolerable," "10-100 = Requires treatment," ">100 = Unsuitable" | PASS - see "F2 Spot-Check" below |
+| F3 | Oxfam Water Quality Analysis: arsenic 0.01, fluoride 1.5, nitrate "11 mg/l as N," manganese 0.4 (health) / 0.1 (taste), iron "does not provide a health based guideline... above 0.3 mg/l" (aesthetic only) | PASS - see "Article 6 Verification" below |
+| F4 | Oxfam Water Quality Analysis: "Open wells... Once monthly," "Covered dug wells... Twice yearly," "Springs and piped sources... Twice yearly," "Rainwater... Once yearly" | PASS |
+| F5 | No source; general knowledge, drawing on A4's WHO incremental-improvement framing | GENERAL KNOWLEDGE / EDITORIAL SYNTHESIS |
+
+**28 of 28 pre-writing claim IDs: PASS or PASS WITH NARROWING or
+GENERAL KNOWLEDGE. 0 REWRITE REQUIRED (beyond the 2 precision fixes
+below). 0 REMOVE. 0 UNRESOLVED.**
+
+### First-Priority Items (Editorial Review Flagged)
+
+**1. Article 2 synthesis (coagulant dose selection).** Classification:
+**B - a faithful synthesis of the source's jar-test procedure**, not a
+verbatim quote and not an unsupported optimization rule. The original
+final-prose wording ("picking the smallest dose that clears the water
+adequately") was not literally stated by the source, which says only
+that the "optimal dose... is determined experimentally by a 'jar
+test' using a series of beakers containing an increasing dose of
+coagulant." "Optimal" and "smallest effective" are closely related in
+water-treatment jar-testing practice, but not identical, so this pass
+**rewrote** the sentence to track the source's own procedure and
+language directly: "with a side-by-side test using a series of
+samples dosed at increasing coagulant levels to find the dose that
+actually clarifies that water" - describing the method precisely as
+sourced, without asserting an optimization rule ("smallest") the
+source doesn't itself state.
+
+**2. C3 spot-check.** Exact source: eCompendium T.9 (">95%... >99%")
+and SSWM Module 6 ("90 to 99%... below 1.0 NTU"). Exact support
+boundary: high pathogen removal is genuinely reported by both sources,
+with SSWM explicitly tying its figure to <1.0 NTU effluent turbidity
+and eCompendium stating its figures without an explicit same-sentence
+turbidity link (though eCompendium separately states its own effluent
+turbidity as <1 NTU elsewhere on the same page). Final prose ("...
+typically associated with filtered water reaching a turbidity below
+about 1 NTU") stays within this boundary - it is accurate in
+substance and does not misattribute the explicit linkage equally to
+both sources. **No rewrite needed.**
+
+**3. F2 spot-check.** Exact source: Oxfam WASH, Water Quality Analysis
+in Emergency Situations - the four-tier E. coli/100mL table. Exact
+support boundary: the article's four hedged tiers ("roughly, zero...
+very roughly, up to around 10... roughly 10 to 100... above roughly
+100") map directly onto the source's four thresholds. Final prose
+stays within this boundary and adds appropriate "roughly" hedging for
+a lay reader, not overstatement. **No rewrite needed.**
+
+### §9.3 Eight-Claim Re-Verification (Source + Final Wording)
+
+| Claim | vs. confirmed boundary | vs. fresh source re-read |
+|---|---|---|
+| B2 | Matches | Matches exactly - pH 6-8, 0.2 mg/L, remedy all re-confirmed verbatim |
+| D1 | Matches | Matches exactly - both dosage ranges re-confirmed verbatim, unmerged |
+| D2 | Matches | Matches exactly - 30-min figure (both sources), temp/pH rule (Oxfam only, re-confirmed) |
+| D3 | Matches narrowed boundary | Matches, with one available-but-unused refinement noted (pH-conditional 0.4 mg/l household variant) - not an expansion or contradiction, just unused precision |
+| D4 | Matches narrowed boundary | Matches exactly - re-confirmed eCompendium states no number, Oxfam's 4.0-5.0 mg/L re-confirmed verbatim |
+| D5 | Matches | Matches exactly - all three figures + manufacturer caveat re-confirmed verbatim |
+| E3 | Matches narrowed boundary | Matches exactly - re-confirmed the source states only the 50 mg/L figure and O&M context, nothing about flushing/comparison |
+| F3 | Matches (narrows further) | Matches exactly - all 5 guideline values and their 4 categories re-confirmed verbatim |
+
+**0 of 8 expand, change operational meaning, or introduce a new
+number.** All 8 either match their confirmed boundary exactly or
+narrow it further with unused-but-available precision noted, not
+missing support.
+
+### Article 4 Verification (Highest Risk)
+
+Full sequence re-verified against fresh source reads:
+
+- **D1 dosage:** eCompendium and Oxfam re-read independently this
+  pass; the genuine divergence (eCompendium 0.5-2/1-6 mg/L vs. Oxfam
+  2.0/4.0-5.0 mg/L) is preserved exactly as before - not harmonized.
+  Each number remains attributed only to the source that states it.
+  The jar-test/actual-chlorine-demand principle remains the article's
+  stated governing rule, not either fixed range.
+- **D2 contact time:** 30-minute figure re-confirmed on both sources;
+  temperature-doubling and pH>8.0 rules re-confirmed as Oxfam-specific
+  statements, not universalized beyond their conditional framing - the
+  article's own wording ("in colder water, more time is needed...
+  above that, either a higher chlorine concentration or a longer
+  contact time is needed") keeps these as conditional relationships,
+  not blanket instructions.
+- **D3 FRC structure:** the three tiers (distribution target /
+  delivery minimum / consumption minimum) remain separately stated in
+  final prose, matching Oxfam's own three-tier structure exactly - not
+  collapsed.
+- **D4 upper figure:** re-confirmed attributed only to Oxfam WASH in
+  final prose; eCompendium re-read and re-confirmed to state no
+  number.
+- **Measurement and adjustment:** the article's "if a reading comes
+  back low... more chlorine or more contact time is needed" sentence
+  generalizes a relationship Oxfam states explicitly only for the
+  pH>8.0 case. This is a reasonable extension following directly from
+  the article's own already-confirmed dose-time relationship (D1+D2
+  together establish that dose and time trade off), not an invented
+  new fact or number - classified **GENERAL KNOWLEDGE / EDITORIAL
+  SYNTHESIS**, flagged here for transparency, no rewrite required
+  since it introduces no new number and contradicts nothing.
+
+**Result: the complete D1-D5 sequence remains accurate, internally
+consistent, and faithful to source after independent re-verification.
+No editorial transition was found to have created a new operational
+procedure beyond what the sources support.**
+
+### Full Numeric Verification (20 Claims)
+
+All 20 numeric claims identified by Editorial Review were re-verified
+against fresh source reads this pass (see the Source Access Log and
+Claim-to-Source Verification Map above for the individual results).
+**Every value, unit, and context re-confirmed exact.** Independent
+arithmetic re-check of the one unit conversion in the pack (SSWM's 0.1
+-0.3 m³/h per m² restated as 100-300 L/h per m²): 0.1 m³ = 100 L,
+0.3 m³ = 300 L, so per hour per square metre the conversion is
+arithmetically correct. Re-confirmed this conversion applies only
+within SSWM's own figure, never presented as equivalent to
+eCompendium's separately-reported 0.1-0.4 m/h range. **No new
+conversion or range-combination error found anywhere in the pack.**
+
+### Article 5 Verification (Shock Chlorination)
+
+Re-read eCompendium D.6 fresh this pass. The source states exactly one
+sentence on this topic: "Shock chlorination (at a rate of 50mg/L) can
+also be used for disinfection," in the Operation and Maintenance
+section, with no surrounding statement about flushing, waiting,
+disposal, return-to-service procedure, draining, exposure duration, or
+post-treatment testing. Re-auditing the article's own text confirms it
+correctly separates: (1) the source-supported fact (50 mg/L, O&M
+context) - stated plainly; (2) general safety reasoning - explicitly
+self-labeled in the article's own words as "a common-sense precaution
+given how much higher the cleaning concentration is, not a specific
+flushing procedure recommended by name in this article's sources"; (3)
+no specific flush duration, volume, or cycle count is stated anywhere
+- avoiding exactly the unsupported-operational-specificity risk this
+audit was designed to catch. **No narrowing or removal required - the
+article already meets the bar.**
+
+### Article 6 Verification (F3 Water Quality Interpretation)
+
+Re-read Oxfam WASH's Water Quality Analysis page fresh this pass and
+independently re-confirmed all five guideline values and their
+categories exactly as previously recorded (arsenic and fluoride:
+health-based, long-term; nitrate: health-based, short-term/infant-
+specific; manganese: dual health-based/aesthetic; iron: aesthetic
+only, explicitly no WHO health guideline). Re-checked the article's
+own prose line by line: no sentence implies all guideline values carry
+the same meaning, no sentence implies crossing a value creates an
+immediate universal health threshold, no sentence implies being below
+one value proves general safety, and no sentence implies a limited
+contaminant test establishes complete potability - the article's
+Summary and F5 paragraph explicitly reinforce the opposite ("None of
+this is a one-time task"). **Result: PASS, no rewrite required.**
+
+### Claims Rewritten
+
+1. **Article 2 (Pre-Treating Water at Community Scale)** - the
+   coagulant dose-selection sentence rewritten to track the source's
+   own "optimal dose... determined experimentally" language exactly,
+   removing the unsourced "smallest dose" framing. See "First-Priority
+   Items" above for the full before/after reasoning.
+
+### Claims Removed
+
+None. No claim required removal - every claim found adequate support,
+either directly or via a precision rewrite.
+
+### Sources Sections Changed
+
+1. **Article 6 (Monitoring Water Quality and Maintaining the System
+   Over Time)** - added "Oxfam WASH, Chlorination in Emergencies" to
+   `## Sources`, since that page (not "Water Quality Analysis in
+   Emergency Situations," the only page previously listed) is where
+   the article's F1 content (DPD1 tablets, photometers, pool testers,
+   test strips) actually appears. Both Oxfam pages are now correctly
+   listed, since the article does draw on both (F1 from Chlorination
+   in Emergencies; F2-F4 from Water Quality Analysis).
+
+### Terrain Metadata Decision
+
+Reconsidered the Editorial Review's Low finding (Articles 1, 2, 3, 5,
+6's terrain tags only modestly justified) as a pure metadata
+consistency check, not a distraction from source verification.
+Re-examined each article's actual tag set against a stated,
+content-based rationale:
+
+- **Article 1** (desert, coastal, urban - excludes tropical_rainforest):
+  genuine, if modest, differentiation - careful community water-demand
+  planning is most acutely necessary where water is scarce (desert),
+  saline-contamination-prone (coastal), or served by piped
+  infrastructure (urban); abundant-rainfall tropical settings face
+  this planning problem less acutely. **Kept.**
+- **Article 2 and Article 3** (tropical_rainforest, urban - the
+  pre-treatment/filtration pair): genuine differentiation - turbid
+  surface water requiring pre-treatment and filtration is most
+  characteristic of heavy-rainfall and river/lake-fed urban intake
+  contexts. **Kept.**
+- **Article 5** (urban, coastal): genuine differentiation - fixed
+  storage tanks and piped distribution networks are most relevant to
+  settled, denser contexts. **Kept.**
+- **Article 6** (urban only): genuine, narrow differentiation -
+  ongoing monitoring/maintenance routines are most tied to established
+  systems. **Kept.**
+
+None of the five reduces to indefensible "tag everything" coverage
+tagging on reconsideration - each excludes at least one terrain ID
+with a stated, content-based reason. **Decision: no further terrain
+changes made this pass, beyond Article 4's already-completed removal.**
+This finding is now closed.
+
+### Per-Article Verification Result
+
+| Article | Result | Reasoning |
+|---|---|---|
+| Assessing Community Water Needs and Protecting the Source | **Verified Source** | All 4 claims (A1, A2, A4) + 1 editorial generalization (A3) read PASS or GENERAL KNOWLEDGE after independent re-verification |
+| Pre-Treating Water at Community Scale | **Verified Source** | All 4 claims (B1-B4) read PASS after independent re-verification and one precision rewrite |
+| Filtration Systems Beyond Single-Person Scale | **Verified Source** | All 5 claims (C1-C5) read PASS or PASS WITH NARROWING (C3, no rewrite needed) after independent re-verification |
+| Disinfection at Batch and Community Scale | **Verified Source** | All 6 claims (D1-D6) read PASS after the pack's strictest re-verification pass; the adjustment-loop sentence is flagged editorial synthesis, not unsupported |
+| Safe Storage, Distribution, and Preventing Recontamination | **Verified Source** | All 4 claims (E1-E4) read PASS after independent re-verification |
+| Monitoring Water Quality and Maintaining the System Over Time | **Verified Source** | All 5 claims (F1-F5) read PASS or GENERAL KNOWLEDGE (F5) after independent re-verification and one Sources-section correction (F1) |
+
+Applied honestly per-article first, per the project's standard - no
+article was defaulted to `Verified Source`; each was individually
+re-derived from its own claim rows reading `Yes`/`PASS`/`N/A` with
+zero `No`/`REWRITE REQUIRED (unresolved)`/`REMOVE`/`UNRESOLVED` rows
+remaining after fixes.
+
+## Verification Level: Per-Article Status (Updated, Stage 6)
+
+| Article | `verification_level` | Why |
+|---|---|---|
+| Assessing Community Water Needs and Protecting the Source | **Verified Source** | All claims independently re-verified against fresh source reads, 2026-07-18 |
+| Pre-Treating Water at Community Scale | **Verified Source** | All claims independently re-verified; one precision rewrite applied |
+| Filtration Systems Beyond Single-Person Scale | **Verified Source** | All claims independently re-verified; flow-rate correction re-confirmed holding |
+| Disinfection at Batch and Community Scale | **Verified Source** | All claims independently re-verified against both sources; genuine D1 divergence preserved, not hidden |
+| Safe Storage, Distribution, and Preventing Recontamination | **Verified Source** | All claims independently re-verified; E3's source/reasoning separation re-confirmed |
+| Monitoring Water Quality and Maintaining the System Over Time | **Verified Source** | All claims independently re-verified; F1 Sources-section correction applied |
+
+### Pack-Wide Verification Summary
+
+Applying `registry_generator`'s existing weakest-link rule
+(`PackValidation.verificationSummary`): all 6 articles read `Verified
+Source`, and the set contains no `Unverified` article, so the
+pack-wide verification summary is **`Verified Source`**.
+
+### Unresolved Findings
+
+None blocking. Two items are recorded for future reference, not as
+open blockers:
+
+- Article 4's adjustment-loop sentence is editorial synthesis
+  (reasonable, not unsupported) - noted for transparency.
+- Oxfam's pH-conditional 0.4 mg/L household FRC variant (D3) is
+  available but not published in the article's exact figure - the
+  article's existing general pH-compensation statement (D2) already
+  covers the underlying principle. A future version could add this
+  precision but it is not required for `Verified Source` status.
+
+## Reviewer Sign-off (Stage 6)
+
+- **Reviewer name/handle:** Claude (AI agent)
+- **Date:** 2026-07-18
+- **Scope:** Formal post-drafting source verification of all 6
+  articles' final prose, all 28 claim IDs, the 8 §9.3 Founder-
+  confirmed claims, all 20 numeric claims, and the 2 Editorial-Review-
+  flagged items (Article 2 synthesis, C3/F2 spot-checks).
+- **Sources personally opened and read this pass:** all 12 - the
+  Global WASH Cluster eCompendium (8 pages: Community Distribution
+  System, Assisted Sedimentation, Roughing Filtration, Chlorination,
+  Slow Sand Filtration, Point-of-Supply Chlorination, Water Storage
+  Tank), Oxfam WASH (2 pages: Chlorination in Emergencies, Water
+  Quality Analysis in Emergency Situations), SSWM University Course
+  Module 6, CAWST WASH Resources, and WHO Water Safety Planning - each
+  independently re-fetched this pass, not recalled from planning
+  artifacts.
+- **Statement:** I confirm every claim marked `PASS` above was checked
+  by me, this pass, against a source I personally opened and read
+  fresh - not a quotation copied from an earlier planning document,
+  and not assumed from Editorial Review's traceability check. Where a
+  discrepancy was found (Article 6's F1 mis-sourcing; Article 2's
+  "smallest dose" overreach), I corrected it rather than treating the
+  claim as verified regardless. This satisfies
+  `pack_production_workflow/QUALITY_STANDARD.md` §9's formal post-
+  drafting Human/AI-agent Source Verification requirement for this
+  pack/version. It does not constitute, and is explicitly not, a
+  Founder Publication Decision.

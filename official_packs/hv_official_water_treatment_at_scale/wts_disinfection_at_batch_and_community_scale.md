@@ -5,7 +5,7 @@ subcategory: Water Treatment
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 3
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: wts_pre_treating_water_at_community_scale, wts_filtration_systems_beyond_single_person_scale, wts_safe_storage_distribution_and_preventing_recontamination, wts_monitoring_water_quality_and_maintaining_the_system, water_purification
 ---
 

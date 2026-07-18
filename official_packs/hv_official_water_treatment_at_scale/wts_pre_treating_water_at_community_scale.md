@@ -5,7 +5,7 @@ subcategory: Water Treatment
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 terrain: tropical_rainforest, urban
 related_articles: wts_filtration_systems_beyond_single_person_scale, wts_disinfection_at_batch_and_community_scale, water_purification
 ---
@@ -38,8 +38,9 @@ liter. If this limit is a concern, it can be addressed by adjusting
 the raw water's pH or by passing the water through a rapid sand filter
 afterward. The correct coagulant dose for a specific batch of water
 cannot be worked out from a table - it is determined experimentally,
-using a side-by-side settling test on samples with different doses,
-and picking the smallest dose that clears the water adequately.
+with a side-by-side test using a series of samples dosed at
+increasing coagulant levels to find the dose that actually clarifies
+that water.
 
 For water that is very turbid - well beyond what plain sedimentation
 can handle - roughing filtration is another pre-treatment option: raw

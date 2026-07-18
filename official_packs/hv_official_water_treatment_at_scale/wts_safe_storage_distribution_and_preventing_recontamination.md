@@ -5,7 +5,7 @@ subcategory: Water Treatment
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 terrain: urban, coastal
 related_articles: wts_disinfection_at_batch_and_community_scale, water_storage_and_long_term_water_safety, sanitation_hygiene_and_disease_prevention
 ---

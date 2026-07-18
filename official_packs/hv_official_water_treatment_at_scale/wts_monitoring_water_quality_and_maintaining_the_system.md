@@ -5,7 +5,7 @@ subcategory: Water Treatment
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 terrain: urban
 related_articles: wts_disinfection_at_batch_and_community_scale, wts_safe_storage_distribution_and_preventing_recontamination, wts_assessing_community_water_needs_and_protecting_the_source, sanitation_hygiene_and_disease_prevention
 ---
@@ -99,4 +99,5 @@ still being restored.
 
 ## Sources
 
+- Oxfam WASH, Chlorination in Emergencies
 - Oxfam WASH, Water Quality Analysis in Emergency Situations

@@ -5,7 +5,7 @@ subcategory: Water
 author: Humanity Vault Contributors
 last_updated: 2026-07-18
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 terrain: desert, coastal, urban
 related_articles: wts_pre_treating_water_at_community_scale, well_digging_and_safe_water_access, water_storage_and_long_term_water_safety, water_purification
 ---

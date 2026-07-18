@@ -107,6 +107,25 @@ as direct reads, per `QUALITY_STANDARD.md` §4 and §9.
 - **Collected by:** Claude (AI agent)
 - **Date:** 2026-07-18
 
+### Source: U.S. Fire Administration (USFA/FEMA), "Heating Fire Safety" page
+
+*(Added 2026-07-18, Targeted Verification Closure - a second, distinct
+USFA page from the Carbon Monoxide page above.)*
+
+- **Citation/URL:**
+  https://www.usfa.fema.gov/prevention/home-fires/prevent-fires/heating/
+- **Which claims it supports:** Article 4, D6 (space heater clearance
+  and operational rules).
+- **Source quality tier:** [x] Tier 1 (federal fire-safety authority)
+- **Directly opened and read in full:**
+  - [x] "Keep anything that can burn at least 3 feet from all heat
+    sources including fireplaces, wood stoves, radiators, space
+    heaters or candles." "Turn space heaters off when leaving the room
+    or going to bed." "Never use an oven to heat your home." Annual
+    professional heating-equipment/chimney maintenance guidance.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-18
+
 ## Sources attempted but not directly readable (recorded honestly, not cited as verified)
 
 - **Sphere Handbook** (spherestandards.org, handbook.spherestandards.org,
@@ -150,7 +169,48 @@ as direct reads, per `QUALITY_STANDARD.md` §4 and §9.
   - only this specific temperature figure and the PDF export itself
   remain unconfirmed.)
 
-## Collection summary
+### Additional attempts, 2026-07-18 (Targeted Verification Closure)
+
+- **ICRC/IFRC Frame Tent Specification**
+  (procurement.ifrc.org/catalogue/upload/products_data/files/HSHETENT07.pdf)
+  - the fetch tool rejected this host outright: "Hostname/IP does not
+  match certificate's altnames: Host: procurement.ifrc.org. is not in
+  the cert's altnames: DNS:perrytrader.com, DNS:www.perrytrader.com" -
+  a TLS certificate mismatch pointing to an unrelated domain, a
+  different and more serious failure mode than a simple HTTP block.
+  **Not attempted further; not directly read.**
+- **UNHCR "New Self Standing Family Tent" PDF**
+  (emergency.unhcr.org/sites/default/files/New%20Self%20Standing%20Tent.pdf)
+  - fetched successfully as a binary file, but returned only graphic/
+  compressed-stream content, no extractable text - the same
+  illustrated-PDF failure class as the Family Tent PDF and the print/
+  PDF export above. **Not directly read.**
+- **REI, "How to Set Up/Pitch a Tent" (rei.com/learn/expert-advice/tent-set-up.html)**
+  - attempted as a Tier 2/3 substitute (a recognized outdoor-recreation
+  technical authority, per this task's explicit permission when
+  stronger humanitarian/government guidance is unavailable) after
+  UNHCR/IFRC/Sphere all proved inaccessible. **3 consecutive attempts
+  all failed with a connection reset (`read ECONNRESET`)** - a
+  network-level failure, not a content block or an HTTP error status.
+  Not directly read. Not retried a 4th time, per this sprint's
+  instruction not to over-invest in a single blocked source.
+- **NOLS (National Outdoor Leadership School)** - searched for a
+  specific, directly-fetchable page on tent siting/anchoring; no
+  single NOLS-hosted page was identified (only general references to
+  NOLS's own printed curriculum/handbook, which is not
+  freely web-accessible). **Not attempted via direct fetch - no
+  fetchable URL was found to attempt.**
+
+**Conclusion after 8 total access attempts across two organizations,
+two sprints, and multiple hosts/formats (UNHCR ×2 distinct PDFs, IFRC
+×2 distinct sources, Sphere ×3 mirrors, REI ×3 attempts):** the
+specific anchoring technique for Article 3 is not directly verifiable
+with the tools and access available this sprint. This is recorded as
+a closed, resolved outcome (Article 3 narrowed to its general
+principle - see the Human Verification Workbook's Pre-Writing Claim
+Freeze), not an open item to keep retrying indefinitely.
+
+## Collection summary (superseded by the Update below - preserved as the prior sprint's accurate record)
 
 | Article | Claims with a Tier 1 source directly read | Claims with no directly-read source | Realistic `verification_level` if written today |
 |---|---|---|---|
@@ -160,7 +220,17 @@ as direct reads, per `QUALITY_STANDARD.md` §4 and §9.
 | 4. Thermal Management, Ventilation, and Fire Safety in Shelter Systems | 8 of 8 (D1-D8) | 0 | Verified Source achievable, subject to §9.3 mandatory human confirmation on the CO-safety claims before Writing finalizes them |
 | 5. Communal and Transitional Shelter: Occupancy, Maintenance, and Adaptation | 5 of 6 planned (E1, E4-E6 fully; E2-E3 excluded, not attempted as claims) | 0 unresolved (2 candidate claims deliberately excluded rather than left open) | Verified Source achievable on the claims actually included |
 
-This table is the honest basis for the next research pass and,
-eventually, Writing - it is not yet the Editorial Review's own
+### Update, 2026-07-18 (Targeted Verification Closure)
+
+| Article | Final claim status | Realistic `verification_level` if written today |
+|---|---|---|
+| 1. Shelter Site Selection and System Planning | 7/7 verified, unchanged | Verified Source achievable |
+| 2. Tarps, Tents, and Rapidly-Deployable Shelter Forms | 6/6 verified, unchanged | Verified Source achievable |
+| 3. Anchoring, Wind, and Weather Resistance for Shelter Systems | **CLOSED**: C1 verified (general principle), C2 replaced (general knowledge, no source needed), C3 removed, C4 confirmed out of scope. 2 active claims, 0 unresolved | Verified Source achievable on the narrowed scope actually retained |
+| 4. Thermal Management, Ventilation, and Fire Safety in Shelter Systems | 8/8 verified (D6 newly verified this pass) | Verified Source achievable, subject to Founder high-risk confirmation on D1-D4, D6 before Writing finalizes them |
+| 5. Communal and Transitional Shelter: Occupancy, Maintenance, and Adaptation | 5/6 verified, unchanged | Verified Source achievable on the claims actually included |
+
+This table is the honest basis for the next stage (Founder high-risk
+confirmation, then Writing) - it is not yet the Editorial Review's own
 independent Claim-to-Source Map, which re-checks everything again per
 `editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`.

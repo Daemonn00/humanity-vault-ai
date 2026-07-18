@@ -13,13 +13,23 @@ AI-agent verification, so "Human" in this filename describes the
 required *rigor*, not exclusively who performs it - per §9.4.
 
 No claim below is marked verified merely because a source appears
-relevant. **Article 3's claim rows are marked `UNRESOLVED` honestly -
-they are not a gap papered over with a plausible-sounding
-description.** Two candidate claims for Article 5 (shelter orientation
+relevant. Two candidate claims for Article 5 (shelter orientation
 and vulnerable-group housing) found only via a blocked source's search
 summary were **not assigned claim IDs at all**, rather than being
 entered as unresolved rows - they do not yet exist as claims this pack
 intends to publish.
+
+**Update, 2026-07-18 (Targeted Verification Closure):** Article 3's
+two previously-`UNRESOLVED` claims (C2, C3) and D6 were closed this
+pass - see the "Pre-Writing Claim Freeze" section at the end of this
+document for the full record. C2 was **replaced** with a narrower,
+non-procedural general-knowledge claim after 8 total access attempts
+(across this and the prior sprint) failed to directly verify the
+specific anchoring hardware/technique originally planned. C3 was
+**removed** entirely - its underlying concern (site drainage) is
+already covered at the correct scope by Article 1's directly-verified
+A1-A2. D6 was **verified** against a freshly-found USFA source. No
+claim was left `UNRESOLVED` after this pass.
 
 ## Claim map
 
@@ -39,15 +49,15 @@ intends to publish.
 | B5 | 2 | Design principles: allow occupant modification, prioritize individual family shelters over communal arrangements where feasible, use local materials, respect cultural practices | Same | Directly read | Verified | Normal | N/A | State plainly | N/A |
 | B6 | 2 | This pack's shelter forms are distinct from the natural-material lean-to already covered elsewhere | Cross-link to `basic_shelter_construction.md` | N/A - internal cross-link | N/A | Normal | N/A | Cross-link, do not restate lean-to construction | N/A |
 | C1 | 3 | Cold-climate and high-wind conditions require structural stability specifically to resist snow and wind loads | UNHCR Emergency Shelter Solutions and Standards | Directly read | Verified | Elevated (structural safety) | N/A (general principle, no figure) | State as the general principle only | N/A |
-| C2 | 3 | Specific ground-anchoring technique (guy ropes and pegs) for wind resistance | Found via WebSearch summary only (UNHCR Shelter Design Catalogue / Family Tent spec) | **Not directly read - 2 fetch attempts failed (size limit; binary/unreadable PDF)** | **UNRESOLVED** | Elevated (structural safety) | Would be operational/procedural if confirmed | **Do not include in Writing until directly verified** | Either close the gap with a successful re-fetch/alternate source, or omit this specific technique and keep the article at C1's general-principle level only |
-| C3 | 3 | Foundation/base guidance: shelter should rest on stable, well-drained ground, protected from erosion | Found via WebSearch summary only (attributed to IFRC Shelter Safety Handbook) | **Not directly read - IFRC PDF returned HTTP 403** | **UNRESOLVED** | Elevated (structural safety) | Would be operational if confirmed | **Do not include in Writing until directly verified or a substitute source is found and read** | Substitute candidates to try next: an accessible IFRC HTML page (not PDF), a recognized camping/outdoor-recreation technical authority, or a national emergency-management agency's tent/shelter guidance |
-| C4 | 3 | Specific snow/wind structural load figures (e.g. kg/m² or kPa) | Not sourced this pass at all | Not attempted | **UNRESOLVED - no claim exists yet** | Would be highest-elevated (directly matches §9.3's "structural load-bearing figures") if pursued | Numeric, if it existed | **Recommend NOT pursuing this claim** - a general-public offline knowledge pack is not the right vehicle for formal structural load calculations, and this project has consistently declined to reproduce this kind of precise engineering table elsewhere (e.g. Field Comm's visual-code figures) | Keep Article 3 qualitative throughout; direct a reader needing precise load calculations to a qualified structural engineer |
+| C2 | 3 | **REPLACED, 2026-07-18.** Was: specific ground-anchoring technique (guy ropes and pegs, specific angles/spacing). Now: a general, non-procedural claim that a shelter not securely anchored is more vulnerable to wind damage, and that the correct anchoring method depends on the shelter/tent design and ground conditions - follow the manufacturer's instructions (manufactured tents) or a qualified/experienced source (improvised anchoring), rather than a universal technique | No specific source; general engineering/common-sense knowledge, same class as other general-knowledge statements already accepted elsewhere in this corpus (e.g. "a smaller enclosed space is easier to keep warm" in `basic_shelter_construction.md`) | N/A - general knowledge | **GENERAL KNOWLEDGE / EDITORIAL** | Normal (no longer asserts a specific procedure that could be wrong) | N/A - explicitly defers to manufacturer/expert rather than stating a technique | State only the general vulnerability principle and the explicit referral to manufacturer instructions/qualified sources - never a specific angle, depth, spacing, or hardware count | N/A - this IS the fallback for the original C2 |
+| C3 | 3 | **REMOVED, 2026-07-18.** Was: foundation/base guidance (stable, well-drained ground, erosion protection) attributed to IFRC. | IFRC Shelter Safety Handbook - HTTP 403 on every attempt, both sprints | Not directly read (final) | **REMOVED** | N/A | N/A | Do not include as a standalone claim; the underlying concern is already covered at the correct scope by Article 1's A1-A2 (directly-verified UNHCR slope/drainage/groundwater figures) - cross-link Article 3 to Article 1 instead | N/A |
+| C4 | 3 | Specific snow/wind structural load figures (e.g. kg/m² or kPa) | Never sourced; deliberately not pursued | Not attempted (by design) | **OUT OF SCOPE (confirmed, 2026-07-18)** | Would be highest-elevated (directly matches §9.3's "structural load-bearing figures") if it existed | N/A - no claim exists | **Confirmed out of scope this pass** - a general-public offline knowledge pack is not the right vehicle for formal structural load calculations, matching this project's established practice elsewhere (e.g. Field Comm's declined visual-code figures) | Direct a reader needing precise load calculations to a qualified structural engineer - stated once, generally, not per-claim |
 | D1 | 4 | Fuel-burning devices (generators, charcoal grills, gas stoves/ranges) must never be used indoors - CO risk | USFA + EPA (both directly read, cross-corroborating) | Directly read (2 independent Tier 1 sources) | Verified | **High - toxic-substance handling (CO), §9.3-analogous** | N/A (categorical rule, not a dose figure) | Do not present as ready-to-publish `Verified Source` wording until §9.3-equivalent human confirmation occurs, per this Research Plan's Part 5 determination | State the categorical rule only; do not soften into a conditional |
 | D2 | 4 | Generators must run outdoors, away from doors/windows/vents/sleeping areas | USFA + EPA | Directly read (2 sources) | Verified | **High** | N/A | Same as D1 | Same as D1 |
 | D3 | 4 | CO alarms should be installed in a central location outside each sleeping area, on every level | USFA | Directly read | Verified | **High** | N/A | Same as D1 | Same as D1 |
 | D4 | 4 | Vented-fireplace precautions: inspect flue/chimney seasonally, keep damper open until ashes cool, never burn charcoal in a fireplace, use only dry seasoned wood, maintain spark screens | EPA | Directly read | Verified | **High** | N/A | Same as D1 | Same as D1 |
 | D5 | 4 | Battery/solar generators avoid toxic fumes and can be used more safely indoors/near windows than fuel generators | EPA | Directly read | Verified | Elevated (contrast case to D1/D2, not itself a hazard) | N/A | State as the safer alternative, explicitly contrasted with D1/D2 | N/A |
-| D6 | 4 | Space heater precautions (not used while sleeping, kept away from flammable materials, turned off when unattended) | Found via WebSearch summary only this pass, not yet independently directly read from a specific USFA/EPA page | **Not directly read - flagged for closure before Writing** | **UNRESOLVED (not yet confirmed by direct read)** | High if confirmed | N/A | Do not include until directly read from a specific source page | A direct USFA space-heater-safety page is the obvious next fetch target |
+| D6 | 4 | **VERIFIED, 2026-07-18.** Keep anything that can burn at least 3 feet from any heat source (space heaters, fireplaces, wood stoves, radiators, candles); turn space heaters off when leaving the room or going to bed; never use an oven to heat a home | USFA, "Heating Fire Safety" page (directly read this pass - not the CO page previously cited) | Directly read | Verified | **High - conservative Founder confirmation (explicitly a "heater... fire" claim family)** | Numeric (3 feet, a fixed federal-authority figure, not manufacturer-specific) | Include in the Founder Confirmation set alongside D1-D4 | State the 3-foot figure and the two operational rules exactly as sourced; do not generalize to other heater types not covered by this source |
 | D7 | 4 | Cold-climate stove sizing: a 5-7 kW stove can heat roughly 40-70 sqm of floor area | UNHCR Emergency Shelter Solutions and Standards | Directly read | Verified | Normal (a sizing planning figure, not a life-safety threshold on its own) | Numeric | State as a planning figure | N/A |
 | D8 | 4 | Settlement-scale firebreak spacing (30m/300m) applies to shelter/thermal-safety planning, cross-referencing A4 | UNHCR (already directly read for A4) | Directly read | Verified | Elevated | Numeric (same as A4) | Cross-reference A4 rather than restate | N/A |
 | E1 | 5 | Settlement typologies exist: formal settlements, transit centres, collective centres, hosting arrangements, individual accommodation in communities, informal settlements | UNHCR (index page - titles confirmed; individual typology page content not yet read) | Partially read (titles only) | Verified at the "these typologies exist and are named thus" level; NOT verified for any typology's specific content | Normal | N/A | State only that these typologies exist and are named thus; do not describe any typology's specific operational content until its own page is directly read | If a typology's specific details are wanted for Writing, read that typology's own page first |
@@ -72,7 +82,7 @@ If a future pass successfully reads Sphere Handbook content (or an
 equivalent authoritative source covering the same ground) directly,
 these can be promoted to real claim IDs at that point - not before.
 
-## Summary
+## Summary (superseded by the Pre-Writing Claim Freeze below - preserved as the accurate record of the prior sprint's own state at the time)
 
 - **Total claims mapped:** 29 (A1-A7, B1-B6, C1-C4, D1-D8, E1, E4-E6)
 - **Verified, ready for Writing:** 24 (A1-A7, B1-B6, C1, D1-D5, D7-D8,
@@ -91,7 +101,81 @@ marked `Verified Source` in a future Editorial Review, matching
 exactly how Water Treatment at Scale's Disinfection article was
 handled.
 
+---
+
+## PRE-WRITING CLAIM FREEZE (2026-07-18, Targeted Verification Closure)
+
+This section supersedes the Summary above as the current state -
+the Summary is preserved unchanged as the historical record of the
+prior sprint, not deleted, per this document's append-only
+convention.
+
+### Final claim count
+
+**27 active claims** (down from 29): A1-A7 (7), B1-B6 (6), C1+C2 (2,
+C3 removed and C4 confirmed out-of-scope), D1-D8 (8), E1+E4-E6 (4).
+
+### Removed claims
+
+- **C3** (foundation/drainage guidance attributed to IFRC) - source
+  never became accessible after repeated attempts across two sprints;
+  the underlying concern is already covered at the correct scope by
+  Article 1's A1-A2.
+
+### Replaced claims
+
+- **C2** - was a specific ground-anchoring technique (guy ropes and
+  pegs, implied angles/hardware); replaced with a general,
+  non-procedural claim (anchoring matters for wind resistance; follow
+  manufacturer instructions or a qualified source for the specific
+  technique) after 8 total access attempts across two sprints failed
+  to directly verify the specific technique. Classified `GENERAL
+  KNOWLEDGE / EDITORIAL`, not requiring further source citation.
+
+### Confirmed out of scope (never real claims)
+
+- **C4** (specific snow/wind structural load figures) - confirmed
+  this pass as intentionally excluded; a general-public offline
+  knowledge pack is not the right vehicle for formal structural load
+  calculations.
+- Snow-accumulation removal / shelter-deformation monitoring guidance
+  - investigated per Part 4's explicit request; no directly-read
+    source was found supporting this specific operational guidance
+    (only the general "must resist snow weight" design requirement,
+    already captured in C1). **Left out entirely, per instruction,
+    rather than invented.**
+
+### Newly verified this pass
+
+- **D6** (space heater 3-foot clearance + operational rules) -
+  verified against USFA's "Heating Fire Safety" page, directly read
+  this pass.
+
+### Unresolved claims remaining
+
+**Zero.** Every claim that existed at the start of this sprint now has
+a final status: Verified, Replaced, Removed, or Confirmed Out of
+Scope.
+
+### Claims requiring Founder confirmation
+
+**5: D1, D2, D3, D4, D6** - all in Article 4. See
+`emergency_shelter_systems_FOUNDER_CONFIRMATION_PACKET.md` for the
+full record. C1/C2 (Article 3) do **not** require Founder confirmation
+- C1 is a qualitative, non-procedural general principle, and C2's
+replacement explicitly defers to manufacturer instructions rather than
+asserting a specific technique that could be wrong, which removes the
+risk that would have warranted the gate.
+
+### Claims ready for normal Writing (no Founder confirmation needed)
+
+22: A1-A7, B1-B6, C1, C2 (replaced form), D5, D7-D8, E1 (title-scope
+only), E4-E6.
+
 **This Workbook does not itself verify anything and does not
 authorize Writing.** It is the claim-by-claim map a future Editorial
 Review will re-check independently, per
-`editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`.
+`editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`. The
+claim set is now frozen for the next stage (Founder high-risk
+confirmation, then Writing) - any further change requires a new,
+explicitly-recorded revision, not a silent edit.

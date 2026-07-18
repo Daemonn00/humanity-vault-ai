@@ -208,44 +208,61 @@ overcrowding.
 
 - **Purpose:** How a tarp/tent/rapidly-deployable shelter is kept
   standing under wind and snow load.
-- **Scope:** The general principle that cold-climate and high-wind
-  shelters require structural stability and ground anchoring; sourced
-  caution about tent vulnerability to high wind/snow.
+- **Scope, FINALIZED 2026-07-18 after Targeted Verification Closure:**
+  the general, directly-sourced principle that cold-climate and
+  high-wind shelters require structural stability, with tents
+  specifically noted as vulnerable to failure in high wind/snow (C1);
+  plus a general, non-procedural statement that inadequate anchoring
+  increases wind-damage risk and that the correct method depends on
+  the specific shelter and ground conditions, explicitly deferring to
+  manufacturer instructions or a qualified source rather than
+  asserting a universal technique (C2, replaced). This is a
+  deliberately narrow, principle-level article, not the
+  procedural/how-to article originally envisioned.
 - **Explicit exclusions:** Does not restate the knot/lashing technique
   itself (cross-link to Field Comm's article); does not attempt to
-  reproduce formal engineering load calculations (kPa/kg-per-m² style
-  figures) - this pack's general-reader register and the current
-  source-access gap (below) both argue against it.
-- **Core claim IDs:** C1-C4
-- **Likely sources:** UNHCR Emergency Handbook (Emergency Shelter
-  Solutions and Standards, "Cold Weather Considerations" and the
-  shelter-type comparison table)
-- **KNOWN GAP - the pack's weakest-sourced article:** the specific
-  guy-rope/peg anchoring instruction and family-tent pole/guy-rope
-  hardware counts were found only via a `WebSearch` summary this pass
-  (attributed to UNHCR's Shelter Design Catalogue and a "Family Tent"
-  spec sheet) - **not directly read**. Two direct-fetch attempts this
-  pass failed: the Family Tent PDF exceeded the fetch tool's size
-  limit, and a UNHCR print/PDF export of the standards page returned
-  only binary/unreadable content. The IFRC Shelter Safety Handbook
-  (the other strong candidate for this article, per search results)
-  returned HTTP 403 on both attempts. Only the *general* principle
-  (cold-climate/high-wind shelters need structural stability; tents
-  are specifically noted as unstable in high wind/snow) is directly
-  verified. **This article should not proceed to Writing until either
-  the Family Tent/Shelter Design Catalogue source is successfully
-  re-fetched (e.g. a smaller page range or an alternate host) or a
-  substitute authoritative source for anchoring technique is found and
-  directly read.**
-- **Safety-critical claims:** anchoring failure under wind is a
-  genuine structural-safety concern; any future specific anchoring
-  procedure/hardware claim should receive the same heightened scrutiny
-  Water Treatment at Scale applied to its chemical-dosing claims (see
-  Part 5).
-- **Overlap/cross-links:** `basic_knots_for_shelter_and_gear_lashing.md`.
+  reproduce formal engineering load calculations (kPa/kg-per-m²
+  style figures) - confirmed out of scope; does not state a specific
+  anchoring procedure, hardware count, angle, spacing, or depth of any
+  kind, after a genuine, multi-attempt research effort could not
+  directly verify one (see Source Collection's access log).
+- **Core claim IDs:** C1 (verified), C2 (replaced, general knowledge).
+  C3 removed; C4 confirmed out of scope - see the Human Verification
+  Workbook's Pre-Writing Claim Freeze for the full resolution record.
+- **Sources:** UNHCR Emergency Handbook (Emergency Shelter Solutions
+  and Standards) for C1. C2 requires no source (general knowledge).
+- **RESOLVED, 2026-07-18 (was KNOWN GAP):** after 8 total access
+  attempts across two sprints (UNHCR Family Tent PDF - size limit;
+  UNHCR print/PDF export - unreadable binary; IFRC Shelter Safety
+  Handbook - HTTP 403 ×2; ICRC/IFRC Frame Tent Specification -
+  certificate mismatch; Sphere Handbook - HTTP 403 across 3 mirrors;
+  REI's tent-staking guide - connection reset ×3), no authoritative
+  source's specific anchoring technique could be directly read. Per
+  this sprint's explicit instruction to accept a narrowed result
+  rather than manufacture technical specificity, **the article is
+  finalized at the general-principle level only** - this is a
+  successful closure, not an open gap.
+- **Safety-critical claims:** C1 remains a genuine structural-safety
+  topic but is now purely qualitative (no figure, no procedure) and
+  does not require Founder confirmation. Any future version that adds
+  a specific anchoring technique would need to find and directly read
+  a real source first, then apply the same heightened scrutiny Water
+  Treatment at Scale applied to its chemical-dosing claims.
+- **Overlap/cross-links:** `basic_knots_for_shelter_and_gear_lashing.md`
+  (technique); Article 1 (site-level drainage/slope, replacing the
+  removed C3).
 - **Proposed category:** Construction
-- **Proposed knowledge_level:** Level 2
+- **Proposed knowledge_level:** Level 1 (revised down from Level 2 -
+  the finalized content is now purely principle-level, not technical/
+  procedural, so the original Level 2 justification no longer applies)
 - **Proposed terrain:** deferred.
+- **Architecture recommendation for the Writing stage (not executed
+  this sprint):** given how narrow this article's final scope is,
+  the Writing-stage author should consider folding its content into
+  Article 2 (Tarps, Tents, and Rapidly-Deployable Shelter Forms) as a
+  closing section rather than shipping a very short standalone
+  article - a genuine quality judgment call, not a source-verification
+  question, left to that stage rather than decided here.
 
 ### Article 4: Thermal Management, Ventilation, and Fire Safety in Shelter Systems
 
@@ -260,15 +277,23 @@ overcrowding.
   safety already covered in `emergency_fire_safety.md` (cross-link);
   does not repeat hypothermia/heatstroke medical treatment (cross-link
   to the Mass Casualty pack).
-- **Core claim IDs:** D1-D8
-- **Likely sources:** U.S. Fire Administration (USFA/FEMA), EPA, UNHCR
-  Emergency Handbook
+- **Core claim IDs:** D1-D8, all now VERIFIED (D6, space-heater
+  clearance, was RESOLVED this pass against USFA's "Heating Fire
+  Safety" page - a different USFA page than the one originally cited
+  for D1-D3, directly read this pass).
+- **Sources:** U.S. Fire Administration (USFA/FEMA - two distinct
+  pages: Carbon Monoxide and Heating Fire Safety), EPA, UNHCR
+  Emergency Handbook - all directly read.
 - **Safety-critical claims:** **This is the pack's highest-risk
   article**, directly comparable to Water Treatment at Scale's
   Disinfection article. Indoor CO poisoning is a leading cause of
   accidental death in exactly the sheltering-in-place / temporary-
-  heating scenario this pack addresses. See Part 5 for the explicit
-  §9.3 applicability determination.
+  heating scenario this pack addresses. **D1, D2, D3, D4, and D6 are
+  now frozen for Founder high-risk confirmation** - see
+  `emergency_shelter_systems_FOUNDER_CONFIRMATION_PACKET.md`. D5, D7,
+  and D8 do not require this gate (D5 states a safer-alternative
+  contrast, not a hazard rule; D7-D8 are planning figures, not binary
+  safety rules).
 - **Overlap/cross-links:** `emergency_fire_safety.md`,
   `fire_starting_without_matches.md`.
 - **Proposed category:** Survival
@@ -351,7 +376,7 @@ Engine is not implemented in this sprint.
 | Good vs. dangerous shelter site selection | **Visual strongly recommended** | Side-by-side comparison: a safe site (level ground, away from dead trees/dry streambeds/ridgelines, upslope of hazards) vs. a dangerous one (in a dry streambed, under a dead tree, on an exposed ridge) - must show the *reasoning* (why each hazard is dangerous), not just label them, matching Canon Philosophy's fidelity requirement that a diagram assert only what the source supports |
 | Drainage around a shelter/settlement | Visual helpful | A cross-section or plan view showing slope direction, a shelter/settlement sited on the 2-4% grade UNHCR describes, and water flowing away from (not toward) structures |
 | Tarp/tent configurations | Visual helpful | Two or three named configurations (e.g. A-frame, lean-to tarp) - genuinely improves comprehension but text alone is workable given the article's comparative, non-procedural framing |
-| Anchoring and guy-line geometry | **Visual strongly recommended** | How a guy-line's angle and stake placement resist wind pull - this is inherently a spatial/geometric concept poorly served by prose; **explicitly blocked on the same Known Gap as Article 3's text content** - no visual brief should be finalized until the underlying technique is itself source-verified, to avoid illustrating an unverified claim |
+| Anchoring and guy-line geometry | **Revised, 2026-07-18: Text sufficient (downgraded from "strongly recommended")** | Article 3's C2 claim was narrowed to a general, non-procedural statement (anchoring matters; follow manufacturer/expert guidance) rather than a specific technique. A visual illustrating guy-line angles or stake placement would depict a technique more specifically than the verified claim boundary permits - exactly the failure mode Part 11 warns against. **No visual brief is appropriate for this concept until a future pass directly verifies a specific anchoring technique**, at which point this row should be revisited, not before |
 | Ventilation and combustion hazards | **Visual strongly recommended** | A cutaway showing a vented vs. unvented heating device in an enclosed shelter, with CO accumulation implied in the unvented case and airflow shown in the vented case - directly serves Article 4's highest-risk claim family |
 | Insulation from the ground | Visual helpful | Cross-section showing an insulating layer between occupant and cold ground, reinforcing (not duplicating) the same principle already in `basic_shelter_construction.md` |
 | Wind orientation | Visual helpful | Shelter opening/closed-wall orientation relative to prevailing wind direction |

@@ -457,6 +457,66 @@ Publication Decision, has not been made and is not made by this
 update. This document continues to record the pack as **Not Yet
 Approved** until the Founder records that decision.
 
+## Founder Publication Decision (2026-07-18)
+
+*Appended per this document's append-only convention - the Editorial
+Review's original "Not Yet Approved" decision and its Stage 6 update
+above are preserved unchanged as the historical record of what was
+true at each point; this section records a new, later, distinct
+decision.*
+
+- **Pack:** `hv_official_water_treatment_at_scale`
+- **Version under decision:** 1.0.0
+- **Decision:** **APPROVED**
+- **Decided by:** The Founder
+- **Date:** 2026-07-18
+- **Basis of the decision, as reviewed and accepted by the Founder:**
+  - All 6 articles independently reached `Verified Source` (not
+    defaulted - each article's own claim rows were individually
+    re-derived during Stage 6).
+  - The pack-wide verification summary is `Verified Source`
+    (weakest-link rule, no `Unverified` article present).
+  - 28 meaningful factual/operational claims were reviewed against
+    final prose.
+  - All 20 numeric claims were re-verified against fresh source reads,
+    including an independent arithmetic re-check of the pack's one
+    unit conversion.
+  - All 8 §9.3 high-risk claims (B2, D1, D2, D3, D4, D5, E3, F3) were
+    re-verified against both fresh source reads and their
+    Founder-confirmed drafting boundaries - none expanded, changed
+    meaning, or introduced a new number.
+  - All 12 targeted sources were successfully reopened and read this
+    pass - no source substitution was needed.
+  - 0 Critical, 0 High, 0 Medium findings remain open (the one Medium
+    finding from Editorial Review - Article 4's terrain over-tagging -
+    was fixed during that same pass).
+  - 0 unresolved source-verification claims remain.
+  - The two remaining recorded observations (Article 4's editorial
+    synthesis on the adjustment-loop sentence; Oxfam's unused
+    pH-conditional household FRC figure) are non-blocking.
+  - Article 2's unsupported "smallest dose" wording was corrected to
+    track the source's own "optimal dose... determined experimentally"
+    language.
+  - Article 6's Sources section was corrected to cite the page its F1
+    content actually comes from.
+  - The genuine eCompendium/Oxfam WASH chlorine-dosage divergence
+    (D1) remains explicitly preserved in the article text, not
+    harmonized into one figure.
+- **Scope:** This approval applies specifically to
+  `hv_official_water_treatment_at_scale` v1.0.0. It explicitly
+  accepts the AI-agent verification methodology used for *this pack
+  and this version* - consistent with, but not automatically extended
+  by, the standing AI-Agent Verification Policy already ratified in
+  `pack_production_workflow/QUALITY_STANDARD.md` §9. It is **not** a
+  new blanket approval for any other pack or future version beyond
+  what §9 already establishes.
+- **Authorizes:** Proceeding to Release Preparation for
+  `hv_official_water_treatment_at_scale` v1.0.0.
+- **Does not authorize:** Creating the GitHub Release, tagging,
+  pushing, uploading the ZIP anywhere, or modifying production
+  `registry.json` - those remain separate, later steps subject to
+  their own review.
+
 ### Why `verification_level` stays `Unverified` (superseded, see Stage 6 update above - preserved as the accurate record of the Editorial Review pass's own reasoning at the time)
 
 Every claim row in the Claim-to-Source Map reads `Yes` or `N/A` - none
@@ -482,6 +542,7 @@ and remains the next required step.
 | 1.0.0 | 2026-07-18 | Stage 4 Writing: manifest.md + 6 articles drafted from the frozen, confirmed claim set; self-audit found and fixed one numeric equivalence error (Article 3 flow rates) and tightened Article 4 source attribution | Draft complete, all 6 articles `Unverified` | Claude (AI agent) | Not Yet Approved |
 | 1.0.0 | 2026-07-18 | Editorial Review of final draft: Claim-to-Source Map built fresh against final prose; heightened Article 4 review; numeric-claim audit; targeted Article 3/5/6 audits; §9.3 eight-claim traceability check; content-boundaries, metadata/terrain, related-article, and visual-comprehension reviews; one terrain over-tagging fixed (Article 4) | 0 Critical, 0 High, 1 Medium (terrain over-tagging, fixed), 1 Low (terrain genuineness on remaining 5 articles, flagged not fixed), 1 informational (Article 2 synthesis phrasing flagged for Stage 6) | Claude (AI agent) | **Not Yet Approved** - pending formal post-drafting Source Verification and a separate Founder Publication Decision |
 | 1.0.0 | 2026-07-18 | Stage 6 formal post-drafting Human/AI-agent Source Verification: all 12 underlying sources re-opened and re-read fresh against final prose; found and fixed one genuine mis-sourcing (Article 6's F1 content actually comes from Oxfam's "Chlorination in Emergencies" page, not "Water Quality Analysis," Sources section corrected) and one wording overreach (Article 2's "smallest dose" narrowed to track the source's own "optimal dose... determined experimentally" language); all 8 §9.3 claims re-confirmed against fresh source reads with no expansion; all 20 numeric claims re-verified with no new error; C3 and F2 spot-checks both PASS | All 6 articles upgraded to `Verified Source`; pack-wide weakest-link summary now `Verified Source` | Claude (AI agent) | **Still Not Yet Approved** - source verification complete; publication approval is a distinct, separate Founder decision |
+| 1.0.0 | 2026-07-18 | Founder Publication Decision: Founder reviewed the complete Stage 6 verification result and explicitly approved publication, accepting the AI-agent verification methodology for this pack/version | No content change; decision only | The Founder | **APPROVED** - Release Preparation authorized; GitHub Release publication not yet authorized |
 
 ## Status
 
@@ -853,3 +914,15 @@ open blockers:
   drafting Human/AI-agent Source Verification requirement for this
   pack/version. It does not constitute, and is explicitly not, a
   Founder Publication Decision.
+
+## Status (Updated, 2026-07-18 - Founder Publication Decision)
+
+All 6 articles are honestly `Verified Source`; the pack-wide
+verification summary is `Verified Source`. The Founder has reviewed
+the complete Stage 6 result and **APPROVED** publication of
+`hv_official_water_treatment_at_scale` v1.0.0 - see "Founder
+Publication Decision (2026-07-18)" above for the full basis. This
+authorizes Release Preparation. It does not itself authorize creating
+the GitHub Release, pushing a tag, or modifying production
+`registry.json` - those remain separate, later, explicitly-authorized
+steps.

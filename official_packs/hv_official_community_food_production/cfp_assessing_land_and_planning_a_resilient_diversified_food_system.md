@@ -5,7 +5,7 @@ subcategory: Planning
 author: Humanity Vault Contributors
 last_updated: 2026-07-19
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: growing_staple_food_crops, seed_saving_basics, ess_shelter_site_selection_and_system_planning, cfp_protecting_crops_pest_and_disease_resilience_without_heavy_chemical_inputs, cfp_water_for_growing_irrigation_planning_at_community_scale
 ---
 

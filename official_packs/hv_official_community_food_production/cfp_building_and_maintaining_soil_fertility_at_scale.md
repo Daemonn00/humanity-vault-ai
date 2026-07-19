@@ -5,7 +5,7 @@ subcategory: Soil
 author: Humanity Vault Contributors
 last_updated: 2026-07-19
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: growing_staple_food_crops, cfp_assessing_land_and_planning_a_resilient_diversified_food_system, cfp_harvest_storage_and_building_a_community_food_reserve
 ---
 

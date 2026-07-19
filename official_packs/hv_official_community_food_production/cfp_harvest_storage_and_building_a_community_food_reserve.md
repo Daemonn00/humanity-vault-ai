@@ -5,7 +5,7 @@ subcategory: Food Storage
 author: Humanity Vault Contributors
 last_updated: 2026-07-19
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: food_preservation_basics, growing_staple_food_crops, cfp_protecting_crops_pest_and_disease_resilience_without_heavy_chemical_inputs, cfp_building_and_maintaining_soil_fertility_at_scale
 ---
 

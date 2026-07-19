@@ -5,7 +5,7 @@ subcategory: Pest Management
 author: Humanity Vault Contributors
 last_updated: 2026-07-19
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: growing_staple_food_crops, cfp_assessing_land_and_planning_a_resilient_diversified_food_system, cfp_harvest_storage_and_building_a_community_food_reserve
 ---
 
@@ -16,8 +16,8 @@ related_articles: growing_staple_food_crops, cfp_assessing_land_and_planning_a_r
 Protecting crops from pests and disease doesn't have to start with
 chemical pesticides - a combination of prevention, biological and
 physical methods, and low-toxicity treatments, with chemical control
-reserved as a last resort, can meaningfully protect both growing crops
-and stored food.
+kept as one option among several rather than the default, can
+meaningfully protect both growing crops and stored food.
 
 ## Main Content
 

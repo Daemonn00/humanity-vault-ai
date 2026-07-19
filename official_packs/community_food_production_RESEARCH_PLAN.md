@@ -328,7 +328,7 @@ decided here.
 |---|---|---|
 | A1 | Before committing significant effort, a group should assess site suitability for growing (soil, water access, sun exposure) - general framing, cross-links existing core content | General knowledge / cross-link, low risk |
 | A2 | A specific "land area required per person" figure was investigated and **could not be confirmed** against a directly-read Tier 1 primary source - only found via an uncertain secondary/tertiary chain (a forum post attributing an uncertain "FAO, 1993" figure, likely actually traceable to Pimentel, not FAO). **Decision: no specific hectare/acre-per-person figure will be used** - land needs will be stated only as scaling with group size, diet composition, and local soil/water conditions | **FLAGGED - drop specific number, confirmed this pass** |
-| A3 | Crop diversification (multiple crop types/varieties) increases resilience against pest, disease, and single-season failure at group/community planning scale, extending `growing_staple_food_crops.md`'s monoculture-risk point to group-level planning | Found via search this pass; primary FAO policy-brief document not yet directly read - candidate source identified, direct read pending |
+| A3 | Crop diversification (multiple crop types/varieties) increases resilience against pest, disease, and single-season failure at group/community planning scale, extending `growing_staple_food_crops.md`'s monoculture-risk point to group-level planning | **VERIFIED, 2026-07-19** - see Targeted Source Collection Closure below |
 | A4 | A community/group can establish a shared seed bank, extending individual household seed-saving to a pooled, more resilient system | Directly read (FAO STI Portal, Community Seed Banks) |
 | A5 | Community seed banks are typically organized with an elected/community committee governing deposit, withdrawal, and replenishment rules | Directly read (same source) |
 | A6 | Seeds contributed to a community bank are cleaned, dried, and tested for viability before storage, commonly in simple facilities (e.g., clay pots) | Directly read (same source) |
@@ -338,10 +338,11 @@ decided here.
 | ID | Claim | Status |
 |---|---|---|
 | B1 | A brown (carbon-rich) to green (nitrogen-rich) compost material ratio of roughly 3:1 to 4:1 by volume is commonly recommended | Directly read (Ask Extension) |
-| B2 | The target carbon-to-nitrogen (C:N) ratio for a compost pile as a whole is commonly cited as roughly 20:1 to 40:1 | Found via search this pass (USDA/Extension consensus); direct primary read pending - NRCS Chapter 2 Composting returned 403, substitute Tier 1/2 source needed |
-| B3 | Compost pile moisture should be maintained at roughly 40-65% | Found via search this pass (USDA AMS); direct read pending |
-| B4 | To reduce pathogen risk, USDA's organic-certification standard requires a manure compost pile to sustain a minimum of 131°F (55°C) for at least 3 days | Found via search this pass (USDA AMS NOP 5021); direct read pending - **highest-priority claim to lock down given its safety relevance** |
+| B2 | The target carbon-to-nitrogen (C:N) ratio for a compost pile as a whole is roughly 25:1 to 40:1 (revised from the original 20:1-40:1 planning estimate to the directly-confirmed regulatory figure) | **VERIFIED WITH NARROWING, 2026-07-19** - see Targeted Source Collection Closure below |
+| B3 | Compost pile moisture should be maintained at roughly 50-60% (optimum), with below 30% too dry and above 65% causing problems (revised from the original 40-65% planning estimate) | **VERIFIED WITH NARROWING, 2026-07-19** - see Targeted Source Collection Closure below |
+| B4 | To reduce pathogen risk, a manure compost pile must reach 131-170°F (55-77°C) for **3 days if using an in-vessel or static aerated-pile system, or 15 days with at least 5 turnings if using a windrow system** - the original single "3 days" framing was incomplete and has been redesigned to represent both methods | **VERIFIED WITH NARROWING (claim redesigned to represent both methods), 2026-07-19 - flagged for §9.3-analogous Founder confirmation, see `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`** |
 | B5 | Composting recycles organic waste (crop residue, manure, food scraps) into usable soil fertility, reducing dependence on purchased/imported fertilizer | General framing, low risk, cross-links `growing_staple_food_crops.md` |
+| B6 (new, added 2026-07-19) | Raw (uncomposted) manure applied to growing land should not be used within 120 days of harvest for a crop whose edible portion touches the soil, or within 90 days of harvest for a crop whose edible portion does not touch the soil | **VERIFIED, 2026-07-19 - REQUIRED SAFETY COMPLETION closing the "manure use generally" gap flagged in the prior sprint's High-Risk Claim Areas - flagged for §9.3-analogous Founder confirmation, see `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`** |
 
 ### Article 3 (C)
 
@@ -350,7 +351,7 @@ decided here.
 | C1 | Multiple small-scale irrigation methods exist (surface, sprinkle, drip, subsurface/subirrigation), each with different water-efficiency, capital, and labor tradeoffs | Directly read (FAO Small-Scale Irrigation for Arid Zones) |
 | C2 | There is no single "best" irrigation method - the right choice depends on water availability, capital constraints, labor availability, and local conditions | Directly read (same source) |
 | C3 | Precisely estimating a crop's irrigation water need is a genuinely technical, locally-specific calculation that a general reader cannot precisely compute without local data - stated as an honest limitation, not reduced to an invented universal number | Directly read (FAO Irrigation Water Needs manual) |
-| C4 | Irrigation water carrying contamination can transfer pathogens to food crops, so the same source-protection principle used for drinking water applies | **KNOWN GAP - not directly sourced this pass.** A real, important claim; requires a direct source (candidate: WHO/FAO wastewater-reuse-in-agriculture guidance) before Writing. Not invented, not assumed |
+| C4 | Irrigation water quality matters most when the water contacts the harvestable/edible portion of the crop; groundwater/well sources are generally less contaminated than surface water; drip/trickle irrigation reduces contamination risk versus overhead methods for crops other than root vegetables; allowing time between the last irrigation and harvest reduces pathogen risk. Explicitly framed as general good practice, not a claim that irrigation water must meet drinking-water potability standards, and no jurisdiction-specific numeric standard (e.g., a specific CFU count) is asserted | **VERIFIED WITH NARROWING, 2026-07-19** - see Targeted Source Collection Closure below |
 
 ### Article 4 (D)
 
@@ -367,7 +368,7 @@ decided here.
 |---|---|---|
 | E1 | Storage hygiene (clean, well-prepared storage structures) is the basic prerequisite for successful loss prevention, prioritized over chemical treatment | Directly read (FAO farm/village-level grain storage manual) |
 | E2 | Dividing a harvest by planned use timeline can reduce chemical treatment needs, since a documented Tanzania/West Africa field study found stored pest insects generally didn't cause economic loss in the first 3-4 months | Directly read (same source) - keep the specific-study attribution explicit, do not generalize into a universal rule for all grains/climates |
-| E3 | Specific pre-storage moisture-content percentages by crop (maize 23-28%, sorghum 20-25%, rice 22-28%, beans 30-40%, groundnuts 30-35%) | **FLAGGED, NOT FROZEN.** Found via WebFetch this pass but read as anomalously high relative to common storage-moisture knowledge (typical safe grain storage moisture is usually cited far lower). Possible explanation: these may describe a different measurement stage (pre-drying/threshing) rather than a final safe-storage target - **this must be confirmed by a fresh, careful direct primary-text re-read, not assumed**, before any specific percentage is used in Writing |
+| E3 | **CITATION-CONTENT MISMATCH CONFIRMED, then REPLACED, 2026-07-19** - the original percentages (maize 23-28%, sorghum 20-25%, rice 22-28%, beans 30-40%, groundnuts 30-35%) are the source's own table of moisture content **at physiological maturity/harvest**, explicitly *not* presented by the source as safe-storage values (the source's own text states "the indicated moisture content at the time of maturity does not mean that the crop is fit for storage. Drying is necessary after the harvest"). **Replaced claim:** safe storage moisture for maize is roughly 12% for bulk storage or up to 15% for bag storage - a directly-confirmed figure for maize only; other crops' safe-storage moisture was not independently confirmed this pass and is not asserted | **REPLACED WITH A BETTER SOURCE, narrowed to maize only, 2026-07-19** - see Targeted Source Collection Closure below |
 | E4 | Building a food reserve/buffer beyond immediate need is a recognized food-security practice for surviving a bad season | Framed qualitatively - no specific "X months" figure found this pass; extends `food_preservation_basics.md` and `growing_staple_food_crops.md`'s existing content to group scale |
 | E5 | Household-scale preservation techniques (drying, salting, smoking, fermenting) are not restated here | Cross-link only, not a sourced claim - points to `food_preservation_basics.md` |
 
@@ -386,40 +387,280 @@ dependence).
 | Planting calendars | No calendar-date content planned; cross-links `traditional_weather_prediction_and_seasonal_indicators.md` for timing signals instead of inventing dates | No risk |
 | Fertilizer application rates | Compost ratios (B1-B2) are well-corroborated across multiple Extension/USDA sources; no specific application-rate-per-area figure is planned | Normal §9.2 verification once B2 is directly confirmed |
 | Pesticide use | No chemical-pesticide dosing/product content planned at all; IPM framing (D1) explicitly favors non-chemical methods first | Low risk by design |
-| Compost safety (manure pathogen reduction) | B4's 131°F/55°C-for-3-days figure is safety-relevant (foodborne pathogen risk) and currently only search-confirmed, not directly read | **Requires direct primary-source read before Writing; recommend explicit, conservative warning language once confirmed, matching the CO/fire-safety treatment precedent - not a §9.3 literal match (not toxic-substance/medical/structural), so no mandatory Founder pre-writing confirmation is triggered by the standing policy** |
-| Manure use generally | A real food-safety concern (pathogen risk from raw manure applied to food crops) beyond composting specifically - **no source targeting a safe pre-harvest interval was found this pass** | **Gap - if not closed with a real source before Writing, write only a general caution ("compost manure fully before applying it near food crops") rather than inventing a specific day-count** |
+| Compost safety (manure pathogen reduction) | B4 directly confirmed 2026-07-19, and found to be method-specific (in-vessel/static aerated pile: 3 days; windrow: 15 days + 5 turnings) - the original single-figure framing would have been misleading | **RESOLVED - claim redesigned to represent both methods. Re-evaluated against §9.3 by analogy to the Emergency Shelter Systems CO-safety precedent (a specific numeric threshold controlling a real, specific illness risk) and now flagged for §9.3-analogous Founder confirmation - see `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`. This updates the prior sprint's conclusion that no §9.3 analogy applied** |
+| Manure use generally | RESOLVED 2026-07-19 - a directly-read source (eOrganic, quoting USDA NOP regulatory language) gives an exact, real pre-harvest interval: 120 days if the edible portion touches the soil, 90 days if it does not | **Closed as a new claim, B6. Also flagged for §9.3-analogous Founder confirmation alongside B4** |
 | Irrigation quantities | C3 explicitly declines to invent a universal crop-water-need number, matching the source's own stated caution that this requires local data | No risk - handled by honest limitation-framing |
-| Irrigation water quality/food safety | C4 is a known, unresolved gap - a real claim with no directly-read source yet | **Gap - must be resolved (real source found) or written as a general caution before Writing** |
+| Irrigation water quality/food safety | C4 RESOLVED 2026-07-19 via two directly-read university Extension sources (UF IFAS, Purdue Extension) - kept deliberately qualitative (source selection, irrigation method, timing buffer), with a jurisdiction-specific numeric standard (CFU count) deliberately excluded per this task's instruction to avoid a regulatory-manual framing | No mandatory Founder confirmation - stays a general caution, not a specific actionable number, so §9.3's own trigger condition isn't met |
 | Livestock stocking densities / disease | N/A - livestock excluded from this pack's architecture (Part 4) | No risk - out of scope |
-| Food-storage moisture/temperature thresholds | E3's specific percentages are flagged as requiring re-verification - see Claim Inventory | **Do not use as currently found; re-read primary source before Writing** |
+| Food-storage moisture/temperature thresholds | E3 RESOLVED 2026-07-19 - the original figures were a citation-content mismatch (harvest-maturity moisture, not storage-safe moisture); replaced with a directly-confirmed maize-only safe-storage figure (12% bulk / 15% bag) | **Resolved - narrowed to maize only; other crops' safe-storage moisture not asserted** |
 | Land-per-person calculations | A2 - investigated and found unconfirmable against a reliable primary source; will not be used | **Resolved this pass - drop the number, state general dependency instead** |
 | Yield-per-area claims | No yield-per-area figure is planned; `growing_staple_food_crops.md`'s own established "yield varies enormously" framing will be followed if the topic comes up at all | Low risk by design |
 | Universal calorie-production claims | No calorie-math content planned - avoided entirely, consistent with this project's established caution against inventing nutrition arithmetic | No risk |
 | Claims dependent on climate/soil/variety | Default framing throughout, matching `growing_staple_food_crops.md`'s own "depends heavily on local climate" language | Low risk - consistent pattern already proven across this project |
 
-**None of the identified high-risk claim areas literally match
-`QUALITY_STANDARD.md` §9.3's five named categories** (specific
-medication dosages, invasive medical/surgical procedures, childbirth/
-obstetric management, specific toxic-substance handling thresholds,
-specific electrical/structural load-bearing figures). B4's pathogen-
-heat-threshold is analogous in spirit to a biological-hazard
-threshold but is not a literal toxic-substance handling figure - per
-§9.3's own text ("narrowly scoped... not a broader classification
-system"), this is **not force-fit into §9.3**. It is instead flagged
-for the same conservative, explicit-warning discipline this project
-already applies to safety-relevant content that falls short of §9.3's
-literal scope (e.g., Emergency Shelter Systems' CO/fire-safety
-content, which was similarly not a §9.3 match).
+**Superseded, 2026-07-19 - see Targeted Source Collection Closure
+below for the current conclusion.** The original text of this
+paragraph (preserved here as the accurate record of this Research
+Plan's initial reasoning) is: "None of the identified high-risk claim
+areas literally match `QUALITY_STANDARD.md` §9.3's five named
+categories (specific medication dosages, invasive medical/surgical
+procedures, childbirth/obstetric management, specific toxic-substance
+handling thresholds, specific electrical/structural load-bearing
+figures). B4's pathogen-heat-threshold is analogous in spirit to a
+biological-hazard threshold but is not a literal toxic-substance
+handling figure - per §9.3's own text ('narrowly scoped... not a
+broader classification system'), this is not force-fit into §9.3. It
+is instead flagged for the same conservative, explicit-warning
+discipline this project already applies to safety-relevant content
+that falls short of §9.3's literal scope (e.g., Emergency Shelter
+Systems' CO/fire-safety content, which was similarly not a §9.3
+match)." **This conclusion has been revised** - see the Targeted
+Source Collection Closure section below for why B4 and the new B6
+claim are now treated as §9.3-analogous.
+
+## Targeted Source Collection Closure (2026-07-19)
+
+Performed by Claude (AI agent), continuing the same research/source-
+collection authorization the Founder granted 2026-07-19. Every source
+below was freshly opened and read this pass via direct `WebFetch`, not
+recalled from the prior sprint or from training data. This section
+resolves the 6 items the prior sprint left open (A3, B2, B3, B4, C4,
+E3) and one additionally-discovered safety gap (manure pre-harvest
+interval, now claim B6).
+
+### A3 — Crop diversification for resilience
+
+**Result: VERIFIED.** The originally-targeted candidate source (an FAO
+Guatemala smallholder study, fao.org/4/u8050t/u8050t06.htm) was
+directly opened and read, and turned out **not** to support this
+claim - it examines a different question (whether adding cash crops
+displaces staple-food production), a genuine citation-content mismatch
+caught before use, not silently substituted. The two FAO Policy Briefs
+identified as stronger candidates (Policy Brief 2, "Is crop
+diversification a panacea for climate resilience in Africa," 2017;
+Policy Brief 8, "Crop diversification increases productivity and
+stabilizes income of small-holders," 2018) could not be directly
+opened - both `openknowledge.fao.org` bitstream URLs returned HTTP 403,
+consistent with this project's established pattern for that specific
+repository endpoint. **CCARDESA** (Centre for Coordination of
+Agricultural Research and Development for Southern Africa - a
+recognized regional agricultural research institution, matching this
+task's Part 2 priority list) was directly opened and read instead, and
+both summarizes and directly quotes the same two FAO Policy Briefs:
+"The main advantage of implementing crop diversification is that it
+enhances household climate resilience through reducing risk of
+monocrop failure due to pests, disease, low rainfall and other climate
+risks," and "Increased yields of rotated crops due to lower incidence
+of pests/diseases." This is accepted as a Tier 2 directly-read source
+(an institutional agricultural-research body's own published resource
+page, actually opened and read) that itself transmits the FAO primary
+findings - the claim is verified via CCARDESA, not falsely attributed
+to a personally-read FAO primary document.
+
+### B2, B3 — Compost C:N ratio and moisture
+
+**Result: VERIFIED WITH NARROWING, both.** eOrganic
+(https://eorganic.org/pages/18567/making-and-using-compost-for-organic-farming
+- a Cooperative Extension-affiliated, land-grant-university-consortium
+educational resource, Tier 2) was directly opened and read: "Composted
+plant and animal manures established an initial C:N ratio of between
+25:1 and 40:1" (per USDA National Organic Program regulatory
+language) - narrower than the original 20:1-40:1 planning estimate,
+now corrected to the confirmed figure. Cornell Composting
+(https://compost.css.cornell.edu/physics.html - Cornell Waste
+Management Institute, Tier 1/2 academic extension resource) was
+directly opened and read for moisture: "A moisture content of 50-60%
+is generally considered optimum for composting," with below 30% too
+dry (slows bacterial activity) and above 65% causing odor/nutrient-
+loss problems - narrower and more precisely sourced than the original
+40-65% planning estimate.
+
+### B4 — Compost pathogen-reduction time/temperature
+
+**Result: VERIFIED WITH NARROWING (claim redesigned).** The same
+eOrganic page, directly read, gives the actual USDA National Organic
+Program regulatory text, and it is **method-specific, not a single
+universal rule**, confirming the task's explicit warning not to
+collapse multiple process standards into one:
+
+> "Maintained a temperature of between 131°F and 170°F for 3 days
+> using an in-vessel or static aerated pile system" **or** "Maintained
+> a temperature of between 131°F and 170°F for 15 days using a windrow
+> composting system, during which period, the materials must be
+> turned a minimum of five times."
+
+The original planned claim ("131°F/55°C for at least 3 days," singular)
+would have been **incomplete and potentially misleading** for a general
+reader, since windrow composting (an open pile, turned periodically) -
+the method most accessible without specialized equipment, and the one
+this pack's readers are most likely to actually use - requires 15 days
+and 5 turnings, not 3 days. **The claim has been redesigned to state
+both methods explicitly**, not simplified back to a single figure.
+Vermicomposting was also investigated (via the same source) and found
+to follow an entirely different process (no fixed temperature
+threshold; pathogen elimination over 7-60 days depending on
+technology, with time-log rather than temperature-log
+recordkeeping) - **not included as a claim**, since this pack's planned
+scope (a general composting method for a group, not a specialized
+vermicomposting operation) does not need it, and asserting a
+vermicompost-specific rule would risk exactly the kind of collapsed,
+over-generalized claim this task warned against.
+
+### C4 — Irrigation water contamination risk to food crops
+
+**Result: VERIFIED WITH NARROWING.** Two established university
+Extension sources were directly opened and read:
+
+- University of Florida IFAS Extension (FS136,
+  https://ask.ifas.ufl.edu/publication/FS136): water quality "is
+  extremely important when water comes into direct contact with the
+  harvestable portion of produce," groundwater "is less likely to be
+  contaminated than surface water" (with a caveat for shallow/older/
+  improperly-constructed wells), and allowing "time for potentially
+  dangerous microbes to die off in field between last irrigation and
+  harvest" is a recognized risk-reduction practice.
+- Purdue Extension (Vegetable Crops Hotline,
+  https://vegcropshotline.org/article/food-safety-considerations-for-vegetable-farms/):
+  "With the exception of root crops, produce farms can reduce risk by
+  limiting the contact of water with the edible portion of the crop
+  through utilization of drip or trickle irrigation," and public/well
+  water sources are preferred over surface water (ponds, streams,
+  reservoirs) because "surface water is open to the environment,
+  making it difficult to control animal access, runoff, and other
+  potential sources of contamination."
+
+Per this task's explicit instruction, the claim is kept **qualitative
+and comparative** (source choice, irrigation method, timing buffer,
+root-crop exception) rather than asserting that irrigation water must
+meet drinking-water potability standards, and the U.S. FDA Produce
+Safety Rule's specific numeric standard (126 CFU/100mL generic E.
+coli, found via the same FS136 page) is **deliberately excluded** -
+including it would turn a general offline knowledge pack into a
+jurisdiction-specific regulatory citation, which this task explicitly
+warned against.
+
+### E3 — Grain storage moisture content
+
+**Result: citation-content mismatch confirmed, then REPLACED WITH A
+BETTER AUTHORITATIVE SOURCE.** The original FAO source
+(x5065e/x5065E07.htm) was re-opened and read with a specifically
+targeted prompt asking for the exact surrounding text. The table's own
+heading and the sentence immediately following it were located:
+
+> "Watch out for the signs of physiological maturity: [table with
+> maize 23-28%, sorghum 20-25%, rice 22-28%, beans 30-40%, groundnuts
+> 30-35%] The indicated moisture content at the time of maturity does
+> not mean that the crop is fit for storage. Drying is necessary after
+> the harvest until the moisture content is reduced to values
+> mentioned under section 2.2.5."
+
+This confirms the prior sprint's suspicion exactly: **these are
+harvest-maturity indicators, not safe-storage values**, and the source
+itself says so explicitly - a genuine citation-content mismatch, now
+recorded rather than silently corrected. Section 2.2.5 itself could
+not be located at a directly-fetchable URL this pass (only the
+document's introduction page was reachable via the same path
+structure). A **different, directly-read FAO source** was found and
+used instead: Farm Structures... (S1250E,
+https://www.fao.org/4/s1250e/S1250E0w.htm), which states plainly: "For
+maize, the requirement for safe storage is maximum 15 and 12%
+moisture content respectively" for bag and bulk storage. **This
+figure is confirmed for maize only.** Sorghum, rice, beans, and
+groundnuts' safe-storage moisture were not independently confirmed
+this pass - the claim is narrowed to maize rather than extrapolating a
+single universal grain-storage percentage across all five crops, per
+this task's explicit instruction not to manufacture one universal
+threshold when the evidence is crop-specific.
+
+### Manure pre-harvest interval (new claim, B6)
+
+**Classification: REQUIRED SAFETY COMPLETION.** The prior sprint
+flagged "manure use generally" as a real, necessary safety gap
+(pathogen risk from raw manure on food crops) beyond composting
+specifically - not optional, since Article 2 already discusses manure
+as a soil-fertility input and a reader could reasonably apply it raw
+without this caution. The same eOrganic source used for B2/B4, directly
+read, supplies the exact USDA National Organic Program interval:
+
+> "Incorporated into the soil not less than 120 days prior to the
+> harvest of a product whose edible portion has direct contact with
+> the soil surface or soil particles" or "not less than 90 days prior
+> to the harvest of a product whose edible portion does not have
+> direct contact with the soil surface or soil particles."
+
+This is added as new claim **B6**, not silently folded into B4 (which
+covers composting, a different practice from raw-manure application
+timing). Framed as a widely-used, science-informed safety practice
+rather than binding law in every jurisdiction, consistent with this
+task's instruction to keep the pack general rather than a regulatory
+manual.
+
+### Founder-confirmation reassessment (Part 8)
+
+Freshly reconsidered against the actual final claim set, not
+mechanically repeating the prior sprint's conclusion. **B4 and B6 are
+now treated as §9.3-analogous and flagged for mandatory Founder
+confirmation before Writing finalizes them**, applying the same
+reasoning this project already used for Emergency Shelter Systems' CO-
+poisoning thresholds (a specific numeric figure controlling a specific,
+real illness risk, structurally the same shape regardless of whether
+the hazard is a toxic gas or a foodborne pathogen). See
+`community_food_production_FOUNDER_CONFIRMATION_PACKET.md` - nothing
+in it is marked confirmed. C4 remains a general, non-numeric caution
+and does not meet §9.3's own trigger condition ("the article must
+state a specific, actionable number"), so it is not included in the
+packet. D3 (storage-pest oil dosing) remains a pest-control figure,
+not a human-health pathogen threshold, and stays under ordinary §9.2
+conservative-scoping discipline.
+
+### Full 24(now 25)-claim re-audit (Part 7)
+
+Every claim ID was reviewed fresh against the actual final wording
+above:
+
+- No unsupported operational number remains unflagged - every
+  remaining number (B1-B4, B6, C-series qualitative framing, E3-maize)
+  traces to a source actually opened and read this pass or the prior
+  one.
+- No search-snippet-only evidence is treated as verified - A3, B2, B3,
+  B4, C4, B6, and the E3 replacement were all promoted from search-
+  level to directly-read this pass; none was upgraded without an
+  actual fetch.
+- No inaccessible source is represented as directly read - the two
+  blocked FAO Policy Briefs are cited only via CCARDESA's own
+  directly-read summary/quotation, not falsely claimed as personally
+  read in full.
+- No claim silently expanded - B4 was *narrowed into two explicit
+  method-specific figures*, not expanded; C4 stayed deliberately
+  qualitative; E3 was *narrowed* to maize only.
+- No crop-specific recommendation became universal - E3 stays maize-
+  only; the original 5-crop table is excluded, not generalized.
+- No climate-specific recommendation became universal - C1-C2's arid-
+  zone-sourced content remains framed as general method comparison,
+  not arid-zone-specific advice.
+- No regulatory recommendation became universal - C4 excludes the
+  U.S.-specific CFU standard; B4/B6 are framed as general good
+  practice drawn from a real standard, not asserted as binding law
+  everywhere.
+- No livestock content entered - manure is treated only as an
+  already-available soil input (as `growing_staple_food_crops.md`
+  already does), not as livestock-keeping guidance.
+- No Aquaponics technical content entered - none introduced this pass.
+- No chemical-pesticide dosing guidance entered - D3 remains the only
+  dosing figure and it is a plant-based, low-toxicity, storage-scoped
+  protectant, not a chemical pesticide.
 
 ## Expected Verification Levels (if research closes successfully)
 
-| Article | Realistic `verification_level` if Source Collection closes the flagged gaps | If gaps remain open |
+**Updated, 2026-07-19 (post-closure):**
+
+| Article | Source-support status | Remaining blocker before Writing |
 |---|---|---|
-| 1. Assessing Land and Planning a Resilient, Diversified Food System | Verified Source achievable (A3 needs its direct primary read) | Community Verified if A3 stays search-only |
-| 2. Building and Maintaining Soil Fertility at Scale | Verified Source achievable (B2-B4 need direct primary reads) | Community Verified if B2-B4 stay search-only |
-| 3. Water for Growing: Irrigation Planning at Community Scale | Verified Source achievable **only if C4 is closed** | Not achievable at Verified Source with C4 open - either find a source or write C4 as general caution |
-| 4. Protecting Crops: Pest and Disease Resilience Without Heavy Chemical Inputs | Verified Source achievable now (all claims already directly read) | N/A - no open gap |
-| 5. Harvest, Storage, and Building a Community Food Reserve | Verified Source achievable **only if E3 is either re-verified or dropped** | Not achievable at Verified Source with E3 open as currently worded |
+| 1. Assessing Land and Planning a Resilient, Diversified Food System | All claims (A1, A3-A6) directly supported; A2 resolved (dropped) | None - source-ready |
+| 2. Building and Maintaining Soil Fertility at Scale | All claims (B1-B6) directly supported | **B4 and B6 require Founder confirmation** before Writing finalizes them at full strength (see Founder Confirmation Packet) |
+| 3. Water for Growing: Irrigation Planning at Community Scale | All claims (C1-C4) directly supported | None - source-ready |
+| 4. Protecting Crops: Pest and Disease Resilience Without Heavy Chemical Inputs | All claims (D1, D3, D4) directly supported; D2 is a cross-link | None - source-ready |
+| 5. Harvest, Storage, and Building a Community Food Reserve | All claims (E1, E2, E4, E5) directly supported; E3 replaced/narrowed to maize | None - source-ready |
 
 ## Visual Knowledge Opportunity Audit
 
@@ -448,24 +689,37 @@ article metadata added.
 - **Stages 4-7:** Not started. Not authorized by the Founder's current
   decision, which covers research and source collection only.
 
-## Ready to write? — NO
+## Ready to write? — UPDATED 2026-07-19: READY FOR WRITING AFTER FOUNDER CONFIRMATION
 
-- [ ] Every planned article has at least one directly-read candidate
-      source - **met for Articles 1 (partially), 2 (partially), 3, 4**;
-      **NOT fully met for Article 5** (E3's specific figures need
-      re-verification before use) and Article 3 has one open claim
-      (C4).
-- [x] No planned claim requires a source known in advance to be
-      inaccessible without a fallback plan - every flagged gap (A2,
-      A3, B2-B4, C4, E3) has an explicit fallback (drop the number,
-      find a substitute source, or write as general caution), none is
-      silently left open.
-- [x] Safety-sensitive claim families identified (B4 manure pathogen
-      threshold, D3 storage-pest oil dosing, E3 moisture thresholds)
-      and mapped against `QUALITY_STANDARD.md` §9.3 - none is a literal
-      match; all get conservative-framing treatment instead of a
-      mandatory Founder pre-writing confirmation gate.
+*(Original 2026-07-18 "NO" assessment preserved above/unchanged in the
+claim tables' history; this section records the current, superseding
+status after the Targeted Source Collection Closure.)*
 
-**This Research Plan does not authorize Writing.** Per the Founder's
-decision, this sprint's authorization covers research, scope
-definition, and source collection only.
+- [x] Every planned article now has adequate directly-read source
+      support - all 6 previously-open items (A3, B2, B3, B4, C4, E3)
+      are closed; one additional gap (manure pre-harvest interval) was
+      found and closed as new claim B6.
+- [x] No unresolved source conflict remains - E3's citation-content
+      mismatch was identified, explained, and replaced with a correct,
+      narrower claim (maize only).
+- [x] No search-level-only claim remains - every claim in the 25-item
+      set is either directly read, general framing/cross-link, or
+      explicitly dropped (A2).
+- [x] No unsupported operational number remains - B4 was redesigned to
+      represent both composting methods rather than asserting one
+      incomplete figure; C4 deliberately stays non-numeric.
+- [x] All claim boundaries are sufficiently precise for drafting.
+- [ ] **Mandatory Founder confirmation remains outstanding for exactly
+      two claims: B4 (compost pathogen-reduction time/temperature,
+      method-specific) and B6 (raw manure pre-harvest interval)** -
+      see `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`.
+      This is the one remaining condition standing between this pack
+      and a clean "READY FOR WRITING."
+
+**This Research Plan still does not authorize Writing.** Per the
+Founder's decision, this sprint's authorization covers research,
+scope definition, and source collection only. Writing on every claim
+*except* B4 and B6 could proceed once a separate Writing authorization
+is given; B4 and B6 specifically require the Founder Confirmation
+Packet to be completed first, or must be written as a general caution
+without their specific figures if confirmation is not given.

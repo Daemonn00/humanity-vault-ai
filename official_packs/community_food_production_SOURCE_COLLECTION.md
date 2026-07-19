@@ -168,6 +168,189 @@ in-progress Source Collection stage.
 - **Collected by:** Claude (AI agent)
 - **Date:** 2026-07-19
 
+## Sources added in Targeted Source Collection Closure (2026-07-19)
+
+Every source below was freshly opened and read this pass via direct
+`WebFetch`, closing the 6 items left open by the prior sprint plus one
+additionally-discovered gap. See
+`community_food_production_RESEARCH_PLAN.md`'s "Targeted Source
+Collection Closure (2026-07-19)" section for the full reasoning; this
+section records the source-log entries themselves.
+
+### Source: CCARDESA (Centre for Coordination of Agricultural Research and Development for Southern Africa) — Crop Diversification
+
+- **Citation/URL:** https://www.ccardesa.org/crop-diversification
+- **Publisher:** CCARDESA (a recognized regional agricultural research
+  coordination body, per this task's Part 2 priority list of CGIAR-
+  equivalent institutions)
+- **Which claims it supports:** Article 1, A3
+- **Source quality tier:** [x] Tier 2 (established institutional
+  secondary reference that itself directly quotes and cites FAO
+  primary policy briefs)
+- **Directly opened and read in full:** Yes - "The main advantage of
+  implementing crop diversification is that it enhances household
+  climate resilience through reducing risk of monocrop failure due to
+  pests, disease, low rainfall and other climate risks"; "Increased
+  yields of rotated crops due to lower incidence of pests/diseases";
+  explicit citations to FAO Policy Brief 2 (2017) and Policy Brief 8
+  (2018).
+- **Limitations:** The two FAO primary policy briefs it cites could
+  not themselves be directly opened this pass (see below) - this
+  source is used as a directly-read Tier 2 secondary reference, not a
+  false stand-in for having personally read the FAO primaries.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+### Source: eOrganic — Making and Using Compost for Organic Farming
+
+- **Citation/URL:** https://eorganic.org/pages/18567/making-and-using-compost-for-organic-farming
+- **Publisher:** eOrganic (a Cooperative Extension-affiliated,
+  land-grant-university-consortium educational resource)
+- **Which claims it supports:** Article 2, B2, B4, B6
+- **Source quality tier:** [x] Tier 2 (established extension/
+  educational reference, directly quoting USDA National Organic
+  Program regulatory text)
+- **Directly opened and read in full:** Yes, across two targeted
+  fetches - C:N ratio ("established an initial C:N ratio of between
+  25:1 and 40:1"); compost temperature/duration, method-specific ("131
+  and 170°F for 3 days using an in-vessel or static aerated pile
+  system" or "131°F and 170°F for 15 days using a windrow composting
+  system... turned a minimum of five times"); raw manure pre-harvest
+  interval ("not less than 120 days prior to the harvest of a product
+  whose edible portion has direct contact with the soil" or "not less
+  than 90 days" for produce without soil contact).
+- **Limitations:** Did not give a moisture-content percentage for
+  standard (non-vermicompost) piles - closed via Cornell Composting
+  instead (below).
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+### Source: Cornell Composting (Cornell Waste Management Institute) — Physics of Composting
+
+- **Citation/URL:** https://compost.css.cornell.edu/physics.html
+- **Publisher:** Cornell University, Cornell Waste Management
+  Institute
+- **Which claims it supports:** Article 2, B3
+- **Source quality tier:** [x] Tier 1/2 (established academic
+  extension/research resource)
+- **Directly opened and read in full:** Yes - "A moisture content of
+  50-60% is generally considered optimum for composting," below 30%
+  slows bacterial activity, above 65% causes odor/decomposition/
+  nutrient-loss problems.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+### Source: University of Florida IFAS Extension — Food Safety on the Farm: Good Agricultural Practices and Good Handling Practices, Water (FS136)
+
+- **Citation/URL:** https://ask.ifas.ufl.edu/publication/FS136
+- **Publisher:** University of Florida, Institute of Food and
+  Agricultural Sciences (land-grant university Extension)
+- **Which claims it supports:** Article 3, C4
+- **Source quality tier:** [x] Tier 1/2 (established land-grant
+  university Extension publication)
+- **Directly opened and read in full:** Yes - water quality "is
+  extremely important when water comes into direct contact with the
+  harvestable portion of produce"; groundwater "is less likely to be
+  contaminated than surface water" (with a caveat for shallow/older/
+  improperly-constructed wells); allowing "time for potentially
+  dangerous microbes to die off in field between last irrigation and
+  harvest" as a risk-reduction practice. Also contains a U.S. FDA
+  Produce Safety Rule-specific numeric standard (126 CFU/100mL generic
+  E. coli) - **deliberately not used as a claim**, since it is a
+  jurisdiction-specific regulatory figure, not general practical
+  knowledge.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+### Source: Purdue Extension (Vegetable Crops Hotline) — Food Safety Considerations for Vegetable Farms
+
+- **Citation/URL:** https://vegcropshotline.org/article/food-safety-considerations-for-vegetable-farms/
+- **Publisher:** Purdue University Extension
+- **Which claims it supports:** Article 3, C4 (corroborating)
+- **Source quality tier:** [x] Tier 1/2 (established land-grant
+  university Extension publication)
+- **Directly opened and read in full:** Yes - "With the exception of
+  root crops, produce farms can reduce risk by limiting the contact of
+  water with the edible portion of the crop through utilization of
+  drip or trickle irrigation"; preference for public/well water over
+  surface water because "surface water is open to the environment,
+  making it difficult to control animal access, runoff, and other
+  potential sources of contamination."
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+### Source: FAO, Farm Structures... (S1250E)
+
+- **Citation/URL:** https://www.fao.org/4/s1250e/S1250E0w.htm
+- **Publisher:** FAO
+- **Which claims it supports:** Article 5, E3 (replacement claim,
+  maize only)
+- **Source quality tier:** [x] Tier 1
+- **Directly opened and read in full:** Yes - "For maize, the
+  requirement for safe storage is maximum 15 and 12% moisture content
+  respectively" for bag and bulk storage.
+- **Limitations:** Gives a figure for maize only; does not address
+  sorghum, rice, beans, or groundnuts safe-storage moisture - those
+  remain unconfirmed and are not asserted in this pack.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+### Re-examination: FAO, Manual of the Prevention of Post-Harvest Grain Losses (x5065e/x5065E07.htm) — moisture table re-read
+
+- **Citation/URL:** https://www.fao.org/4/x5065e/x5065E07.htm (same
+  URL as the prior sprint's entry, re-opened with a more targeted
+  prompt asking for exact surrounding text)
+- **Result: citation-content mismatch confirmed, recorded honestly.**
+  The table of moisture percentages by crop is explicitly introduced
+  in the source as "signs of physiological maturity," and is
+  immediately followed by: "The indicated moisture content at the time
+  of maturity does not mean that the crop is fit for storage. Drying
+  is necessary after the harvest until the moisture content is reduced
+  to values mentioned under section 2.2.5." **The original claim (E3,
+  as drafted in the prior sprint) misread these as safe-storage
+  values - they are not, and the source itself says so.** Section
+  2.2.5 was not reachable at a directly-fetchable URL this pass (only
+  the manual's introduction page, x5065E03.htm, loaded - it does not
+  contain section 2.2.5's content). This finding is preserved as the
+  reason E3 was replaced, not deleted or quietly corrected.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19
+
+## Sources attempted but not directly readable this pass (added 2026-07-19)
+
+- **FAO Policy Brief 2** ("Is crop diversification a panacea for
+  climate resilience in Africa," openknowledge.fao.org bitstream
+  ee6dffd7-3492-431c-8df8-1b650827dcb4) - HTTP 403 Forbidden. Not
+  directly read. Same failure class as other openknowledge.fao.org
+  bitstream attempts in the prior sprint. Closed instead via CCARDESA
+  (above), which directly quotes this brief.
+- **USDA AMS, NOP 5021 handbook page**
+  (ams.usda.gov/rules-regulations/organic/handbook/5021) - HTTP 403
+  Forbidden. Not directly read.
+- **USDA AMS, NOP 5021 PDF** (ams.usda.gov/sites/default/files/media/5021.pdf)
+  - HTTP 403 Forbidden. Not directly read.
+- **USDA AMS, Compost Tipsheet PDF**
+  (ams.usda.gov/sites/default/files/media/Compost_FINAL.pdf) - HTTP
+  403 Forbidden. Not directly read. All three USDA AMS direct-fetch
+  attempts failed; the same regulatory content was successfully
+  obtained instead via eOrganic (above), which quotes the same NOP
+  regulatory text directly.
+- **FAO JEMRA (Joint FAO/WHO Expert Meetings on Microbiological Risk
+  Assessment) overview page**
+  (fao.org/food-safety/scientific-advice/jemra-microbiological-risk/en)
+  - HTTP 200, fetched and read successfully, but is a general program-
+  overview page with **no specific irrigation-water/fresh-produce
+  guidance** - a content gap, not an access failure. Not used as a
+  claim source; C4 was closed via the two university Extension sources
+  instead.
+- **CDFA (California Department of Food and Agriculture), Healthy
+  Soils On-Farm Compost Working Group page** - HTTP 200, fetched and
+  read successfully, gives the same 131-170°F/15-day/5-turning windrow
+  figure as eOrganic (corroborating), but does not itself distinguish
+  the in-vessel/static-pile method's shorter 3-day requirement. Used as
+  corroboration only, not as the primary citation (eOrganic is more
+  complete).
+
 ## Sources found via search summary only — NOT yet directly read (discovered but not yet read)
 
 Recorded honestly as candidates, not verified sources, per
@@ -177,29 +360,38 @@ failure to hide.
 
 - **USDA NRCS, Conservation Practice Standard - Composting Facility
   (Code 317)** - candidate for B2 (C:N ratio) and B3 (moisture %).
-  Direct fetch of the PDF was not attempted this pass after a related
-  NRCS bitstream (below) failed; a fresh direct-fetch attempt against
-  the HTML overview page is a priority for closing this gap.
+  **RESOLVED 2026-07-19 - not directly fetched (still not
+  attempted directly), superseded by eOrganic and Cornell Composting,
+  both directly read and sufficient to close B2/B3.**
 - **USDA Agricultural Marketing Service (AMS), NOP 5021 - Guidance on
-  Compost and Vermicompost** - candidate for B4 (manure pathogen-
-  reduction heat threshold, 131°F/55°C for 3 days). This is the
-  highest-priority source to directly confirm, given B4's safety
-  relevance. Not yet directly fetched this pass.
+  Compost and Vermicompost** - candidate for B4. **RESOLVED 2026-07-19
+  - direct fetch attempted this pass and failed (HTTP 403, see below);
+  closed instead via eOrganic, which directly quotes the same
+  regulatory text.**
 - **Cornell Cooperative Extension, compost troubleshooting page** -
-  candidate corroborating source for B1/B2. Not yet directly fetched.
+  candidate corroborating source for B1/B2. **Superseded 2026-07-19 -
+  not directly fetched; B2/B3 closed via eOrganic and Cornell
+  Composting's physics page instead. Remains a valid future
+  corroborating source if needed.**
 - **FAO, "Crop diversification increases productivity and stabilizes
   income of small-holders" (Agricultural Development Economics Policy
   Brief 8)** and the related Policy Brief 2 on climate resilience -
-  candidates for A3. Not yet directly fetched; found only via search
-  summary describing their existence and general findings.
+  candidates for A3. **RESOLVED 2026-07-19 - Policy Brief 2's direct
+  fetch failed (HTTP 403, see below); Policy Brief 8 was not
+  separately re-attempted after the same-repository failure pattern.
+  A3 closed instead via CCARDESA, which directly quotes both briefs.**
 - **FAO, household food security and crop diversification study
-  (Guatemala)** (fao.org/4/u8050t/u8050t06.htm) - candidate,
-  potentially strong, directly-fetchable HTML source for A3 given the
-  format of other successfully-read FAO `/4/` pages this pass. Not yet
-  attempted.
+  (Guatemala)** (fao.org/4/u8050t/u8050t06.htm) - **RESOLVED 2026-07-19
+  - directly fetched this pass and found NOT to support the intended
+  claim (a genuine citation-content mismatch, not an access failure -
+  see the Research Plan's Targeted Source Collection Closure section).
+  Not used as a source for A3.**
 - **WHO/FAO guidance on safe use of wastewater/irrigation water quality
-  in agriculture** - not yet searched for specifically; needed to close
-  the C4 gap (irrigation water contamination risk to food crops).
+  in agriculture** - **RESOLVED 2026-07-19 - a direct WHO/FAO
+  wastewater-specific document was not located, but two directly-read
+  university Extension sources (UF IFAS, Purdue) closed C4 with
+  adequately authoritative, general-audience-appropriate guidance
+  instead.**
 
 ## Sources attempted but not directly readable (recorded honestly, not cited as verified)
 
@@ -242,7 +434,7 @@ failure to hide.
   publication). **No primary source was found or read. This figure is
   not used anywhere in this pack's claim set (A2).**
 
-## Collection summary (in progress - not final)
+## Collection summary (superseded by the Update below - preserved as the prior sprint's accurate record)
 
 | Article | Claims with a Tier 1/2 source directly read | Claims search-level only or open gaps | Realistic `verification_level` if written today |
 |---|---|---|---|
@@ -252,13 +444,28 @@ failure to hide.
 | 4. Protecting Crops: Pest and Disease Resilience Without Heavy Chemical Inputs | 3 of 4 directly read (D1, D3, D4); D2 is a cross-link, not an independent claim | None open | Verified Source achievable now |
 | 5. Harvest, Storage, and Building a Community Food Reserve | 2 of 5 directly read and usable (E1, E2); E5 is a cross-link | E3 (flagged, not usable as currently found - requires re-verification); E4 is general framing, no source needed | Community Verified today; Verified Source achievable on E1, E2, E4-E5 now, but E3 must be either re-verified or dropped before the article as a whole can honestly reach Verified Source |
 
-This table is the honest basis for continuing Source Collection - it
-is not yet a closed collection, and it is not the Editorial Review's
-own independent Claim-to-Source Map, which would re-check everything
-again per `editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`
-at a much later stage.
+### Update, 2026-07-19 (Targeted Source Collection Closure)
 
-## Immediate next steps to close this Source Collection (not performed this sprint)
+| Article | Final claim status | Realistic `verification_level` if written today |
+|---|---|---|
+| 1. Assessing Land and Planning a Resilient, Diversified Food System | 6/6 claims resolved (A2 dropped by decision, A3 now directly read via CCARDESA, A1/A4-A6 unchanged) | Verified Source achievable |
+| 2. Building and Maintaining Soil Fertility at Scale | 6/6 claims resolved (B1 unchanged; B2, B3, B4 now directly read; B5 unchanged; B6 newly added and directly read) | Verified Source achievable **on every claim except B4 and B6, which additionally require Founder confirmation** (see Founder Confirmation Packet) before being finalized at their full specific-figure strength |
+| 3. Water for Growing: Irrigation Planning at Community Scale | 4/4 claims resolved (C1-C3 unchanged; C4 now directly read via two university Extension sources) | Verified Source achievable |
+| 4. Protecting Crops: Pest and Disease Resilience Without Heavy Chemical Inputs | 4/4 claims, unchanged from prior sprint | Verified Source achievable |
+| 5. Harvest, Storage, and Building a Community Food Reserve | 5/5 claims resolved (E1, E2, E4, E5 unchanged; E3 replaced with a narrower, maize-only, directly-read claim) | Verified Source achievable |
+
+This table is the honest basis for a Writing-stage decision - it is
+not yet the Editorial Review's own independent Claim-to-Source Map,
+which would re-check everything again per
+`editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md` at a
+much later stage.
+
+## Immediate next steps (superseded - preserved as the prior sprint's record)
+
+*(The 5 items originally listed here were the target of this sprint's
+Targeted Source Collection Closure - see the Research Plan's
+corresponding section for how each was resolved. Original text
+preserved below, unedited.)*
 
 1. Directly fetch USDA AMS NOP 5021 (or a substitute Tier 1/2 source)
    to confirm B4's pathogen-reduction heat threshold - highest
@@ -274,7 +481,10 @@ at a much later stage.
    figure concern - ideally quoting the exact table/section rather
    than relying on a single summarized pass.
 
-None of these steps were performed in this sprint, per the Founder's
-authorization covering research and source collection only, and per
-this task's explicit scope (Research Plan and Source Collection
-construction, not their completion).
+## Remaining open item after this sprint
+
+None of the original 6 items remain open. The single remaining
+condition before this pack is unconditionally "ready for writing" is
+**Founder confirmation of B4 and B6** (see
+`community_food_production_FOUNDER_CONFIRMATION_PACKET.md`), which is
+a Founder decision, not a further research/source-collection task.

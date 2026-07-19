@@ -1070,3 +1070,48 @@ because any claim is unconfirmed, but because a separate, explicit
 Founder Publication Decision has not yet been made. Nothing about this
 update erases or reinterprets the Stage 5 Editorial Review findings
 above, which remain the accurate record of that pass.
+
+## Founder Publication Decision (Update)
+
+- **Pack:** `hv_official_community_food_production`
+- **Version under decision:** 1.0.0
+- **Decision:** **APPROVED FOR PUBLICATION.**
+- **Decided by:** The Founder
+- **Date:** 2026-07-19
+
+The Founder reviewed the completed Stage 5 Editorial Review and Stage 6
+Formal Post-Drafting Source Verification results recorded above and
+confirms:
+
+- All 5 articles independently earned `verification_level: Verified
+  Source`.
+- The expected pack-wide verification summary is `Verified Source`
+  (weakest-link rule, no `Unverified` article present).
+- 0 unresolved Critical, High, or Medium findings; 0 remaining
+  editorial or verification blockers.
+- The Founder knowingly accepts the AI-agent-performed formal source
+  verification methodology, under the ratified standing AI-Agent
+  Verification Policy (`pack_production_workflow/QUALITY_STANDARD.md`
+  §9), **for `hv_official_community_food_production` v1.0.0
+  specifically.** This acceptance is not a blanket waiver and does not
+  apply automatically to any future pack or version.
+
+**Publication of `hv_official_community_food_production` v1.0.0 is
+APPROVED, and the pack is authorized to proceed to the Release
+Pipeline.** This decision supersedes the "Not Yet Approved" status
+recorded earlier in this document's "Publication Decision" and
+"Status" sections - those sections are preserved above, unedited, as
+the accurate historical record of the pack's status prior to this
+Founder decision.
+
+This Founder Publication Decision does **not** itself constitute
+release: creation of the GitHub Release, publication of
+`registry.json`, and pushing to the remote each remain separate, later
+actions requiring their own explicit authorization and are not
+performed by this update.
+
+## Version Review History (Update 2)
+
+| Version | Date | What changed | Review outcome | Reviewer(s) | Publication decision |
+|---|---|---|---|---|---|
+| 1.0.0 | 2026-07-19 | Founder Publication Decision recorded: Founder reviewed the Stage 6 verification result (5/5 articles Verified Source, pack-wide summary Verified Source, 0 unresolved Critical/High/Medium findings) and approved the pack for publication, knowingly accepting the AI-agent verification methodology for this pack/version specifically | Publication approved | The Founder | **APPROVED** - publication through the Release Pipeline authorized; GitHub Release/registry/push remain separate later actions |

@@ -39,14 +39,12 @@ Once a site is chosen, growing more than one kind of crop, rather than
 relying on a single crop across all the available land, meaningfully
 protects a group's food supply. A pest, disease, or bad season that
 affects one crop is far less likely to affect every crop at once, and
-mixing crop types has also been observed to reduce how much damage any
-one pest or disease does even to the crops it does affect, likely
-because a mixed planting is a harder target than a single large block
-of one plant. This builds directly on the same principle behind
-rotating crops on a single plot (see "Growing Staple Food Crops") -
-diversification is that same risk-spreading idea applied to what an
-entire group chooses to plant, not just how one plot is rotated season
-to season.
+rotating which crop is grown in a given plot has also been observed to
+increase yields by lowering how much pest and disease pressure builds
+up on that plot over time (see "Growing Staple Food Crops" for the
+rotation technique itself) - diversification is that same
+risk-spreading idea applied to what an entire group chooses to plant
+across its land, not just how one plot is rotated season to season.
 
 Keeping a reliable supply of seed for future seasons is just as
 important as growing this season's food, and a group can go further

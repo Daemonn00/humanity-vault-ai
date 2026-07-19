@@ -6,7 +6,6 @@ author: Humanity Vault Contributors
 last_updated: 2026-07-19
 knowledge_level: Level 2
 verification_level: Unverified
-terrain: desert
 related_articles: cfp_assessing_land_and_planning_a_resilient_diversified_food_system, well_digging_and_safe_water_access, water_storage_and_long_term_water_safety, wts_assessing_community_water_needs_and_protecting_the_source
 ---
 

@@ -42,33 +42,40 @@ and time needed depends on which composting method is actually being
 used, not one single rule for every method. A pile built in an
 enclosed container or as a mechanically-aerated static pile needs to
 hold a temperature of roughly 131-170°F (55-77°C) for at least **3
-days**. An open, turned pile - a windrow, the method most people
-composting without specialized equipment are actually using - needs to
-hold that same 131-170°F (55-77°C) range for a longer period, **at
-least 15 days**, and must be physically turned **at least 5 times**
-during that period so every part of the pile spends time at the hot
-center. These are two different requirements for two different
-methods, not one rule that can be applied loosely regardless of which
-method is used - a pile assumed to be "done" after 3 days because it
-reached temperature, when it was actually built and managed as an
-open, turned windrow, has not been held hot for long enough to
-reliably reduce pathogens the way the enclosed or static-pile method
-has. This time-and-temperature approach is specific to standard
-composting; a different method sometimes used for organic waste,
-vermicomposting (composting with worms), works through an entirely
-different, cooler process and does **not** follow these same
-temperature or day-count rules.
+days**. An open, turned pile - a windrow, built without a sealed
+container or mechanical aeration equipment - needs to hold that same
+131-170°F (55-77°C) range for a longer period, **at least 15 days**,
+and must be physically turned **at least 5 times** during that period
+so every part of the pile spends time at the hot center. These are two
+different requirements for two different methods, not one rule that
+can be applied loosely regardless of which method is used - a pile
+assumed to be "done" after 3 days because it reached temperature, when
+it was actually built and managed as an open, turned windrow, has not
+been held hot for long enough to reliably reduce pathogens the way the
+enclosed or static-pile method has. This time-and-temperature approach
+is specific to standard composting; a different method sometimes used
+for organic waste, vermicomposting (composting with worms), works
+through an entirely different, cooler process and does **not** follow
+these same temperature or day-count rules. These figures come from an
+established composting standard used to judge when manure-containing
+compost is safe to handle around food, not a general natural law about
+heat and pathogens - a different standard, developed for a different
+purpose, could reasonably use different numbers.
 
 Manure that has not been fully composted this way - or has not been
 composted at all - still carries a real risk of spreading pathogens
 onto food if applied too close to harvest time. If raw manure is
 worked into the soil rather than fully composted first, a waiting
 period before harvest reduces this risk: **at least 120 days** before
-harvest for a crop whose edible part touches the soil or soil
-particles directly (such as root vegetables or low-growing leafy
-greens), and **at least 90 days** before harvest for a crop whose
-edible part does not touch the soil (such as a fruit or grain that
-grows well above ground). These specific waiting periods come from an
+harvest for a crop whose edible part directly touches the soil or soil
+particles (root vegetables are the clearest example), and **at least
+90 days** before harvest for a crop whose edible part does not touch
+the soil (such as a fruit or grain that grows well above ground). What
+matters is the actual physical contact between the edible part and the
+soil, not the general type of plant - when that's genuinely unclear
+for a particular crop or growing method, treating it as soil-contact
+and using the longer 120-day interval is the more cautious choice.
+These specific waiting periods come from an
 established food-safety framework for handling raw manure around food
 crops, not from a general natural law about how fast pathogens die off
 in every situation - treat them as the sourced, evidence-based

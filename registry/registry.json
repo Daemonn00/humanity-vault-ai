@@ -1,8 +1,8 @@
 {
   "registry_schema_version": "1",
-  "generated_at": "2026-07-18T16:25:53.477460Z",
+  "generated_at": "2026-07-19T10:56:59.817167Z",
   "generator_version": "0.1.0",
-  "pack_count": 5,
+  "pack_count": 6,
   "source_repositories": [
     "Daemonn00/humanity-vault-ai"
   ],
@@ -39,7 +39,42 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
+          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+        }
+      ]
+    },
+    {
+      "pack_id": "hv_official_community_food_production",
+      "pack_name": "Community & System-Scale Food Production",
+      "description": "Five official Humanity Vault articles on building and maintaining food-production capacity beyond a single household or personal garden - assessing land and planning a diversified system, soil fertility and composting, irrigation planning, pest and disease resilience, and harvest, storage, and community food reserves.",
+      "category_tags": [
+        "Agriculture",
+        "Survival"
+      ],
+      "trust_tier": "official",
+      "verification_summary": "Verified Source",
+      "latest_version": "1.0.0",
+      "asset_type": "knowledge_pack",
+      "license": null,
+      "dependencies": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publish_date": "2026-07-19T10:53:23.000Z",
+          "changelog_summary": "## Community & System-Scale Food Production v1.0.0\r\n\r\nFive official Humanity Vault articles focused on building and maintaining resilient food-production capacity beyond a single household or personal garden.\r\n\r\nThis knowledge pack covers community-scale food-system planning, soil fertility, irrigation, integrated pest and disease management, and post-harvest storage and reserves.\r\n\r\n## Articles\r\n\r\n1. **Assessing Land and Planning a Resilient, Diversified Food System**\r\n2. **Building and Maintaining Soil Fertility at Scale**\r\n3. **Water for Growing: Irrigation Planning at Community Scale**\r\n4. **Protecting Crops: Pest and Disease Resilience Without Heavy Chemical Inputs**\r\n5. **Harvest, Storage, and Building a Community Food Reserve**\r\n\r\n## Verification\r\n\r\n- **Verification Summary:** Verified Source\r\n- **Verified Articles:** 5 of 5\r\n- **SHA-256:** `42cd7eda5d2e25da2f04b0b3ddcd61864fd10cca9a4c267f8f6330c08a182e68`\r\n\r\nAll five articles completed formal post-drafting source verification against their underlying authoritative and technical sources.\r\n\r\n## Installation\r\n\r\n### Humanity Vault App\r\n\r\nOpen **Vault Hub**, locate **Community & System-Scale Food Production**, and select **Install**.\r\n\r\nThe app will download the official Knowledge Pack, verify its SHA-256 checksum against the published registry entry, and install it automatically.\r\n\r\n### Manual Installation\r\n\r\n1. Download `hv_official_community_food_production-v1.0.0.zip` from the assets attached to this release.\r\n2. Verify the SHA-256 checksum:\r\n\r\n   `42cd7eda5d2e25da2f04b0b3ddcd61864fd10cca9a4c267f8f6330c08a182e68`\r\n\r\n3. Open the Humanity Vault app.\r\n4. Use the available **Import Knowledge Pack** option.\r\n5. Select the downloaded ZIP file.\r\n\r\n## Compatibility\r\n\r\nCompatible with the current Humanity Vault Official Knowledge Pack format.\r\n\r\nNo special minimum app version is currently required beyond standard Official Knowledge Pack import support.\r\n\r\n## Package Information\r\n\r\n- **Package ID:** `hv_official_community_food_production`\r\n- **Version:** `1.0.0`\r\n- **Categories:** Agriculture, Survival\r\n- **Articles:** 5\r\n- **Verification Summary:** Verified Source\r\n- **Asset:** `hv_official_community_food_production-v1.0.0.zip`\r\n- **SHA-256:** `42cd7eda5d2e25da2f04b0b3ddcd61864fd10cca9a4c267f8f6330c08a182e68`",
+          "download_url": "https://github.com/Daemonn00/humanity-vault-ai/releases/download/hv_official_community_food_production-v1.0.0/hv_official_community_food_production-v1.0.0.zip",
+          "sha256": "42cd7eda5d2e25da2f04b0b3ddcd61864fd10cca9a4c267f8f6330c08a182e68",
+          "size_bytes": 14101,
+          "article_count": 5,
+          "compatibility": {
+            "min_app_version": null,
+            "recommended_app_version": null
+          },
+          "deprecated": false,
+          "deprecated_reason": null,
+          "replacement_pack_id": null,
+          "archived": false,
+          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
         }
       ]
     },
@@ -74,7 +109,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
+          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
         }
       ]
     },
@@ -108,7 +143,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
+          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
         }
       ]
     },
@@ -142,7 +177,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
+          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
         }
       ]
     },
@@ -177,7 +212,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "d153ae8a8606f1f98151551b74e78132c675c9a6"
+          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
         }
       ]
     }

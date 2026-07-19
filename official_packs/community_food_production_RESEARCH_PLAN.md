@@ -657,7 +657,7 @@ above:
 | Article | Source-support status | Remaining blocker before Writing |
 |---|---|---|
 | 1. Assessing Land and Planning a Resilient, Diversified Food System | All claims (A1, A3-A6) directly supported; A2 resolved (dropped) | None - source-ready |
-| 2. Building and Maintaining Soil Fertility at Scale | All claims (B1-B6) directly supported | **B4 and B6 require Founder confirmation** before Writing finalizes them at full strength (see Founder Confirmation Packet) |
+| 2. Building and Maintaining Soil Fertility at Scale | All claims (B1-B6) directly supported | **RESOLVED 2026-07-19 - the Founder confirmed both B4 and B6** (see `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`'s Record of Completion). No remaining blocker. |
 | 3. Water for Growing: Irrigation Planning at Community Scale | All claims (C1-C4) directly supported | None - source-ready |
 | 4. Protecting Crops: Pest and Disease Resilience Without Heavy Chemical Inputs | All claims (D1, D3, D4) directly supported; D2 is a cross-link | None - source-ready |
 | 5. Harvest, Storage, and Building a Community Food Reserve | All claims (E1, E2, E4, E5) directly supported; E3 replaced/narrowed to maize | None - source-ready |
@@ -678,22 +678,30 @@ article metadata added.
 
 ## Production-Stage Status
 
+**Updated 2026-07-19 (Founder Confirmation Recording).**
+
 - **Stage 1 (Topic Selection):** Complete - Founder-approved directly,
   six acceptance criteria pass (above).
-- **Stage 2 (Research):** This document - in progress, not complete.
-  Article architecture and claim inventory drafted; several claims
-  remain search-level or explicitly flagged as gaps (A3, B2-B4, C4,
-  E3).
-- **Stage 3 (Source Collection):** Underway in parallel - see
-  `community_food_production_SOURCE_COLLECTION.md`. Not complete.
-- **Stages 4-7:** Not started. Not authorized by the Founder's current
-  decision, which covers research and source collection only.
+- **Stage 2 (Research):** Complete - all 25 claims (including B6)
+  resolved to a directly-read source, general-knowledge framing, or an
+  explicit drop decision (A2). No open item remains.
+- **Stage 3 (Source Collection):** Complete - see
+  `community_food_production_SOURCE_COLLECTION.md`.
+- **§9.3-analogous Founder confirmation gate:** Complete - B4 and B6
+  confirmed by the Founder 2026-07-19, see
+  `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`.
+- **Stage 4 (Writing):** Now authorized and proceeding this sprint.
+- **Stages 5-7:** Not started - Editorial Review, formal post-drafting
+  Source Verification, Founder Publication Decision, and release all
+  remain later, separate gates.
 
-## Ready to write? — UPDATED 2026-07-19: READY FOR WRITING AFTER FOUNDER CONFIRMATION
+## Ready to write? — UPDATED 2026-07-19 (Founder Confirmation Recording): READY FOR WRITING
 
-*(Original 2026-07-18 "NO" assessment preserved above/unchanged in the
-claim tables' history; this section records the current, superseding
-status after the Targeted Source Collection Closure.)*
+*(The 2026-07-19 "READY FOR WRITING AFTER FOUNDER CONFIRMATION"
+assessment immediately below is preserved unedited as the accurate
+record of this Research Plan's state at that point; this section
+records the current, superseding status now that the Founder has
+confirmed both outstanding claims.)*
 
 - [x] Every planned article now has adequate directly-read source
       support - all 6 previously-open items (A3, B2, B3, B4, C4, E3)
@@ -709,17 +717,17 @@ status after the Targeted Source Collection Closure.)*
       represent both composting methods rather than asserting one
       incomplete figure; C4 deliberately stays non-numeric.
 - [x] All claim boundaries are sufficiently precise for drafting.
-- [ ] **Mandatory Founder confirmation remains outstanding for exactly
-      two claims: B4 (compost pathogen-reduction time/temperature,
-      method-specific) and B6 (raw manure pre-harvest interval)** -
-      see `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`.
-      This is the one remaining condition standing between this pack
-      and a clean "READY FOR WRITING."
+- [x] **Mandatory Founder confirmation is now closed for both B4 and
+      B6** - the Founder confirmed both claims 2026-07-19, at the
+      exact method-specific/context-specific boundaries documented in
+      `community_food_production_FOUNDER_CONFIRMATION_PACKET.md`'s
+      Record of Completion. No other claim in the pack requires this
+      gate.
 
-**This Research Plan still does not authorize Writing.** Per the
-Founder's decision, this sprint's authorization covers research,
-scope definition, and source collection only. Writing on every claim
-*except* B4 and B6 could proceed once a separate Writing authorization
-is given; B4 and B6 specifically require the Founder Confirmation
-Packet to be completed first, or must be written as a general caution
-without their specific figures if confirmation is not given.
+**Final status: READY FOR WRITING.** Every condition on the checklist
+above is now met. Writing may proceed on the full 25-claim frozen set,
+preserving every narrowing, method-specific distinction, and crop-
+specific boundary documented in this Research Plan - in particular the
+B4 method distinction (in-vessel/static-pile vs. windrow) and the B6
+context distinction (soil-contact vs. no-soil-contact) must never be
+collapsed into a single universal rule in the final prose.

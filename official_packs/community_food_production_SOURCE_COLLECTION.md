@@ -481,10 +481,16 @@ preserved below, unedited.)*
    figure concern - ideally quoting the exact table/section rather
    than relying on a single summarized pass.
 
-## Remaining open item after this sprint
+## Remaining open item after this sprint (superseded, 2026-07-19)
 
-None of the original 6 items remain open. The single remaining
-condition before this pack is unconditionally "ready for writing" is
-**Founder confirmation of B4 and B6** (see
-`community_food_production_FOUNDER_CONFIRMATION_PACKET.md`), which is
-a Founder decision, not a further research/source-collection task.
+*(Original text preserved: "None of the original 6 items remain open.
+The single remaining condition before this pack is unconditionally
+'ready for writing' is Founder confirmation of B4 and B6, which is a
+Founder decision, not a further research/source-collection task.")*
+
+**Update, 2026-07-19 (Founder Confirmation Recording):** the Founder
+confirmed both B4 and B6, at the exact boundaries documented in this
+collection's source-log entries above - see
+`community_food_production_FOUNDER_CONFIRMATION_PACKET.md`'s Record of
+Completion. Source Collection for this pack is complete; no open item
+remains.

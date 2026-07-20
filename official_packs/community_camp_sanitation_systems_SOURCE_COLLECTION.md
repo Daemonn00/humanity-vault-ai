@@ -172,13 +172,89 @@ research pass, not a closed collection.
 - **Collected by:** Claude (AI agent)
 - **Date:** 2026-07-19
 
+### Source: Global WASH Cluster eCompendium, Single Ventilated Improved Pit (S.4)
+
+- **Citation/URL:** https://www.emersan-compendium.org/en/technologies/technology/single-ventilated-improved-pit-vip
+- **Publisher:** Global WASH Cluster / German WASH Network / Eawag /
+  SuSanA (same trusted eCompendium family already used for A1, E1, E2)
+- **Which claims it supports:** B7
+- **Source quality tier:** [x] Tier 1
+- **Directly opened and read in full:** Yes - fly-trap mechanism
+  ("Flies that hatch in the pit are attracted to the light at the top
+  of the ventilation pipe. When they fly towards the light and try to
+  escape, they are trapped by the fly-screen and eventually die.");
+  odor-control mechanism ("continuous airflow through the ventilation
+  pipe prevents odours and acts as a trap for flies as they escape
+  towards the light"); vent-pipe specification ("a straight vent pipe
+  is needed with an internal diameter of at least 11 cm and reaching
+  more than 30 cm above the highest point of the toilet
+  superstructure"); wind-driven/heat-driven convection and the
+  black-paint performance note for low-wind conditions.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19 (Targeted Source Collection Closure pass)
+
+### Source: SSWM.info, Preventing Gender-Based Violence (Camps and Prolonged Encampments)
+
+- **Citation/URL:** https://sswm.info/humanitarian-crises/prolonged-encampments/hygiene-promotion-community-mobilisation/hygiene/preventing-gender-based-violence-(camps-and-prolonged-encampments)
+- **Publisher:** SSWM (Sustainable Sanitation and Water Management) -
+  same trusted platform already used for A2, A4, B2, B3, B4, B6
+- **Which claims it supports:** C6
+- **Source quality tier:** [x] Tier 2 (established secondary technical
+  reference, directly opened and read)
+- **Directly opened and read in full:** Yes - "building gender
+  segregated sanitary and bathing facilitating, installing adequate
+  lighting at WASH facilities, putting locks on latrines, ensuring
+  safe travel distances and routes to water and sanitation points
+  (water points should be located at less than 500 m from shelters)."
+- **Cross-pack overlap noted:** the "water points <500m from shelters"
+  figure in this quote is the same claim already published in Water
+  Treatment at Scale's
+  `wts_assessing_community_water_needs_and_protecting_the_source.md`.
+  This figure is cross-linked, not restated, in C6 - see the Research
+  Plan's C6 closure notes.
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19 (Targeted Source Collection Closure pass)
+
+### Source: World Health Organization, Health-care waste (fact sheet)
+
+- **Citation/URL:** https://www.who.int/news-room/fact-sheets/detail/health-care-waste
+- **Publisher:** World Health Organization (WHO) - official HTML
+  fact-sheet page, distinct from the cdn.who.int PDF documents that
+  have repeatedly failed to load in this project (corrupted binary)
+- **Which claims it supports:** D5
+- **Source quality tier:** [x] Tier 1 (official UN specialized-agency
+  publication)
+- **Directly opened and read in full:** Yes - waste-composition
+  breakdown ("about 85% is general, non-hazardous waste," "the
+  remaining 15% is considered hazardous material"); named hazardous
+  categories ("Infectious waste... Pathological waste... Sharps
+  waste... Chemical waste... Pharmaceutical/cytotoxic waste...
+  Radioactive waste"); the low-income-country segregation gap
+  ("health-care waste is often not separated into hazardous or
+  non-hazardous wastes"); segregation framed as "a key element in
+  improving health-care waste management."
+- **Collected by:** Claude (AI agent)
+- **Date:** 2026-07-19 (Targeted Source Collection Closure pass)
+
 ## Sources found via search summary only — NOT yet directly read
+
+**Status update, Targeted Source Collection Closure pass (2026-07-19):
+the first three items below (VIP mechanism, GBV/lighting nuance,
+medical-waste reference) have now been closed via directly-read
+substitute sources - see the new entries appended to "Sources
+successfully opened and read in full" above and the Research Plan's
+"Targeted Source Collection Closure" section for full detail. The
+original entries are preserved below, unmodified, per this project's
+append/update discipline - they remain an accurate record of that
+earlier state.**
 
 - **VIP (Ventilated Improved Pit) latrine mechanism (fly/odor control
   via vented airflow and light-attraction)** - candidate for B7. Found
   via `WebSearch` summary describing the mechanism in some detail, but
   no specific page was directly fetched and read this pass. **Not
   frozen as a claim** until directly read.
+  **→ CLOSED, 2026-07-19: directly read via Global WASH Cluster
+  eCompendium, S.4 Single Ventilated Improved Pit page - see above.**
 - **Oxfam Views & Voices, "We must do more to make emergency sanitation
   safer" (2019)** - candidate for C6's more specific nuance (lighting-
   only-at-latrines can backfire; camp-wide lighting is safer than
@@ -190,10 +266,17 @@ research pass, not a closed collection.
   level only** (GBV risk exists, requires design attention), without
   the more specific lighting nuance, until a working copy of this
   source (or an equivalent) is found.
+  **→ CLOSED, 2026-07-19: this specific dead-linked article was never
+  recovered, but a substitute, richer source (SSWM's dedicated GBV-
+  prevention page) was found and directly read instead, closing C6 to
+  VERIFIED WITH NARROWING - see above. The original Oxfam article
+  remains unread; it was not needed once the SSWM source was found.**
 - **A dedicated medical/biohazard waste handling reference** - needed
   to properly resolve D5 (currently only a single brief mention in the
   general Oxfam waste-management page). Not yet searched for
   specifically this pass - a priority item for a closure pass.
+  **→ CLOSED, 2026-07-19: directly read via WHO's official "Health-care
+  waste" HTML fact-sheet page - see above.**
 - **WHO's multi-volume "Guidelines for the safe use of wastewater,
   excreta and greywater"** - identified via search as the formal
   global framework for drainage/wastewater, but not directly read this
@@ -201,6 +284,9 @@ research pass, not a closed collection.
   was too thin and indirect to respons­ibly use. Recorded as the
   starting point for a future drainage/wastewater investigation, not
   used this pass.
+  **Still open - not in scope for this closure pass, which targeted
+  only B7/C6/D5. Drainage/greywater remains excluded from this pack's
+  architecture (see Architecture Recheck in the Research Plan).**
 
 ## Sources attempted but not directly readable (recorded honestly, not cited as verified)
 
@@ -233,8 +319,56 @@ research pass, not a closed collection.
   project's established, repeated IFRC-hosted-domain blocking pattern.
 - **Oxfam Views & Voices, emergency-sanitation-safer article** - see
   above (301 redirect to a generic index, not the specific content).
+- **WHO Module 17, "Management of Specific Infectious Waste"** (part of
+  the WHO "Training modules in health-care waste management" series,
+  cdn.who.int/media/docs/default-source/wash-documents/wash-in-hcf/training-modules-in-health-care-waste-management/module-17---management-of-specific-infectious-waste.pdf) -
+  fetched successfully as a binary file (865.9KB), but returned only
+  corrupted/encoded PDF stream data with no extractable readable text -
+  the same illustrated/complex-PDF failure class already documented
+  repeatedly across this project's history and within this pack's own
+  WHO Technical Note 14 attempt above. **Not directly read.** Not
+  needed this pass - the WHO HTML fact-sheet page (see above) fully
+  resolved D5 to Determination A without requiring this module.
+- **CDC, "Regulated Medical Waste"**
+  (cdc.gov/infection-control/hcp/environmental-control/regulated-medical-waste.html) -
+  HTTP 403 Forbidden. Not directly read. Consistent with this
+  project's established, repeated live-cdc.gov blocking pattern (the
+  archived cdc.gov page used elsewhere in this pack remains the
+  reliable access route for CDC content). Not needed this pass - the
+  WHO fact-sheet page fully resolved D5.
 
-## Collection summary (in progress - not final)
+**Targeted Source Collection Closure pass note (2026-07-19):** both
+new failures above were attempted while resolving D5 and are recorded
+honestly per this project's standing practice of never omitting an
+access failure. Neither blocked D5's resolution, since the WHO HTML
+fact-sheet page (Tier 1) provided sufficient, directly-read support on
+its own.
+
+## Collection summary — CLOSED, all 5 articles fully sourced (2026-07-19)
+
+**Status update: this table supersedes the "in progress" table below
+it (preserved unmodified beneath, per append discipline). All 3
+previously-open items (B7, C6, D5) are now closed via directly-read
+sources.**
+
+| Article | Claims with a Tier 1/2 source directly read | Claims search-level only or open gaps | Realistic `verification_level` if written today |
+|---|---|---|---|
+| 1. Assessing Sanitation Needs and Planning a Community System | 6 of 7 (A1-A6; A7 is a non-sourced boundary note, N/A) | None open | Verified Source achievable |
+| 2. Latrine Types and Construction for Camp and Emergency Settings | 6 of 7 directly read (B1-B4, B6-B7); B5 is a cross-link (N/A, no new verification needed) | None open | Verified Source achievable |
+| 3. Accessibility, Safety, and Dignified Use of Sanitation Facilities | 7 of 7 directly read (C1-C7) | None open | Verified Source achievable |
+| 4. Solid Waste Collection and Disposal at Community Scale | 7 of 7 directly read (D1-D7) | None open | Verified Source achievable (D5 narrowed and closed at Determination A - no Founder confirmation required) |
+| 5. Operation, Maintenance, and Decommissioning of Sanitation Systems | 2 of 4 directly read (E1-E2); E3 is a cross-link (N/A), E4 is general synthesis (N/A) | None open | Verified Source achievable |
+
+**All 32 claim IDs across all 5 articles are now closed** - either
+directly read, a cross-link to an already-verified figure elsewhere in
+the corpus, or non-sourced editorial/boundary framing. None remain at
+search-summary-only status. This table is still not the Editorial
+Review's own independent Claim-to-Source Map, which will re-check
+everything again per
+`editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md` at a
+much later stage - it is this pre-writing pass's honest record only.
+
+### Prior table (superseded, preserved for history)
 
 | Article | Claims with a Tier 1/2 source directly read | Claims search-level only or open gaps | Realistic `verification_level` if written today |
 |---|---|---|---|
@@ -244,30 +378,42 @@ research pass, not a closed collection.
 | 4. Solid Waste Collection and Disposal at Community Scale | 6 of 7 directly read (D1-D4, D6-D7) | D5 (directly read but flagged high-risk, requires deeper sourcing before a §9.3 determination) | Not achievable at Verified Source until D5 is resolved (either with deeper sourcing and/or Founder confirmation, or narrowed/dropped) |
 | 5. Operation, Maintenance, and Decommissioning of Sanitation Systems | 2 of 4 directly read (E1-E2); E3 is a cross-link (N/A), E4 is general synthesis (N/A) | None open | Verified Source achievable |
 
-This table is the honest basis for continuing Source Collection - it
-is not yet a closed collection, and it is not the Editorial Review's
-own independent Claim-to-Source Map, which would re-check everything
-again per `editorial_review_template/03_CLAIM_VERIFICATION_TEMPLATE.md`
-at a much later stage.
+## Immediate next steps — CLOSED (2026-07-19)
 
-## Immediate next steps to close this Source Collection (not performed this sprint)
+**Status update: items 1-3 below (the only mandatory items) are now
+complete. This section is preserved unmodified beneath for history,
+per append discipline.**
 
 1. Directly read a source for B7 (VIP latrine mechanism) - the
    eCompendium likely has a dedicated VIP technology page, a strong
    first candidate.
+   **→ DONE: Global WASH Cluster eCompendium S.4 page, see above.**
 2. Find a working, directly-readable source for C6's more specific
    GBV/lighting nuance, or accept the general-framing-only level as
    final for this claim.
+   **→ DONE: SSWM's GBV-prevention page found and directly read,
+   supporting a narrower claim than "general framing only" - see
+   above.**
 3. Find and directly read a dedicated medical/biohazard waste handling
    reference to properly resolve D5 - the single highest-priority open
    item, given its flagged high-risk status.
+   **→ DONE: WHO's official Health-care waste fact sheet, see above.**
 4. Optionally, attempt an alternate access route for WHO Technical Note
    14, a high-value Tier 1 source currently blocked by a PDF-rendering
    failure.
+   **→ Not attempted this pass (optional, not required to close B7/C6/
+   D5); a second WHO PDF (Module 17) was attempted for D5 and also
+   failed with the same corrupted-binary pattern, confirming this
+   remains a systemic WHO-PDF access limitation, not a one-off.**
 5. Optionally, investigate drainage/greywater management further if a
    genuinely camp/emergency-specific, directly-readable source can be
    found - not required for the current 5-article architecture, but
    would be needed if a future version considered adding it.
+   **→ Not attempted this pass (optional, out of this closure task's
+   scope). Drainage/greywater exclusion rechecked and confirmed
+   unchanged - see the Research Plan's Architecture Recheck.**
 
-None of these steps were performed in this sprint, per the Founder's
-authorization covering research and source collection only.
+All mandatory closure items are complete. The pack's claim set and
+source collection are assessed as ready for Writing to begin, pending
+separate Founder authorization for Stage 4 - this task's own
+boundaries explicitly exclude beginning Writing itself.

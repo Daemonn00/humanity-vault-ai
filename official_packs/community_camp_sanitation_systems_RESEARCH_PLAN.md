@@ -265,7 +265,7 @@ boundaries over maximizing article count" discipline.
 | B4 | A camp/trench latrine should be sited roughly 15-30m from any groundwater source | Directly read (SSWM) - **explicitly a distinct claim object from the household 30m rule and the ESS water-table-clearance rule, see boundary statement above** |
 | B5 | Water-table clearance (1.5m) - cross-link only | Already owned by Emergency Shelter Systems - not re-verified or restated here |
 | B6 | During use, a pit is generally considered for backfilling once filled to roughly 20cm beneath the slab | Directly read (SSWM) |
-| B7 | VIP (Ventilated Improved Pit) latrines exist as a fly/odor-control upgrade from basic pit latrines, using a vented pipe to draw odor upward and trap flies via light-attraction | **FLAGGED, NOT FROZEN** - found via search summary only this pass; direct read pending before use in Writing |
+| B7 | VIP (Ventilated Improved Pit) latrines control flies and odor via a vented pipe: continuous airflow carries odor upward and out, while flies hatching in the pit are attracted to light at the top of the vent and trapped by a fly-screen. The vent pipe needs an internal diameter of at least 11cm and must reach more than 30cm above the highest point of the superstructure | **VERIFIED WITH NARROWING, 2026-07-19** - directly read (Global WASH Cluster eCompendium, S.4 Single Ventilated Improved Pit) - see Targeted Source Collection Closure below |
 
 ### Article 3 (C)
 
@@ -276,7 +276,7 @@ boundaries over maximizing article count" discipline.
 | C3 | A wheelchair user needs roughly 80cm x 130cm of free space next to the seat to transfer, plus a 150cm x 150cm turning space, with a grabrail at roughly 80cm height | Directly read (CBM HHoT) |
 | C4 | Roughly 1 in 10 latrines in a facility should be built fully accessible/barrier-free | Directly read (CBM HHoT) |
 | C5 | Latrines should be no more than roughly 50m from shelters in short-term emergencies, tightening to no more than roughly 30m in longer-term settlements | Directly read (CBM HHoT) - **a distinct claim object (dwelling-to-latrine walking distance) from Article 2's groundwater-siting distance** |
-| C6 | Gender-based-violence risk is a real, documented safety concern connected to latrine siting and lighting, requiring deliberate design attention | **FLAGGED, GENERAL FRAMING ONLY** - the specific source found for this (an Oxfam Views & Voices article) is no longer live at its original URL (301 redirect to a generic blog index); not directly read this pass. Only the general, widely-corroborated principle (women/girls face elevated risk, especially at night) will be used, without the specific "lighting-only-at-latrines can backfire" nuance, unless a directly-readable source is found in a future closure pass |
+| C6 | Reducing gender-based-violence risk at sanitation facilities requires multiple coordinated measures, not any single fix: gender-segregated facilities, locks on latrines, adequate lighting, and safe, direct travel routes/distances to water and sanitation points. Lighting is one contributing measure, not by itself sufficient | **VERIFIED WITH NARROWING, 2026-07-19** - directly read (SSWM, Preventing Gender-Based Violence in Camps and Prolonged Encampments) - see Targeted Source Collection Closure below. **Note:** the same source's "water points <500m from shelters" figure is the already-published Water Treatment at Scale claim - cross-linked, not restated here |
 | C7 | Latrines should have separate male/female facilities, working locks, and privacy from view | General, low-risk, corroborated across multiple already-directly-read sources (CBM HHoT) |
 
 ### Article 4 (D)
@@ -287,7 +287,7 @@ boundaries over maximizing article count" discipline.
 | D2 | Communal collection: roughly one 100-liter bin per 10 families, sited at least 15m from residences | Directly read (Oxfam WASH) |
 | D3 | Transport scaling: hand-carts can serve roughly 10,000-20,000 people within a 1km radius; motorized trucks are generally needed above roughly 50,000 people | Directly read (Oxfam WASH) |
 | D4 | Waste burial pits should be sited at least 30m from the nearest dwelling and water sources, at least 1.5m above the water table, with daily soil cover | Directly read (Oxfam WASH) - **its own distinct claim, not the same rule as Article 2's latrine siting or Emergency Shelter Systems' settlement-hazard distances** |
-| D5 | No medical/biohazard waste should be disposed of in general community burial pits | **FLAGGED, HIGH-RISK, NOT FROZEN** - directly read but only as a brief mention in the source; requires deeper sourcing (a dedicated medical-waste-handling reference) before a Founder-confirmation determination can responsibly be made - see High-Risk Claim Identification below |
+| D5 | Health-care waste is a mix of general/non-hazardous material (roughly 85%) and hazardous material (roughly 15% - infectious, pathological, sharps, chemical, pharmaceutical, and radioactive waste); segregating the hazardous portion from general waste, rather than mixing it into ordinary community refuse/burial systems, is a key element of safe management | **VERIFIED WITH NARROWING (claim substantially narrowed from the original vague framing), 2026-07-19** - directly read (WHO, Health-care waste fact sheet) - see Targeted Source Collection Closure below for the full §9.3 determination (Determination A - no Founder confirmation required) |
 | D6 | Incineration should be used only as a last resort, conducted downwind of settlements, with plastics removed first; informal/uncontrolled burning often fails to reach adequate temperature and creates air-pollution hazards | Directly read (Oxfam WASH) |
 | D7 | Reference planning-capacity ratios: roughly 6 cubic meters of burial capacity per 50 people per week; roughly 3 cubic meters of landfill design capacity per 200 people per week | Directly read (Oxfam WASH) |
 
@@ -318,19 +318,16 @@ categories to scrutinize.
 | Wastewater handling | **N/A - excluded from this pack's architecture this pass** (see Ownership Boundary above - drainage/wastewater was investigated and found insufficiently sourced; no claim exists to evaluate). |
 | Vector-control chemical use | **N/A - not currently part of this pack's claim set.** E1's vector-control content is entirely non-chemical (ventilation/design-based), so no chemical-use claim exists to evaluate. |
 | Disease-prevention claims | **General framing only, not §9.3** - this pack's disease-prevention content (A1's rationale, E4's maintenance framing) stays at the level of "why this matters," not a specific clinical/treatment claim. |
-| **Medical/biohazard waste exclusion from general burial pits (D5)** | **FLAGGED - genuinely uncertain, requires deeper sourcing before determination.** This is the one candidate in the entire inventory with a plausible §9.3-by-analogy argument (biohazard material is closer in kind to a toxic-substance handling threshold than a simple engineering figure), but the current source support (one brief mention in Oxfam's general waste-management guidance) is too thin to responsibly evaluate severity or scope. **Recommendation: do not attempt to write around this by converting it into vague prose - instead, treat it as an open research item requiring a dedicated medical-waste-handling source before Writing, and make an explicit §9.3-applicability determination at that time**, following the same "flag now, resolve with real sourcing in a closure pass" pattern already used successfully for Emergency Shelter Systems' and Community Food Production's own open items. |
+| **Medical/biohazard waste segregation (D5)** | **RESOLVED, 2026-07-19 - Determination A, does not require Founder confirmation.** See the Targeted Source Collection Closure section below for the full reasoning against the four factors this task specifies (consequence of misuse, operational specificity, whether the claim directs hazardous-waste handling, established precedent). |
 
-**Result: exactly one claim (D5) is flagged as a genuine high-risk
-open item requiring resolution - not by converting it to unsupported
-vague prose, but by finding real sourcing depth before Writing.** No
-claim in this inventory currently requires mandatory Founder
-pre-writing confirmation, because no claim has yet reached the
-specific-figure-with-confirmed-severity state that triggered
-Founder confirmation in Emergency Shelter Systems (B4/B6-equivalent:
-CO thresholds) or Community Food Production (B4/B6: compost/manure
-thresholds) - D5 may reach that state after further sourcing, or may
-resolve to an ordinary general caution, or may be dropped; this is not
-decided here.
+**Result (superseded by the Targeted Source Collection Closure below -
+preserved as the prior sprint's accurate record): "exactly one claim
+(D5) is flagged as a genuine high-risk open item requiring
+resolution... No claim in this inventory currently requires mandatory
+Founder pre-writing confirmation... D5 may reach that state after
+further sourcing, or may resolve to an ordinary general caution, or
+may be dropped; this is not decided here."** This has now been
+resolved - see below.
 
 ## Source Conflict / Ambiguity Handling (Part E)
 
@@ -357,43 +354,250 @@ directly-read sources giving different numbers for the *same* claim
 object) - the numerical similarities found were all across genuinely
 different claim objects, handled as above.
 
+## Targeted Source Collection Closure (2026-07-19)
+
+This section closes the three items left open by the Research pass
+above (B7, C6, D5). Each was resolved by directly opening and reading
+a new source this pass - not by accepting a search-summary claim.
+Per this project's append/update discipline, the original flagged
+text for each item is preserved above in the Claim Inventory's
+superseded-note form and in the High-Risk table; nothing has been
+erased.
+
+### B7 — VIP latrine mechanism: VERIFIED WITH NARROWING
+
+**Source directly read:** Global WASH Cluster eCompendium
+(emersan-compendium.org), "S.4 Single Ventilated Improved Pit"
+technology page. Same source family already used and trusted
+elsewhere in this pack (E1/E2) and in this pack's own B1-B3/B6.
+
+**Exact supporting quotes:**
+- "Flies that hatch in the pit are attracted to the light at the top
+  of the ventilation pipe. When they fly towards the light and try to
+  escape, they are trapped by the fly-screen and eventually die."
+- "continuous airflow through the ventilation pipe prevents odours and
+  acts as a trap for flies as they escape towards the light."
+- "a straight vent pipe is needed with an internal diameter of at
+  least 11 cm and reaching more than 30 cm above the highest point of
+  the toilet superstructure."
+- Wind-driven or heat-driven convection drives the airflow; painting
+  the pipe black improves performance in low-wind conditions.
+
+**Narrowing applied:** the original candidate claim ("VIP latrines
+exist as a fly/odor-control upgrade... using a vented pipe to draw
+odor upward and trap flies via light-attraction") was a correct but
+under-specified summary. The now-verified claim adds the two concrete
+figures (11cm minimum internal diameter, 30cm minimum height above the
+superstructure) and the precise causal mechanism (continuous airflow
+prevents odor; flies are light-attracted into a screened trap), all
+directly attributable to this one source. This is a dimensional/
+construction figure, not a life-safety threshold - no §9.3 concern.
+
+### C6 — GBV/lighting/sanitation-facility safety: VERIFIED WITH NARROWING
+
+**Source directly read:** SSWM.info, "Preventing Gender-Based Violence
+(Camps and Prolonged Encampments)" - the dedicated humanitarian-WASH
+knowledge platform already trusted elsewhere in this pack (A2, A4,
+B2, B3, B6).
+
+**Exact supporting quote:** "building gender segregated sanitary and
+bathing facilitating, installing adequate lighting at WASH facilities,
+putting locks on latrines, ensuring safe travel distances and routes
+to water and sanitation points (water points should be located at
+less than 500 m from shelters)."
+
+**Narrowing applied:** the original candidate claim was flagged as
+"general framing only" because its source (an Oxfam article) was
+dead-linked and never directly read. The now-verified claim is
+narrower and more precise than the original framing in one important
+respect: it does NOT support "lighting is a fix for GBV risk" as a
+standalone claim. The source lists lighting as one of four coordinated
+measures (gender segregation, locks, lighting, safe routes/distances)
+- none singled out as sufficient alone. The claim as written in the
+inventory (C6, above) reflects this precisely: multiple coordinated
+measures, lighting as one contributing measure among several.
+
+**Cross-pack overlap identified and handled:** this same source's
+"water points <500m from shelters" figure is the identical claim
+already published in Water Treatment at Scale's
+`wts_assessing_community_water_needs_and_protecting_the_source.md`
+("Households are generally planned to be within about 500 meters of a
+water point"). Per this project's ownership-boundary discipline, this
+figure is cross-linked, not restated, in C6's claim text (see the
+Claim Inventory note above) and will be cross-linked rather than
+re-cited at Writing time. This is a qualitative safety-practice claim,
+not a numeric threshold whose precision drives an acute-harm outcome -
+no §9.3 concern.
+
+### D5 — Medical/biohazard waste segregation: VERIFIED WITH NARROWING, §9.3 Determination A
+
+**Source directly read:** World Health Organization, official HTML
+fact-sheet page, "Health-care waste"
+(who.int/news-room/fact-sheets/detail/health-care-waste) - Tier 1,
+distinct from the WHO PDF documents that have repeatedly failed to
+load in this pack's research (corrupted binary) and in this closure
+pass itself (Module 17 PDF, see Source Collection update).
+
+**Exact supporting quotes:**
+- "about 85% is general, non-hazardous waste"
+- "the remaining 15% is considered hazardous material"
+- Named hazardous categories: "Infectious waste... Pathological
+  waste... Sharps waste... Chemical waste... Pharmaceutical/cytotoxic
+  waste... Radioactive waste"
+- "health-care waste is often not separated into hazardous or
+  non-hazardous wastes" in low-income-country settings
+- Segregation is described as "a key element in improving health-care
+  waste management"
+
+**Narrowing applied:** the original candidate claim ("no medical/
+biohazard waste should be disposed of in general community burial
+pits") was a plausible but vague, under-sourced rule with no named
+authority and no operational detail. The now-verified claim is
+substantially narrower and more precisely scoped: it states the
+composition breakdown (85%/15%), names the hazardous sub-categories,
+and frames the actionable guidance as *segregation* of the hazardous
+fraction from general waste - not a categorical prohibition on any
+one disposal method. This is a meaningfully different, more
+defensible claim than the original framing, and is the one that will
+carry forward into Writing.
+
+**§9.3 Determination: A — does not require Founder pre-writing
+confirmation.** Reasoning against the same four factors this project
+has applied consistently since Emergency Shelter Systems and Community
+Food Production:
+
+1. **Consequence of misuse.** A reader who under-applies this claim
+   (fails to segregate hazardous health-care waste, mixes it into
+   general refuse) faces the same generalized infection/injury risk
+   that already exists in any setting without organized health-care
+   waste management - not a sudden, acute, individually-triggered harm
+   from a single misapplied number. This differs in kind from CO
+   poisoning (Emergency Shelter Systems) or pathogen survival at a
+   specific compost temperature (Community Food Production), where a
+   single wrong number produces a direct, immediate physiological harm
+   to the person following the instruction.
+2. **Operational specificity.** The claim carries a percentage
+   breakdown (85%/15%) and named waste categories, but issues no
+   specific dose, temperature, exposure duration, structural load, or
+   other single number whose precise value determines a safe/unsafe
+   outcome. It is categorical guidance ("segregate hazardous from
+   general") in the same register as Emergency Shelter Systems' own
+   non-elevated categorical rule ("never use a fuel-burning heater or
+   an oven to heat an enclosed space") - which stayed at ordinary §9.2
+   specifically *because* it carried no exploitable numeric threshold,
+   in contrast to that same pack's CO-ppm figures, which were
+   elevated.
+3. **Does the claim direct hazardous-material handling procedure?**
+   No. D5 does not instruct how to treat, transport, sterilize, or
+   dispose of hazardous health-care waste (autoclave temperatures,
+   chemical disinfectant concentrations, incineration temperatures) -
+   it only establishes that such waste exists as a distinct category
+   and should not be mixed into ordinary community refuse/burial
+   systems. A future claim that specified, e.g., a minimum incineration
+   temperature for medical waste would need its own fresh §9.3
+   evaluation and would likely fail Determination A - but no such claim
+   is proposed here.
+4. **Established project precedent.** This project has now applied the
+   categorical-vs-numeric-threshold test three times (Emergency Shelter
+   Systems' heating-source rule vs. its CO thresholds; Community Food
+   Production's manure-application caution vs. its compost-pathogen
+   temperature thresholds; now D5's segregation principle vs. an
+   unproposed hypothetical handling-temperature claim). The test has
+   been applied the same way each time: category-level "be aware of
+   and separate this risk" guidance stays ordinary; a specific number
+   whose precision determines an acute outcome gets elevated. D5, as
+   narrowed, falls on the categorical side.
+
+**Explicit confirmation, per this task's instruction:** this
+determination was reached by applying the test, not by a default
+assumption in either direction - D5 was not classified high-risk
+merely because it concerns health/medical material, and it was not
+classified ordinary merely to avoid a Founder-confirmation gate. The
+narrowed claim's own content (no dose, no temperature, no procedure)
+is what places it in Determination A.
+
+**No Founder Confirmation Packet is created for this pack.** No claim
+in the full 32-item inventory reached the specific-figure-with-
+confirmed-severity state that has triggered a Founder Confirmation
+Packet in prior packs (Emergency Shelter Systems' CO thresholds,
+Community Food Production's compost/manure thresholds). Manufacturing
+a packet here for process symmetry, when no claim requires it, would
+misrepresent this pack's actual risk profile - this task's instructions
+explicitly warn against doing so.
+
+## Architecture Recheck (Part 6)
+
+Rechecked all four items this task calls for, using the now-closed
+claim set:
+
+- **Article 3 standalone-worthiness.** C6's narrowing (from vague
+  general framing to a source-grounded, four-measure claim with an
+  explicit cross-link) strengthens rather than weakens Article 3's
+  case for standing alone. Combined with C1-C5 and C7 (accessibility
+  dimensions, door/lock specs, wheelchair transfer space, accessible-
+  facility ratio, dwelling-to-latrine distance, separate-facility/
+  privacy principle), Article 3 now has 7 claims, all directly read,
+  covering a genuinely new corpus-wide topic (disability access and
+  facility-safety). Standalone status confirmed - no reason to fold it
+  into another article.
+- **Article 4 / D5 coherence.** D5's narrowed form (segregate
+  hazardous health-care waste from general community waste/burial
+  systems) fits Article 4's existing scope (household and communal
+  solid-waste collection and disposal) as a boundary/exclusion claim
+  within that scope, consistent with D1-D4, D6, D7's shared subject
+  (what happens to community refuse). No architecture change needed -
+  D5 stays in Article 4.
+- **Drainage/greywater exclusion.** Rechecked against this pass's new
+  reading (VIP mechanism, GBV-prevention page, WHO health-care-waste
+  fact sheet) - none of the three newly-read sources introduced
+  drainage/greywater material. The original Part B finding (excluded,
+  insufficiently sourced this pass) stands unchanged.
+- **Cross-pack overlap.** One new instance found and handled this pass:
+  C6's "water points <500m from shelters" figure duplicates Water
+  Treatment at Scale's already-published household-to-water-point
+  distance. Resolved by cross-linking rather than restating (see C6
+  closure above and the Claim Inventory note). No other new overlaps
+  were introduced by this closure pass's three new sources.
+
 ## Production-Stage Status
 
 - **Stage 1 (Topic Selection):** Complete - Founder-approved directly,
   six acceptance criteria pass (above).
-- **Stage 2 (Research):** This document - substantially complete for a
-  first pass. 5-article architecture proposed with 32 claim IDs; one
-  claim flagged high-risk pending deeper sourcing (D5); one claim
-  flagged pending direct source read (B7); one claim area kept
-  deliberately general pending a directly-readable source (C6);
-  drainage/wastewater deliberately excluded as insufficiently sourced
-  this pass.
-- **Stage 3 (Source Collection):** Underway in parallel - see
-  `community_camp_sanitation_systems_SOURCE_COLLECTION.md`.
+- **Stage 2 (Research):** Complete. 5-article architecture confirmed
+  with all 32 claim IDs closed - no claim remains flagged, open, or
+  pending deeper sourcing. Drainage/wastewater remains deliberately
+  excluded as insufficiently sourced (rechecked this pass, finding
+  unchanged).
+- **Stage 3 (Source Collection):** Complete for this pre-writing pass -
+  see `community_camp_sanitation_systems_SOURCE_COLLECTION.md` for the
+  full, now-updated record including this closure pass's 3 new
+  successful reads and 2 new access failures.
 - **Stages 4-7:** Not started. Not authorized by the Founder's current
-  decision, which covers research and source collection only.
+  decision, which covers research and source collection only. Writing
+  (Stage 4) requires a separate, later authorization and is explicitly
+  not begun by this task.
 
-## Ready to write? — NOT READY
+## Ready to write? — READY FOR WRITING (pending separate Founder authorization to begin Stage 4)
 
-- [ ] Every planned article has at least one directly-read candidate
-      source - **met for all 5 articles**, but 3 specific claims
-      (B7, C6, D5) remain open (search-level-only, general-only, or
-      requiring deeper sourcing respectively) and must be closed
-      before Writing.
+- [x] Every planned article has at least one directly-read candidate
+      source - **met for all 5 articles**, and all 3 previously-open
+      claims (B7, C6, D5) are now closed via directly-read sources.
 - [x] No planned claim requires a source known in advance to be
-      inaccessible without a fallback plan - each open item (B7, C6,
-      D5) has an explicit fallback stated above (direct-read it, keep
-      it general, or find a dedicated medical-waste source).
+      inaccessible without a fallback plan - all fallbacks were
+      exercised successfully this pass.
 - [x] Safety-sensitive claim families identified and mapped against
-      `QUALITY_STANDARD.md` §9.3 - one genuine open question (D5)
-      flagged rather than resolved silently; every other numeric claim
-      determined not to require mandatory Founder pre-writing
-      confirmation, consistent with how this project treated
-      structurally identical figures in Emergency Shelter Systems.
+      `QUALITY_STANDARD.md` §9.3 - the sole open question (D5) has now
+      been explicitly resolved as Determination A (no Founder
+      confirmation required); every other numeric claim confirmed not
+      to require mandatory Founder pre-writing confirmation, consistent
+      with how this project treated structurally identical figures in
+      Emergency Shelter Systems and Community Food Production.
 
-**This Research Plan does not authorize Writing.** Per the Founder's
-decision, this sprint's authorization covers research, scope
-definition, and source collection only. A targeted closure pass
-(matching the precedent already used for Emergency Shelter Systems and
-Community Food Production) would need to resolve B7, C6, and
-especially D5 before this pack could responsibly proceed to Writing.
+**This Research Plan still does not itself authorize Writing.** Per
+the Founder's original decision, this sprint's authorization covered
+research, scope definition, and source collection only, and this
+closure task's own boundaries explicitly exclude beginning Stage 4.
+The claim set and architecture are now assessed as ready for Writing
+to begin *once the Founder separately authorizes that stage* - this
+document records that readiness; it does not grant the authorization
+itself.

@@ -68,47 +68,26 @@ records topic-level scope and status only.
   coexistence with Mass Casualty, Survival Physical Readiness, Field
   Communication & Wayfinding, and Water Treatment at Scale). See its
   `REVIEW_NOTES.md` for the full record.
+- **Community & System-Scale Food Production**
+  (`hv_official_community_food_production`,
+  `official_packs/hv_official_community_food_production/`) -
+  **Released v1.0.0.** All 5 articles `Verified Source`; Founder
+  Publication Decision Approved; registered in `registry/registry.json`,
+  live GitHub Release published and independently verified end-to-end
+  (Vault Hub six-pack discovery, Official Website, Pack Detail,
+  download, checksum, real `PackImporter` import, and six-pack
+  coexistence with Mass Casualty, Survival Physical Readiness, Field
+  Communication & Wayfinding, Water Treatment at Scale, and Emergency
+  Shelter Systems). Basic animal husbandry/livestock was deliberately
+  excluded from this pack's architecture and recorded as a candidate
+  for a separate future pack (Section 5, below), not approved. See its
+  `REVIEW_NOTES.md` for the full record.
 
 ## 3. In Production (Not Yet Released)
 
-### Community & System-Scale Food Production
-
-**Status: Founder Approved — Research / Source Collection.**
-Proposed `pack_id`: `hv_official_community_food_production`.
-
-- **Approved by:** The Founder, 2026-07-19. This approval authorizes
-  research, scope definition, and source collection only - it does
-  **not** authorize article-architecture approval, individual
-  operational-claim approval, Writing, creation of the final pack
-  directory or `manifest.md`, Editorial Review completion, `Verified
-  Source` status for any claim, Release Pipeline execution, or
-  publication. Those remain separate, later gates per
-  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`.
-- **Origin:** Identified as the strongest candidate for Pack #6 in a
-  dedicated Production Direction and Topic Selection Analysis
-  (2026-07-18), scoring 47/50 and representing the largest remaining
-  system-scale capability gap - the core corpus's Agriculture category
-  contains only two household/individual-garden-scale articles
-  (`growing_staple_food_crops.md`, `seed_saving_basics.md`), with no
-  community or system-scale food-production content anywhere.
-- **Current stage:** Research Plan and Source Collection underway; see
-  `official_packs/community_food_production_RESEARCH_PLAN.md` and
-  `official_packs/community_food_production_SOURCE_COLLECTION.md` for
-  the full record. No `manifest.md`, no articles, and no pack
-  directory under `official_packs/` exist yet - Writing has not begun.
-- **Scope:** Building and maintaining resilient food-production
-  capacity beyond a single household or small personal garden -
-  land/resource assessment and diversified-system planning, soil
-  fertility management and composting at scale, irrigation planning,
-  pest and disease resilience with low chemical input, and harvest/
-  storage/community food-reserve practices - explicitly distinct from
-  the core corpus's existing household-scale crop-growing and
-  seed-saving content, which this pack cross-links to rather than
-  duplicates. Basic animal husbandry/livestock is explicitly **not**
-  included in this pack's architecture (see the Research Plan's
-  livestock stress-test); it remains a candidate for a separate future
-  pack. Aquaponics is not folded into this pack and remains a distinct
-  future direction (Section 5, below).
+No topic is currently in production. Community & System-Scale Food
+Production (Section 2, above) completed its full production cycle and
+is now released.
 
 ## 4. Named But Not Yet Started
 
@@ -151,32 +130,51 @@ stress test. Any future authoring of this topic must represent the
 loop explicitly (the water returning to the fish, closing the cycle),
 not as a one-directional sequence.
 
+### Livestock / Animal Husbandry (recorded future candidate, not an approved pack)
+
+**Status: Recorded as a legitimate future candidate. Not scheduled.
+Not researched. Not an approved production pack.**
+
+Unlike Aquaponics (a Founder-originated direction), this entry
+originated from AI-agent analysis during Community & System-Scale Food
+Production's Research Plan (2026-07-19), which deliberately excluded
+basic animal husbandry from that pack's architecture after a livestock
+stress-test found disproportionate complexity (zoonotic disease,
+veterinary care, slaughter, feed-supply-chain dependency, animal
+welfare) relative to that pack's scope, and recommended the topic be
+deferred to its own future pack rather than included or dropped
+entirely. See
+`official_packs/community_food_production_RESEARCH_PLAN.md`'s
+livestock stress-test for the full reasoning. This entry preserves
+that recorded gap; it does not authorize producing a pack.
+
 ## 6. Recommended Next Production Target
 
 Fulfilled. The previous recommendation in this section - approve and
 begin Water Treatment at Scale - is complete; it is released (Section
-2, above). Emergency Shelter Systems, the pack that was in active
-research at the time of the previous update, is also now complete and
-released (Section 2, above). Community & System-Scale Food Production
-(Section 3, above) is now the pack in active research, per the
-Founder's 2026-07-19 approval. This document does not, on its own
-initiative, extend that approval into an approved sequence of future
-packs - the analytical tentative Pack #7-#10 sequence proposed in the
-same Production Direction Analysis (2026-07-18) is recorded there as
-analysis only and is **not** adopted as a roadmap commitment here.
-Aquaponics (Section 5, below) remains a recorded future direction, not
-an approved topic; this document does not select it as a next target
-on its own initiative.
+2, above). Emergency Shelter Systems and Community & System-Scale Food
+Production, each in turn the pack in active research at the time of a
+previous update, are also now complete and released (Section 2,
+above). No topic is currently named-but-unstarted (Section 4) or in
+production (Section 3). A fresh Production Direction & Roadmap
+Reconciliation analysis (2026-07-19, post-sixth-release) identified
+**Community & Camp Sanitation Systems** as the strongest advisory
+candidate for Official Knowledge Pack #7, on the basis that both
+Water Treatment at Scale and Emergency Shelter Systems already
+cross-link to household-scale sanitation content without owning
+community-scale sanitation infrastructure themselves. **This is a
+recommendation only, not a Founder-approved topic** - this document
+does not select it, or any topic, as an approved next target on its
+own initiative. Aquaponics and Livestock/Animal Husbandry (Section 5,
+above) remain recorded future directions, not approved topics.
 
 ## 7. Next Steps (Not Actioned By This Document)
 
-- Complete Source Collection for Community & System-Scale Food
-  Production (Section 3, above), then proceed through Writing,
-  Editorial Review, and Human/AI-agent Source Verification per
-  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md` and
-  `pack_production_workflow/QUALITY_STANDARD.md` §9 - followed by its
-  own separate Founder Publication Decision before any release step.
-  This document records that progress when it happens; it does not
-  perform it.
-- A Founder decision on Aquaponics remains a prerequisite before it
-  could begin production.
+- No pack is currently in production. A new topic requires a Founder
+  approval decision (research/scope/source-collection authorization)
+  before production work of any kind may begin, per
+  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`.
+- A Founder decision on the recommended Pack #7 candidate (Community &
+  Camp Sanitation Systems), on Aquaponics, or on Livestock/Animal
+  Husbandry remains a prerequisite before any of them could begin
+  production.

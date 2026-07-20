@@ -62,8 +62,9 @@ beyond the scope of a general community waste system - only that it
 must be recognized and kept separate from everything else described
 above.
 
-When waste has to be burned rather than buried, incineration should be
-treated as a last resort rather than a routine method. It should be
+When ordinary community waste has to be burned rather than buried,
+incineration should be treated as a last resort rather than a routine
+method. It should be
 done downwind of where people live, with plastics removed beforehand,
 since they burn poorly and release harmful smoke. Informal or
 uncontrolled burning in particular often fails to reach a temperature

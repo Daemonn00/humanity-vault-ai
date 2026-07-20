@@ -5,7 +5,7 @@ subcategory: Sanitation
 author: Humanity Vault Contributors
 last_updated: 2026-07-20
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: ccss_latrine_types_and_construction_for_camp_and_emergency_settings, ccss_accessibility_safety_and_dignified_use_of_sanitation_facilities, ccss_solid_waste_collection_and_disposal_at_community_scale, sanitation_hygiene_and_disease_prevention, ess_shelter_site_selection_and_system_planning
 ---
 

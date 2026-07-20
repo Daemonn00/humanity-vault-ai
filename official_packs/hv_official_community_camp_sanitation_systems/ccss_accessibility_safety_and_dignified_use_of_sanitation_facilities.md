@@ -5,7 +5,7 @@ subcategory: Sanitation
 author: Humanity Vault Contributors
 last_updated: 2026-07-20
 knowledge_level: Level 2
-verification_level: Unverified
+verification_level: Verified Source
 related_articles: ccss_latrine_types_and_construction_for_camp_and_emergency_settings, ccss_assessing_sanitation_needs_and_planning_a_community_system, wts_assessing_community_water_needs_and_protecting_the_source
 ---
 

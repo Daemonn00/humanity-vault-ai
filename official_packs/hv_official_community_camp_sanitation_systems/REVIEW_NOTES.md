@@ -1282,4 +1282,83 @@ unaffected by this update.
 | Version | Date | What changed | Review outcome | Reviewer(s) | Publication decision |
 |---|---|---|---|---|---|
 | 1.0.0 | 2026-07-20 | Stage 6 Formal Source Verification: all 11 sources re-fetched fresh; all 32 claims independently re-verified against current final prose; heightened B7/C6/D5 verification; D5 §9.3 Determination A independently reconsidered and reconfirmed; D6 post-fix wording confirmed genuinely effective; full numeric and three-distinct-30m audits independently rebuilt; cross-pack ownership and drainage/greywater boundaries re-confirmed; 0 rewrites, 0 removals required | 32 of 32 claims PASS or correctly-classified cross-link/general-knowledge; all 5 articles upgraded to `Verified Source` | Claude (AI agent) | **Not Yet Approved** - Source Verification complete, but a separate Founder Publication Decision has not yet been made |
+| 1.0.0 | 2026-07-20 | Founder Publication Decision recorded: APPROVED FOR PUBLICATION | No new review performed this row - recording the Founder's own separate decision against the Stage 6 verification state above (32 of 32 claims passed, 5 of 5 articles `Verified Source`, 0 unresolved findings) | The Founder | **Approved for Release** - see "Founder Publication Decision" section below for the full record |
+
+## Founder Publication Decision (2026-07-20)
+
+*(Per `editorial_review_template/06_PUBLICATION_DECISION_TEMPLATE.md`.
+This section is appended, not an in-place edit of the "Publication
+Decision" section recorded during Stage 5 above - that section is
+preserved unchanged as the accurate historical record of the pack's
+status at that time (`Not Yet Approved`). This section is the current,
+controlling decision.)*
+
+### Decision
+
+- **Pack:** `hv_official_community_camp_sanitation_systems`
+- **Version under decision:** 1.0.0
+- **Decision:** **[x] Approved for Release** - every article's
+  `verification_level` in the Claim-to-Source Map is fully supported
+  (32 of 32 claims independently re-verified as PASS or correctly-
+  classified CROSS-LINK/GENERAL KNOWLEDGE during Stage 6, 0 REWRITE
+  REQUIRED, 0 REMOVE, 0 UNRESOLVED); this exact version may be
+  packaged and released via `release_pipeline/`.
+- **Decided by:** The Founder
+- **Date:** 2026-07-20
+- **Basis for this decision** (the verified state this approval is
+  granted against, not re-derived here):
+  - 5 of 5 articles: `verification_level: Verified Source`
+  - 32 of 32 frozen claims passed formal Stage 6 verification
+  - 0 unresolved Critical findings
+  - 0 unresolved High findings
+  - 0 unresolved Medium findings
+  - 0 unresolved verification blockers
+  - D5's §9.3 determination independently reconsidered and reconfirmed
+    as Determination A (no Founder high-risk confirmation required) -
+    this Publication Decision is a separate, distinct decision from
+    that determination, not a substitute for it or dependent on
+    reopening it
+
+### Methodology acceptance
+
+The Founder accepts, for this pack/version only, the established
+AI-agent verification methodology used throughout Stages 2-6
+(`pack_production_workflow/QUALITY_STANDARD.md` §9's ratified standing
+AI-Agent Verification Policy) as the basis for this Publication
+Decision.
+
+### Explicit scope limits on this approval
+
+- **This is a pack/version-specific publication approval** - it
+  applies only to `hv_official_community_camp_sanitation_systems`
+  v1.0.0, exactly as recorded above.
+- **This is not a blanket waiver** of any future review, verification,
+  or Founder-decision requirement for this or any other pack.
+- **This is not approval for future versions** of this same pack - a
+  v1.0.1, v1.1.0, or v2.0.0 release would each require its own
+  Editorial Review, Source Verification, and separate Founder
+  Publication Decision, per `QUALITY_STANDARD.md` §6's update policy.
+- **This is not approval for any other Knowledge Pack** - it has no
+  bearing on any other pack's review or publication status.
+
+### What "Approved for Release" actually authorizes
+
+Exactly what `06_PUBLICATION_DECISION_TEMPLATE.md` states, no more:
+
+- The pack's manifest `pack_version` (1.0.0) may be treated as ready
+  for `release_pipeline/bin/release.dart` to be run against it.
+- Nothing about the ZIP, checksum, or registry entry is created by
+  this decision itself - the Release Pipeline still performs its own
+  full, independent checklist regardless of what this document says.
+
+### What this decision does not authorize
+
+- It does not authorize creating the real GitHub Release, running the
+  real Registry Generator, or touching `registry/registry.json` -
+  those remain separate, later, manual steps per
+  `release_pipeline/RELEASE_CHECKLIST.md`.
+- It does not authorize Official Release Finalization (live-release
+  verification, registry regeneration/commit/push, Vault Hub/website
+  verification) - that is explicitly a separate, later, authorized
+  sprint per this task's own instructions.
 

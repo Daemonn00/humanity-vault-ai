@@ -85,9 +85,48 @@ records topic-level scope and status only.
 
 ## 3. In Production (Not Yet Released)
 
-No topic is currently in production. Community & System-Scale Food
-Production (Section 2, above) completed its full production cycle and
-is now released.
+### Community & Camp Sanitation Systems
+
+**Status: Founder Approved — Research / Source Collection.**
+Proposed `pack_id`: `hv_official_community_camp_sanitation_systems`.
+
+- **Approved by:** The Founder, 2026-07-19. This approval authorizes
+  research, scope definition, and source collection only - it does
+  **not** authorize article-architecture approval, individual
+  operational-claim approval, Writing, creation of the final pack
+  directory or `manifest.md`, Editorial Review completion, `Verified
+  Source` status for any claim, Release Pipeline execution, or
+  publication. Those remain separate, later gates per
+  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`.
+- **Origin:** Identified as the strongest advisory candidate for
+  Pack #7 in a dedicated Production Direction & Roadmap Reconciliation
+  analysis (2026-07-19, post-sixth-release), on the basis that three
+  released packs (Water Treatment at Scale, Emergency Shelter Systems,
+  and Community & System-Scale Food Production) already cross-link to
+  household-scale sanitation content without any of them owning
+  community/camp-scale sanitation infrastructure.
+- **Current stage:** Research Plan and Source Collection underway; see
+  `official_packs/community_camp_sanitation_systems_RESEARCH_PLAN.md`
+  and
+  `official_packs/community_camp_sanitation_systems_SOURCE_COLLECTION.md`
+  for the full record. No `manifest.md`, no articles, and no pack
+  directory under `official_packs/` exist yet - Writing has not begun.
+  One claim (medical/biohazard waste exclusion from general burial
+  pits) is flagged high-risk and requires deeper sourcing before a
+  §9.3 determination can be made; two further items (a VIP-latrine
+  source, a specific gender-based-violence/lighting source) remain
+  open pending a closure pass.
+- **Scope:** Community and camp-scale sanitation infrastructure -
+  needs assessment and system planning, latrine types and
+  construction, accessibility and dignified/safe use, solid-waste
+  collection and disposal, and system operation/maintenance/
+  decommissioning - explicitly distinct from the core corpus's
+  existing household-scale hygiene content and from the settlement-
+  siting, water-table-clearance, and toilet-ratio figures already
+  owned by Emergency Shelter Systems, which this pack cross-links to
+  rather than duplicates. Drainage/greywater management was
+  investigated and excluded from this pass's architecture as
+  insufficiently sourced, not forced in.
 
 ## 4. Named But Not Yet Started
 
@@ -155,26 +194,26 @@ begin Water Treatment at Scale - is complete; it is released (Section
 2, above). Emergency Shelter Systems and Community & System-Scale Food
 Production, each in turn the pack in active research at the time of a
 previous update, are also now complete and released (Section 2,
-above). No topic is currently named-but-unstarted (Section 4) or in
-production (Section 3). A fresh Production Direction & Roadmap
-Reconciliation analysis (2026-07-19, post-sixth-release) identified
-**Community & Camp Sanitation Systems** as the strongest advisory
-candidate for Official Knowledge Pack #7, on the basis that both
-Water Treatment at Scale and Emergency Shelter Systems already
-cross-link to household-scale sanitation content without owning
-community-scale sanitation infrastructure themselves. **This is a
-recommendation only, not a Founder-approved topic** - this document
-does not select it, or any topic, as an approved next target on its
-own initiative. Aquaponics and Livestock/Animal Husbandry (Section 5,
-above) remain recorded future directions, not approved topics.
+above). **Community & Camp Sanitation Systems (Section 3, above) is
+now the pack in active research, per the Founder's 2026-07-19
+approval.** A prior Production Direction & Roadmap Reconciliation
+analysis (2026-07-19, post-sixth-release) also proposed a tentative,
+advisory sequence for Packs #8-#9 (Aquaponics, then Field Medicine
+Beyond Trauma) - **that sequence is not adopted as a roadmap
+commitment here** and remains analysis only. Aquaponics and
+Livestock/Animal Husbandry (Section 5, above) remain recorded future
+directions, not approved topics.
 
 ## 7. Next Steps (Not Actioned By This Document)
 
-- No pack is currently in production. A new topic requires a Founder
-  approval decision (research/scope/source-collection authorization)
-  before production work of any kind may begin, per
-  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md`.
-- A Founder decision on the recommended Pack #7 candidate (Community &
-  Camp Sanitation Systems), on Aquaponics, or on Livestock/Animal
-  Husbandry remains a prerequisite before any of them could begin
-  production.
+- Complete Source Collection for Community & Camp Sanitation Systems
+  (Section 3, above) - in particular, resolve the flagged medical/
+  biohazard-waste high-risk item - then proceed through Writing,
+  Editorial Review, and Human/AI-agent Source Verification per
+  `pack_production_workflow/PACK_PRODUCTION_CHECKLIST.md` and
+  `pack_production_workflow/QUALITY_STANDARD.md` §9 - followed by its
+  own separate Founder Publication Decision before any release step.
+  This document records that progress when it happens; it does not
+  perform it.
+- A Founder decision on Aquaponics or on Livestock/Animal Husbandry
+  remains a prerequisite before either could begin production.

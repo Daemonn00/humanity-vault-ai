@@ -1,8 +1,8 @@
 {
   "registry_schema_version": "1",
-  "generated_at": "2026-07-19T10:56:59.817167Z",
+  "generated_at": "2026-07-22T09:30:31.893115Z",
   "generator_version": "0.1.0",
-  "pack_count": 6,
+  "pack_count": 7,
   "source_repositories": [
     "Daemonn00/humanity-vault-ai"
   ],
@@ -39,7 +39,42 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
+        }
+      ]
+    },
+    {
+      "pack_id": "hv_official_community_camp_sanitation_systems",
+      "pack_name": "Community & Camp Sanitation Systems",
+      "description": "Planning, building, and maintaining sanitation systems for groups, camps, and settlements - from needs assessment and latrine construction to accessible and dignified facility design and community-scale waste management.",
+      "category_tags": [
+        "Construction",
+        "Survival"
+      ],
+      "trust_tier": "official",
+      "verification_summary": "Verified Source",
+      "latest_version": "1.0.0",
+      "asset_type": "knowledge_pack",
+      "license": null,
+      "dependencies": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publish_date": "2026-07-22T09:26:05.000Z",
+          "changelog_summary": "# Community & Camp Sanitation Systems v1.0.0\r\n\r\nPlanning, building, and maintaining sanitation systems for groups, camps, and settlements — from needs assessment and latrine construction to accessible and dignified facility design and community-scale waste management.\r\n\r\n## Articles (5)\r\n\r\n1. Assessing Sanitation Needs and Planning a Community System\r\n2. Latrine Types and Construction for Camp and Emergency Settings\r\n3. Accessibility, Safety, and Dignified Use of Sanitation Facilities\r\n4. Solid Waste Collection and Disposal at Community Scale\r\n5. Operation, Maintenance, and Decommissioning of Sanitation Systems\r\n\r\n## Verification Summary\r\n\r\n**Verified Source — 5 of 5 articles**\r\n\r\nEvery claim in this pack was independently traced during Editorial Review and then independently re-verified during formal post-drafting Source Verification, with sources freshly re-opened and re-read against the final published text.\r\n\r\n## Package Information\r\n\r\n- **Package ID:** `hv_official_community_camp_sanitation_systems`\r\n- **Version:** `1.0.0`\r\n- **Categories:** Construction, Survival\r\n- **Article count:** 5\r\n- **SHA-256:** `4564e275394c4ecac0ef5356f1a7c10d2adf64a9f7a7eaba046a2923968295b4`\r\n\r\n## Installation\r\n\r\n### Through Vault Hub\r\n\r\nOpen **Vault Hub** in the Humanity Vault app and install this pack directly from the catalog once it appears there.\r\n\r\n### Manual Installation\r\n\r\nDownload:\r\n\r\n`hv_official_community_camp_sanitation_systems-v1.0.0.zip`\r\n\r\nThen open the Humanity Vault app and go to:\r\n\r\n**About → Import Knowledge Pack**\r\n\r\nSelect the downloaded ZIP file and fully restart the app afterward. Installed packs are merged into the Vault at startup.\r\n\r\n### Verify the Download\r\n\r\nBefore installation, you can verify the integrity of the downloaded ZIP by computing its SHA-256 checksum and confirming that it matches:\r\n\r\n`4564e275394c4ecac0ef5356f1a7c10d2adf64a9f7a7eaba046a2923968295b4`\r\n\r\n## Compatibility\r\n\r\nThis release uses the standard Humanity Vault Official Knowledge Pack format, consisting of a `manifest.md` file at the ZIP root together with Markdown knowledge articles.\r\n\r\nIt is compatible with Humanity Vault app builds that support Official Knowledge Pack import and can coexist with the core Vault and other installed Official Knowledge Packs.\r\n\r\nArticle slugs in this pack use the `ccss_` prefix to prevent collisions with the core knowledge corpus and other packs.",
+          "download_url": "https://github.com/Daemonn00/humanity-vault-ai/releases/download/hv_official_community_camp_sanitation_systems-v1.0.0/hv_official_community_camp_sanitation_systems-v1.0.0.zip",
+          "sha256": "4564e275394c4ecac0ef5356f1a7c10d2adf64a9f7a7eaba046a2923968295b4",
+          "size_bytes": 12460,
+          "article_count": 5,
+          "compatibility": {
+            "min_app_version": null,
+            "recommended_app_version": null
+          },
+          "deprecated": false,
+          "deprecated_reason": null,
+          "replacement_pack_id": null,
+          "archived": false,
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
         }
       ]
     },
@@ -74,7 +109,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
         }
       ]
     },
@@ -109,7 +144,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
         }
       ]
     },
@@ -143,7 +178,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
         }
       ]
     },
@@ -177,7 +212,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
         }
       ]
     },
@@ -212,7 +247,7 @@
           "deprecated_reason": null,
           "replacement_pack_id": null,
           "archived": false,
-          "source_commit": "6e28b6112ae23e8e69ecc70cf3dfa7b6fb26f41c"
+          "source_commit": "fbdd6f5c0eedf6af1f72c6c8aeb55305e3e01136"
         }
       ]
     }
